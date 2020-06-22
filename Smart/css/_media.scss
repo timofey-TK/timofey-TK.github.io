@@ -1,0 +1,47 @@
+@media screen and (max-width:1199px) {
+    body {
+        .team__nameplates {
+            justify-content: center;
+            .nameplate, .nameplate-active  {
+                margin-bottom: 5rem;
+            }
+            .nameplate-active {
+                margin-left: 3rem;
+            }
+        }
+        .works__squares {
+            justify-content: center;
+            .square {
+                margin-right: 3rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:992px) {
+    body {
+ 
+        .services__about-icons {
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 5rem;
+            .icon {
+                margin-right: 3rem;
+            } 
+        }
+        .process-section {
+            
+            .boxes {
+                justify-content: center;     
+            }
+            &__1st-box, &__2nd-box, &__3rd-box, &__4th-box {
+                margin-right: 3rem;
+            }
+        
+            
+        }
+        .services__about {
+            margin-top: 5rem;
+        }
+    }
+}
+ 
