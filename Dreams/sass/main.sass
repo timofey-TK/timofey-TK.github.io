@@ -1,0 +1,1086 @@
+@import 'fonts'
+@import 'mixins'
+@import 'vars'
+@import '../libs/hamburgers/hamburgers'
+//  Главные отдельные стили
+*
+    margin: 0
+    padding: 0
+li
+    list-style: none
+a
+    text-decoration: none
+html
+    overflow-x: hidden
+body
+    font-family: 'Open Sans', sans-serif
+    overflow-x: hidden
+    color: #333333
+
+    //  Header
+.header
+    background-color: #000
+    color: #fff
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    .topbar
+        width: 100%
+        height: 50px
+        position: relative
+        display: flex
+        justify-content: space-between
+        .social
+            display: flex
+            li
+                list-style: none
+                margin-right: 27px
+                &:last-child
+                    margin: 0
+            a
+                color: #fff 
+                font-size: 12px
+                text-transform: uppercase
+                line-height: 50px
+        .composition
+            display: flex
+            z-index: 10
+            .adress
+                display: flex
+                align-items: center
+                a
+                    color: #fff
+                    font-size: 12px
+                    font-weight: 400
+                    margin: 0
+                    margin-left: 10px
+                    white-space: nowrap
+                .mob
+                    display: none
+                .fa-map-marker-alt
+                    font-size: 12px
+            .login
+                display: flex
+                align-items: center
+                margin-left: 60px
+                span
+                    width: 1px
+                    height: 20px
+                    background-color: #ffdd00
+                    display: inline-block
+                    margin: 0 12px
+                a
+                    color: #fff
+                    text-decoration: none
+                    font-size: 12px
+                    font-weight: 400
+                    text-transform: uppercase
+    .hr
+        width: 100vw
+        height: 1px
+        position: absolute
+        top: 50px
+        background-color: rgba(#ffdd00,0.2)
+    .menubar
+        position: relative
+        display: flex
+        align-items: center
+        margin-top: 15px
+        justify-content: space-between
+        .logo
+            z-index: 10
+        .menu-list
+            display: flex
+            li.active
+                a
+                    color: $accent
+            li
+                list-style: none
+                margin-right: 29px
+                &:last-child
+                    margin: 0
+                a
+                    text-decoration: none
+                    color: #ffffff
+                    font-size: 14px
+                    font-weight: 400
+                    text-transform: uppercase
+                    transition: color .3s ease
+                &:hover
+                    a
+                        color: $accent
+    .header-text
+        margin-top: 270px
+        max-width: 650px
+        position: relative
+        .phone
+            color: $accent
+            font-size: 20px
+            font-weight: 700
+            text-transform: uppercase
+            margin-bottom: 25px
+        .h1
+            font-size: 48px
+            font-weight: 700
+            margin-bottom: 25px
+        .lorem
+            font-size: 16px
+            font-weight: 400
+        .btn
+            display: block
+            width: 171px
+            height: 45px
+            border: 1px solid #ffffff
+            border-radius: 45px 
+            color: $accent
+            font-size: 14px
+            font-weight: 700
+            text-transform: uppercase 
+            text-decoration: none
+            display: flex
+            align-items: center
+            justify-content: center
+            margin-top: 50px
+            transition: all .3s ease
+            .fa-long-arrow-alt-right
+                margin-right: 10px
+            &:hover
+                background-color: rgba(#ffffff, 0.05)
+.bgh
+    width: 100% 
+    height: 100%
+    background-image: url('../img/header-bg.png')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    opacity: 0.7
+    position: absolute
+    top: 0
+    left: 0
+    // Меню
+.hamburger
+    display: none
+    z-index: 10 
+.full-menu
+    display: none
+    position: fixed
+    width: 100%
+    height: 100%
+    background-color: rgba($accent, .9)
+    right: -100%
+    top: 0
+    transition: all 1s ease
+    padding: 60px 30px 
+    z-index: 10
+    .top
+        background-color: rgba(#292929, 0.95)
+        width: 100%
+        height: 70px
+        border-radius: 10px
+    .full-menu__list
+        margin-top: 30px
+        width: 100%
+        padding: 30px 45px
+        border: 2px solid #fff
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        a
+            display: block
+            text-align: center
+            width: 100%
+            height: 60px
+            background-color: rgba(#292929, 0.95)
+            border-radius: 10px
+            color: #fff
+            font-size: 28px
+            line-height: 60px
+            text-transform: uppercase
+            transition: color .3s ease
+            &:hover
+                color: $accent
+        li
+            margin-bottom: 15px
+            &:last-child
+                margin: 0
+    .full-menu__social
+        margin-top: 30px
+        width: 100%
+        padding: 30px 45px
+        border: 2px solid #fff
+        border-radius: 10px
+        .social-list
+            display: flex
+            justify-content: space-around
+            width: 100%
+            height: 60px
+            background-color: rgba(#292929, 0.95)
+            border-radius: 10px
+            padding: 0 50px
+            a
+                color: #fff
+                font-size: 26px
+                line-height: 60px
+                &:hover
+                    color: $accent
+// Навбар с вкладками
+.tabs-forms
+    .tabs
+        position: relative
+        margin-bottom: 110px
+        width: 100%
+        .tabs__caption
+            position: absolute
+            top: -46px
+            display: flex
+            border-left: 24px solid $accent
+            li
+                width: 100px
+                height: 45px
+                background-color: #fff
+                margin-right: 1px
+                color: #000
+                display: flex
+                align-items: center
+                justify-content: center
+                text-transform: uppercase
+                font-size: 14px
+                transition: .3s ease
+                cursor: pointer
+                &:last-child
+                    margin: 0
+            li.active
+                background-color: $accent
+                color: #fff
+        .content
+            width: 100%
+            border-left: 24px solid $accent
+            height: 187px
+            top: 1px
+            transition: all .3s ease
+            overflow: hidden
+            transition: all .3s ease
+            .tabs__content 
+                display: none
+                transition: all .3s ease
+            .tabs__content.active 
+                display: block
+                width: 100%
+                height: 100%
+                background-color: #fafafa
+                padding: 55px 45px
+                transition: all .3s ease
+                form
+                    width: 100%
+                    display: flex
+                    .btn
+                        position: absolute
+                        transform: translate(0, -50%)
+                        top: 50%
+                        right: -35px    
+                        button
+                            width: 109px;
+                            height: 40px
+                            background-color: #ffc001
+                            border: none
+                            outline: none
+                            color: #fdfdfd
+                            font-family: "Open Sans"
+                            font-size: 13px
+                            font-weight: 600
+                            text-transform: uppercase
+                            letter-spacing: 3.25px
+                            transform: rotate(90deg)
+                    .form-inp
+                        display: flex
+                        flex-direction: column
+                        margin-right: 60px
+                        &:last-child
+                            margin: 0
+                        .form-label
+                            color: #616161
+                            font-size: 14px
+                            font-weight: 400
+                            text-transform: uppercase
+                            margin-bottom: 10px
+                        .form-input
+                            width: 190px
+                            height: 50px
+                            background-color: #ffffff
+                            border: none
+                            outline: none
+                            padding: 20px 30px
+                            font-family: "Open Sans"
+                            font-size: 14px
+                            font-weight: 400
+                            &::placeholder
+                                opacity: 0.35 
+// Populer place
+.packages
+    padding-bottom: 120px
+    &-text
+        .accent-text
+            color: $accent
+            font-size: 14px
+            font-weight: 600
+            text-transform: uppercase
+        .h2
+            color: #333333
+            font-size: 30px
+            font-weight: 700
+            text-transform: uppercase
+    // Меню
+    #places
+        .item
+            width: 360px !important
+            height: 360px !important
+            background-color: #f0f0f0
+            opacity: 0.9
+            position: relative
+            .info
+                width: 100%
+                height: 94px
+                background-color: rgba(#f9f9f9, 0.7)
+                position: absolute
+                bottom: 0
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                cursor: pointer
+                transition: .3s ease
+                &:hover
+                    background: rgba($accent, 0.8)
+                    height: 164px
+                    .price
+                        display: inline
+                    .arrow
+                        display: block
+
+                .price
+                    display: none
+                    font-size: 16px
+                    font-weight: 600
+                    color: #333
+                .name
+                    color: #333
+                    font-size: 20px
+                    font-weight: 600
+                .arrow
+                    display: none
+                    position: absolute
+                    transform: translate(-50%, -50%)
+                    top: 100% 
+                    left: 50%
+                    width: 57px
+                    height: 57px
+        .owl-dots
+            position: absolute
+            transform: translate(-50%, 0)
+            left: 50%
+            margin-top: 60px
+            display: flex
+            align-items: center
+            .owl-dot
+                width: 10px
+                height: 10px
+                border: 1px solid #fd0
+                border-radius: 50%
+                transition: .3s ease
+                margin-right: 10px
+                outline: none
+                &:last-child
+                    margin: 0
+            .owl-dot.active
+                transform: scale(1.5)
+                background-color: #ffc001   
+        #bg1
+            background-image: url(../img/bg1.png)
+        #bg2
+            background-image: url(../img/bg2.png)
+        #bg3 
+            background-image: url(../img/bg3.png) 
+    &-composition
+        margin-top: 170px
+        text-align: center
+        margin-bottom: 70px
+        .bg-text
+            background-image: url(../img/populer_place.png)
+            background-repeat: no-repeat
+            background-position:  center
+            text-align: center
+            height: 111px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin-bottom: 25px
+            .h3
+                color: #333333
+                font-size: 30px
+                font-weight: 700
+        .lorem  
+            margin: 0 auto
+            color: #333333
+            font-size: 16px
+            font-weight: 400
+            max-width: 658px
+//  Второй слайде
+.slider
+    position: relative
+    #switzerland-slider
+        .item
+            background: #333333
+            width: 100%
+            height: 580px
+            background-repeat: no-repeat
+            background-position: center
+        #switzerland-slider__item
+            background-image: url(../img/norway1.png)
+        .owl-nav
+            position: absolute
+            width: 100%
+            display: flex
+            justify-content: space-between
+            top: 50%
+            padding: 0 100px
+            outline: none
+            .fa-chevron-right, .fa-chevron-left
+                font-size: 30px
+                font-weight: 400
+                color: $accent
+                outline: none
+    .slider-board
+        width: 470px
+        height: 205px
+        box-shadow: 0 15px 30px rgba(230, 230, 230, 0.3)
+        border-radius: 5px
+        background-color: rgba(#fff, 0.75)
+        position: absolute
+        transform: translate(-50%, -50%)
+        left: 50%
+        bottom: -25% 
+        z-index: 2
+        display: flex
+        align-items: center
+        flex-direction: column
+        padding: 30px
+        p
+            font-size: 24px
+            font-weight: 700
+            color: #333333
+            margin-bottom: 20px
+        ul
+            display: flex
+            li
+                width: 40px
+                height: 40px
+                border: 1px solid #ffdd00
+                display: flex
+                justify-content: center
+                align-items: center
+                a
+                    color: #ffdd00
+                    font-size: 20px
+        .dots
+            position: absolute
+            transform: translate(-50%, 0)
+            left: 50%
+            margin-top: 40px
+            display: flex
+            align-items: center
+            bottom: 20%
+            .owl-dot
+                width: 10px
+                height: 10px
+                border: 1px solid #fd0
+                border-radius: 50%
+                transition: .3s ease
+                margin-right: 10px
+                background: none
+                outline: none
+                &:last-child
+                    margin: 0
+            .owl-dot.active
+                transform: scale(1.5)
+                background-color: #ffc001   
+.destinations
+    margin-top: 50px
+    padding-bottom: 122px
+    &-text
+        display: flex
+        align-items: center
+        flex-direction: column
+        margin-bottom: 50px
+        .h3
+            color: #333333
+            font-size: 30px
+            font-weight: 600
+            margin-bottom: 30px
+        .lorem
+            color: #333333
+            font-size: 16px
+            font-weight: 400
+            max-width: 650px
+            text-align: center
+    #destinations-slider
+        width: 100%
+        .item
+            position: relative
+            width: 620px
+            height: 357px
+            box-shadow: 0 0 35px rgba(186, 197, 198, 0.25)
+            background-color: #fff
+            padding-top: 50px
+            display: flex
+            .img-box
+                background-color: #333333
+                width: 370px
+                height: 307px 
+                img
+                    width: 370px
+                    height: 307px 
+            .slider-text
+                padding-left: 25px  
+                padding-right: 30px 
+                .name   
+                    font-size: 24px
+                    font-weight:  600
+                    margin-bottom: 20px
+                .price
+                    font-size: 24px
+                    font-weight: 700
+                    text-transform: uppercase
+                    color: $accent
+                    margin-bottom: 10px
+                .time
+                    font-size: 16px
+                    font-weight: 400
+                    margin-bottom: 20px
+                    .fa-clock
+                        margin-right: 12px
+                .lorem  
+                    font-size: 15px
+                    font-weight: 400
+                    margin-bottom: 20px
+                .stars
+                    font-size: 15px
+                    font-weight: 400
+                    display: flex
+                    color: $accent
+                .btn 
+                    position: absolute
+                    right: 0
+                    bottom: 0
+                    display: block
+                    width: 250px
+                    height: 50px
+                    color: $accent
+                    text-align: center
+                    line-height:  50px
+                    font-size: 16px
+                    font-weight: 400
+                    text-transform: uppercase
+                    transition: .3s ease
+                    &:hover
+                        background-color: $accent
+                        color: #ffffff
+    .owl-dots
+        position: absolute
+        margin-top: 40px
+        transform: translate(-50%, 0)
+        left: 50%
+
+        .owl-dot
+            width: 10px
+            height: 10px
+            border: 1px solid #fd0
+            border-radius: 50%
+            transition: .3s ease
+            margin-right: 10px
+            background: none
+            outline: none
+            &:last-child
+                margin: 0
+        .owl-dot.active
+            transform: scale(1.5)
+            background-color: #ffc001  
+//  Package
+.package
+    background-color: #f9f9f9
+    .holiday    
+        background-image: url(../img/ph.png)
+        width: 100%
+        height: 700px
+        padding: 120px 0
+        &-text
+            padding: 45px 0
+            .top-composition
+                position: relative
+                display: flex
+                align-items: flex-end
+                .numb
+                    font-size: 40px
+                    font-weight: 700
+                    line-height: 40px
+                .prc
+                    font-size: 16px
+                    font-weight: 700
+                    align-self:  flex-start
+                .text
+                    font-size: 16px
+                    font-weight: 600
+                    text-transform: uppercase
+                    color: $accent
+            .h3
+                font-size: 38px
+                font-weight: 700
+                margin-top: 20px
+                margin-bottom: 30px
+            .lorem  
+                max-width: 440px
+                color: #616161
+                font-size: 15px
+                font-weight: 400
+                margin-bottom: 45px
+            .btn
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 140px
+                height: 40px
+                border-radius: 3px
+                background-color: $accent
+                font-size: 14px
+                font-weight: 700
+                text-transform: uppercase
+                color: #fefefe
+        #holiday-slider
+            position: relative
+            min-width: 600px
+            .item
+                background-color: #333
+                width: 600px
+                height: 398px
+            #ibg
+                background-image: url(../img/slider4.png)
+                background-position:  center
+            .owl-nav
+                width: 100%
+                display: flex
+                justify-content: space-between
+                padding:  0 75px 0 30px
+                span
+                    width: 45px
+                    height: 45px
+                    background-color: rgba(#080808, 0.4)
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 36px
+                    color: $accent
+                    position: absolute
+                    top:  50%   
+                    transform:  translate(0, -50%)
+    .discount
+        overflow: hidden
+        margin-top: 110px
+        position: relative
+        margin-bottom: 300px
+        overflow: visible
+        &-text
+            display: flex
+            align-items: center
+            flex-direction:  column
+            margin-bottom: 60px
+            .h3
+                margin-bottom: 30px
+                font-size: 30px
+                font-weight: 700
+                text-transform: uppercase
+                text-align: center
+            .lorem
+                font-size: 15px
+                font-weight: 300 
+                max-width: 730px
+                text-align: center
+                color: #616161
+            a
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 171px
+                height: 45px
+                border-radius: 23px
+                border: 1px solid $accent
+                font-size: 14px
+                font-weight: 700
+                text-transform: uppercase
+                color: $accent
+                margin-top: 55px
+                transition:  .3s ease
+                .fa-long-arrow-alt-right
+                    margin-right: 10px
+                &:hover
+                    background-color:  $accent
+                    color: #fff
+        .time   
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            justify-content: space-around
+            padding-bottom: 230px
+            .time-item
+                width: 120px
+                display: flex
+                align-items: center
+                flex-direction:  column
+                .value
+                    font-size: 36px
+                    font-weight: 800
+                .period
+                    font-size: 16px
+                    font-weight: 700
+                    text-transform: uppercase
+            #days
+                color: $accent
+            #hours
+                color: #ef6f6c
+            #minutes
+                color: #28c190
+            #second
+                color: #333333
+        #discount-slider
+            position: absolute
+            transform:  translateY(-50%)
+            .owl-item
+                display: flex
+                justify-content: center
+                .item
+                    width: 770px
+                    height: 300px
+                    box-shadow: 0 0 30px rgba(230, 230, 230, 0.3)
+                    background-color: #ffffff
+                    display: flex
+                    position: relative
+                    .img
+                        background-image: url(../img/Mountain-in-Banff-National-Park.png)
+                        width: 350px
+                        height: 300px
+                        background-position: center
+                        background-repeat: no-repeat
+                    .slider-text
+                        padding:  45px 30px 40px 40px
+                        .name 
+                            font-size: 24px
+                            font-weight: 600
+                            margin-bottom: 30px
+                        .time-tour
+                            li
+                                font-size: 16px
+                                font-weight: 400    
+                                list-style: none
+                                &:last-child
+                                    margin-top: 17px
+                                .fa-check-circle
+                                    color: $accent
+                                    margin-right: 15px
+                        .price
+                            font-size: 40px
+                            font-weight: 600
+                            color: $accent
+                            margin-top: 25px
+                        .btn-wrap
+                            top:  50%   
+                            right: -30px
+                            position: absolute
+                            transform:  translate(0, -50%)
+                            .btn
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                width: 171px
+                                height: 45px
+                                border-radius: 0 2px 2px 0
+                                background-color: #fbad03
+                                opacity: 0.8
+                                color: #ffffff
+                                transform:  rotate(-90deg)
+                                text-transform: uppercase
+                                font-size: 14px
+            .owl-nav
+                width: 100%
+                position: absolute
+                transform:  translate(0, -50%)
+                padding: 0 370px
+                top: 50%
+                left: 0
+                display: flex
+                justify-content: space-between
+                .owl-prev, .owl-next
+                     transition: all .3s ease
+                     outline:  none
+                .disabled
+                    opacity:  .2
+                span
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 50px
+                    height: 50px
+                    background-image: url(../img/arrow-owl.png) 
+                    background-position:  center
+                    color: #ffffff
+                    font-size: 14px
+                    transition: all .3s ease
+                .next
+                    transform:  rotate(-180deg)
+.blog
+    overflow: hidden
+    position: relative
+    padding-bottom: 300px
+    .main-bg
+        background-color:  $accent
+        position: relative
+        width: 100%
+        height: 458px
+        .blog-bg
+            position: absolute
+            background-image: url(../img/shutterstock_427994269-1-.png)
+            background-position:  center
+            width: 100%
+            height: 100%    
+            background-size: cover
+    &-text
+        position: relative
+        z-index: 9999 
+        display: flex
+        flex-direction:  column
+        align-items: center
+        color: #fff
+        opacity:  1
+        .h3 
+            margin-top: 75px
+            margin-bottom: 20px
+            font-size: 30px
+            font-weight: 700
+            text-transform: uppercase
+        .lorem
+            font-size: 16px
+            font-weight: 400
+            text-transform: uppercase
+            letter-spacing: 5.6px
+            margin-bottom: 27px
+        .email
+            display: flex
+            input
+                width: 380px
+                height: 50px
+                border-radius: 3px 0 0 3px
+                background-color: #ffffff    
+                outline: none
+                font-size: 16px
+                font-weight: 400
+                padding: 10px 30px
+                border:  none
+                @include placeholder
+                    opacity: 0.4
+                    color: #1b2739
+            .btn
+                width: 100px
+                height: 50px
+                border-radius: 0 3px 3px 0
+                background-color: #1b2739
+                outline:  none
+                border:  none
+                font-size: 14px
+                font-weight: 400
+                text-transform: uppercase
+                color: #ffffff
+                font-family: "Open Sans"
+                cursor: pointer
+    .video  
+        z-index: 9999
+        opacity:  1
+        position: absolute
+        transform:  translate( -50%, -50%) 
+        left: 50%
+        top: 100%
+        width: 630px
+        height: 330px
+        iframe
+            border:  none
+            width: 100%
+            height: 100%
+.articles
+    #articles-slider
+        .owl-item   
+            display: flex
+            justify-content: center
+        .item
+            width: 350px
+            height: 582px
+            box-shadow: 0 0 30px rgba(230, 230, 230, 0.25)
+            background-color: #ffffff
+            .articles-text
+                width: 100%
+                padding:  0 30px
+                padding-top: 65px
+                position: relative
+                .date
+                    position: absolute
+                    top:  30px
+                    left:  30px
+                    color: #b9bbba
+                    font-size: 12px
+                    font-weight: 600
+                    text-transform: uppercase
+                .by 
+                    position: absolute
+                    top: 30px
+                    right: 30px
+                    color: #b9bbba
+                    font-size: 12px
+                    font-weight: 600
+                    text-transform: uppercase
+                .h5 
+                    font-size: 20px
+                    font-weight: 400
+                    margin-bottom: 20px
+                .lorem
+                    font-size: 15px
+                    font-weight: 300
+                    color: #616161
+                    margin-bottom: 30px
+                .icons
+                    display: flex
+                    .msg 
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        cursor: pointer
+                        width: 40px
+                        height: 40px
+                        border-radius: 1px 10px 25px
+                        background-color: rgba(#f3f0f0, 0.5)
+                        color: #fbad03
+                        font-size: 16px
+                    .like
+                        cursor: pointer
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        margin-left: 30px
+                        margin-right: 30px
+                        width: 40px
+                        height: 40px
+                        border-radius: 5px 5px 16px 16px
+                        background-color: #f9f7f7
+                        color: #28c190
+                        font-size: 16px
+                    .share
+                        cursor: pointer
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        width: 40px
+                        height: 40px
+                        border-radius: 10px 1px 10px 25px
+                        background-color: #f9f7f7
+.footer
+    background-color: #1b2739
+    height: 620px
+    position: relative
+    .world
+        position: relative
+        height: 620px
+        background-image: url(../img/world.png)
+        background-position: center
+        background-size: contain
+        background-repeat: no-repeat
+    .contact
+        padding-top: 120px
+        display: flex
+        .phone, .fax, .email
+            color: #bababa
+            font-size: 14px
+            font-weight: 400
+            margin-bottom: 20px
+        .phone
+            margin-top: 40px
+        .email
+            margin-bottom: 40px
+        .social
+            display: flex
+            li
+                list-style:  none
+                margin-right: 30px
+                &:last-child
+                    margin: 0
+                a
+                    color: #ffffff
+                    font-size: 14px
+                    &:hover
+                        color: $accent
+        .column-text
+            margin-left: 190px
+            .title
+                color: #ffffff
+                font-size: 16px
+                font-weight: 400
+                text-transform: uppercase
+                margin-bottom: 12px
+            .hr
+                width: 24px
+                height: 1px
+                background-color: $accent
+            .list
+                margin-top: 40px
+                li
+                    list-style:  none
+                    margin-bottom: 30px
+                a
+                    color: #bababa
+                    font-size: 14px
+                    font-weight: 400
+                    transition: color .3s ease
+                    &:hover
+                        color: $accent
+    .footer-c
+        position: absolute
+        bottom: 0
+        left:  0
+        min-height:  100px
+        width: 100%
+        border-top: 1px solid rgba(#fff, 0.05)
+        display: flex
+        align-items: center
+        justify-content: space-between
+        .cop
+            color: #bababa
+            font-size: 14px
+            font-weight: 400
+            opacity:  0.6
+        ul
+            display: flex
+            li
+                list-style:  none
+                margin-right: 45px
+                a
+                    color: #bababa
+                    font-size: 14px
+                    font-weight: 400
+                    opacity:  0.6
+
+
+//  Отдельные стили
+.owl-item
+    padding: 30px 0
+.owl-prev, .owl-next
+    outline:  none
+.active-menu
+    right: 0
+.overflow
+    overflow: hidden
+
+// Медиа запросы
+@import 'media' 

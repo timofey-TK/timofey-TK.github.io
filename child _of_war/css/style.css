@@ -1,0 +1,1248 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../img/header_bg.png);
+  background-size: cover;
+}
+
+.header .bg-dark {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+}
+
+.header .top-nav {
+  position: relative;
+  height: 175px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header .top-nav .hamburger {
+  display: none;
+}
+
+.header .top-nav .links {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header .top-nav .links li {
+  list-style-type: none;
+}
+
+.header .top-nav .links li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.header .top-nav .links li a:hover {
+  color: #B40000;
+}
+
+.header .top-nav .links li .two_lines {
+  position: relative;
+}
+
+.header .top-nav .links li .two_lines p:last-child {
+  font-size: 25px;
+  margin-top: -10px;
+}
+
+.header-text {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 255px;
+}
+
+.header-text .h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+}
+
+.header-text .h1 {
+  font-size: 68px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 68px;
+  text-align: center;
+}
+
+.header-text .h1 span {
+  color: #B40000;
+}
+
+.header-text .lorem {
+  font-size: 32px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 550px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.header .icon {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: pulsing 4s infinite;
+  animation: pulsing 4s infinite;
+}
+
+.header .icon .fa-angle-double-down {
+  font-size: 55px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 200px;
+}
+
+.heros {
+  padding-top: 80px;
+  position: relative;
+  padding-bottom: 140px;
+}
+
+.heros .bird {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.heros .bird .fa-dove {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  font-size: 670px;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.heros_text {
+  text-align: center;
+  font-size: 44px;
+  font-weight: 600;
+  color: #000;
+}
+
+.heros .hr {
+  background: #707070;
+  width: 1580px;
+  height: 1px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.heros .owl-carousel {
+  position: relative;
+}
+
+.heros .owl-carousel .owl-item .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 180px;
+}
+
+.heros .owl-carousel .owl-item .item .main {
+  width: 560px;
+  border: 3px solid #707070;
+  border-radius: 15px;
+  padding: 25px 30px;
+  padding-bottom: 0;
+  max-height: 830px;
+}
+
+.heros .owl-carousel .owl-item .item .main .img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 490px;
+}
+
+.heros .owl-carousel .owl-item .item .main .carousel-hr {
+  margin: 0 auto;
+  margin-top: 18px;
+  width: 100%;
+  height: 1px;
+  background-color: #707070;
+}
+
+.heros .owl-carousel .owl-item .item .main .awards {
+  padding: 0 40px;
+}
+
+.heros .owl-carousel .owl-item .item .main .awards p {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #B40000;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.heros .owl-carousel .owl-item .item .main .awards ul {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.heros .owl-carousel .owl-item .item .main .awards ul .award {
+  list-style: none;
+  margin-right: 20px;
+  margin-bottom: 25px;
+  max-width: 79px;
+  max-height: 80px;
+}
+
+.heros .owl-carousel .owl-item .item .main .awards ul .award:last-child {
+  margin-right: 0;
+}
+
+.heros .owl-carousel .owl-item .item .main .awards ul .problem-img {
+  width: 45px;
+}
+
+.heros .owl-carousel .owl-item .item .about {
+  border: 3px solid #707070;
+  width: 950px;
+  border-radius: 15px;
+  margin-left: 40px;
+  padding: 15px 40px;
+  max-height: 830px;
+}
+
+.heros .owl-carousel .owl-item .item .about .name {
+  font-size: 48px;
+  font-weight: 700;
+  color: #B40000;
+  text-align: center;
+}
+
+.heros .owl-carousel .owl-item .item .about .about-text {
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 17px;
+  text-align: center;
+}
+
+.heros .owl-carousel .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.heros .owl-carousel .owl-dots .owl-dot {
+  border: none;
+  outline: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: #B40000 solid 1px;
+  margin-right: 10px;
+  -webkit-transition: 0.8s ease;
+  transition: 0.8s ease;
+}
+
+.heros .owl-carousel .owl-dots .owl-dot:active {
+  border: none;
+  outline: none;
+}
+
+.heros .owl-carousel .owl-dots .owl-dot:last-child {
+  margin-right: 0;
+}
+
+.heros .owl-carousel .owl-dots .owl-dot.active {
+  background-color: #B40000;
+}
+
+.heros .owl-carousel .owl-nav .owl-next {
+  position: absolute;
+  left: 57%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+}
+
+.heros .owl-carousel .owl-nav .owl-next:active {
+  border: none;
+  outline: none;
+  border: none;
+  outline: none;
+}
+
+.heros .owl-carousel .owl-nav .owl-prev {
+  position: absolute;
+  left: 42%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
+}
+
+.heros .owl-carousel .owl-nav .owl-prev:active {
+  border: none;
+  outline: none;
+  border: none;
+  outline: none;
+}
+
+.heros .owl-carousel .owl-nav i {
+  color: #B40000;
+  font-size: 32px;
+}
+
+.prisoners {
+  padding-bottom: 170px;
+}
+
+.prisoners .prisoners-bg {
+  position: relative;
+}
+
+.prisoners .prisoners-bg .bg-text {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  text-align: center;
+  font-size: 68px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-text-stroke: 2px black;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+}
+
+.prisoners .prisoners-bg .parallax-window {
+  width: 100%;
+  min-height: 750px;
+  background: transparent;
+}
+
+.prisoners .prisoners-text {
+  padding: 0 170px;
+}
+
+.prisoners .prisoners-text .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.prisoners .prisoners-text .about p {
+  font-size: 24px;
+  font-style: italic;
+}
+
+.prisoners .prisoners-text .reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.my-heros .top-text {
+  font-size: 65px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.my-heros .golub-text {
+  font-size: 44px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.my-heros .golub {
+  padding: 0 170px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.my-heros .golub .about {
+  font-size: 26px;
+  font-style: italic;
+  max-width: 675px;
+}
+
+.my-heros .ungur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 130px;
+  padding: 0 340px;
+}
+
+.my-heros .ungur .ungur-text .name {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.my-heros .ungur .ungur-text .about {
+  font-size: 22px;
+  font-style: italic;
+  text-align: center;
+  max-width: 760px;
+}
+
+footer .wrap {
+  padding: 0 170px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
+footer .hr {
+  height: 1px;
+  width: 100%;
+  background-color: #707070;
+}
+
+footer .to-up {
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  font-size: 26px;
+  line-height: 10px;
+  text-transform: uppercase;
+  color: #707070;
+  text-decoration: none;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+footer .to-up:hover {
+  color: #000;
+  opacity: 0.8;
+}
+
+footer .to-up i {
+  font-size: 40px;
+}
+
+footer .copyright {
+  height: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.w666 {
+  max-width: 666px;
+}
+
+.w700 {
+  max-width: 700px;
+}
+
+.w790 {
+  max-width: 790px;
+}
+
+.w740 {
+  max-width: 740px;
+}
+
+.end-text {
+  font-size: 28px;
+  max-width: 475px;
+  margin-right: 40px;
+}
+
+@-webkit-keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+}
+
+@keyframes pulsing {
+  0% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+  50% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+}
+
+/*!
+ * Hamburgers
+ * @description Tasty CSS-animated hamburgers
+ * @author Jonathan Suh @jonsuh
+ * @site https://jonsuh.com/hamburgers
+ * @link https://github.com/jonsuh/hamburgers
+ */
+.hamburger {
+  padding: 15px 15px;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition-property: opacity, -webkit-filter;
+  transition-property: opacity, -webkit-filter;
+  transition-property: opacity, filter;
+  transition-property: opacity, filter, -webkit-filter;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+}
+
+.hamburger:hover {
+  opacity: 1;
+}
+
+.hamburger.is-active:hover {
+  opacity: 1;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #B40000;
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+/*
+   * Spin
+   */
+.hamburger--spin .hamburger-inner {
+  -webkit-transition-duration: 0.22s;
+          transition-duration: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/*
+   * Spin Reverse
+   */
+.hamburger--spin-r .hamburger-inner {
+  -webkit-transition-duration: 0.22s;
+          transition-duration: 0.22s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin-r .hamburger-inner::before {
+  -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+
+.hamburger--spin-r .hamburger-inner::after {
+  -webkit-transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin-r.is-active .hamburger-inner {
+  -webkit-transform: rotate(-225deg);
+          transform: rotate(-225deg);
+  -webkit-transition-delay: 0.12s;
+          transition-delay: 0.12s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.hamburger--spin-r.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+
+.hamburger--spin-r.is-active .hamburger-inner::after {
+  bottom: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+@media (max-width: 1700px) {
+  .heros .hr {
+    width: 90%;
+  }
+  .heros .owl-carousel .owl-item .item .about {
+    padding: 10px 15px;
+  }
+  .heros .owl-carousel .owl-item .item .about .name {
+    font-size: 38px;
+  }
+  .heros .owl-carousel .owl-item .item .about .about-text {
+    font-size: 17px;
+    margin-top: 5px;
+  }
+  .owl-carousel .owl-item img {
+    max-width: 90%;
+  }
+  .prisoners .prisoners-text img {
+    max-width: 90%;
+  }
+  .prisoners .prisoners-text .about p {
+    font-size: 20px;
+    max-width: 500px;
+  }
+  .prisoners .prisoners-text .end-text {
+    font-size: 20px !important;
+    max-width: 300px !important;
+  }
+  .my-heros .golub img {
+    max-width: 90%;
+  }
+  .my-heros .golub .about {
+    font-size: 20px;
+    max-width: 500px;
+  }
+  .my-heros .ungur .ungur-text img {
+    max-width: 90%;
+  }
+  .my-heros .ungur .ungur-text .about {
+    font-size: 20px;
+    max-width: 500px;
+  }
+  .prisoners .prisoners-text {
+    padding: 0 120px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .my-heros .ungur {
+    padding: 0 100px;
+  }
+  .my-heros .ungur img {
+    width: 377px;
+    height: 522px;
+  }
+  .heros .owl-carousel .owl-item .item .main .img {
+    margin: 0 auto;
+  }
+  .heros .owl-carousel .owl-item .item .main .img img {
+    max-width: 95%;
+  }
+  .heros .owl-carousel .owl-item .item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .heros .owl-carousel .owl-item .item .main {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .heros .owl-carousel .owl-item .item .about {
+    width: 100%;
+    margin: 0;
+  }
+  .prisoners .prisoners-text .img {
+    max-width: 55%;
+  }
+  .prisoners .prisoners-text {
+    padding: 0 100px;
+  }
+  .my-heros .golub {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  footer .wrap {
+    padding: 0 50px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+  .my-heros .ungur .ungur-text .about {
+    font-size: 18px;
+    max-width: 450px;
+  }
+  .prisoners .prisoners-text img {
+    max-width: 100%;
+  }
+  .my-heros .top-text {
+    font-size: 58px;
+  }
+  .prisoners {
+    padding-bottom: 100px;
+  }
+  .prisoners .prisoners-text .img {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .prisoners .prisoners-text .about {
+    margin-top: 50px;
+  }
+  .prisoners .prisoners-text .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .heros .owl-carousel .owl-nav .owl-next {
+    left: 60%;
+  }
+  .heros .owl-carousel .owl-nav .owl-prev {
+    left: 38%;
+  }
+  .header-text .h1 {
+    font-size: 52px;
+  }
+  .header .top-nav .links li .two_lines p:last-child {
+    font-size: 21px;
+    margin-top: -5px;
+  }
+  .header .top-nav .links {
+    font-size: 28px;
+  }
+  .header-text {
+    position: absolute;
+    top: 20%;
+  }
+  .header .icon {
+    position: absolute;
+    bottom: 60px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    left: 50%;
+  }
+  .my-heros .golub {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .my-heros .golub .about {
+    text-align: center;
+    max-width: 1000%;
+    margin-top: 20px;
+  }
+  .my-heros .golub .img {
+    width: 760px;
+    height: 570px;
+  }
+  .my-heros .golub img {
+    max-width: 100%;
+  }
+  .my-heros .golub-text {
+    font-size: 38px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .my-heros .ungur {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .prisoners .prisoners-text .end-text {
+    margin: 0 !important;
+  }
+  .header-text .h1 {
+    line-height: 48px;
+    margin-top: 20px;
+    font-size: 48px;
+    max-width: 85%;
+  }
+  .header .top-nav .links li .two_lines p:last-child {
+    font-size: 29.2px;
+  }
+  .header .top-nav {
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+    height: 100px;
+  }
+  .header .top-nav .links {
+    font-size: 38px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+    position: absolute;
+    right: -100%;
+    z-index: 2;
+  }
+  .header .top-nav .links li {
+    padding: 30px;
+    margin-top: 40px;
+    background: rgba(0, 0, 0, 0.75);
+  }
+  .header .top-nav .hamburger {
+    right: 10px;
+    top: 20px;
+    display: block;
+    position: absolute;
+    z-index: 3;
+  }
+  .header .top-nav.active-menu {
+    position: relative;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+    width: 100vw;
+    height: 100vh;
+  }
+  .header .top-nav.active-menu .links {
+    -webkit-transition-delay: 0.8s;
+            transition-delay: 0.8s;
+    right: 0;
+    position: relative;
+  }
+  .header-text {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .none {
+    -webkit-transition-delay: 0.1s;
+            transition-delay: 0.1s;
+    opacity: 0;
+  }
+  .overflow {
+    overflow: hidden;
+  }
+  .my-heros .ungur {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .my-heros .ungur .ungur-text .name {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .heros .owl-carousel .owl-item .item {
+    margin: 40px 30px;
+  }
+  .heros .owl-carousel .owl-nav .owl-next {
+    left: 66%;
+  }
+  .heros .owl-carousel .owl-nav .owl-prev {
+    left: 32%;
+  }
+}
+
+@media (max-width: 768px) {
+  .owl-next {
+    left: 68% !important;
+  }
+  .owl-prev {
+    left: 30% !important;
+  }
+  .img {
+    max-width: 95%;
+    height: auto;
+  }
+  .prisoners .prisoners-text {
+    padding: 0 50px;
+  }
+  .my-heros .golub .about {
+    margin: -80px 0;
+    margin-bottom: 0;
+  }
+  .my-heros .ungur {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .copyright p {
+    font-size: 13px;
+  }
+  .my-heros .golub .about {
+    margin: -110px 0;
+    margin-bottom: 0;
+  }
+  .my-heros .ungur .ungur-text .name {
+    font-size: 22px;
+  }
+  .my-heros .ungur img {
+    max-width: 350px !important;
+    height: 502px;
+  }
+  .heros .owl-carousel .owl-item .item .main .awards ul .award {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  .owl-carousel .owl-item img {
+    max-width: 70%;
+  }
+  .my-heros .ungur .ungur-text .about {
+    font-size: 16px;
+  }
+  .my-heros .golub {
+    padding: 0 10px;
+  }
+  .my-heros .golub .about {
+    font-size: 16px;
+  }
+  .my-heros .golub .img {
+    margin-bottom: -150px;
+  }
+  .my-heros .golub-text {
+    font-size: 22px;
+  }
+  .my-heros .top-text {
+    font-size: 35px;
+  }
+  .owl-next {
+    left: 80% !important;
+  }
+  .owl-prev {
+    left: 18% !important;
+  }
+  .heros .owl-carousel .owl-item .item .main .awards {
+    padding: 0;
+  }
+  .header-text {
+    top: 30%;
+    margin: 0;
+  }
+  .header-text .h2 {
+    font-size: 28px;
+  }
+  .header-text .h1 {
+    font-size: 35px;
+    line-height: 38px;
+  }
+  .header-text .lorem {
+    font-size: 22px;
+  }
+  .header .top-nav .links {
+    font-size: 32px;
+    text-align: center;
+  }
+  .header .top-nav .links li {
+    max-width: 90%;
+  }
+  .heros .owl-carousel .owl-item .item {
+    margin: 10px;
+  }
+  .heros .owl-carousel .owl-item .item .about {
+    height: auto;
+  }
+  .heros .owl-carousel .owl-item .item .about .about-text {
+    text-align: left;
+    font-size: 14px;
+  }
+  .prisoners .prisoners-text .about p {
+    font-size: 16px;
+    text-align: center;
+  }
+  .prisoners .prisoners-bg .bg-text {
+    font-size: 42px;
+  }
+  .heros .owl-carousel .owl-item .item .about .name {
+    font-size: 30px;
+  }
+  .heros .owl-carousel .owl-item .item .main {
+    padding: 15px;
+  }
+  .heros .owl-carousel .owl-nav .owl-next {
+    bottom: -25px !important;
+  }
+  .owl-prev {
+    bottom: -25px !important;
+  }
+  .heros .owl-carousel .owl-dots {
+    bottom: -25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .copyright p {
+    font-size: 10px;
+  }
+  .header .top-nav .links {
+    font-size: 25px;
+  }
+  .header .top-nav .links li {
+    margin-top: 15px;
+    padding: 15px;
+  }
+  .header-text .h2 {
+    font-size: 24px;
+  }
+  .header-text .h1 {
+    font-size: 30px;
+  }
+  .header-text .lorem {
+    font-size: 18px;
+  }
+  .header .icon {
+    display: none;
+  }
+  .heros_text {
+    font-size: 30px;
+  }
+  .heros .hr {
+    margin-top: 20px;
+  }
+  .heros .owl-carousel .owl-item .item .about .name {
+    font-size: 22px;
+  }
+  .heros .owl-carousel .owl-item .item .about .about-text {
+    font-size: 13px;
+  }
+  .owl-carousel .owl-item img {
+    max-width: 50%;
+  }
+  .heros .owl-carousel .owl-item .item .main .awards ul .award {
+    margin-right: -10px;
+  }
+  .heros .owl-carousel .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+  }
+  .heros .owl-carousel .owl-item .item .about {
+    padding: 5px;
+  }
+  .heros .owl-carousel .owl-item .item .main {
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  .heros .owl-carousel .owl-item .item .main .awards ul {
+    margin-top: 10px;
+  }
+  .owl-next {
+    bottom: -25px !important;
+  }
+  .owl-prev {
+    bottom: -25px !important;
+  }
+  .heros .owl-carousel .owl-dots {
+    bottom: -25px;
+  }
+  .prisoners .prisoners-bg .bg-text {
+    font-size: 30px;
+  }
+  .prisoners .prisoners-text .about p {
+    font-size: 13px;
+  }
+  .prisoners .prisoners-text .end-text {
+    font-size: 15px !important;
+    margin: 0 !important;
+  }
+  .my-heros .top-text {
+    font-size: 30px;
+  }
+  .my-heros .golub .about {
+    font-size: 14px;
+    margin-top: -140px;
+  }
+  .my-heros .ungur {
+    padding: 0 15px;
+  }
+  .my-heros .ungur img {
+    width: 300px;
+    height: 452px;
+  }
+  .my-heros .ungur .ungur-text .about {
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
