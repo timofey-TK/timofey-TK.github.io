@@ -1,0 +1,354 @@
+
+@media (max-width: 1500px) {
+    body {
+        overflow: hidden;
+        
+    }
+    .servises .service-boxes {
+        padding: 0 100px;  
+    }
+    .portfolio .owl-item .item {
+        flex-direction: column;  
+        width: 85vw;
+        min-width: 300px;
+        .square {
+            min-width: 100%;
+            width: 100%;
+            margin: 0;
+            height: 300px;
+        }
+        .slider-text {
+            height: 400px;
+            border-left: none;
+            border-top: 1px solid #dee0e4;
+            text-align: center;
+            padding: 0 10px;
+            .icon {
+                margin: 20px auto !important;
+                width: 59px;
+                height: 59px;
+              }
+        }
+    }
+}
+@media (max-width: 1320px) {
+    header .logo {
+        left: 60%;
+    }
+}
+    
+// Большие девайсы (большие десктопы, < 1200px)
+@media (max-width: 1199.98px) {
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: $accent;
+        right: -100%;
+        top: 0;
+        transition: all .8s ease;
+        z-index: 2;
+        display: block;
+        padding-top: 15%;
+        &-nav {
+            ul {
+                border-top: 2px solid rgba($light, .5);
+                height: 75vh; 
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                padding: 15px 30px;
+                hr {
+                    width: 100%;
+                }
+                li {
+                    list-style: none;   
+                    a {
+                        text-decoration: none;
+                        color: $light;
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
+    }
+    .header-nav {
+        display: none;
+    }
+    .top-line .btn {
+        display: none;
+    }
+    .top-line .logo {
+        position: relative;
+        display: block;
+        left: 0;
+        top: 0;
+        transform: translateX(0);
+        z-index: 3;
+
+    }
+    .hamburger {
+        display: block;
+        z-index: 3;
+        margin-left: auto;
+        outline: none;
+    }
+    .active-menu {
+        right: 0;
+    }
+    .help .quote {
+        transform: translateX(-50%);
+        left: 50%;
+    }
+    .prev {
+        left: 44%;
+    }
+    .next {
+        left: 56%;
+    }
+}
+
+
+// Средние девайсы («таблетки», < 992px) 
+@media (max-width: 991.98px) {
+    .header-text .button {
+        width: 335px !important; 
+        height: 81px !important;
+        font-size: 16px !important;
+        border: 10px solid #434444 !important;
+        margin-top: 25px !important;
+    }
+    .help .button {
+        width: 315px;
+        height: 61px;
+        font-size: 16px;
+    }
+    header .header-text .h1 {
+        font-size: 62px;
+    }
+    .menu-nav ul li a {
+        font-size: 50px;
+    }
+    .help .lorem {
+        font-size: 18px;
+    }
+    .servises .service-boxes {
+        padding: 0 20px;  
+    }
+    .portfolio .owl-item .item .slider-text {
+        height: auto;
+    }
+    .logo-ds {
+        display: none;
+    }
+    footer .logo .logo-mob {
+        display: block;
+    }
+    footer .footer-text {
+        justify-content: center;
+    }
+    footer .social {
+        justify-content: flex-end;
+    }
+}
+
+
+// Малые девайсы («ландшафтные», < 768px)
+@media (max-width: 768px) {
+    header .header-text .text {
+        font-size: 18px;
+    }
+    header .header-text .h1 {
+        font-size: 44px;
+    }
+    header .header-text .header-lorem {
+        font-size: 18px;
+    }
+    .logo-mob {
+        display: block;
+    }
+    .logo-ds {
+        display: none;
+    }
+    header .top-line {
+        padding: 0 30px;
+        padding-top: 25px;
+    }
+    .help .owl-item .item {
+        width: 550px;
+        height: auto;
+    }
+    .help .owl-item .item .review {
+        padding: 0 20px;
+    }
+    .help .owl-item .item .name {
+        font-size: 16px;
+        padding: 40px;
+    }
+    .help {
+        height: auto;
+    }
+    .prev {
+        left: 41%;
+        bottom: 15px;
+    }
+    .next {
+        left: 59%;
+        bottom: 15px
+    }
+    .help .owl-dots {
+        bottom: 22px;
+    }
+    .menu-nav ul {
+        height: 50vh;
+    }
+    .servises .service-boxes .service {
+        height: auto;
+    }
+    .servises .service-boxes .service .circle{
+        left:50%;
+    }
+    .portfolio .owl-dots {
+        bottom: 20px;
+    }
+    .contact .contact-form {
+        width: 100%;
+    }
+}
+
+
+// Экстрамалые девайсы («телефоны», < 576px)
+@media (max-width: 575.98px) {
+    .menu-nav ul {
+        height: 55vh;
+        position: relative;
+        top: 3vh;
+    }
+    header .header-text .text {
+        font-size: 16px;
+    }
+    header .header-text .h1 {
+        font-size: 28px;
+    }
+    header .header-text .header-lorem {
+        font-size: 16px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    header .header-text {
+        margin-top: 50px;
+    }
+    .menu-nav ul li a {
+        font-size: 24px;
+    }
+    header .header-text .button {
+        width: 85% !important;    
+    }
+    .help .h2 {
+        font-size: 24px;
+        line-height: 33px
+    }
+    .help .lorem {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .help .owl-item .item {
+        width: 85vw
+    }
+    .prev {
+        left: 35%;
+        bottom: 15px;
+    }
+    .next {
+        left: 65%;
+        bottom: 15px
+    }
+    .help .quote {
+        bottom: 730px;
+    }
+    .help .owl-item .item .review {
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    .contact .sbm {
+        width: 100%;
+    }
+    footer {
+        padding: 30px;
+    }
+    footer .footer-text {
+        margin-top: 25px;
+    }
+    footer .social a {
+        font-size: 24px;
+    }
+    .contact .sbm {
+        font-size: 20px;
+    }
+    .portfolio-text .h2 {
+        margin-top: 50px;
+    }
+    .help .how {
+        margin-top: 50px;
+    }
+    .servises-text {
+        margin-top: 50px;
+    }
+    .contact-text .h2 {
+        font-size: 32px;
+    }
+}
+@media (max-width: 390px) {
+    .portfolio-text .h2 {
+        font-size: 24px;
+        margin-top: 50px;
+    }
+    .prev {
+        left: 30%;
+    }
+    .next {
+        left: 70%;
+    }
+    .servises-text .h2 {
+        font-size: 24px;
+    }
+    .servises-text .lorem {
+        font-size: 14px;
+    }
+    .servises .service-boxes .service .circle {
+        width: 89px;
+        height: 89px;
+    }
+    .servises .service-boxes .service-name {
+        font-size: 18px;
+    }
+    .service-lorem {
+        font-size: 14px !important;
+    }
+    .portfolio-text .lorem {
+        font-size: 14px;
+        margin-bottom: -70px;
+    }
+    .contact-text .h2 {
+        font-size: 24px;
+    }
+    .contact .sbm {
+        font-size: 16px;
+        width: 315px;
+        height: 61px;
+    }
+    footer .social a {
+        font-size: 18px;
+        margin-right: 10px;
+        &:last-child {
+                margin: 0;
+        }
+    }
+    .help .how {
+        margin-top: 50px;
+    }
+    .servises-text {
+    margin-top: 50px;
+    }
+}
