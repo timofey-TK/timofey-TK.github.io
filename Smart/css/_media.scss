@@ -42,6 +42,20 @@
         .services__about {
             margin-top: 5rem;
         }
+        .header .menu-hambg {
+            width: 90vw;
+            right: -90vw;
+        }
+        .header .list-item {
+            width: 90%;
+            border-bottom: 1px solid #000;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            margin-top: 20px;
+        }
     }
 }
  
