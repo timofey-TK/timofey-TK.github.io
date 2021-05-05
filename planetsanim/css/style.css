@@ -294,7 +294,7 @@ header {
   z-index: -1 !important;
 }
 .hiden {
-  opacity: 0.1 !important;
+  opacity: 0 !important;
 }
 .hiden .planet,
 .hiden .star,
