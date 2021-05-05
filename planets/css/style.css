@@ -179,7 +179,7 @@ header {
   opacity: 0 !important;
 }
 .hiden {
-  opacity: 0.1 !important;
+  opacity: 0 !important;
 }
 .hiden .planet,
 .hiden .star {
