@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Planets</title>
+
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -72,7 +73,7 @@
             </div>
           </div>
           <div class="orbit" id="products">
-            <a href="#1" class="planet">Программные продукты</a>
+            <div class="planet">Программные продукты</div>
             <div class="hiden-planet invisible">SiTTELLE</div>
             <div class="hiden-planet invisible">ПО СМИК</div>
             <div class="hiden-planet invisible">ПО СМИС</div>
@@ -82,7 +83,8 @@
             <object id="j" data="svg/orbit1.svg" type="image/svg+xml"></object>
           </div>
           <div class="orbit" id="systems">
-            <a href="#2" class="planet">Системы</a>
+            <p class="planet">Системы</p>
+
             <div class="hiden-planet invisible">
               <p>СМИК</p>
               <object
@@ -121,19 +123,58 @@
             <object data="svg/orbit2.svg" type="image/svg+xml"></object>
           </div>
           <div class="orbit" id="solutions">
-            <a href="#3" class="planet">Отраслевые решения</a>
-            <div class="star" id="star2"></div>
-            <div class="star" id="star3"></div>
-            <div class="star" id="star1"></div>
-            <div class="star" id="star4"></div>
-            <div class="star" id="star5"></div>
-            <div class="star" id="star6"></div>
-            <div class="star" id="star7"></div>
-            <div class="star" id="star8"></div>
-            <div class="star" id="star9"></div>
-            <div class="star" id="star10"></div>
+            <div class="planet">Отраслевые решения</div>
+            <div class="star" id="star1">
+              <img src="icons/dam.png" alt="icon" />
+            </div>
+            <div class="star" id="star2">
+              <img src="icons/crane.png" alt="icon" />
+            </div>
+            <div class="star" id="star3">
+              <img src="icons/home.png" alt="icon" />
+            </div>
+            <div class="star" id="star4">
+              <img src="icons/electric-tower.png" alt="icon" />
+            </div>
+            <div class="star" id="star5">
+              <img src="icons/nuclear-plant.png" alt="icon" />
+            </div>
+            <div class="star" id="star6">
+              <img src="icons/oil-industry.png" alt="icon" />
+            </div>
+            <div class="star" id="star7">
+              <img src="icons/mining-cart.png" alt="icon" />
+            </div>
+            <div class="star" id="star8">
+              <img src="icons/retail.png" alt="icon" />
+            </div>
+            <div class="star" id="star9">
+              <img src="icons/motorway.png" alt="icon" />
+            </div>
+            <div class="star" id="star10">
+              <img src="icons/train-station.png" alt="icon" />
+            </div>
             <object data="svg/orbit3.svg" type="image/svg+xml"></object>
           </div>
+        </div>
+
+        <!-- Кнопки для мобильной версии -->
+        <div class="mobile-btns">
+          <a href="#" class="header-btn">
+            <span>Интеграционная Платформа <b>Xpert</b></span>
+            <img src="icons/arrow.png" alt="arrow" />
+          </a>
+          <a href="#" class="header-btn"
+            ><span>Программные продукты</span
+            ><img src="icons/arrow.png" alt="arrow"
+          /></a>
+          <a href="#" class="header-btn"
+            ><span>Системы</span><img src="icons/arrow.png" alt="arrow"
+          /></a>
+          <a href="#" class="header-btn"
+            ><span>Отраслевые решения</span
+            ><img src="icons/arrow.png" alt="arrow"
+          /></a>
         </div>
       </div>
 

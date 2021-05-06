@@ -6,7 +6,7 @@ var solutions_list = document.querySelector(".solutions_list");
 var header_list = document.querySelectorAll(".heafer-list__link");
 var accent1 = document.querySelector(".accent1");
 var box = document.querySelector(".box");
-
+var hl = document.querySelector(".header_list");
 function toogle_List() {
   header_list.forEach((el) => {
     el.classList.toggle("invisible");
@@ -32,6 +32,7 @@ sun.addEventListener("click", (e) => {
 });
 
 solutions_planet.addEventListener("click", (e) => {
+  hl.classList.toggle("hiden");
   box.classList.toggle("paused");
   solutions_planet.querySelector(".planet").classList.toggle("active");
   stopStars();
