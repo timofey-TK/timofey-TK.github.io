@@ -1,6 +1,6 @@
 # Памятка с кодом и полезными библиотеками
 ## Строки кода
-### Изменение активного класса у навигационных ссылок при скролле
+#### Изменение активного класса у навигационных ссылок при скролле
   ```javascript
   const sections = document.querySelectorAll("SECTIONS") 
   window.onscroll = function () {
@@ -18,7 +18,7 @@
   };
   ```
   
-### Плавный скролл через навигационные ссылки
+#### Плавный скролл через навигационные ссылки
 
 ```javascript
 const smoothLinks = document.querySelectorAll('LINKS');
