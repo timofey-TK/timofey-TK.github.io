@@ -18,7 +18,7 @@
   };
   ```
   
-#### Плавный скролл через навигационные ссылки
+#### Плавный для якорных ссылок
 
 ```javascript
 const smoothLinks = document.querySelectorAll('LINKS');
