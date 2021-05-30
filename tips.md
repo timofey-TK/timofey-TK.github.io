@@ -41,7 +41,7 @@ for (let smoothLink of smoothLinks) {
 5. Библиотека анимаций - https://animate.style/ 
 6. Библиотека для анимации - https://animejs.com/
 7. Кастомные гамбургеры - https://codepen.io/ainalem/pen/GeMqdP
-8. Разделить текст на символы - http://letterizejs.com/'
+8. Разделить текст на символы - http://letterizejs.com/
 9. Просмотр изображений (lightbox) - https://github.com/biati-digital/glightbox
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
