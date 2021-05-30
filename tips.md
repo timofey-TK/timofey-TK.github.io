@@ -34,7 +34,5 @@ for (let smoothLink of smoothLinks) {
 };
 ````
 
-___
----
-
+#
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
