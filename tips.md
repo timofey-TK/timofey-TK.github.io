@@ -35,7 +35,7 @@ for (let smoothLink of smoothLinks) {
 ````
 ---
 # Библиотеки
-1.скролл библиотека - httpm/locomotivemtl/locomotive-scroll
+1. скролл библиотека - httpm/locomotivemtl/locomotive-scroll
 2. Эффекты на текст https://blotter.js.org/#/materials/LiquidDistortMaterial
 3. Слайдер - https://swiperjs.com/
 4. Анимация на скролл https://wowjs.uk/
