@@ -1,6 +1,6 @@
 # Строки кода
 
-## Классы ссылкам на скролл
+### Классы ссылкам на скролл
   ```const sections = document.querySelectorAll(".scroll")
   console.log(sections)
 
