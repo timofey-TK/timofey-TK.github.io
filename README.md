@@ -1,7 +1,8 @@
 # Строки кода
 
 ### Классы ссылкам на скролл
-  ```const sections = document.querySelectorAll(".scroll")
+  ```javascript
+  const sections = document.querySelectorAll(".scroll")
   console.log(sections)
 
   window.onscroll = function () {
