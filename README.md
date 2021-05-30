@@ -1,7 +1,7 @@
 # Строки кода
 
 ## Классы ссылкам на скролл
-  const sections = document.querySelectorAll(".scroll")
+  ```const sections = document.querySelectorAll(".scroll")
   console.log(sections)
 
   window.onscroll = function () {
@@ -17,3 +17,4 @@
       }
     })
   };
+  ```
