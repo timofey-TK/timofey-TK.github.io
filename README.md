@@ -1,7 +1,19 @@
-# Ткачёв Тимофей
-Мои работы:
+# Строки кода
 
-1. [Digital Crafters](https://timofey-tk.github.io/Digital%20Crafters/)
-2. [Dreams](https://timofey-tk.github.io/Dreams/)
-3. [Smart](https://timofey-tk.github.io/Smart/)
+## Классы ссылкам на скролл
+  const sections = document.querySelectorAll(".scroll")
+  console.log(sections)
 
+  window.onscroll = function () {
+    sections.forEach((el, i) => {
+      var top = el.offsetTop - 100;
+      var bottom = top + el.offsetHeight;
+      var scroll = window.pageYOffset
+      var id = el.getAttribute("id")
+      if (scroll > top && scroll < bottom) {
+        document.querySelector(".nav__link a.active").classList.remove('active')
+        var href = "#" + id
+        document.querySelector('a[href = "' + href + '"').classList.add('active')
+      }
+    })
+  };
