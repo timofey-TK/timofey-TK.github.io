@@ -1,4 +1,5 @@
-# Строки кода
+# Памятка с кодом и полезными библиотеками
+## Строки кода
 ### Изменение активного класса у навигационных ссылок при скролле
   ```javascript
   const sections = document.querySelectorAll("SECTIONS") 
@@ -33,7 +34,7 @@ for (let smoothLink of smoothLinks) {
 };
 ````
 ---
-# Библиотеки
+## Библиотеки
 1. Cкролл библиотека - https://github.com/locomotivemtl/locomotive-scroll
 2. Эффекты на текст - https://blotter.js.org/#/materials/LiquidDistortMaterial
 3. Слайдер - https://swiperjs.com/
