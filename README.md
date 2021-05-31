@@ -1,6 +1,6 @@
 # Памятка 
 ## Моё портфолио
-‎ https://timofey-tk.github.io/Digital Crafters/
+‎ https://timofey-tk.github.io/Digital%20Crafters/
 ‎ https://timofey-tk.github.io/Dreams/
 ‎ https://timofey-tk.github.io/Smart/
 ‎ https://timofey-tk.github.io/reclamaagent/
