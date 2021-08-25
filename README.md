@@ -51,6 +51,7 @@ for (let smoothLink of smoothLinks) {
 7. Кастомные гамбургеры - https://codepen.io/ainalem/pen/GeMqdP
 8. Разделить текст на символы - http://letterizejs.com/
 9. Просмотр изображений (lightbox) - https://github.com/biati-digital/glightbox
+10. Маска для телевонного инпута https://github.com/alexey-goloburdin/phoneinput
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
