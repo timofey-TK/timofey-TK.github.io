@@ -52,6 +52,7 @@ for (let smoothLink of smoothLinks) {
 8. Разделить текст на символы - http://letterizejs.com/
 9. Просмотр изображений (lightbox) - https://github.com/biati-digital/glightbox
 10. Маска для телефонного инпута https://github.com/alexey-goloburdin/phoneinput
+11. Видеоплеер https://plyr.io/
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
