@@ -40,6 +40,14 @@ for (let smoothLink of smoothLinks) {
   });
 };
 ````
+
+#### Css container
+
+```css
+section {
+  padding: 0 calc(50% - 590px);
+}
+````
 ---
 ## Библиотеки
 1. Cкролл библиотека - https://github.com/locomotivemtl/locomotive-scroll
