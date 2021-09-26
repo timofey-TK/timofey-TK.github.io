@@ -61,6 +61,7 @@ section {
 9. Просмотр изображений (lightbox) - https://github.com/biati-digital/glightbox
 10. Маска для телефонного инпута https://github.com/alexey-goloburdin/phoneinput
 11. Видеоплеер https://plyr.io/
+12. Аккардионе но на jQuery https://accordion.js.org/
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
