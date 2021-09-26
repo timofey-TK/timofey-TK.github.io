@@ -7,7 +7,7 @@
 * https://timofey-tk.github.io/planetsanim/
 ---
 ## Строки кода
-#### Изменение активного класса у навигационных ссылок при скролле
+#### Изменение активного класса у навигационных ссылок при скролле (jQuery http://jsfiddle.net/bonilka/p7sgwg4L/)
   ```javascript
   const sections = document.querySelectorAll("SECTIONS") 
   window.onscroll = function () {
@@ -25,7 +25,7 @@
   };
   ```
   
-#### Плавный для якорных ссылок (jQuery http://jsfiddle.net/bonilka/p7sgwg4L/)
+#### Плавный для якорных ссылок (jQuery https://realadmin.ru/coding/js-scroll.html)
 
 ```javascript
 const smoothLinks = document.querySelectorAll('LINKS');
