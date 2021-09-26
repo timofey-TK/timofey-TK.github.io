@@ -25,7 +25,7 @@
   };
   ```
   
-#### Плавный для якорных ссылок
+#### Плавный для якорных ссылок (jQuery http://jsfiddle.net/bonilka/p7sgwg4L/)
 
 ```javascript
 const smoothLinks = document.querySelectorAll('LINKS');
