@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      ,
+      maximum-scale="1.0"
+    />
+
+    <title>Consortium</title>
+    <!-- Стили и Шрифты-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <!-- Стили билиотек -->
+    <link rel="stylesheet" href="scripts/owlcarousel/owl.carousel.min.css" />
+  </head>
+
+  <body>
+    <!-- =============== Шапка сайта =============== -->
+    <header>
+      <div class="logo">
+        <img src="media/logo.svg" alt="logo" />
+        <span class="logo__text">Маркетинговое агентство</span>
+      </div>
+      <button class="hamburger" onclick="openModal('menu', true)">
+        <img src="media/icons/hamburger.svg" alt="hamburger" />
+      </button>
+      <div class="header-wrapper only-mobile-modal" data-modal="menu">
+        <button onclick="closeActiveModal()" class="only-mobile-cross">
+          <img src="media/icons/cross.svg" alt="cross" />
+        </button>
+        <p class="description">Работаем по всей РФ</p>
+        <div class="top-info">
+          <a href="mailto:info@consortium.su" class="mail-link accent-color"
+            >info@consortium.su</a
+          >
+          <button class="tel-text accent-color bold" onclick="openModal(1)">
+            Заказать звонок
+          </button>
+        </div>
+        <div class="social">
+          <a href="#" class="social__link">
+            <img src="media/icons/whatsapp.svg" alt="whatsapp" />
+          </a>
+          <a href="#" class="social__link">
+            <img src="media/icons/telegram.svg" alt="telegram" />
+          </a>
+        </div>
+        <div class="header-spot-right">
+          <img src="media/spot6.svg" alt="" />
+        </div>
+        <div class="header-spot-left"><img src="media/spot5.svg" alt="" /></div>
+      </div>
+    </header>
+    <!-- =============== Главная секция сайта =============== -->
+    <section class="main">
+      <div class="main__text">
+        <h1 class="main__title section-title">
+          Привлекаем клиентов из Интернета за <span class="accent-color"
+            >% с продаж</span
+          >
+        </h1>
+        <p class="main__description">
+          Полностью берем на себя продвижение вашего бизнеса. Вы оплачиваете
+          только рекламный бюджет и комфортный процент от продаж.
+        </p>
+        <button class="btn main__btn fw-900">Хочу в партнёрство</button>
+        <p class="caption">
+          Вы можете протестировать интернет маркетинг для вашего бизнеса за 3
+          дня и 3000 рублей рекламного бюджета
+        </p>
+      </div>
+      <img
+        src="media/illustration1.webp"
+        alt="illustration "
+        class="main__illustration"
+      />
+    </section>
+    <!-- =============== Секция Сотрудничества =============== -->
+    <section class="cooperation">
+      <h1 class="section-title title-with-bg">
+        Сотрудничество по системе Win-Win
+      </h1>
+      <ul class="cooperationtem__list">
+        <li class="cooperationtem__list__item">
+          <span class="number_bg fw-900">1</span>
+          <p class="item__name">Оплата за результат</p>
+          <p class="description">
+            Мы зарабатываем, только тогда, когда зарабатываете вы. Вы не платите
+            за работу, которая не приносит денег.
+          </p>
+        </li>
+        <li class="cooperationtem__list__item">
+          <span class="number_bg">2</span>
+          <p class="item__name">Работа за наш счёт</p>
+          <p class="description">
+            Создание сайта, настройка и ведение Яндекс.Директ, Google Ads,
+            Facebook, внедрение аналитики, эмейл-маркетинг, чат-боты и десятки
+            других способов продвижения.
+          </p>
+        </li>
+        <li class="cooperationtem__list__item">
+          <span class="number_bg">3</span>
+          <p class="item__name">Беззаботное сотрудничество</p>
+          <p class="description">
+            Наш заработок привязан к результату. Нас не нужно пинать. Делаем
+            работу, как для себя. Мы заинтересованы в сотрудничестве в течение
+            многих лет.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- =============== Секция Мы vs Другие =============== -->
+    <section class="versus">
+      <h1 class="section-title versus__title">
+        Как работаем мы <span class="versus-caption">vs</span> Другие агентства
+      </h1>
+      <div class="versus__tables">
+        <!-- Мы -->
+        <p class="table-mobile-name">Как работаем мы</p>
+        <div class="table we">
+          <div class="table__name">
+            <img src="media/icons/free.svg" alt="ico" />
+            <p class="bold">Все работы за наш счёт:</p>
+          </div>
+
+          <div class="versus__table-items">
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">Разработка сайта</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">0 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">Настройка любой рекламы</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">0 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">
+                Ведение и управление рекламой
+              </p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">0 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">E-mail-маркетинг</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">0 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">Создание автоворонок</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">0 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">Разработка чат-ботов</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">0 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">
+                Размещение на маркетплейсах
+              </p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">0 ₽</p>
+            </div>
+          </div>
+          <p class="table__caption">Отвечаем за продажи</p>
+          <p class="table__caption">
+            Итого: <span class="accent-color fw-700">платите за результат</span>
+          </p>
+          <p class="table__caption">
+            Мы разделяем ваши риски. Вы платите только комфортный процент с
+            продажи
+          </p>
+          <div class="table__spot">
+            <img src="media/spot1.svg" alt="spot" />
+          </div>
+        </div>
+        <p class="mobile-versus-caption">vs</p>
+        <!-- Other -->
+        <p class="table-mobile-name">Другие агентства</p>
+        <div class="table other">
+          <div class="table__name">
+            <img src="media/icons/free.svg" alt="ico" />
+            <p class="bold">Все работы за наш счёт:</p>
+          </div>
+
+          <div class="versus__table-items">
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">Разработка сайта</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">от 50 000 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">Настройка любой рекламы</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">от 40 000 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">
+                Ведение и управление рекламой
+              </p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">от 20 000 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">E-mail-маркетинг</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">от 25 000 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">Создание автоворонок</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">от 90 000 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">Разработка чат-ботов</p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">от 30 000 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">
+                Размещение на маркетплейсах
+              </p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">от 20 000 ₽</p>
+            </div>
+            <div class="versus__table-item">
+              <p class="versus__table-item__name">
+                Любые консультации и доработки
+              </p>
+              <div class="versus__table-item__line"></div>
+              <p class="versus__table-item__price">платно</p>
+            </div>
+          </div>
+          <p class="table__caption">
+            Отвечают за заявки, продажи не зона ответсвенности
+          </p>
+          <p class="table__caption">
+            Итого: <span class="accent-color fw-700">расходы в 250 000 ₽</span>
+          </p>
+          <p class="table__caption">
+            Приходится платить за работу, которая не приносит денег
+          </p>
+          <div class="table__spot">
+            <img src="media/spot2.svg" alt="spot" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============== Секция с скриншотом почты =============== -->
+    <section class="mail">
+      <h1 class="section-title title-with-bg mail__title">
+        Сотрудничество по системе Win-Win
+      </h1>
+      <div class="mail__img-content">
+        <div class="macbook">
+          <img src="media/macbook.webp" alt="macbook" />
+          <div class="macbook__screenshot-cicrcle bold">
+            Скриншот моей почты
+          </div>
+        </div>
+        <img
+          src="media/spot3.svg"
+          alt="spot"
+          class="mail__img-content__spot spot-right"
+        />
+        <img
+          src="media/spot4.svg"
+          alt="spot"
+          class="mail__img-content__spot spot-left"
+        />
+        <img
+          src="media/dots.svg"
+          alt="dots"
+          class="mail__img-content__dots dots-left"
+        />
+        <img
+          src="media/dots.svg"
+          alt="dots"
+          class="mail__img-content__dots dots-right"
+        />
+        <div class="mail__img-content__application-text bold">
+          <p>Заявки наших клиентов</p>
+          <img src="media/arrow.svg" alt="arrow" />
+        </div>
+      </div>
+    </section>
+    <!-- =============== Секция Результаты наших партнёров =============== -->
+    <section class="partner_results">
+      <h1 class="section-title title-with-bg partner_results__title">
+        Результаты наших партнёров
+      </h1>
+      <div class="partner_results__carousel owl-carousel">
+        <!-- Элемент слайда -->
+        <div class="item">
+          <div class="item__img">
+            <img src="media/CRM.webp" alt="crm" />
+          </div>
+          <div class="item__body">
+            <div class="body__top">
+              <a href="crmlinkage.ru" class="accent-color company-link bold"
+                >crmlinkage.ru</a
+              >
+              <img
+                src="media/company-logo.webp"
+                alt="logo"
+                class="company-logo"
+              />
+            </div>
+            <p class="description niche">
+              <span class="fw-700">Ниша: </span>Внедрение CRM систем для
+              строительных компаний
+            </p>
+            <p class="description done">
+              <span class="fw-700">Сделано:</span> Одностраничный сайт под
+              разные направления. Яндекс.Директ, Google Ads, таргетированная
+              реклама Facebook и Instagram. Постоянная поддержка и улучшение
+              проекта
+            </p>
+            <p class="partner_result bold">Результат: 20 заявок в месяц</p>
+          </div>
+        </div>
+        <!-- Элемент слайда -->
+        <div class="item">
+          <div class="item__img">
+            <img src="media/CRM.webp" alt="crm" />
+          </div>
+          <div class="item__body">
+            <div class="body__top">
+              <a href="crmlinkage.ru" class="accent-color company-link"
+                >crmlinkage.ru</a
+              >
+              <img
+                src="media/company-logo.webp"
+                alt="logo"
+                class="company-logo"
+              />
+            </div>
+            <p class="description niche">
+              <span class="fw-700">Ниша: </span>Внедрение CRM систем для
+              строительных компаний
+            </p>
+            <p class="description done">
+              <span class="fw-700">Сделано:</span> Одностраничный сайт под
+              разные направления. Яндекс.Директ, Google Ads, таргетированная
+              реклама Facebook и Instagram. Постоянная поддержка и улучшение
+              проекта
+            </p>
+            <p class="partner_result bold">Результат: 20 заявок в месяц</p>
+          </div>
+        </div>
+        <!-- Элемент слайда -->
+        <div class="item">
+          <div class="item__img">
+            <img src="media/CRM.webp" alt="crm" />
+          </div>
+          <div class="item__body">
+            <div class="body__top">
+              <a href="crmlinkage.ru" class="accent-color company-link"
+                >crmlinkage.ru</a
+              >
+              <img
+                src="media/company-logo.webp"
+                alt="logo"
+                class="company-logo"
+              />
+            </div>
+            <p class="description niche">
+              <span class="fw-700">Ниша: </span>Внедрение CRM систем для
+              строительных компаний
+            </p>
+            <p class="description done">
+              <span class="fw-700">Сделано:</span> Одностраничный сайт под
+              разные направления. Яндекс.Директ, Google Ads, таргетированная
+              реклама Facebook и Instagram. Постоянная поддержка и улучшение
+              проекта
+            </p>
+            <p class="partner_result bold">Результат: 20 заявок в месяц</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============== Секция С онлайн калькулятором и формой =============== -->
+    <section class="get_plan">
+      <h1 class="section-title text-center">
+        Получите готовый медиаплан в течение 10 минут
+      </h1>
+      <div class="get-plan__wrapper">
+        <!-- ----------- Калькулятор ------------->
+        <div class="calculator">
+          <p class="description bold">
+            Благодаря медиаплану вы сможете контролировать:
+          </p>
+          <ul class="calculator__list">
+            <li>примерный месячный бюджет каждого канала;</li>
+            <li>стоимость и количество целевых заявок;</li>
+          </ul>
+          <p class="calculator__name">Онлайн-калькулятор стоимости заявки</p>
+          <div class="calc-form js-calc">
+            <div class="group-top">
+              <div class="group-cols">
+                <div class="group-col">
+                  <div class="label">Рекламный бюджет:</div>
+                  <div class="field">
+                    <div class="input">
+                      <input
+                        type="text"
+                        value="50000"
+                        class="rek-b onlyDigits number-l"
+                      />
+                      <div class="rubl">₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="group-col text-center">
+                  <div class="label">Показов рекламы:</div>
+                  <div class="field">
+                    <div class="value rek-show">27</div>
+                  </div>
+                </div>
+                <div class="group-col text-center">
+                  <div class="label">Переходов на сайт:</div>
+                  <div class="field">
+                    <div class="value transit">33&nbsp;333</div>
+                  </div>
+                </div>
+                <div class="group-col">
+                  <div class="label">Цена клика:</div>
+                  <div class="field">
+                    <div class="input">
+                      <input
+                        type="text"
+                        value="15"
+                        class="price-click onlyDigits"
+                      />
+                      <div class="rubl">₽</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="group-col">
+                  <div class="label">CTR:</div>
+                  <div class="field">
+                    <div class="input">
+                      <input type="text" value="12" class="ctr onlyDigits" />
+                    </div>
+                  </div>
+                </div>
+                <div class="group-col">
+                  <div class="label">Конверсия сайта:</div>
+                  <div class="field">
+                    <div class="input">
+                      <input type="text" value="2" class="convers onlyDigits" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group-bootom">
+              <div class="group-cols text-center">
+                <div class="group-col full">
+                  <div class="label">Количество заявок:</div>
+                  <div class="field">
+                    <div class="value dark request">999</div>
+                  </div>
+                </div>
+                <div class="group-col full">
+                  <div class="label">Стоимость заявки:</div>
+                  <div class="field">
+                    <div class="value dark request-price">500.50</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ----------- Форма с данными ------------->
+        <div class="form">
+          <form action="">
+            <div class="form__input-field">
+              <label for="niche"> Ниша </label>
+              <input type="text" id="niche" name="" />
+            </div>
+            <div class="form__input-field">
+              <label for="region"> Регион </label>
+              <input type="text" id="region" name="" />
+            </div>
+            <div class="form__input-field">
+              <label for="name"> Имя </label>
+              <input type="text" id="name" name="" />
+            </div>
+            <div class="form__input-field">
+              <label for="tel"> Телефон </label>
+              <input
+                type="tel"
+                data-tel-input
+                maxlength="18"
+                id="tel"
+                placeholder="+7 (XXX) XXX-XX-XX"
+                name=""
+              />
+            </div>
+            <div class="checkbox-field">
+              <input type="checkbox" name="" id="checkbox" required />
+              <label for="checkbox" class="caption">
+                Я принимаю <a href="#">условия предоставления услуг</a>
+              </label>
+            </div>
+            <button type="submit" class="btn form__btn">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- =============== Секция Сотрудничества =============== -->
+
+    <!-- Элементы для вызова модальных окон, могут быть любые -->
+
+    <button onclick="openModal(1)" href="#" class="js-open-modal">
+      Открыть окно 1
+    </button>
+    <a href="#" class="js-open-modal" data-modal="2">Открыть окно 2</a>
+
+    <!-- Несколько модальных окон -->
+
+    <div class="modal" data-modal="1">
+      <!--   Svg иконка для закрытия окна  -->
+      <button onclick="closeActiveModal()">
+        <svg
+          class="modal__cross js-modal-close"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+          />
+        </svg>
+      </button>
+      <p class="modal__title">Заголовок окна 1</p>
+    </div>
+
+    <div class="modal" data-modal="2">
+      <!--   Svg иконка для закрытия окна  -->
+      <button onclick="closeActiveModal()">
+        <svg
+          class="modal__cross js-modal-close"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"
+          />
+        </svg>
+      </button>
+      <p class="modal__title">Заголовок окна 2</p>
+    </div>
+
+    <!-- Подложка под модальным окном -->
+    <div class="overlay js-overlay-modal"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="/scripts/owlcarousel/owl.carousel.min.js"></script>
+    <script src="scripts/landing-calc.js"></script>
+    <script src="scripts/modal.js"></script>
+    <script src="scripts/phoneinput.js"></script>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
