@@ -7,7 +7,7 @@
 * https://timofey-tk.github.io/planetsanim/
 ---
 ## Строки кода
-#### Изменение активного класса у навигационных ссылок при скролле
+#### Изменение активного класса у навигационных ссылок при скролле (jQuery http://jsfiddle.net/bonilka/p7sgwg4L/)
   ```javascript
   const sections = document.querySelectorAll("SECTIONS") 
   window.onscroll = function () {
@@ -25,7 +25,7 @@
   };
   ```
   
-#### Плавный для якорных ссылок
+#### Плавный для якорных ссылок (jQuery https://realadmin.ru/coding/js-scroll.html)
 
 ```javascript
 const smoothLinks = document.querySelectorAll('LINKS');
@@ -40,6 +40,14 @@ for (let smoothLink of smoothLinks) {
   });
 };
 ````
+
+#### Css container
+
+```css
+section {
+  padding: 0 calc(50% - 590px);
+}
+````
 ---
 ## Библиотеки
 1. Cкролл библиотека - https://github.com/locomotivemtl/locomotive-scroll
@@ -51,6 +59,9 @@ for (let smoothLink of smoothLinks) {
 7. Кастомные гамбургеры - https://codepen.io/ainalem/pen/GeMqdP
 8. Разделить текст на символы - http://letterizejs.com/
 9. Просмотр изображений (lightbox) - https://github.com/biati-digital/glightbox
+10. Маска для телефонного инпута https://github.com/alexey-goloburdin/phoneinput
+11. Видеоплеер https://plyr.io/
+12. Аккардионе но на jQuery https://accordion.js.org/
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
