@@ -17,6 +17,9 @@ function openModal(modalId, IsMobile = false) {
 function closeActiveModal() {
     document.querySelector('.active-modal').classList.remove('active-modal');
     overlay.classList.remove('active-modal');
+    if (document.querySelector('.active-modal')) {
+        closeActiveModal()
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

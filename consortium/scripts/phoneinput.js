@@ -3,7 +3,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var getInputNumbersValue = function (input) {
         // Return stripped input value — just numbers
-        return input.value.replace(/\D/g, '');
+        var a = input.value.replace(/\D/g, '');
+        document.querySelector("#modal-tel-hiden").value = a
+        document.querySelector("#tel-hiden").value = a
+        return a
     }
 
     var onPhonePaste = function (e) {

@@ -38,7 +38,10 @@
           <a href="mailto:info@consortium.su" class="mail-link accent-color"
             >info@consortium.su</a
           >
-          <button class="tel-text accent-color bold" onclick="openModal(1)">
+          <button
+            class="tel-text accent-color bold"
+            onclick="openModal('phone')"
+          >
             Заказать звонок
           </button>
         </div>
@@ -68,7 +71,9 @@
           Полностью берем на себя продвижение вашего бизнеса. Вы оплачиваете
           только рекламный бюджет и комфортный процент от продаж.
         </p>
-        <button class="btn main__btn fw-900">Хочу в партнёрство</button>
+        <button class="btn main__btn fw-900" onclick="openModal('empty')">
+          Хочу в партнёрство
+        </button>
         <p class="caption">
           Вы можете протестировать интернет маркетинг для вашего бизнеса за 3
           дня и 3000 рублей рекламного бюджета
@@ -407,57 +412,65 @@
           <div class="calc-form js-calc">
             <div class="group-top">
               <div class="group-cols">
-                <div class="group-col">
-                  <div class="label">Рекламный бюджет:</div>
-                  <div class="field">
-                    <div class="input">
-                      <input
-                        type="text"
-                        value="50000"
-                        class="rek-b onlyDigits number-l"
-                      />
-                      <div class="rubl">₽</div>
+                <div class="group-row">
+                  <div class="group-col">
+                    <div class="label">Рекламный бюджет:</div>
+                    <div class="field">
+                      <div class="input">
+                        <input
+                          type="text"
+                          value="50000"
+                          class="rek-b onlyDigits number-l"
+                        />
+                        <div class="rubl">₽</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="group-col text-center">
+                    <div class="label">Показов рекламы:</div>
+                    <div class="field">
+                      <div class="value rek-show">27</div>
+                    </div>
+                  </div>
+                  <div class="group-col text-center">
+                    <div class="label">Переходов на сайт:</div>
+                    <div class="field">
+                      <div class="value transit">33&nbsp;333</div>
                     </div>
                   </div>
                 </div>
-                <div class="group-col text-center">
-                  <div class="label">Показов рекламы:</div>
-                  <div class="field">
-                    <div class="value rek-show">27</div>
-                  </div>
-                </div>
-                <div class="group-col text-center">
-                  <div class="label">Переходов на сайт:</div>
-                  <div class="field">
-                    <div class="value transit">33&nbsp;333</div>
-                  </div>
-                </div>
-                <div class="group-col">
-                  <div class="label">Цена клика:</div>
-                  <div class="field">
-                    <div class="input">
-                      <input
-                        type="text"
-                        value="15"
-                        class="price-click onlyDigits"
-                      />
-                      <div class="rubl">₽</div>
+                <div class="group-row">
+                  <div class="group-col">
+                    <div class="label">Цена клика:</div>
+                    <div class="field">
+                      <div class="input">
+                        <input
+                          type="text"
+                          value="15"
+                          class="price-click onlyDigits"
+                        />
+                        <div class="rubl">₽</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="group-col">
-                  <div class="label">CTR:</div>
-                  <div class="field">
-                    <div class="input">
-                      <input type="text" value="12" class="ctr onlyDigits" />
+                  <div class="group-col">
+                    <div class="label">CTR:</div>
+                    <div class="field">
+                      <div class="input">
+                        <input type="text" value="12" class="ctr onlyDigits" />
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="group-col">
-                  <div class="label">Конверсия сайта:</div>
-                  <div class="field">
-                    <div class="input">
-                      <input type="text" value="2" class="convers onlyDigits" />
+                  <div class="group-col">
+                    <div class="label">Конверсия сайта:</div>
+                    <div class="field">
+                      <div class="input">
+                        <input
+                          type="text"
+                          value="2"
+                          class="convers onlyDigits"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -465,16 +478,18 @@
             </div>
             <div class="group-bootom">
               <div class="group-cols text-center">
-                <div class="group-col full">
-                  <div class="label">Количество заявок:</div>
-                  <div class="field">
-                    <div class="value dark request">999</div>
+                <div class="group-row center">
+                  <div class="group-col full">
+                    <div class="label">Количество заявок:</div>
+                    <div class="field">
+                      <div class="value dark request">999</div>
+                    </div>
                   </div>
-                </div>
-                <div class="group-col full">
-                  <div class="label">Стоимость заявки:</div>
-                  <div class="field">
-                    <div class="value dark request-price">500.50</div>
+                  <div class="group-col full">
+                    <div class="label">Стоимость заявки:</div>
+                    <div class="field">
+                      <div class="value dark request-price">500.50</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -483,18 +498,29 @@
         </div>
         <!-- ----------- Форма с данными ------------->
         <div class="form">
-          <form action="">
+          <iframe
+            name="hidden_iframe2"
+            id="hidden_iframe2"
+            style="display: none"
+          ></iframe>
+          <form
+            action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe04uXqXIi8WkZ2gXKDBL0Io619qB8TJVuQgWrvIUvesrIZaw/formResponse"
+            method="post"
+            target="hidden_iframe2"
+            onsubmit="openModal('thx')"
+            id="mainForm"
+          >
             <div class="form__input-field">
               <label for="niche"> Ниша </label>
-              <input type="text" id="niche" name="" />
+              <input type="text" id="niche" name="entry.855306009" />
             </div>
             <div class="form__input-field">
               <label for="region"> Регион </label>
-              <input type="text" id="region" name="" />
+              <input type="text" id="region" name="entry.581661160" />
             </div>
             <div class="form__input-field">
               <label for="name"> Имя </label>
-              <input type="text" id="name" name="" />
+              <input type="text" id="name" name="entry.732872245" />
             </div>
             <div class="form__input-field">
               <label for="tel"> Телефон </label>
@@ -504,30 +530,577 @@
                 maxlength="18"
                 id="tel"
                 placeholder="+7 (XXX) XXX-XX-XX"
-                name=""
+                name="entry.57072136"
               />
             </div>
+            <input type="text" id="tel-hiden" disabled />
+            <p id="message"></p>
             <div class="checkbox-field">
               <input type="checkbox" name="" id="checkbox" required />
               <label for="checkbox" class="caption">
                 Я принимаю <a href="#">условия предоставления услуг</a>
               </label>
             </div>
-            <button type="submit" class="btn form__btn">Отправить</button>
+            <div onclick="ValidPhone()" class="btn form__btn">Отправить</div>
           </form>
         </div>
       </div>
     </section>
+    <!-- =============== Секция Критерии =============== -->
+    <section class="criterions">
+      <h1 class="section-title">Критерии сотрудничества</h1>
+      <div class="criterions-list">
+        <div class="criterion">
+          <img src="media/icons/benefits.svg" alt="icon" />
+          <div class="criterion-text">
+            <p class="criterion-name fw-700">
+              Чистая прибыль с 1 продажи
+              <span class="accent-color">от 10 000 ₽</span>
+            </p>
+            <p class="criterion__description description">
+              Чтобы реклама окупала бюджет, приносила прибыль и вам и нам
+              требуется высокая маржинальность и большой средний чек
+            </p>
+          </div>
+        </div>
+        <div class="criterion">
+          <img src="media/icons/progress.svg" alt="icon" />
+          <div class="criterion-text">
+            <p class="criterion-name fw-700">
+              Работающий бизес <span class="accent-color">от 1 года</span>
+            </p>
+            <p class="criterion__description description">
+              Мы не работаем со стартапами. У вас должны быть клиенты, отдел
+              продаж и продукт за который не стыдно
+            </p>
+          </div>
+        </div>
+        <div class="criterion">
+          <img src="media/icons/location.svg" alt="icon" />
+          <div class="criterion-text">
+            <p class="criterion-name fw-700">
+              Продаете по РФ или в городе с населением
+              <span class="accent-color">+500 000</span>
+            </p>
+            <p class="criterion__description description">
+              Иными словами на на ваш товар/услуги должен быть спрос. Нас
+              интересует привлечение больших потоков клиентов для своих
+              партнеров
+            </p>
+          </div>
+        </div>
+        <div class="criterion">
+          <img src="media/icons/aim.svg" alt="icon" />
+          <div class="criterion-text">
+            <p class="criterion-name fw-700">
+              Вы нацелены <span class="accent-color">на результат</span>
+            </p>
+            <p class="criterion__description description">
+              Вы не отвлекаете нас по мелочам. Не стараетесь контролировать
+              каждый этап работы. На нас тяжело влиять. Вы доверятесь
+              специалистам. Мы доводим проект до результата
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="criterion alone">
+        <img src="media/icons/girl.svg" alt="icon" />
+        <div class="criterion-text">
+          <p class="criterion-name fw-700">
+            Вы <span class="accent-color">честный и порядочный </span> человек
+          </p>
+          <p class="criterion__description description">
+            Мы настроены на сотрудничество в течение многих лет. Эмоциональный
+            фон крайне важен для продуктивного партнерства в долгосрочной
+            перспективе.
+          </p>
+        </div>
+        <button
+          class="mobile-more accent-color bold"
+          onclick="showMore('.criterions')"
+        >
+          Посмотреть все критерии
+        </button>
+      </div>
+    </section>
+    <!-- =============== Секция C кем не работаем =============== -->
+    <section class="not-working">
+      <h1 class="section-title">
+        С кем мы <span class="red">не</span> работаем
+      </h1>
+      <div class="not-working__list">
+        <ul class="group">
+          <li>Одиночные частные специалисты</li>
+          <li>Агенства недвижимости/риелторы, турагентства</li>
+          <li>Интернет-магазины</li>
+          <li>Салоны красоты</li>
+          <li>Веб-студии</li>
+          <li>Кредиты/ипотека/микрозаймы</li>
+          <li>Алкоголь, сигареты и другие неэкологичные товары и услуги</li>
+        </ul>
+        <ul class="group">
+          <li>Маги/гадалки/астрологи</li>
+          <li>Инфобизнес</li>
+          <li>Прямые конкуренты наших текущих партеров</li>
+          <li>
+            Халявщики. Хотят получить большой результат, но не готовы ничего
+            вкладывать
+          </li>
+          <li>
+            Уже настроена и хорошо работает реклама в большинстве рекламных
+            систем. Вы хотите, чтобы мы взяли на себя остальные.
+          </li>
+        </ul>
+      </div>
+      <img
+        src="media/illustration2.webp"
+        alt="illustration"
+        class="illustration-bg"
+      />
+      <img
+        src="media/illustration2-mobile.webp"
+        alt="illustration"
+        class="illustration-bg-mobile"
+      />
+      <img
+        src="media/bg-circles2.svg"
+        alt="bg"
+        class="not-working__circles-only-mobile"
+      />
 
+      <img src="media/bg-circles.svg" alt="bg" class="not-working__circles" />
+      <img src="media/spot7.svg" alt="spot" class="not-working__spot" />
+    </section>
+    <!-- =============== Секция Недостатки =============== -->
+    <section class="disadvantages">
+      <h1 class="section-title accent-color">Недостатки работы с нами</h1>
+      <ul class="disadvantages__list">
+        <li>
+          <div class="li-top">
+            <img class="li-icon" src="media/icons/quality.svg" alt="icon" />
+
+            <p class="li-name fw-700">Делаем не быстро, но качественно</p>
+          </div>
+          <p class="li-description">
+            Если вам нужно было вчера, мы не сработаемся. Стратегическое
+            отношение к делу гораздо важнее дедлайнов
+          </p>
+        </li>
+        <li>
+          <div class="li-top">
+            <img class="li-icon" src="media/icons/cancel.svg" alt="icon" />
+            <p class="li-name fw-700 small-width">На нас сложно влиять</p>
+          </div>
+          <p class="li-description">
+            В первую очередь, мы партнеры, а не подчиненные. Мы открыты к
+            конструктивной критике. Но не готовы подстраиваться под субъективное
+            мнение
+          </p>
+        </li>
+        <li>
+          <div class="li-top">
+            <img class="li-icon" src="media/icons/website.svg" alt="icon" />
+            <p class="li-name fw-700">Делаем свой сайт и рекламу</p>
+          </div>
+          <p class="li-description">
+            Мы работаем только со своими сайтами и рекламой. Мы не можем
+            отвечать за результат чужой работы. Поэтому каждый проект начинаем с
+            нуля. Сайт и реклама создаются нами и находятся на наших аккаунтах
+          </p>
+        </li>
+        <li>
+          <div class="li-top">
+            <img class="li-icon" src="media/icons/job.svg" alt="icon" />
+            <p class="li-name fw-700">Мы не боги</p>
+          </div>
+          <p class="li-description">
+            Как и в любом деле, у нас бывают неудачные проекты. В этом случае
+            возвращаем непотраченный рекламный бюджет.
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- =============== секция что мы делаем =============== -->
+    <section class="whatwedo full">
+      <div class="container">
+        <h1 class="section-title title-with-bg">Что конкретно мы делаем?</h1>
+      </div>
+      <div class="owl-carousel whatwedo__slider">
+        <div class="whatwedo__slide container">
+          <!-- Слайд -->
+          <div class="slide-wrapper big-img">
+            <div class="slider-img">
+              <img src="media/slider-ill1.webp" alt="" />
+            </div>
+            <div class="slider-body">
+              <p class="slider-name bold">1. Создание сайтов</p>
+              <ul class="slider-list">
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Анализируем ЦА, составляем аватар каждого сергмента;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Прорабатываем рельса убеждений и содержание;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Разрабатываем дизайн;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>
+                    Верстаем и програмиурем сайт, который будет приносить
+                    прибыль;
+                  </p>
+                </li>
+              </ul>
+              <div class="slider-price">
+                <img src="media/icons/free.svg" alt="icon " />
+                <p>Проведём работы <span class="fw-700">за наш счёт</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="whatwedo__slide container">
+          <!-- Слайд -->
+          <div class="slide-wrapper">
+            <div class="slider-img">
+              <img src="media/slider2.webp" alt="" class="reclama" />
+            </div>
+            <div class="slider-body">
+              <p class="slider-name bold">2. Настройка рекламы</p>
+              <p class="name_of_list fw-700">Настройка и ведение:</p>
+              <ul class="slider-list">
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Яндекс.Директ;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Google Ads;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Facebook Ads;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>My Target;</p>
+                </li>
+              </ul>
+              <div class="slider-price">
+                <img src="media/icons/free.svg" alt="icon " />
+                <p>Проведём работы <span class="fw-700">за наш счёт</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="whatwedo__slide container">
+          <!-- Слайд -->
+          <div class="slide-wrapper">
+            <div class="slider-img">
+              <img src="media/slider3.webp" alt="" />
+            </div>
+            <div class="slider-body">
+              <p class="slider-name bold">3. Создание автоворонок </p>
+              <ul class="slider-list">
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Разработка чат-ботов;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Нарабатываем и создаём базу подписчиков;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Разрабатывем сложные цепочки взаимодействия с клиентом;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>
+                    Постепенно прогреваем и продаём с помощью чат-ботов в
+                    мессенджерах и рассылок;
+                  </p>
+                </li>
+              </ul>
+              <div class="slider-price">
+                <img src="media/icons/free.svg" alt="icon " />
+                <p>Проведём работы <span class="fw-700">за наш счёт</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="whatwedo__slide container">
+          <!-- Слайд -->
+          <div class="slide-wrapper">
+            <div class="slider-img">
+              <img src="media/slider4.webp" alt="" />
+            </div>
+            <div class="slider-body">
+              <p class="slider-name bold">4. SEO-продвижение </p>
+              <ul class="slider-list">
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Выводим сайт в ТОП поисковой выдачи;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Техническая оптимизация сайтов;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Закупка внешних ссылок;</p>
+                </li>
+                <li class="slider-list__item">
+                  <img src="media/icons/list-marker.svg" alt="icon" />
+                  <p>Повышение поведенческих факторов;</p>
+                </li>
+              </ul>
+              <div class="slider-price">
+                <img src="media/icons/free.svg" alt="icon " />
+                <p>Проведём работы <span class="fw-700">за наш счёт</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =============== Как мы работаем =============== -->
+    <section class="pattern">
+      <h1 class="section-title title-with-bg">Порядок работы</h1>
+      <ul class="pattern__list">
+        <li>
+          <span class="pattern__list__number">1</span>
+          <p class="pattern__list__name fw-700 fw-700">
+            Пишите мне в мессенджер
+          </p>
+          <p class="pattern__list__text">
+            Я задаю вопросы о вашем продукте и бизнесе. Анализирую спрос.
+            Определяю, подходит данный проект под наши услуги или нет
+          </p>
+        </li>
+        <li>
+          <span class="pattern__list__number">2</span>
+          <p class="pattern__list__name fw-700">
+            Определяем наш %. Заключаем договор
+          </p>
+          <p class="pattern__list__text">
+            Подписываем регламент сотрудничества, решаем все вопросы «на берегу»
+          </p>
+        </li>
+        <li>
+          <span class="pattern__list__number">3</span>
+          <p class="pattern__list__name fw-700">
+            Утверждаем тестовый рекламный бюджет
+          </p>
+          <p class="pattern__list__text">
+            Обычно это 40 0000 ₽. Которые мы полностью вкладываем в рекламный
+            бюджет. Наш доход — % от успешных сделок. Мы зарабатываем только
+            когда зарабатываете вы. Депозит — это подтверждение серьезности
+            ваших намерений.
+          </p>
+        </li>
+        <li>
+          <span class="pattern__list__number">4</span>
+          <p class="pattern__list__name fw-700">
+            Проводим брифинг по Skype/Zoom
+          </p>
+          <p class="pattern__list__text">
+            Я задаю много вопросов о компании, продукте, аудитории и рынке.
+            Проводим анализ целевой аудитории и конкурентов. Создаем стратегию
+            продвижения и УТП.
+          </p>
+        </li>
+        <li>
+          <span class="pattern__list__number">5</span>
+          <p class="pattern__list__name fw-700">Проводим тестовый запуск</p>
+          <p class="pattern__list__text">
+            За 10-12 дней создаем тестовый лендинг или квиз, тестовые рекламные
+            кампании. Делаем тестовый запуск. Вы получаете первые заявки и
+            продажи.
+          </p>
+        </li>
+        <li>
+          <span class="pattern__list__number">6</span>
+          <p class="pattern__list__name fw-700">Проводим анализ</p>
+          <p class="pattern__list__text">
+            Если всех всё устраивает, работаем дальше: создаем полноценные
+            лендинги и рекламные кампании. Подключаем новые источники трафика.
+            Улучшаем показатели. Вы своевременно пополняете рекламный бюджет.
+          </p>
+        </li>
+      </ul>
+      <button class="mobile-more bold" onclick="showMore('.pattern')">
+        Посмотреть все пункты
+      </button>
+    </section>
+    <!-- =============== Частые вопросы =============== -->
+    <section class="FAQ">
+      <h1 class="section-title">Частые вопросы</h1>
+      <div class="accordions-wrapper">
+        <div class="accordions-wrapper">
+          <button class="accordion bold acc-open">
+            Какой процент мы берем?
+          </button>
+          <div class="panel">
+            <p>
+              Конктретный процент обсуждается индивидуально. Вы сами выбираете,
+              какую часть от оборота прибыли вам было бы комфортно платить за
+              нашу работу.
+            </p>
+          </div>
+        </div>
+        <div class="accordions-wrapper">
+          <button class="accordion bold">Какие риски?</button>
+          <div class="panel">
+            <p>
+              Конктретный процент обсуждается индивидуально. Вы сами выбираете,
+              какую часть от оборота прибыли вам было бы комфортно платить за
+              нашу работу.
+            </p>
+          </div>
+        </div>
+        <div class="accordions-wrapper">
+          <button class="accordion bold">Как мы контролируем продажи?</button>
+          <div class="panel">
+            <p>
+              Конктретный процент обсуждается индивидуально. Вы сами выбираете,
+              какую часть от оборота прибыли вам было бы комфортно платить за
+              нашу работу.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img src="media/pre-footer-ill.webp" alt="ill" class="FAQ__ill" />
+      <img
+        src="media/prefooter-mobile-ill.webp"
+        alt="ill"
+        class="FAQ__ill-mobile"
+      />
+    </section>
+    <!-- =============== Подвал =============== -->
+    <footer>
+      <img src="media/footer-ill.webp" alt="ill" class="footer__ill" />
+      <div class="footer__content">
+        <p class="footer__title bold">Возьмем только 3 проекта в 2021 году</p>
+        <p class="footer__description description">
+          На данный у нас сформирован портфель партнёрских проектов. Новые
+          проекты продолжаю брать, но редко и очень избирательно.
+          Потому что выгоднее развивать старые, чем запускать поток новых.
+        </p>
+        <div class="tel-wrapper">
+          <div class="social">
+            <a href="#" class="social__link">
+              <img src="media/icons/whatsapp-white.svg" alt="whatsapp" />
+            </a>
+            <a href="#" class="social__link">
+              <img src="media/icons/telegram-white.svg" alt="telegram" />
+            </a>
+          </div>
+          <button
+            class="tel-text accent-color bold default-btn"
+            onclick="openModal('phone')"
+          >
+            Заказать звонок
+          </button>
+        </div>
+        <p class="copyright">Маркетинговое агентство Consortium, 2021</p>
+      </div>
+    </footer>
+    <!-- =============== Модальные окна =============== -->
     <!-- Подложка под модальным окном -->
     <div class="overlay js-overlay-modal"></div>
+    <!-- ------ empty modal ------ -->
+    <div class="modal default-modal" data-modal="empty">
+      <button onclick="closeActiveModal()" class="modal__cross">
+        <img src="media/icons/cross.svg" alt="cross" />
+      </button>
+      <div class="modal-content text-center">
+        <p>Думали, тут будет форма обратной связи?</p>
+        <p>
+          Не спиште, сначала изучите информацию на сайте, а потом оставляйте
+          заявку, чтобы не тратить время друг-друга зря.
+        </p>
+      </div>
+      <img src="media/spot8.svg" class="spot-top" alt="spot" />
+      <img src="media/spot9.svg" class="spot-bottom" alt="spot" />
+      <img
+        src="media/modal_illustration2.webp"
+        alt="illustration"
+        class="modal-illustration"
+      />
+    </div>
+    <!-- ------ thx-modal ------ -->
+    <div class="modal thx-modal default-modal" data-modal="thx">
+      <button onclick="closeActiveModal()" class="modal__cross">
+        <img src="media/icons/cross.svg" alt="cross" />
+      </button>
+      <div class="modal-content text-center">
+        <p class="thx__title">Спасибо!</p>
+        <p>Наш менеджер с Вами свяжется!</p>
+      </div>
+
+      <img src="media/spot9.svg" class="spot-bottom" alt="spot" />
+      <img
+        src="media/modal_illustration.webp"
+        alt="illustration"
+        class="modal-illustration"
+      />
+    </div>
+    <!-- Phone modal -->
+    <div class="modal default-modal phone-modal" data-modal="phone">
+      <button onclick="closeActiveModal()" class="modal__cross">
+        <img src="media/icons/cross.svg" alt="cross" />
+      </button>
+      <div class="modal-content text-center">
+        <p>
+          Введете номер телефона, по которому Вам будет удобно принять звонок:
+        </p>
+        <iframe
+          name="hidden_iframe"
+          id="hidden_iframe"
+          style="display: none"
+        ></iframe>
+        <form
+          action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSe04uXqXIi8WkZ2gXKDBL0Io619qB8TJVuQgWrvIUvesrIZaw/formResponse"
+          id="modalForm"
+          method="post"
+          target="hidden_iframe"
+        >
+          <div class="form__input-field">
+            <label for="modal-name"> Имя </label>
+            <input type="text" id="modal-name" name="entry.732872245" />
+          </div>
+          <div class="form__input-field">
+            <label for="tel"> Телефон </label>
+            <input
+              type="modal-tel"
+              data-tel-input
+              maxlength="18"
+              id="modal-tel"
+              placeholder="+7 (XXX) XXX-XX-XX"
+              name="entry.57072136"
+            />
+            <input type="text" id="modal-tel-hiden" disabled />
+            <p id="modal-message"></p>
+          </div>
+          <div class="btn bold" onclick=" ValidPhone(true)">
+            Заказать звонок
+          </div>
+        </form>
+      </div>
+      <img src="media/spot8.svg" class="spot-top" alt="spot" />
+      <img src="media/spot9.svg" class="spot-bottom" alt="spot" />
+    </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
       integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="/scripts/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/scripts/owlcarousel/owlcarousel.min.js"></script>
     <script src="scripts/landing-calc.js"></script>
     <script src="scripts/modal.js"></script>
     <script src="scripts/phoneinput.js"></script>
