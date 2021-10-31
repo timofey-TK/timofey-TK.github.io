@@ -1,3 +1,10 @@
+@media screen and (max-width: 2100px) {
+  .not-working__list {
+    width: 960px;
+    justify-content: space-between;
+  }
+}
+
 @media screen and (max-width: 1570px) {
   .next-arrow {
     right: 40px;
