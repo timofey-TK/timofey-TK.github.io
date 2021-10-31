@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
-            if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
+            if (inputNumbersValue[0] == "9" || inputNumbersValue[0] == "8") inputNumbersValue = "7" + inputNumbersValue;
             var firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
             formattedInputValue = input.value = firstSymbols + " ";
             if (inputNumbersValue.length > 1) {

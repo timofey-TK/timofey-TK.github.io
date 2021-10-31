@@ -101,9 +101,40 @@
   .li-description {
     max-width: 237px;
   }
+  .macbook {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .macbook img {
+    max-width: 85%;
+  }
+  .dots-right,
+  .dots-left {
+    transform: scale(0.8);
+  }
+  .dots-right {
+    bottom: 35px;
+    right: -35px;
+  }
+  .dots-left {
+    top: 100px;
+    left: -30px;
+  }
+
+  .mail__img-content__application-text p {
+    font-size: 14px;
+  }
+  .mail__img-content__application-text {
+    top: 13px;
+    left: 11px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
+  .partner_result {
+    margin-top: 20px;
+  }
   footer {
     padding-top: 70px !important;
     padding-bottom: 70px !important;
@@ -248,34 +279,7 @@
   .group-col {
     width: auto;
   }
-  .macbook {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .macbook img {
-    max-width: 85%;
-  }
-  .dots-right,
-  .dots-left {
-    transform: scale(0.8);
-  }
-  .dots-right {
-    bottom: 35px;
-    right: -35px;
-  }
-  .dots-left {
-    top: 100px;
-    left: -30px;
-  }
 
-  .mail__img-content__application-text p {
-    font-size: 14px;
-  }
-  .mail__img-content__application-text {
-    top: 13px;
-    left: 11px;
-  }
   .partner_results .description {
     line-height: 25px;
   }
@@ -840,7 +844,7 @@
     margin-top: 0;
   }
   .big-img .slider-img img,
-  .whatwedo__slider img {
+  .slider-img img {
     width: 80% !important;
     margin: 0 auto;
   }
