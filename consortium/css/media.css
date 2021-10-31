@@ -1,7 +1,19 @@
-@media screen and (max-width: 2100px) {
+@media screen and (max-width: 2200px) {
   .not-working__list {
     width: 960px;
     justify-content: space-between;
+  }
+  .prev-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    left: 80px;
+  }
+  .next-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    right: 40px;
   }
 }
 

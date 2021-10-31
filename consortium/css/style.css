@@ -588,13 +588,13 @@ section.partner_results {
   position: absolute;
   top: 45%;
   transform: translate(-50%, -50%);
-  left: 80px;
+  left: 17%;
 }
 .next-arrow {
   position: absolute;
   top: 45%;
   transform: translate(-50%, -50%);
-  right: 40px;
+  right: 17%;
 }
 
 .owl-nav .disabled {
