@@ -133,6 +133,13 @@ section {
   width: 100%;
   object-fit: contain;
   image-rendering: optimizeQuality;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+  -webkit-touch-callout: none;
 }
 .service-img-mobile {
   display: none;
