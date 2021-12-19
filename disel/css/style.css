@@ -1,0 +1,352 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #000;
+}
+header,
+section,
+.navbar {
+  padding: 0 130px;
+}
+h1,
+h2 {
+  font-weight: bold;
+  font-size: 48px;
+}
+.section-title {
+  text-align: center;
+}
+section {
+  padding-top: 50px;
+}
+.navbar {
+  background: #ffd708;
+  height: 65px;
+  filter: drop-shadow(2px 6px 48px rgba(0, 0, 0, 0.25));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__logo {
+  max-width: 120px;
+  object-fit: contain;
+}
+.contact-place {
+  display: flex;
+  align-items: center;
+}
+.work-time,
+.number {
+  font-weight: 600;
+  font-size: 24px;
+  position: relative;
+}
+.number__link {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+}
+.number__link:after {
+  display: block;
+  position: absolute;
+  left: 10px;
+  width: 0;
+  height: 3px;
+  background-color: #fff;
+  content: "";
+  transition: width 0.3s ease-out;
+}
+
+.number__link:hover:after,
+.number__link:focus:after {
+  width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 160px;
+  padding-bottom: 160px;
+  background: rgba(255, 215, 8, 0.03);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.header__img {
+  width: 796px;
+  margin-left: 70px;
+  object-fit: contain;
+  max-width: 50%;
+}
+.header__text .title {
+  font-style: italic;
+  max-width: 680px;
+}
+.header__text .description {
+  font-weight: 400;
+  font-size: 24px;
+  max-width: 793px;
+  line-height: 29px;
+}
+
+.services {
+  padding-bottom: 250px;
+}
+.service-block {
+  width: 100%;
+  position: relative;
+  margin-top: 100px;
+}
+.service-item {
+  height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-circle {
+  width: 260px;
+}
+.service-circle img {
+  width: 100%;
+}
+.service-name {
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+  white-space: nowrap;
+}
+.service-item:nth-child(odd) {
+  align-self: flex-end;
+}
+.lines {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 47.5%;
+}
+.service-img,
+.service-img-mobile {
+  width: 100%;
+  object-fit: contain;
+  image-rendering: optimizeQuality;
+}
+.service-img-mobile {
+  display: none;
+}
+
+section.about {
+  background-color: #fffdf7;
+  padding-bottom: 75px;
+}
+.about-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-list__item {
+  display: flex;
+  margin-top: 130px;
+}
+.about-list__item:nth-child(odd) {
+  margin-right: 85px;
+}
+.about-list__item .icon {
+  object-fit: contain;
+  width: 140px;
+  margin-right: 20px;
+}
+.about-list__item__name {
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 55px;
+  color: #ffd708;
+}
+.about-list__item__description {
+  max-width: 600px;
+  font-size: 24px;
+  line-height: 29px;
+  color: #7e712a;
+}
+.alert {
+  width: 1100px;
+  height: 560px;
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-shadow: 26px 15px 63px -30px rgba(0, 0, 0, 0.25);
+  max-width: 100%;
+}
+.alert__top {
+  width: 100%;
+  height: 132.79px;
+  background: #ffd708;
+  box-shadow: 26px 15px 63px -30px rgba(0, 0, 0, 0.25);
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 59px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert__bottom {
+  font-size: 36px;
+  line-height: 49px;
+  text-align: center;
+  letter-spacing: 0.095em;
+  padding: 45px 65px;
+}
+.modal-btn {
+  display: block;
+  width: 400px;
+  height: 74px;
+  background: #09d059;
+  border-radius: 13px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 137.4%;
+  text-align: center;
+  letter-spacing: 0.095em;
+  outline: none;
+  border: none;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: 85px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background: #ffd708;
+}
+footer {
+  padding-bottom: 100px;
+}
+.footer__spot {
+  font-weight: 900;
+  font-size: 45px;
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  width: 898px;
+  height: 244px;
+  margin: 0 auto;
+  margin-top: 260px;
+  background-image: url(../img/footer-spot.svg);
+  margin-bottom: 80px;
+  max-width: 97%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.footer-spot__text {
+  position: relative;
+  top: 20px;
+}
+.payment-types {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.payment-types img {
+  object-fit: contain;
+  image-rendering: optimizeQuality;
+}
+.payment-types img:not(:last-child) {
+  margin-right: 20px;
+}
+/* ========= Modal ========= */
+.overlay {
+  /* Стили подложки */
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  transition: 0.3s all;
+  background: #ffffff;
+  box-shadow: 0px 4px 20px rgba(166, 166, 165, 0.2);
+  overflow: hidden;
+}
+
+.active-modal,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__cross {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+.default-modal {
+  width: 1101px;
+  background: #ffffff;
+  border-radius: 53px;
+}
+.modal-content {
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 0 140px;
+  padding-bottom: 54px;
+}
+.modal-input {
+  width: 100%;
+  border: none;
+  border-bottom: 4px solid #ffd708;
+  outline: none;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  color: rgba(255, 215, 8, 0.6);
+  margin-bottom: 100px;
+}
+.modal-input:last-child {
+  margin-bottom: 65px;
+}
+.modal-input::placeholder {
+  color: rgba(255, 215, 8, 0.6);
+}
+.modal-submit {
+  width: 260px;
+  height: 75px;
+  background: #ffd708;
+  border-radius: 0px 25px 25px 25px;
+  font-weight: 600;
+  font-size: 30px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+}
