@@ -54,8 +54,7 @@ section {
 <script type="text/javascript">var submitted=false;</script>
 <iframe name="hidden_iframe" id="hidden_iframe"
 style="display:none;" onload="if(submitted){
-MyFunction()
-}"></iframe>
+MyFunction()}"></iframe>
 <form action="..." method="post"
 target="hidden_iframe" onsubmit="submitted=true;">
   ```
