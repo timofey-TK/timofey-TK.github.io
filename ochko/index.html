@@ -9,6 +9,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --animate-duration: 0.6s;
@@ -23,15 +29,17 @@
       }
       body {
         background-color: var(--bg);
+        font-family: "Source Sans Pro", sans-serif;
+        overflow-x: hidden;
       }
       .wrapper {
         position: relative;
+        width: 100%;
       }
       .tabcontent {
-        font-family: "montserrat";
         position: absolute;
         visibility: hidden;
-        width: 700px;
+        width: 100%;
         background: var(--content);
         border-radius: 10px;
         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
@@ -44,7 +52,6 @@
         visibility: visible;
       }
       .tablinks {
-        font-family: "montserrat";
         display: block;
         text-align: center;
         line-height: 30px;
@@ -57,6 +64,10 @@
         text-decoration: none;
         color: var(--tc);
         position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 2px;
       }
       .tablinks.active {
         width: 60%;
@@ -80,12 +91,31 @@
       .wrapper-links {
         display: flex;
         gap: 15px;
-        width: 700px;
+        width: 100%;
       }
       .tabs {
         margin: 0 auto;
         width: 700px;
         margin-top: 150px;
+      }
+
+      /* 768px - 992px*/
+      @media screen and (max-width: 992px) {
+        .tablinks {
+          height: 60px;
+          line-height: 60px;
+        }
+        .tabs {
+          margin: 0 auto;
+          width: 100%;
+          margin-top: 150px;
+        }
+        body {
+          font-size: 16px;
+        }
+        .wrapper-links {
+          gap: 5px;
+        }
       }
     </style>
   </head>
