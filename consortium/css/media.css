@@ -151,6 +151,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .usp__list {
+    text-align: left;
+  }
   .partner_result {
     margin-top: 20px;
   }
@@ -940,6 +943,10 @@
   }
 }
 @media screen and (max-width: 390px) {
+  .usp__list {
+    font-size: 14px;
+    margin-top: 20px;
+  }
   .default-modal {
     width: 90%;
     font-size: 13px;
@@ -1056,6 +1063,9 @@
   }
 }
 @media screen and (max-width: 345px) {
+  .usp__list {
+    font-size: 12px;
+  }
   .not-working__list {
     font-size: 11px;
   }

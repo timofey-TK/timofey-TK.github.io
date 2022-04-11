@@ -285,14 +285,42 @@ section.main {
 .main__title {
   font-size: 46px;
   line-height: 135.4%;
+  width: 785px;
+  margin-bottom: 5px;
+}
+
+.usp__list {
+  margin: 0;
+  padding: 0;
+}
+.usp__list-item {
+  font-family: "DaxlinePro";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 155.68%;
+  color: #333333;
+  margin-bottom: 14px;
+  list-style: none;
+}
+
+.usp__list-item:before {
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: #b6cc43;
+  margin-right: 11px;
+  position: relative;
+  top: 4px;
 }
 .main__description {
   line-height: 155.68%;
 }
 .main__btn {
   width: 320px;
-  height: 60px;
-  margin-top: 43px;
+  height: 75px;
+  margin-top: 25px;
   margin-bottom: 18px;
   font-family: "DaxlinePro";
   color: #ffffff;
@@ -302,8 +330,9 @@ section.main {
 .main__illustration {
   transform: scale(1.07);
   position: relative;
-  left: 100px;
+  left: 70px;
 }
+
 /* -------  Секция Сотрудничества ------- */
 section.cooperation {
   margin-top: 100px;
@@ -642,6 +671,73 @@ section.partner_results {
 .center {
   justify-content: space-around;
 }
+
+.top-side {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.top-side .checkbox-field {
+  height: 20px;
+}
+.input-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.input-block input {
+  width: 90px;
+  margin: 0;
+}
+
+input[type="range"] {
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 769px;
+  height: 22px;
+  background: #ffffff;
+  border: 2px solid #e5f887;
+  box-sizing: border-box;
+  border-radius: 100px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  background: #b6cc43;
+  border-radius: 100%;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+
+input[type="range"]::-moz-range-track {
+  border-radius: 10px/100%;
+  height: 5px;
+  border: 1px solid cyan;
+  background-color: #fff;
+}
+input[type="range"]::-moz-range-thumb {
+  background: #ecf0f1;
+  border: 1px solid cyan;
+  border-radius: 10px/100%;
+  cursor: pointer;
+}
+
+.calc-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
 .input {
   position: relative;
 }

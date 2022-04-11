@@ -7,6 +7,15 @@
   font-weight: 900;
   font-style: normal;
 }
+@font-face {
+  font-family: "DaxlinePro";
+  src: url("DaxlinePro/DaxlinePro-Bold.eot");
+  src: url("DaxlinePro/DaxlinePro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("DaxlinePro/DaxlinePro-Bold.woff") format("woff"),
+    url("DaxlinePro/DaxlinePro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 /* cyrillic-ext */
 @font-face {
   font-family: "Roboto";
