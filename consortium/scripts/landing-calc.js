@@ -37,7 +37,7 @@ function calc() {
 
     request.innerHTML = Math.round(Number("0." + String(ctr.value)) * Number("0." + String(convers.value)) * messages.value)
     fullprice.value = (messages.value * msprice)
-    requestPrice.innerHTML = Math.round(fullprice.value / Number(request.innerHTML))
+    requestPrice.innerHTML = Math.round((messages.value * msprice) / Number(request.innerHTML))
 }
 
 

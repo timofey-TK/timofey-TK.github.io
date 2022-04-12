@@ -982,6 +982,10 @@
   } */
 }
 @media screen and (max-width: 394px) {
+  input {
+    padding: 5px 5px;
+    font-size: 14px;
+  }
   .usp__list {
     font-size: 14px;
     margin-top: 20px;
