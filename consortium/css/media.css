@@ -933,6 +933,12 @@
     width: 110px;
     height: 43px;
   }
+  .group-col {
+    width: 110px;
+  }
+  .rubl {
+    top: 58%;
+  }
   .input-block {
     display: none;
   }
@@ -1044,7 +1050,7 @@
   }
   .calc-form .input input,
   .calc-form .input {
-    width: 95px;
+    width: 90px;
   }
   .calc-form .label {
     height: 30px;
