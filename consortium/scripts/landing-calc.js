@@ -47,10 +47,10 @@ let syncRange = document.querySelector(".messages_range"),
 let calcInputs = document.querySelectorAll(".js-calc input").forEach(i => {
     i.oninput = function () {
         if (i.classList.contains("messages")) {
-            syncRange.value = syncMessages.value / 1000
+            syncRange.value = syncMessages.value
         }
         if (i.classList.contains("messages_range")) {
-            syncMessages.value = syncRange.value * 1000
+            syncMessages.value = syncRange.value
         }
         calc()
 
