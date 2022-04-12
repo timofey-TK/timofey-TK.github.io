@@ -9,28 +9,35 @@ function validate(evt) {
     }
 }
 
+let messages = document.querySelector(".messages"),
+    ctr = document.querySelector(".ctr"),
+    convers = document.querySelector(".convers"),
+    msprice = 2,
+    fullprice = document.querySelector(".price-click"),
+    isBD = document.querySelector("#checkbox1"),
+    isAD = document.querySelector("#checkbox2"),
+    request = document.querySelector(".request"),
+    requestPrice = document.querySelector(".request-price"),
+    messagesMobile = document.querySelector(".messages-mobile")
 function calc() {
-    messages = document.querySelector("#messages")
-    ctr = document.querySelector(".ctr")
-    convers = document.querySelector(".convers")
-    msprice = document.querySelector(".price-click")
-    isBD = document.querySelector("#checkbox1")
-    isAD = document.querySelector("#checkbox2")
-    request = document.querySelector(".request")
-    requestPrice = document.querySelector(".request-price")
+    messagesMobile.innerHTML = messages.value
     // isAD.checked
     if (isBD.checked && !isAD.checked) {
-        msprice.value = 3
+        msprice = 3
     }
     if (isAD.checked && !isBD.checked) {
-        msprice.value = 2.5
+        msprice = 2.5
     }
     if (isBD.checked && isAD.checked) {
-        msprice.value = 3.5
+        msprice = 3.5
+    }
+    if (!isBD.checked && !isAD.checked) {
+        msprice = 2
     }
 
     request.innerHTML = Math.round(Number("0." + String(ctr.value)) * Number("0." + String(convers.value)) * messages.value)
-    requestPrice.innerHTML = Math.round((messages.value * msprice.value) / request.innerHTML)
+    fullprice.value = (messages.value * msprice)
+    requestPrice.innerHTML = Math.round(fullprice.value / Number(request.innerHTML))
 }
 
 
@@ -41,11 +48,9 @@ let calcInputs = document.querySelectorAll(".js-calc input").forEach(i => {
     i.oninput = function () {
         if (i.classList.contains("messages")) {
             syncRange.value = syncMessages.value / 1000
-            console.log("12344");
         }
         if (i.classList.contains("messages_range")) {
             syncMessages.value = syncRange.value * 1000
-            console.log("12344");
         }
         calc()
 

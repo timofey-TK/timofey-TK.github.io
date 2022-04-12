@@ -903,7 +903,40 @@
   .cooperationtem__list__item:first-child {
     width: auto;
   }
-  .calc-form .input input {
+  .messages-mobile-section {
+    display: block;
+  }
+  .value.dark {
+    width: 108px;
+    height: 43px;
+  }
+  .group-cols {
+    padding: 0 10px;
+  }
+  .value {
+    margin-top: 3px;
+  }
+  .top-side {
+    flex-direction: column-reverse;
+    margin-top: 13px;
+  }
+  .calc-inputs {
+    flex-direction: column;
+  }
+  .top-side .checkbox-field {
+    height: auto;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  .calc-form .input input,
+  .calc-form .input {
+    width: 110px;
+    height: 43px;
+  }
+  .input-block {
+    display: none;
+  }
+  /* .calc-form .input input {
     width: 140px;
   }
   .group-col {
@@ -911,7 +944,7 @@
   }
   .calc-form {
     margin-bottom: 180px;
-  }
+  } */
   .table-mobile-name {
     font-size: 20px;
     top: 16px;
@@ -935,14 +968,14 @@
   .body__top img {
     max-width: 120px;
   }
-  .group-row:not(.center) {
+  /* .group-row:not(.center) {
     flex-direction: column;
   }
   .group-cols:not(.text-center) {
     flex-direction: row;
-  }
+  } */
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 394px) {
   .usp__list {
     font-size: 14px;
     margin-top: 20px;
@@ -1009,14 +1042,19 @@
   .group-cols {
     padding: 0 15px;
   }
-  .calc-form .input input {
-    width: 110px;
+  .calc-form .input input,
+  .calc-form .input {
+    width: 95px;
+  }
+  .calc-form .label {
+    height: 30px;
   }
   .group-col {
-    width: 120px;
+    width: 95px;
   }
   .value.dark {
-    width: 110px;
+    width: 95px;
+    margin-top: 10px;
   }
   .main__btn {
     width: 100%;

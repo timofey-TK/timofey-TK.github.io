@@ -279,14 +279,15 @@ header {
 section.main {
   display: flex;
   justify-content: space-between;
-  margin-top: 130px;
+  margin-top: 80px;
   align-items: center;
 }
 .main__title {
   font-size: 46px;
   line-height: 135.4%;
-  width: 785px;
-  margin-bottom: 5px;
+  width: 560px;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .usp__list {
@@ -331,6 +332,8 @@ section.main {
   transform: scale(1.07);
   position: relative;
   left: 70px;
+  max-width: 769px;
+  max-height: 513px;
 }
 
 /* -------  Секция Сотрудничества ------- */
@@ -687,7 +690,7 @@ section.partner_results {
   margin-top: 10px;
 }
 .input-block input {
-  width: 90px;
+  width: 100px;
   margin: 0;
 }
 
@@ -769,6 +772,9 @@ input[type="range"]::-moz-range-thumb {
 }
 .group-bootom .group-cols {
   justify-content: space-around;
+}
+.messages-mobile-section {
+  display: none;
 }
 .value.dark {
   width: 134px;
