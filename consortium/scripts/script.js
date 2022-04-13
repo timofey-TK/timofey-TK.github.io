@@ -19,7 +19,7 @@ function ValidPhone(isInModal = false) {
             message = document.getElementById('message'),
             input = document.getElementById('tel'),
             form = document.forms.mainForm,
-            checkbox = document.querySelector(".checkbox-field")
+            checkbox = document.querySelector(".terms")
         checkboxinp = document.querySelector("#checkbox")
 
     }

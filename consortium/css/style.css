@@ -706,12 +706,13 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-  width: 769px;
+  width: 100%;
   height: 22px;
   background: #ffffff;
   border: 2px solid #e5f887;
   box-sizing: border-box;
   border-radius: 100px;
+  outline: none;
 }
 input[type="range"]::-webkit-slider-thumb {
   background: #b6cc43;
@@ -721,19 +722,29 @@ input[type="range"]::-webkit-slider-thumb {
   height: 30px;
   -webkit-appearance: none;
   margin-top: -6px;
+  border: none;
+  outline: none;
 }
 
 input[type="range"]::-moz-range-track {
-  border-radius: 10px/100%;
-  height: 5px;
-  border: 1px solid cyan;
-  background-color: #fff;
+  width: 100%;
+  height: 22px;
+  background: #ffffff;
+  border: 2px solid #e5f887;
+  box-sizing: border-box;
+  border-radius: 100px;
+  outline: none;
 }
 input[type="range"]::-moz-range-thumb {
-  background: #ecf0f1;
-  border: 1px solid cyan;
-  border-radius: 10px/100%;
+  background: #b6cc43;
+  border-radius: 100%;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  -webkit-appearance: none;
+  margin-top: -6px;
+  border: none;
+  outline: none;
 }
 
 .calc-inputs {
