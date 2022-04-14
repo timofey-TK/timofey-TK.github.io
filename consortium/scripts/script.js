@@ -13,37 +13,48 @@ function ValidPhone(isInModal = false) {
             message = document.getElementById('modal-message'),
             input = document.getElementById('modal-tel'),
             form = document.forms.modalForm
+        var re = /^\d[\d\(\)\ -]{4,14}\d$/;
+        var valid = re.test(myPhone.value);
+
+
+        form.submit()
+        form.reset()
+        setTimeout(() => { openModal("thx") }, 300);
+        message.innerHTML = "";
+        input.classList.remove("error")
+        return valid
     }
     else {
         var myPhone = document.getElementById('tel-hiden'),
             message = document.getElementById('message'),
             input = document.getElementById('tel'),
             form = document.forms.mainForm,
-            checkbox = document.querySelector(".terms")
-        checkboxinp = document.querySelector("#checkbox")
+            checkbox = document.querySelector(".terms"),
+            checkboxinp = document.querySelector("#checkbox")
+        var re = /^\d[\d\(\)\ -]{4,14}\d$/;
+        var valid = re.test(myPhone.value);
+        if (!valid || !checkboxinp.checked) {
+            if (!valid) {
+                output = 'Неправильно заполнено поле';
+                message.innerHTML = output;
+                input.classList.add("error")
+            }
+            if (!checkboxinp.checked) {
+                checkbox.classList.add("animate__animated")
+            }
+        }
+        else {
+            form.submit()
+            form.reset()
+            setTimeout(() => { openModal("thx") }, 300);
+            checkbox.classList.remove("animate__animated")
+            message.innerHTML = "";
+            input.classList.remove("error")
+        }
+        return valid
 
     }
-    var re = /^\d[\d\(\)\ -]{4,14}\d$/;
-    var valid = re.test(myPhone.value);
-    if (!valid || !checkboxinp.checked) {
-        if (!valid) {
-            output = 'Неправильно заполнено поле';
-            message.innerHTML = output;
-            input.classList.add("error")
-        }
-        if (!checkboxinp.checked) {
-            checkbox.classList.add("animate__animated")
-        }
-    }
-    else {
-        form.submit()
-        form.reset()
-        setTimeout(() => { openModal("thx") }, 300);
-        checkbox.classList.remove("animate__animated")
-        message.innerHTML = "";
-        input.classList.remove("error")
-    }
-    return valid
+
 }
 document.addEventListener('DOMContentLoaded', function () {
     // Аккардеон
