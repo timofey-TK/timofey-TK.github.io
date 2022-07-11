@@ -75,6 +75,7 @@ target="hidden_iframe" onsubmit="submitted=true;">
 13. 3d бэкграунд https://www.vantajs.com/?effect=fog#
 14. Кастом инпут с поиском на карте https://community.algolia.com/places/
 15. Патерны на инпуты https://nosir.github.io/cleave.js/
+16. Плитка как в пинтересте https://masonry.desandro.com/
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
