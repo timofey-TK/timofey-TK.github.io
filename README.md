@@ -74,6 +74,7 @@ target="hidden_iframe" onsubmit="submitted=true;">
 12. Аккардионе но на jQuery https://accordion.js.org/
 13. 3d бэкграунд https://www.vantajs.com/?effect=fog#
 14. Кастом инпут с поиском на карте https://community.algolia.com/places/
+15. Патерны на инпуты https://nosir.github.io/cleave.js/
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
