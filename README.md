@@ -72,6 +72,7 @@ target="hidden_iframe" onsubmit="submitted=true;">
 10. Маска для телефонного инпута https://github.com/alexey-goloburdin/phoneinput
 11. Видеоплеер https://plyr.io/
 12. Аккардионе но на jQuery https://accordion.js.org/
+13. 3d бэкграунд https://www.vantajs.com/?effect=fog#
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
