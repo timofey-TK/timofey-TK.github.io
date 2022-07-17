@@ -76,6 +76,7 @@ target="hidden_iframe" onsubmit="submitted=true;">
 14. Кастом инпут с поиском на карте https://community.algolia.com/places/
 15. Патерны на инпуты https://nosir.github.io/cleave.js/
 16. Плитка как в пинтересте [https://masonry.desandro.com/](http://callmecavs.com/bricks.js/)
+17. 3d модели в вебе https://spline.design/
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
