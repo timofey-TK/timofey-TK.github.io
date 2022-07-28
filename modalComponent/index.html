@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Modal</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <dialog class="modal" id="modal1">
+            <p>Some inforvation</p>
+            <button class="close-modal">close</button>
+        </dialog>
+        <dialog class="modal" id="modal2">
+            <p>Some inforvation 2</p>
+            <button class="close-modal">close</button>
+        </dialog>
+
+        <button data-modal-target="modal1">Открыть модальное окно</button>
+        <button data-modal-target="modal2">Открыть модальное окно 2</button>
+
+        <script>
+            function hideDialog(dialog) {
+                dialog.classList.add("hide");
+                dialog.addEventListener(
+                    "webkitAnimationEnd",
+                    function () {
+                        dialog.classList.remove("hide");
+                        dialog.close();
+                        dialog.removeEventListener(
+                            "webkitAnimationEnd",
+                            arguments.callee,
+                            false
+                        );
+                    },
+                    false
+                );
+            }
+            document
+                .querySelectorAll("[data-modal-target]")
+                .forEach(function (btn) {
+                    btn.addEventListener("click", function (e) {
+                        document
+                            .getElementById(
+                                btn.getAttribute("data-modal-target")
+                            )
+                            .showModal();
+                    });
+                });
+            document
+                .querySelectorAll("button.close-modal")
+                .forEach(function (btn) {
+                    btn.addEventListener("click", function (e) {
+                        hideDialog(btn.closest("dialog"));
+                    });
+                });
+            document.querySelectorAll("dialog").forEach(function (dialog) {
+                dialog.addEventListener("click", function (e) {
+                    const rect = dialog.getBoundingClientRect();
+                    if (
+                        event.clientY < rect.top ||
+                        event.clientY > rect.bottom ||
+                        event.clientX < rect.left ||
+                        event.clientX > rect.right
+                    ) {
+                        hideDialog(dialog);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
