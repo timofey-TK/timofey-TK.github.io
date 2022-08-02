@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --animate-duration: 0.6s;
+        --animate-delay: 0;
+        --animate-repeat: 1;
+        --bg: #b7cadb;
+        --link: #f3e9dd;
+        --link-active: #dab88b;
+        --content: #fdf6ec;
+        --tc: #333;
+        --tcs: #fff;
+      }
+      body {
+        background-color: var(--bg);
+        font-family: "Source Sans Pro", sans-serif;
+        overflow-x: hidden;
+      }
+      .wrapper {
+        position: relative;
+        width: 100%;
+      }
+      .tabcontent {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+        background: var(--content);
+        border-radius: 10px;
+        box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        padding: 30px;
+        color: #333;
+      }
+      .tabcontent.active {
+        position: relative;
+        box-sizing: border-box;
+        visibility: visible;
+      }
+      .tablinks {
+        display: block;
+        text-align: center;
+        line-height: 30px;
+        width: 20%;
+        height: 30px;
+        border-radius: 10px;
+        background-color: var(--link);
+        margin-bottom: 15px;
+        transition: all 0.5s ease;
+        text-decoration: none;
+        color: var(--tc);
+        position: relative;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 2px;
+      }
+      .tablinks.active {
+        width: 60%;
+        background: var(--link-active);
+        color: var(--tcs);
+      }
+      /* .tablinks:before {
+        transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.6s all;
+        transform: scaleX(0);
+        width: 80px;
+        position: absolute;
+        bottom: 5px;
+        content: "";
+        height: 2px;
+        margin: 0 auto;
+        background-color: var(--tcs);
+      }
+      .tablinks.active:before {
+        transform: scaleX(1);
+      } */
+      .wrapper-links {
+        display: flex;
+        gap: 15px;
+        width: 100%;
+      }
+      .tabs {
+        margin: 0 auto;
+        width: 700px;
+        margin-top: 150px;
+      }
+
+      /* 768px - 992px*/
+      @media screen and (max-width: 992px) {
+        .tablinks {
+          height: 60px;
+          line-height: 60px;
+        }
+        .tabs {
+          margin: 0 auto;
+          width: 100%;
+          margin-top: 150px;
+        }
+        body {
+          font-size: 16px;
+        }
+        .wrapper-links {
+          gap: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="wrapper-links">
+        <a href="#" data-content="tab_1" class="tablinks active">Вкладка 1</a>
+        <a href="#" data-content="tab_2" class="tablinks">Вкладка 2</a>
+        <a href="#" data-content="tab_3" class="tablinks">Вкладка 3</a>
+      </div>
+      <div class="wrapper">
+        <div class="tabcontent active" id="tab_1">
+          Вкладка 1 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatem mollitia eius reiciendis, iste veniam vero cumque assumenda
+          id voluptas, illum incidunt quod vitae veritatis, explicabo unde!
+          Nostrum, sequi? Obcaecati, possimus! Nisi delectus soluta magni
+          blanditiis optio? Iste, maiores vel quis quaerat nobis fugit odio
+          dignissimos ad magnam, vero a perspiciatis voluptatem asperiores odit,
+          minus blanditiis iusto libero ea? Porro, neque? Вкладка 1 Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Voluptatem mollitia eius
+          reiciendis, iste veniam vero cumque assumenda id voluptas, illum
+          incidunt quod vitae veritatis, explicabo unde! Nostrum, sequi?
+          Obcaecati, possimus! Nisi delectus soluta magni blanditiis optio?
+          Iste, maiores vel quis quaerat nobis fugit odio dignissimos ad magnam,
+          vero a perspiciatis voluptatem asperiores odit, minus blanditiis iusto
+          libero ea? Porro, neque? Вкладка 1 Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Voluptatem mollitia eius reiciendis,
+          iste veniam vero cumque assumenda id voluptas, illum incidunt quod
+          vitae veritatis, explicabo unde! Nostrum, sequi? Obcaecati, possimus!
+          Nisi delectus soluta magni blanditiis optio? Iste, maiores vel quis
+          quaerat nobis fugit odio dignissimos ad magnam, vero a perspiciatis
+          voluptatem asperiores odit, minus blanditiis iusto libero ea? Porro,
+          neque?
+        </div>
+        <div class="tabcontent" id="tab_2">
+          Вкладка 2 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatem mollitia eius reiciendis, iste veniam vero cumque assumenda
+          id voluptas, illum incidunt quod vitae veritatis, explicabo unde!
+          Nostrum, sequi? Obcaecati, possimus! Nisi delectus soluta magni
+          blanditiis optio? Iste, maiores vel quis quaerat nobis fugit odio
+          dignissimos ad magnam, vero a perspiciatis voluptatem asperiores odit,
+          minus blanditiis iusto libero ea? Porro, neque? Вкладка 1 Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Voluptatem mollitia eius
+          reiciendis, iste veniam vero cumque assumenda id voluptas, illum
+          incidunt quod vitae veritatis, explicabo unde! Nostrum, sequi?
+          Obcaecati, possimus! Nisi delectus soluta magni blanditiis optio?
+          Iste, maiores vel quis quaerat nobis fugit odio dignissimos ad magnam,
+          vero a perspiciatis voluptatem asperiores odit, minus blanditiis iusto
+          libero ea? Porro, neque?
+        </div>
+        <div class="tabcontent" id="tab_3">
+          Вкладка 3 Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatem mollitia eius reiciendis, iste veniam vero cumque assumenda
+          id voluptas, illum incidunt quod vitae veritatis, explicabo unde!
+          Nostrum, sequi? Obcaecati, possimus! Nisi delectus soluta magni
+          blanditiis optio? Iste, maiores vel quis quaerat nobis fugit odio
+          dignissimos ad magnam, vero a perspiciatis voluptatem asperiores odit,
+          minus blanditiis iusto libero ea? Porro, neque?Вкладка 1 Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Voluptatem mollitia eius
+          reiciendis, iste veniam vero cumque assumenda id voluptas, illum
+          incidunt quod vitae veritatis, explicabo unde! Nostrum, sequi?
+          Obcaecati, possimus! Nisi delectus soluta magni blanditiis optio?
+          Iste, maiores vel quis quaerat nobis fugit odio dignissimos ad magnam,
+          vero a perspiciatis voluptatem asperiores odit, minus blanditiis iusto
+          libero ea? Porro, neque? Вкладка 1 Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Voluptatem mollitia eius reiciendis,
+          iste veniam vero cumque assumenda id voluptas, illum incidunt quod
+          vitae veritatis, explicabo unde! Nostrum, sequi? Obcaecati, possimus!
+          Nisi delectus soluta magni blanditiis optio? Iste, maiores vel quis
+          quaerat nobis fugit odio dignissimos ad magnam, vero a perspiciatis
+          voluptatem asperiores odit, minus blanditiis iusto libero ea? Porro,
+          neque?Вкладка 1 Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Voluptatem mollitia eius reiciendis, iste veniam vero cumque
+          assumenda id voluptas, illum incidunt quod vitae veritatis, explicabo
+          unde! Nostrum, sequi? Obcaecati, possimus! Nisi delectus soluta magni
+          blanditiis optio? Iste, maiores vel quis quaerat nobis fugit odio
+          dignissimos ad magnam, vero a perspiciatis voluptatem asperiores odit,
+          minus blanditiis iusto libero ea? Porro, neque?Вкладка 1 Lorem ipsum
+          dolor sit amet consectetur adipisicing elit. Voluptatem mollitia eius
+          reiciendis, iste veniam vero cumque assumenda id voluptas, illum
+          incidunt quod vitae veritatis, explicabo unde! Nostrum, sequi?
+          Obcaecati, possimus! Nisi delectus soluta magni blanditiis optio?
+          Iste, maiores vel quis quaerat nobis fugit odio dignissimos ad magnam,
+          vero a perspiciatis voluptatem asperiores odit, minus blanditiis iusto
+          libero ea? Porro, neque?
+        </div>
+      </div>
+    </div>
+    <script src="sc.js"></script>
+  </body>
+</html>
