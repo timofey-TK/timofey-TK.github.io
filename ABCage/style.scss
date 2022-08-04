@@ -11,6 +11,11 @@ body {
     @media screen and (max-width: 360px) {
     }
 }
+body.unscrollable {
+    height: 100vh;
+    overflow-y: hidden;
+    padding-right: 15px; /* Avoid width reflow */
+}
 
 body,
 input,
@@ -293,7 +298,6 @@ hr {
     }
     @media screen and (max-width: 980px) {
         margin-top: 0;
-
         transition: transform ease 0.3s;
         position: fixed;
         top: 0;
@@ -344,6 +348,7 @@ hr {
     @media screen and (max-width: 480px) {
         padding-bottom: 35px;
         height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
         ul.navigation-list a {
             font-weight: 400;
             font-size: 18px;
@@ -358,7 +363,7 @@ hr {
         .contacts {
             position: absolute;
             bottom: 70px;
-            width: 260px;
+            width: fit-content;
         }
         .logo {
             margin-bottom: 80px;

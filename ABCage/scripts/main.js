@@ -1,3 +1,5 @@
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 // Логика мобильного меню
 let hamburger = document.querySelector("button.hamburger "),
     navMenu = document.querySelector(".navigation")
