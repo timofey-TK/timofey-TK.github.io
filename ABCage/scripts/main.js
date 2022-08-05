@@ -30,7 +30,7 @@ const mainSectionSwiper = new Swiper('.main-section__swiper', {
 });
 
 // Теги
-let tags = document.querySelectorAll(".tags-list .tag")
+let tags = document.querySelectorAll(".tags__list .tag")
 tags.forEach(function (tag) {
     tag.addEventListener("click", function (e) {
         tag.classList.toggle("chosen")
@@ -63,7 +63,6 @@ const feadbackSwiper = new Swiper('.feedback__swiper', {
         prevEl: '.swiper-button-prev',
     },
     centeredSlides: true,
-    idesPerView: 2,
     spaceBetween: 100,
     breakpoints: {
         650: {
@@ -75,3 +74,74 @@ const feadbackSwiper = new Swiper('.feedback__swiper', {
     }
 
 });
+
+// Слайдер со статьями
+const blogSwiper = new Swiper('.blog__swiper', {
+    spaceBetween: 25,
+    slidesPerView: 'auto',
+    speed: 2000,
+    autoplay: {
+        pauseOnMouseEnter: true,
+    },
+
+
+});
+
+// Модальные окна
+function hideDialog(dialog) {
+    dialog.classList.add("hide");
+    dialog.addEventListener(
+        "webkitAnimationEnd",
+        function () {
+            dialog.classList.remove("hide");
+            dialog.close();
+            dialog.removeEventListener(
+                "webkitAnimationEnd",
+                arguments.callee,
+                false
+            );
+        },
+        false
+    );
+}
+document
+    .querySelectorAll("[data-modal-target]")
+    .forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+            document
+                .getElementById(
+                    btn.getAttribute("data-modal-target")
+                )
+                .showModal();
+            blogSwiper.detachEvents()
+            document.body.classList.toggle('unscrollable')
+
+        });
+    });
+document
+    .querySelectorAll("button.close-modal")
+    .forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+            hideDialog(btn.closest("dialog"));
+        });
+    });
+document.querySelectorAll("dialog").forEach(function (dialog) {
+    dialog.addEventListener("click", function (e) {
+        console.log(e);
+        const rect = dialog.getBoundingClientRect();
+        if (
+            e.clientY < rect.top ||
+            e.clientY > rect.bottom ||
+            e.clientX < rect.left ||
+            e.clientX > rect.right
+        ) {
+            hideDialog(dialog);
+        }
+    });
+    dialog.addEventListener('close', function (e) {
+        document.body.classList.toggle('unscrollable')
+        blogSwiper.attachEvents()
+    })
+});
+
+// Скролл для модального окна

@@ -8,6 +8,7 @@
     <title>ABC age</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="css/modal.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/fonts/fonts.css" />
     <script src="scripts/phoneinput.js" defer></script>
@@ -52,47 +53,49 @@
         <!-- Меню сайта и навигационные ссылки -->
         <nav class="navigation">
             <img src="assets/logo.png" alt="logo" class="logo" />
-            <ul class="navigation-list">
-                <li><a href="#">Каталог</a></li>
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Блог</a></li>
-                <li><a href="#">Цикл производства</a></li>
-            </ul>
-            <div class="contacts mobile-only">
-                <div class="contacts-field">
-                    <div class="icon">
-                        <img src="assets/icons/call-calling-white.svg" alt="icon" />
+            <div class="nav-wrap">
+                <ul class="navigation-list">
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Цикл производства</a></li>
+                </ul>
+                <div class="contacts mobile-only">
+                    <div class="contacts-field">
+                        <div class="icon">
+                            <img src="assets/icons/call-calling-white.svg" alt="icon" />
+                        </div>
+                        <div class="contacts-field-wrap">
+                            <p>Телефон</p>
+                            <a href="tel:+73104372766">310-437-2766</a>
+                        </div>
                     </div>
-                    <div class="contacts-field-wrap">
-                        <p>Телефон</p>
-                        <a href="tel:+73104372766">310-437-2766</a>
+                    <div class="contacts-field">
+                        <div class="icon">
+                            <img src="assets/icons/sms.svg" alt="icon" />
+                        </div>
+                        <div class="contacts-field-wrap">
+                            <p>Почта</p>
+                            <a href="mailto:unreal@outlook.com">unreal@outlook.com</a>
+                        </div>
                     </div>
-                </div>
-                <div class="contacts-field">
-                    <div class="icon">
-                        <img src="assets/icons/sms.svg" alt="icon" />
+                    <div class="contacts-field">
+                        <div class="icon">
+                            <img src="assets/icons/location.svg" alt="icon" />
+                        </div>
+                        <div class="contacts-field-wrap">
+                            <p>Адрес</p>
+                            <a href="">706 Campfire Ave. Meriden</a>
+                        </div>
                     </div>
-                    <div class="contacts-field-wrap">
-                        <p>Почта</p>
-                        <a href="mailto:unreal@outlook.com">unreal@outlook.com</a>
-                    </div>
-                </div>
-                <div class="contacts-field">
-                    <div class="icon">
-                        <img src="assets/icons/location.svg" alt="icon" />
-                    </div>
-                    <div class="contacts-field-wrap">
-                        <p>Адрес</p>
-                        <a href="">706 Campfire Ave. Meriden</a>
-                    </div>
-                </div>
-                <div class="contacts-field">
-                    <div class="icon">
-                        <img src="assets/icons/printer.svg" alt="icon" />
-                    </div>
-                    <div class="contacts-field-wrap">
-                        <p>Для оптовых покупателей</p>
-                        <a href="tel:+73104372766">310-437-2766</a>
+                    <div class="contacts-field">
+                        <div class="icon">
+                            <img src="assets/icons/printer.svg" alt="icon" />
+                        </div>
+                        <div class="contacts-field-wrap">
+                            <p>Для оптовых покупателей</p>
+                            <a href="tel:+73104372766">310-437-2766</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -612,8 +615,685 @@
                 </div>
             </div>
         </section>
+        <!-- +++++ БЛОГ +++++ -->
         <section class="blog">
-            <h2 class="section-title">блог</h2>
+            <h2 class="section-title blog__title">блог</h2>
+            <p class="blog__description">
+                Massa commodo leo amet in feugiat non, commodo. Augue
+                senectus felis, suspendisse amet suscipit vestibulum
+                lobortis ornare sed. Pharetra, in duis tortor, iaculis mi
+                magna urna nullam.
+            </p>
+            <div class="blog__articles">
+                <div class="blog__swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Статья -->
+                        <article class="swiper-slide blog__article">
+                            <p class="blog__article__title">
+                                Заголовок новости
+                            </p>
+                            <p class="blog__article__short-text">
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam. <br> <br> Massa commodo leo amet in
+                                feugiat non, commodo. Augue senectus felis,
+                                suspendisse amet suscipit vestibulum
+                                lobortis ornare sed. Pharetra, in duis
+                                tortor, iaculis mi magna urna nullam...
+                            </p>
+
+                            <button data-modal-target="article1" class="blog__article__btn">
+                                <span class="circle"></span>
+                                <p>Читать полностью</p>
+                                <span><svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.324625 1.0123C0.221049 1.11834 0.163062 1.26069 0.163062 1.40892C0.163062 1.55716 0.221049 1.69951 0.324625 1.80555L6.11131 7.74186L0.324625 13.677C0.221049 13.783 0.163062 13.9254 0.163062 14.0736C0.163062 14.2218 0.221049 14.3642 0.324625 14.4702C0.37497 14.5219 0.435164 14.563 0.501654 14.5911C0.568144 14.6192 0.639581 14.6336 0.71175 14.6336C0.783919 14.6336 0.855357 14.6192 0.921846 14.5911C0.988336 14.563 1.04853 14.5219 1.09887 14.4702L7.2525 8.1563C7.36058 8.04542 7.42107 7.8967 7.42107 7.74186C7.42107 7.58702 7.36058 7.4383 7.2525 7.32742L1.09887 1.01349C1.04853 0.961778 0.988336 0.92068 0.921846 0.892618C0.855357 0.864555 0.783919 0.850098 0.71175 0.850098C0.639581 0.850098 0.568144 0.864555 0.501654 0.892618C0.435164 0.92068 0.37497 0.961778 0.324625 1.01349V1.0123Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <dialog class="blog__article__modal" id="article1">
+
+                                <div class="dialog-wrap">
+                                    <button class="close-modal"><svg width="10" height="10" viewBox="0 0 10 10"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5 3.88906L8.88906 0L10 1.11094L6.11094 5L10 8.88906L8.88906 10L5 6.11094L1.11094 10L0 8.88906L3.88906 5L0 1.11094L1.11094 0L5 3.88906Z"
+                                                fill="#4F4F4F" />
+                                        </svg>
+                                    </button>
+                                    <div class="blog__article__modal__title">
+                                        Заголовок новости
+                                    </div>
+                                    <div class="blog__article__modal__full-text">
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </dialog>
+                        </article>
+                        <!-- Статья -->
+                        <article class="swiper-slide blog__article">
+                            <p class="blog__article__title">
+                                Заголовок новости
+                            </p>
+                            <p class="blog__article__short-text">
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam. <br> <br> Massa commodo leo amet in
+                                feugiat non, commodo. Augue senectus felis,
+                                suspendisse amet suscipit vestibulum
+                                lobortis ornare sed. Pharetra, in duis
+                                tortor, iaculis mi magna urna nullam...
+                            </p>
+
+                            <button data-modal-target="article2" class="blog__article__btn">
+                                <span class="circle"></span>
+                                <p>Читать полностью</p>
+                                <span><svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.324625 1.0123C0.221049 1.11834 0.163062 1.26069 0.163062 1.40892C0.163062 1.55716 0.221049 1.69951 0.324625 1.80555L6.11131 7.74186L0.324625 13.677C0.221049 13.783 0.163062 13.9254 0.163062 14.0736C0.163062 14.2218 0.221049 14.3642 0.324625 14.4702C0.37497 14.5219 0.435164 14.563 0.501654 14.5911C0.568144 14.6192 0.639581 14.6336 0.71175 14.6336C0.783919 14.6336 0.855357 14.6192 0.921846 14.5911C0.988336 14.563 1.04853 14.5219 1.09887 14.4702L7.2525 8.1563C7.36058 8.04542 7.42107 7.8967 7.42107 7.74186C7.42107 7.58702 7.36058 7.4383 7.2525 7.32742L1.09887 1.01349C1.04853 0.961778 0.988336 0.92068 0.921846 0.892618C0.855357 0.864555 0.783919 0.850098 0.71175 0.850098C0.639581 0.850098 0.568144 0.864555 0.501654 0.892618C0.435164 0.92068 0.37497 0.961778 0.324625 1.01349V1.0123Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <dialog class="blog__article__modal" id="article2">
+
+                                <div class="dialog-wrap">
+                                    <button class="close-modal"><svg width="10" height="10" viewBox="0 0 10 10"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5 3.88906L8.88906 0L10 1.11094L6.11094 5L10 8.88906L8.88906 10L5 6.11094L1.11094 10L0 8.88906L3.88906 5L0 1.11094L1.11094 0L5 3.88906Z"
+                                                fill="#4F4F4F" />
+                                        </svg>
+                                    </button>
+                                    <div class="blog__article__modal__title">
+                                        Заголовок новости
+                                    </div>
+                                    <div class="blog__article__modal__full-text">
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </article>
+
+                        <article class="swiper-slide blog__article">
+                            <p class="blog__article__title">
+                                Заголовок новости
+                            </p>
+                            <p class="blog__article__short-text">
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam. <br> <br> Massa commodo leo amet in
+                                feugiat non, commodo. Augue senectus felis,
+                                suspendisse amet suscipit vestibulum
+                                lobortis ornare sed. Pharetra, in duis
+                                tortor, iaculis mi magna urna nullam...
+                            </p>
+
+                            <button data-modal-target="article1" class="blog__article__btn">
+                                <span class="circle"></span>
+                                <p>Читать полностью</p>
+                                <span><svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.324625 1.0123C0.221049 1.11834 0.163062 1.26069 0.163062 1.40892C0.163062 1.55716 0.221049 1.69951 0.324625 1.80555L6.11131 7.74186L0.324625 13.677C0.221049 13.783 0.163062 13.9254 0.163062 14.0736C0.163062 14.2218 0.221049 14.3642 0.324625 14.4702C0.37497 14.5219 0.435164 14.563 0.501654 14.5911C0.568144 14.6192 0.639581 14.6336 0.71175 14.6336C0.783919 14.6336 0.855357 14.6192 0.921846 14.5911C0.988336 14.563 1.04853 14.5219 1.09887 14.4702L7.2525 8.1563C7.36058 8.04542 7.42107 7.8967 7.42107 7.74186C7.42107 7.58702 7.36058 7.4383 7.2525 7.32742L1.09887 1.01349C1.04853 0.961778 0.988336 0.92068 0.921846 0.892618C0.855357 0.864555 0.783919 0.850098 0.71175 0.850098C0.639581 0.850098 0.568144 0.864555 0.501654 0.892618C0.435164 0.92068 0.37497 0.961778 0.324625 1.01349V1.0123Z" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <dialog class="blog__article__modal" id="article1">
+
+                                <div class="dialog-wrap">
+                                    <button class="close-modal"><svg width="10" height="10" viewBox="0 0 10 10"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5 3.88906L8.88906 0L10 1.11094L6.11094 5L10 8.88906L8.88906 10L5 6.11094L1.11094 10L0 8.88906L3.88906 5L0 1.11094L1.11094 0L5 3.88906Z"
+                                                fill="#4F4F4F" />
+                                        </svg>
+                                    </button>
+                                    <div class="blog__article__modal__title">
+                                        Заголовок новости
+                                    </div>
+                                    <div class="blog__article__modal__full-text">
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+                                        <p>
+                                            Nulla pulvinar felis mi, ac
+                                            porttitor sem luctus in. Ut aliquet
+                                            scelerisque eros. Aenean et orci sit
+                                            amet nibh maximus rutrum. Ut
+                                            elementum luctus dictum. Mauris et
+                                            augue vitae lectus molestie finibus
+                                            vel vitae nibh. Praesent in ornare
+                                            nulla. Integer lobortis, lacus a
+                                            gravida vulputate, arcu arcu
+                                            interdum dolor, ut sodales lectus
+                                            sem consequat diam. Nulla facilisi.
+                                            Etiam in tempor sapien, vitae
+                                            maximus arcu. Nam rhoncus fringilla
+                                            suscipit. Vivamus sollicitudin lacus
+                                            id ultricies tincidunt. Etiam sit
+                                            amet dapibus orci. Praesent et
+                                            lectus ut orci egestas tristique non
+                                            nec est. Nulla quam lacus, pulvinar
+                                            at hendrerit at, pretium a nulla.
+                                            Nulla sodales scelerisque elit, in
+                                            suscipit dui pretium sed. Nullam
+                                            nunc diam, sodales eu turpis nec,
+                                            lacinia condimentum sapien. Nullam
+                                            ante dolor, lacinia quis mi eu,
+                                            faucibus accumsan nulla. Integer
+                                            tristique, justo vitae posuere
+                                            maximus, urna lectus fringilla
+                                            lectus, vitae dapibus ex ex et ante.
+                                            In vulputate orci eget purus mattis,
+                                            pellentesque placerat nisl feugiat.
+                                            Donec posuere eros ut laoreet
+                                            interdum. Morbi vehicula ligula vel
+                                            ipsum sodales, sit amet luctus urna
+                                            laoreet. Praesent auctor faucibus
+                                            augue, non laoreet dui blandit eu.
+                                            Proin mollis justo in scelerisque
+                                            cursus. Quisque tincidunt venenatis
+                                            purus eu tincidunt. Aliquam id
+                                            tempor libero. Fusce interdum nunc
+                                            ac consequat interdum. Nam aliquam
+                                            semper velit, sed sodales elit
+                                            pellentesque pulvinar. Nullam id
+                                            pulvinar turpis, a tristique eros.
+                                            Mauris aliquet auctor lorem, non
+                                            tempus massa suscipit vel. Orci
+                                            varius natoque penatibus et magnis
+                                            dis parturient montes, nascetur
+                                            ridiculus mus. Suspendisse sit amet
+                                            nibh convallis, feugiat diam in,
+                                            ornare ligula. Vivamus lacinia
+                                            molestie ligula, sed posuere justo
+                                            fringilla tempus. Integer varius
+                                            scelerisque suscipit. Phasellus at
+                                            accumsan sem. Pellentesque viverra,
+                                            tortor quis consequat congue, ipsum
+                                            dolor vehicula nulla, et rutrum urna
+                                            lorem et arcu.
+                                        </p>
+                                    </div>
+                                </div>
+                            </dialog>
+                        </article>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -678,7 +1358,6 @@
                 <li><a href="#">Цикл производства</a></li>
             </ul>
             <p class="copyright">© 2000-2022, Все права защищены</p>
-
         </div>
     </footer>
 </body>

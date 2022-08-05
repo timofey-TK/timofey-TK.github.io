@@ -1,0 +1,65 @@
+dialog[open] {
+    -webkit-animation: show ease 0.2s normal;
+    animation: show ease 0.2s normal;
+    width: min(780px, 87%);
+}
+dialog[open]::backdrop {
+    -webkit-animation: show-back ease 0.2s normal;
+    animation: show-back ease 0.2s normal;
+}
+dialog.hide,
+dialog.hide::backdrop {
+    -webkit-animation: hide ease 0.2s normal;
+    animation: hide ease 0.2s normal;
+}
+
+@-webkit-keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes show-back {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+@keyframes show-back {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes hide {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    to {
+        opacity: 0;
+    }
+}
+
+dialog::backdrop {
+    background-color: #000;
+    opacity: 0.5;
+}

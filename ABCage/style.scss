@@ -2,6 +2,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
     @media screen and (max-width: 980px) {
     }
     @media screen and (max-width: 650px) {
@@ -14,7 +15,6 @@ body {
 body.unscrollable {
     height: 100vh;
     overflow-y: hidden;
-    padding-right: 15px; /* Avoid width reflow */
 }
 
 body,
@@ -73,7 +73,6 @@ h2.section-title {
         font-size: 30px;
     }
 }
-
 // +++++ Стили повторяющихся блоков +++++
 .accent-btn {
     display: flex;
@@ -309,7 +308,14 @@ hr {
         padding-bottom: 50px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        .nav-wrap {
+            padding-bottom: 35px;
+            flex-grow: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
         &.opened {
             transform: translate(0);
         }
@@ -346,8 +352,7 @@ hr {
         }
     }
     @media screen and (max-width: 480px) {
-        padding-bottom: 35px;
-        height: 100vh;
+        max-height: 100vh;
         height: calc(var(--vh, 1vh) * 100);
         ul.navigation-list a {
             font-weight: 400;
@@ -361,8 +366,6 @@ hr {
             margin-bottom: 0;
         }
         .contacts {
-            position: absolute;
-            bottom: 80px;
             width: fit-content;
         }
         .logo {
@@ -1340,5 +1343,176 @@ footer {
     @media screen and (max-width: 480px) {
         background: #fff;
         padding: 20px 50px;
+    }
+}
+
+// +++++ БЛОГ +++++
+.blog {
+    padding-bottom: 100px;
+    &__description {
+        max-width: 745px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #728095;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__swiper {
+        overflow-x: hidden;
+    }
+    @media screen and (max-width: 980px) {
+        &__description {
+            font-size: 16px;
+        }
+    }
+    &__article {
+        position: relative;
+        width: 782px;
+        height: 400px;
+        padding: 100px 50px;
+        color: #fff;
+        background-color: #2e363e;
+        background: url(../assets/article-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &__title {
+            font-weight: 700;
+            font-size: 40px;
+        }
+        &__short-text {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+            max-width: 562px;
+        }
+        &__btn {
+            position: absolute;
+            left: 50px;
+            bottom: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: none;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-weight: 500;
+            font-size: 18px;
+            color: #fff;
+
+            .circle {
+                width: 20px;
+                height: 20px;
+                background: #4475f2;
+                border-radius: 100px;
+            }
+            svg {
+                fill: #fff;
+            }
+        }
+        @media screen and (max-width: 1350px) {
+            width: 650px;
+        }
+        @media screen and (max-width: 980px) {
+            width: 400px;
+        }
+        @media screen and (max-width: 650px) {
+            width: 330px;
+            padding-top: 50px;
+            padding-bottom: 150px;
+            &__title {
+                font-size: 25px;
+            }
+            &__short-text {
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 50px 20px;
+            height: max-content;
+            &__title {
+                margin-top: 0;
+            }
+            &__short-text {
+                font-size: 12px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+
+    &__article__modal {
+        max-height: 90vh !important;
+        background: none;
+        border: none;
+        background: #ffffff;
+        border-radius: 50px;
+        padding: 0;
+        overflow: hidden;
+        overflow-y: scroll;
+        -ms-overflow-style: none;
+        overflow: -moz-scrollbars-none;
+        max-height: 870px;
+        transform: scale(1.01);
+        .dialog-wrap {
+            position: relative;
+        }
+        &__title {
+            background-position: center;
+            box-sizing: border-box;
+            padding-left: 50px;
+            padding-top: 100px;
+            font-weight: 700;
+            font-size: 40px;
+            color: #ffffff;
+            border-radius: 50px;
+            background-color: #2e363e;
+            background: url(../assets/article-bg.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 250px;
+        }
+
+        &__full-text {
+            padding: 50px;
+            padding-top: 20px;
+        }
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+            background: #e5e5e5;
+            border-radius: 29px;
+            border: none;
+            outline: none;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        @media screen and (max-width: 480px) {
+            border-radius: 20px;
+            &__title {
+                font-size: 30px;
+                border-radius: 20px;
+                padding-top: 90px;
+                padding-left: 20px;
+            }
+            &__full-text {
+                padding: 20px;
+                font-size: 12px;
+            }
+            .close-modal {
+                right: 10px;
+            }
+        }
     }
 }
