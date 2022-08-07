@@ -568,4 +568,119 @@
     padding-bottom: 50px;
   }
 }
+
+.get-discount-ozon-modal {
+  width: min(465px, 85%);
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 20px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 36px 40px;
+  text-align: center;
+}
+
+.get-discount-ozon-modal button.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background: #e5e5e5;
+  border-radius: 29px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.get-discount-ozon-modal img {
+  width: 100%;
+}
+
+.get-discount-ozon-modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.get-discount-ozon-modal__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(84, 89, 94, 0.6);
+  max-width: 385px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.get-discount-ozon-modal__tel-input {
+  width: 100%;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+  padding: 13px 16px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 14px;
+  outline: none;
+  transition: all ease 0.3s;
+}
+
+.get-discount-ozon-modal__tel-input:focus {
+  border: 1px solid #4475f2;
+}
+
+.get-discount-ozon-modal__tel-input::placeholder {
+  color: #acacac;
+}
+
+.get-discount-ozon-modal__btn {
+  width: 100%;
+  height: 44px;
+  border: none;
+  background: #4475f2;
+  border-radius: 8px;
+  margin-top: 16px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 650px) {
+  .get-discount-ozon-modal {
+    padding: 25px;
+  }
+  .get-discount-ozon-modal__title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .get-discount-ozon-modal {
+    padding: 0;
+  }
+  .get-discount-ozon-modal__title {
+    padding: 0 20px;
+    font-size: 16px;
+  }
+  .get-discount-ozon-modal__description {
+    font-size: 12px;
+    padding: 0 20px;
+    margin: 0;
+  }
+  .get-discount-ozon-modal__form {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .get-discount-ozon-modal__description {
+    padding: 0 10px;
+  }
+  .get-discount-ozon-modal__form {
+    padding: 10px;
+  }
+}
 /*# sourceMappingURL=product-page.css.map */

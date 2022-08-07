@@ -431,9 +431,29 @@
             </ul>
         </section>
         <section class="similar-products">
-            <dialog class="modal" id="get-discount-ozon-modal">
-                <p>Some inforvation 2</p>
-                <button class="close-modal">close</button>
+            <dialog class="get-discount-ozon-modal" id="get-discount-ozon-modal">
+                <button class="close-modal"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M5 3.88906L8.88906 0L10 1.11094L6.11094 5L10 8.88906L8.88906 10L5 6.11094L1.11094 10L0 8.88906L3.88906 5L0 1.11094L1.11094 0L5 3.88906Z"
+                            fill="#4F4F4F" />
+                    </svg>
+                </button>
+                <img src="assets/ozon.png" alt="ozon">
+                <p class="get-discount-ozon-modal__title accent-color">Хотите получить скидку и гарантию?</p>
+                <p class="get-discount-ozon-modal__description">Оставьте свой номер телефона и получите скидку на <span
+                        class="accent-color">OZON</span> и
+                    <span class="accent-color">год гарантии</span> на любую игрушку.
+                </p>
+                <form action="" class="get-discount-ozon-modal__form">
+                    <input class="get-discount-ozon-modal__tel-input" placeholder="Ваш номер телефона" type="tel"
+                        data-tel-input maxlength="18" />
+                    <button class="get-discount-ozon-modal__btn">
+                        Получить скидку!
+                    </button>
+                </form>
+
+
             </dialog>
             <h2 class="section-title">Похожие товары</h2>
             <div class="similar-products__swiper">

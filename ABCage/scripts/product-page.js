@@ -61,4 +61,47 @@ var similarProductsSwiper = new Swiper(".similar-products__swiper", {
 
 });
 
-// Модальное окна
+// Вызовов модального окна
+var element = document.querySelector('.similar-products__swiper'),
+    flag = false
+
+var Visible = function (target) {
+    var targetPosition = {
+        top: window.pageYOffset + target.getBoundingClientRect().top,
+        left: window.pageXOffset + target.getBoundingClientRect().left,
+        right: window.pageXOffset + target.getBoundingClientRect().right,
+        bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+    },
+        windowPosition = {
+            top: window.pageYOffset,
+            left: window.pageXOffset,
+            right: window.pageXOffset + document.documentElement.clientWidth,
+            bottom: window.pageYOffset + document.documentElement.clientHeight
+        };
+
+    if (targetPosition.bottom > windowPosition.top &&
+        targetPosition.top < windowPosition.bottom &&
+        targetPosition.right > windowPosition.left &&
+        targetPosition.left < windowPosition.right) {
+        if (!flag) {
+            showDialog(document.querySelector("#get-discount-ozon-modal"))
+            flag = true
+        }
+    } else {
+    };
+};
+
+// Запускаем функцию при прокрутке страницы
+window.addEventListener('scroll', function () {
+    Visible(element);
+});
+
+// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+Visible(element);
+// Запускаем функцию при прокрутке страницы
+window.addEventListener('scroll', function () {
+    Visible(element);
+});
+
+// А также запустим функцию сразу. А то вдруг, элемент изначально видно
+Visible(element);
