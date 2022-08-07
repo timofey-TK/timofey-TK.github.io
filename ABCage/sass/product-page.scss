@@ -28,6 +28,9 @@
             "buyBtns";
         grid-template-columns: 1fr;
     }
+    .breadcrumbs {
+        padding: 0 !important;
+    }
     &__swiper-wrap {
         padding-right: 45px;
         grid-area: swiper;

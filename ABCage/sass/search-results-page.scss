@@ -1,0 +1,97 @@
+.search-results {
+    &__title {
+        font-weight: 900;
+        font-size: 29px;
+        line-height: 35px;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: #1b1717;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+}
+.tags {
+    &__caption {
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: 0.07em;
+        color: #4475f2;
+    }
+    &-wrap {
+        display: flex;
+        gap: 20px;
+    }
+    &__clear-all {
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.07em;
+        text-decoration-line: underline;
+        color: #775577;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+        min-width: 125px;
+        padding: 0;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        .tag {
+            width: auto;
+            padding: 10px 40px;
+            list-style: none;
+            background: #f05656;
+            border-radius: 10px;
+            color: #ffffff;
+            cursor: pointer;
+            position: relative;
+            transition: all ease 0.3s;
+            .cross {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 1350px) {
+        &-wrap {
+            flex-direction: column;
+        }
+        &__clear-all {
+            margin-bottom: 50px;
+        }
+        &__list {
+            margin: 0;
+        }
+    }
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    @media screen and (max-width: 1400px) {
+        gap: 20px;
+    }
+    @media screen and (max-width: 980px) {
+        gap: 10px;
+        .product {
+            max-width: 48%;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        gap: 15px;
+        justify-content: center;
+        .product {
+            max-width: 100%;
+        }
+    }
+}
+
+.get-discount {
+    @media screen and (max-width: 480px) {
+        padding-bottom: 45px;
+    }
+    padding-bottom: 100px;
+}

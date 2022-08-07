@@ -1,0 +1,149 @@
+.mission {
+  padding-bottom: 50px;
+}
+
+.mission__title {
+  padding-left: 150px;
+}
+
+.mission__content {
+  display: flex;
+  align-items: start;
+  gap: 60px;
+}
+
+.mission__content__text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #6e6e6e;
+  max-width: 650px;
+}
+
+.mission__content__image {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1350px) {
+  .mission__content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .mission {
+    gap: 30px;
+  }
+  .mission__title {
+    padding-left: 30px;
+  }
+  .mission__content__text {
+    margin: 0;
+  }
+}
+
+.quality-standards {
+  padding-bottom: 50px;
+}
+
+.quality-standards .section-title {
+  text-align: center;
+}
+
+.quality-standards__list {
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  gap: 40px;
+}
+
+.quality-standards__list li {
+  position: relative;
+  list-style: none;
+  padding-left: 80px;
+}
+
+.quality-standards__list__name {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  max-width: 460px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000000;
+}
+
+.quality-standards__list__description {
+  margin: 0;
+  max-width: 418px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 135.2%;
+  color: #6e6e6e;
+}
+
+.quality-standards__list .number {
+  top: 0;
+  left: 0;
+  position: absolute;
+  font-weight: 400;
+  font-size: 120px;
+  color: #4475f2;
+}
+
+@media screen and (max-width: 1350px) {
+  .quality-standards__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .quality-standards__list li {
+    position: relative;
+    list-style: none;
+    padding-left: 65px;
+  }
+  .quality-standards__list__name {
+    font-size: 30px;
+  }
+  .quality-standards__list .number {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .quality-standards__list {
+    grid-template-columns: auto;
+    align-items: center;
+  }
+  .quality-standards__list li {
+    padding: 0;
+  }
+  .quality-standards__list .number {
+    position: relative;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .quality-standards h2.section-title {
+    font-size: 40px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .quality-standards h2.section-title {
+    font-size: 28px;
+  }
+  .quality-standards__list__name {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .quality-standards__list__description {
+    font-size: 16px;
+  }
+  .quality-standards__list .number {
+    font-size: 80px;
+  }
+}
+/*# sourceMappingURL=about-company-page.css.map */

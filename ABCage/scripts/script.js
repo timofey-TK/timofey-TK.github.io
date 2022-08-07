@@ -10,13 +10,7 @@ hamburger.addEventListener("click", function (e) {
     document.body.classList.toggle("unscrollable");
 });
 
-// Теги
-let tags = document.querySelectorAll(".tags__list .tag");
-tags.forEach(function (tag) {
-    tag.addEventListener("click", function (e) {
-        tag.classList.toggle("chosen");
-    });
-});
+
 
 // Рейтинг товаров
 let ratings = document.querySelectorAll(".product__about__rating");

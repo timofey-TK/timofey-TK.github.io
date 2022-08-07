@@ -1,0 +1,104 @@
+.cycle {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        padding: 0;
+        margin-top: 80px;
+        li {
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+        }
+        &__image {
+            img {
+                max-width: 100%;
+            }
+        }
+        &__text {
+            position: relative;
+            padding-left: 80px;
+        }
+        &__name {
+            margin-top: 0;
+            margin-bottom: 12px;
+            max-width: 460px;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 42px;
+            color: #000000;
+        }
+        &__description {
+            margin: 0;
+            max-width: 418px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 135.2%;
+            color: #6e6e6e;
+        }
+        .number {
+            top: 0;
+            left: 0;
+            position: absolute;
+            font-weight: 400;
+            font-size: 120px;
+            color: #4475f2;
+        }
+    }
+    @media screen and (max-width: 1350px) {
+        &__list {
+            li {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            &__text {
+                position: relative;
+                list-style: none;
+                padding-left: 65px;
+            }
+            &__name {
+                font-size: 30px;
+            }
+            .number {
+                font-size: 100px;
+            }
+        }
+    }
+    @media screen and (max-width: 980px) {
+        &__list {
+            &__text {
+                padding: 0;
+            }
+            .number {
+                position: relative;
+                text-align: center;
+            }
+        }
+    }
+    @media screen and (max-width: 650px) {
+        &__image {
+            img {
+                max-width: 100%;
+                max-height: 300px;
+            }
+        }
+        h2.section-title {
+            margin-top: 30px;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        &__list {
+            &__name {
+                font-size: 24px;
+                line-height: 28px;
+            }
+            &__description {
+                font-size: 16px;
+            }
+            .number {
+                font-size: 80px;
+            }
+        }
+    }
+}

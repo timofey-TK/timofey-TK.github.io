@@ -23,41 +23,47 @@ button {
 }
 
 section,
-header {
+header,
+.container {
   padding: 0 max(20px, calc(50% - 672px));
 }
 
 @media screen and (max-width: 1350px) {
   section,
-  header {
+  header,
+  .container {
     padding: 0 max(20px, calc(50% - 460px));
   }
 }
 
 @media screen and (max-width: 980px) {
   section,
-  header {
+  header,
+  .container {
     padding: 0 max(20px, calc(50% - 329px));
   }
 }
 
 @media screen and (max-width: 650px) {
   section,
-  header {
+  header,
+  .container {
     padding: 0 max(20px, calc(50% - 240px));
   }
 }
 
 @media screen and (max-width: 480px) {
   section,
-  header {
+  header,
+  .container {
     padding: 0 max(20px, calc(50% - 164px));
   }
 }
 
 @media screen and (max-width: 360px) {
   section,
-  header {
+  header,
+  .container {
     padding: 0 15px;
   }
 }
@@ -102,13 +108,14 @@ h2.section-title {
 @media screen and (max-width: 650px) {
   h2.section-title {
     font-size: 45px;
+    line-height: 45px;
   }
 }
 
 @media screen and (max-width: 480px) {
   h2.section-title {
     font-size: 30px;
-    line-height: 45px;
+    line-height: 35px;
     overflow: hidden;
   }
 }
@@ -122,6 +129,7 @@ h2.section-title {
   font-size: 15px;
   text-transform: capitalize;
   padding: 0;
+  padding-top: 80px;
 }
 
 .breadcrumbs a {
@@ -136,6 +144,12 @@ h2.section-title {
 @media screen and (max-width: 480px) {
   .breadcrumbs {
     font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .breadcrumbs {
+    padding-top: 30px !important;
   }
 }
 

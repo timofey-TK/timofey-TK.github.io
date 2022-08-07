@@ -18,6 +18,10 @@
   }
 }
 
+.product-section .breadcrumbs {
+  padding: 0 !important;
+}
+
 .product-section__swiper-wrap {
   padding-right: 45px;
   grid-area: swiper;

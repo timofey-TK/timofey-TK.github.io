@@ -17,3 +17,11 @@ const mainSectionSwiper = new Swiper(".main-section__swiper", {
         },
     },
 });
+
+// Теги
+let tags = document.querySelectorAll(".tags__list .tag");
+tags.forEach(function (tag) {
+    tag.addEventListener("click", function (e) {
+        tag.classList.toggle("chosen");
+    });
+});

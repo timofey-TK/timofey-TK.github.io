@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 50px;
 }
 
 .top-nav .top-nav-wrap {
@@ -127,11 +126,12 @@
 }
 
 hr {
+  width: 106%;
   border: none;
   color: #dfdfe0;
   background-color: #dfdfe0;
   height: 1px;
-  margin: 0 auto;
+  margin-left: -3%;
 }
 
 @media screen and (max-width: 980px) {
@@ -150,7 +150,6 @@ hr {
   gap: 40px;
   padding: 0;
   margin: 0;
-  padding-left: 50px;
 }
 
 .navigation li {

@@ -39,6 +39,7 @@
 }
 
 .about__advantages li {
+  width: min(33%, 149px);
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -63,8 +64,10 @@
 .about__advantages .years {
   font-weight: 600;
   font-size: 15px;
+  max-width: 195px;
   text-transform: uppercase;
   color: #1b1717;
+  text-align: center;
 }
 
 @media screen and (max-width: 480px) {

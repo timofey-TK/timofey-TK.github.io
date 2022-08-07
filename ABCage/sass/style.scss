@@ -27,7 +27,8 @@ button {
     font-family: "TT Norms";
 }
 section,
-header {
+header,
+.container {
     padding: 0 #{"max(20px, calc(50% - 672px))"};
     @media screen and (max-width: 1350px) {
         padding: 0 #{"max(20px, calc(50% - 460px))"};
@@ -74,10 +75,11 @@ h2.section-title {
     }
     @media screen and (max-width: 650px) {
         font-size: 45px;
+        line-height: 45px;
     }
     @media screen and (max-width: 480px) {
         font-size: 30px;
-        line-height: 45px;
+        line-height: 35px;
         overflow: hidden;
     }
 }
@@ -100,6 +102,10 @@ h2.section-title {
     }
     @media screen and (max-width: 480px) {
         font-size: 11px;
+    }
+    padding-top: 80px;
+    @media screen and (max-width: 980px) {
+        padding-top: 30px !important;
     }
 }
 .accent-btn {
