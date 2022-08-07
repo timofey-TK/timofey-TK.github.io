@@ -1,0 +1,62 @@
+.certificates__list {
+  width: 100%;
+  padding: 0;
+  gap: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.certificates__list li {
+  list-style: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.certificates__list img {
+  max-width: min(312px,100%);
+}
+
+@media screen and (max-width: 980px) {
+  .certificates__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .certificates__list {
+    gap: 15px;
+  }
+}
+
+.certificates__download-link {
+  color: #fff;
+  font-family: "TT Norms";
+  font-size: 20px;
+  transition: color ease 0.3s;
+}
+
+.certificates__download-link:hover {
+  color: #4475f2;
+}
+
+.glightbox-clean .gprev,
+.glightbox-clean .gnext {
+  border-radius: 100px;
+  width: 66px;
+  height: 66px;
+}
+
+.glightbox-clean .gslide-description {
+  background: none;
+}
+
+.gdesc-inner {
+  text-align: center;
+}
+
+@media screen and (max-width: 980px) {
+  .gdesc-inner {
+    display: none;
+  }
+}
+/*# sourceMappingURL=certificates.css.map */

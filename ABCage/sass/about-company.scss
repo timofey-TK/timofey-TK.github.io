@@ -1,0 +1,84 @@
+// +++++ О компании +++++
+.about h2 {
+    margin-bottom: 30px;
+    text-align: left;
+    @media screen and (max-width: 980px) {
+        margin-top: 60px;
+    }
+    @media screen and (max-width: 650px) {
+        margin-top: 0;
+    }
+}
+.about-wrap {
+    display: flex;
+    &-text {
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 980px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.about__advantages {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 30px;
+    li {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:nth-child(2) {
+            .value {
+                color: #54c28f;
+            }
+        }
+        &:nth-child(3) {
+            .value {
+                color: #00b5e3;
+            }
+        }
+    }
+    .value {
+        font-weight: 900;
+        font-size: 45px;
+        margin: 0;
+        color: #ed389e;
+    }
+    .years {
+        font-weight: 600;
+        font-size: 15px;
+
+        text-transform: uppercase;
+        color: #1b1717;
+    }
+    @media screen and (max-width: 480px) {
+        .value {
+            font-size: 30px;
+        }
+        .years {
+            font-size: 13px;
+        }
+    }
+}
+.about__description {
+    font-weight: 400;
+    font-size: 17px;
+    color: #6e6e6e;
+    max-width: 655px;
+    @media screen and (max-width: 480px) {
+        font-size: 16px;
+    }
+}
+.placeholder {
+    margin-top: -120px;
+    max-width: 50%;
+    object-fit: cover;
+    @media screen and (max-width: 980px) {
+        margin-top: 0;
+        max-width: 100%;
+    }
+}

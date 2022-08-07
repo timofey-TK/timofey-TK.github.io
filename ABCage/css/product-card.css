@@ -1,0 +1,130 @@
+.product {
+  border: 2px solid #5dbf79;
+  width: 424px;
+  height: 500px;
+  border-radius: 15px;
+  background: #4475f2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+
+.product__img {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product__img img {
+  object-fit: cover;
+  max-width: 103%;
+}
+
+.product__about {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 40px 40px 40px;
+  color: #fff;
+}
+
+.product__about__name {
+  transition: all ease 0.5s;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 980px) {
+  .product__about__name {
+    font-size: 22px;
+    margin-bottom: 7px;
+  }
+}
+
+.product__about__rating {
+  transition: all ease 0.5s;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  gap: 5px;
+}
+
+.product__about__rating .star {
+  position: relative;
+  top: 2px;
+}
+
+.product__about__description {
+  transition: all ease 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.product__about__buy-btns {
+  display: flex;
+  gap: 10px;
+}
+
+.product__about__buy-btns button {
+  cursor: pointer;
+  display: block;
+  width: 173px;
+  height: 50px;
+  background: #ffffff;
+  border-radius: 25px;
+  text-align: center;
+  color: #4475f2;
+  font-weight: 500;
+  font-size: 16px;
+  border: none;
+  transition: all ease 0.5s;
+}
+
+@media screen and (max-width: 980px) {
+  .product {
+    width: 320px;
+    height: 465px;
+  }
+  .product__about {
+    padding: 25px 25px 25px 25px;
+  }
+  .product__about__buy-btns {
+    margin-top: 25px;
+  }
+  .product__about__buy-btns button {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .product__about__description {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product {
+    width: 100%;
+  }
+}
+
+.product:hover {
+  background: #fff;
+}
+
+.product:hover .product__about__name {
+  color: #000;
+}
+
+.product:hover .product__about__description, .product:hover .product__about__rating {
+  color: #757575;
+}
+
+.product:hover .product__about__buy-btns button {
+  background: #4475f2;
+  color: #ffffff;
+}
+
+.product:hover .product__about__buy-btns button:hover {
+  background: #3861c7;
+}
+/*# sourceMappingURL=product-card.css.map */

@@ -24,18 +24,6 @@
 
 @font-face {
     font-family: "TT Norms";
-    src: url("TTNorms-MediumItalic.eot");
-    src: local("TT Norms Medium Italic"), local("TTNorms-MediumItalic"),
-        url("TTNorms-MediumItalic.eot?#iefix") format("embedded-opentype"),
-        url("TTNorms-MediumItalic.woff2") format("woff2"),
-        url("TTNorms-MediumItalic.woff") format("woff"),
-        url("TTNorms-MediumItalic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "TT Norms";
     src: url("TTNorms-BoldItalic.eot");
     src: local("TT Norms Bold Italic"), local("TTNorms-BoldItalic"),
         url("TTNorms-BoldItalic.eot?#iefix") format("embedded-opentype"),
@@ -68,18 +56,6 @@
         url("TTNorms-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
-}
-
-@font-face {
-    font-family: "TT Norms";
-    src: url("TTNorms-BlackItalic.eot");
-    src: local("TT Norms Black Italic"), local("TTNorms-BlackItalic"),
-        url("TTNorms-BlackItalic.eot?#iefix") format("embedded-opentype"),
-        url("TTNorms-BlackItalic.woff2") format("woff2"),
-        url("TTNorms-BlackItalic.woff") format("woff"),
-        url("TTNorms-BlackItalic.ttf") format("truetype");
-    font-weight: 900;
-    font-style: italic;
 }
 
 @font-face {

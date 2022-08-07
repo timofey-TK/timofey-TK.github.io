@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABC age</title>
+    <!-- Стили и скрипты внешних библиотек -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="scripts/phoneinput.js" defer></script>
+    <!-- Обязательные стили и скрипты -->
+    <link rel="stylesheet" href="css/fonts/fonts.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="scripts/script.js" defer></script>
+    <!-- Стили и скрипты повторяющихся блоков  -->
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/certificates.css" />
+    <script src="scripts/certificates.js" defer></script>
+    <link rel="stylesheet" href="css/our-advantages.css" />
+    <link rel="stylesheet" href="css/get-discount.css" />
+    <link rel="stylesheet" href="css/feedback.css" />
+    <script src="scripts/feedback.js" defer></script>
+    <link rel="stylesheet" href="css/blog.css" />
+    <script src="scripts/blog.js" defer></script>
+    <link rel="stylesheet" href="css/product-card.css">
+    <!-- Стили и скрипты самой страницы -->
+    <link rel="stylesheet" href="css/product-page.css" />
+    <script src="scripts/product-page.js" defer></script>
+</head>
+
+<body>
+    <!-- +++++ Шапка +++++ -->
+    <header>
+        <!-- Верхнаяя секция нава -->
+        <div class="top-nav">
+            <img src="./assets/logo.png" alt="logo" class="logo" />
+            <div class="top-nav-wrap">
+                <div class="search-field">
+                    <label for="search">
+                        <img src="assets/icons/search-normal.svg" alt="search" />
+                    </label>
+                    <input type="search" id="search" placeholder="Поиск" autocomplete="off" />
+                </div>
+                <button class="hamburger hamburger--elastic" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+                <div class="contact-field">
+                    <img src="assets/icons/call-calling.svg" alt="tel" class="tel-icon" />
+                    <div class="contact-field-wrap">
+                        <p class="caption">Появились вопросы?</p>
+                        <a href="tel:+73104372766">310-437-2766</a>
+                    </div>
+                </div>
+                <div class="contact-field">
+                    <img src="assets/icons/call-calling.svg" alt="tel" class="tel-icon" />
+                    <div class="contact-field-wrap">
+                        <p class="caption">Для оптовых покупателей</p>
+                        <a href="tel:+73104372766">310-437-2766</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!-- Меню сайта и навигационные ссылки -->
+        <nav class="navigation">
+            <img src="assets/logo.png" alt="logo" class="logo" />
+            <div class="nav-wrap">
+                <ul class="navigation-list">
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Цикл производства</a></li>
+                </ul>
+                <div class="contacts mobile-only">
+                    <div class="contacts-field">
+                        <div class="icon">
+                            <img src="assets/icons/call-calling-white.svg" alt="icon" />
+                        </div>
+                        <div class="contacts-field-wrap">
+                            <p>Телефон</p>
+                            <a href="tel:+73104372766">310-437-2766</a>
+                        </div>
+                    </div>
+                    <div class="contacts-field">
+                        <div class="icon">
+                            <img src="assets/icons/sms.svg" alt="icon" />
+                        </div>
+                        <div class="contacts-field-wrap">
+                            <p>Почта</p>
+                            <a href="mailto:unreal@outlook.com">unreal@outlook.com</a>
+                        </div>
+                    </div>
+                    <div class="contacts-field">
+                        <div class="icon">
+                            <img src="assets/icons/location.svg" alt="icon" />
+                        </div>
+                        <div class="contacts-field-wrap">
+                            <p>Адрес</p>
+                            <a href="">706 Campfire Ave. Meriden</a>
+                        </div>
+                    </div>
+                    <div class="contacts-field">
+                        <div class="icon">
+                            <img src="assets/icons/printer.svg" alt="icon" />
+                        </div>
+                        <div class="contacts-field-wrap">
+                            <p>Для оптовых покупателей</p>
+                            <a href="tel:+73104372766">310-437-2766</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- +++++ Основной контент +++++ -->
+    <main>
+        <!-- +++++ Секция товара +++++ -->
+        <section class="product-section">
+            <div class="product-section__swiper-wrap">
+                <div class="swiper product-section__thumb-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/thumb-product.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/thumb-product.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/thumb-product.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/thumb-product.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/thumb-product.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/thumb-product.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/thumb-product.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/thumb-product.png" />
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper product-section__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/product.png" alt="" />
+                            <a href="assets/product.png" class="glightbox light-box-btn"><img
+                                    src="assets/icons/zoom.svg" alt="" />
+                                <p>приблизить</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/ImagePlaceHolder.png" alt="" />
+                            <a href="assets/ImagePlaceHolder.png" class="glightbox light-box-btn"><img
+                                    src="assets/icons/zoom.svg" alt="" />
+                                <p>приблизить</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/product.png" alt="" />
+                            <a href="assets/product.png" class="glightbox light-box-btn"><img
+                                    src="assets/icons/zoom.svg" alt="" />
+                                <p>приблизить</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/ImagePlaceHolder.png" alt="" />
+                            <a href="assets/ImagePlaceHolder.png" class="glightbox light-box-btn"><img
+                                    src="assets/icons/zoom.svg" alt="" />
+                                <p>приблизить</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/product.png" alt="" />
+                            <a href="assets/product.png" class="glightbox light-box-btn"><img
+                                    src="assets/icons/zoom.svg" alt="" />
+                                <p>приблизить</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/ImagePlaceHolder.png" alt="" />
+                            <a href="assets/ImagePlaceHolder.png" class="glightbox light-box-btn"><img
+                                    src="assets/icons/zoom.svg" alt="" />
+                                <p>приблизить</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/product.png" alt="" />
+                            <a href="assets/product.png" class="glightbox light-box-btn"><img
+                                    src="assets/icons/zoom.svg" alt="" />
+                                <p>приблизить</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/ImagePlaceHolder.png" alt="" />
+                            <a href="assets/ImagePlaceHolder.png" class="glightbox light-box-btn"><img
+                                    src="assets/icons/zoom.svg" alt="" />
+                                <p>приблизить</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="product-section__info">
+                <li>
+                    <p class="accent-color" style="font-size: 40px">3+</p>
+                    <p class="caption">Возрастная группа</p>
+                </li>
+                <li>
+                    <p class="accent-color">Дерево</p>
+                    <p class="caption">Материал игрушки</p>
+                </li>
+                <li>
+                    <p class="accent-color">Лёгкая</p>
+                    <p class="caption">Сложность сборки</p>
+                </li>
+            </ul>
+            <ul class="breadcrumbs">
+                <li><a href="#">Главная</a>/</li>
+                <li><a href="#">Каталог</a> /</li>
+                <li><a href="#">Маркеры для скетчинга 80 штук</a></li>
+            </ul>
+            <h3 class="product-section__name accent-color">
+                Конструктор деревянный “название”
+            </h3>
+            <p class="product-section__description">
+                Конструкторы из дерева — это прекрасная возможность для
+                развития моторики пальцев и пространственного мышления.
+                Ребенок составляет простейшие композиции, учится совмещать
+                детали, выравнивать их, придавать всей конструкции
+                устойчивость. Все это кажется таким простым и доступным для
+                взрослого человека, но еще такое сложное для малыша, которые
+                только познает мир. <br />
+                <br />
+                Попробуйте решать с помощью фигур конструктора простейшие
+                математические задачи: какой предмет крупнее, чем отличится
+                геометрические формы? Все это важные шаги на пути к
+                постепенному развитию малыша.
+            </p>
+            <div class="product-section__instruction">
+                <svg width="33" height="30" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.45 6.66666H21.52V8.33332H13.45V6.66666Z" fill="black" />
+                    <path d="M13.45 10H21.52V11.6667H13.45V10Z" fill="black" />
+                    <path d="M13.45 13.3333H21.52V15H13.45V13.3333Z" fill="black" />
+                    <path d="M13.45 16.6667H21.52V18.3333H13.45V16.6667Z" fill="black" />
+                    <path d="M13.45 20H21.52V21.6667H13.45V20Z" fill="black" />
+                    <path d="M9.86328 6.66666H11.6566V8.33332H9.86328V6.66666Z" fill="black" />
+                    <path d="M9.86328 10H11.6566V11.6667H9.86328V10Z" fill="black" />
+                    <path d="M9.86328 13.3333H11.6566V15H9.86328V13.3333Z" fill="black" />
+                    <path d="M9.86328 16.6667H11.6566V18.3333H9.86328V16.6667Z" fill="black" />
+                    <path d="M9.86328 20H11.6566V21.6667H9.86328V20Z" fill="black" />
+                    <path
+                        d="M25.1065 1.66666H7.17322C6.69759 1.66666 6.24145 1.84225 5.90514 2.15481C5.56882 2.46737 5.37988 2.8913 5.37988 3.33332V26.6667C5.37988 27.1087 5.56882 27.5326 5.90514 27.8452C6.24145 28.1577 6.69759 28.3333 7.17322 28.3333H25.1065C25.5822 28.3333 26.0383 28.1577 26.3746 27.8452C26.7109 27.5326 26.8999 27.1087 26.8999 26.6667V3.33332C26.8999 2.8913 26.7109 2.46737 26.3746 2.15481C26.0383 1.84225 25.5822 1.66666 25.1065 1.66666ZM25.1065 26.6667H7.17322V3.33332H25.1065V26.6667Z"
+                        fill="black" />
+                </svg>
+                <a href="#">Инструкция по сборке</a>
+            </div>
+            <div class="product-section__buy-btns">
+                <p class="product-section__buy-btns__caption accent-color">
+                    <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24.375 13.75H23.75V9.52734C23.75 9.03125 23.5508 8.55469 23.1992 8.20312L19.2969 4.30078C18.9453 3.94922 18.4688 3.75 17.9727 3.75H16.25V1.875C16.25 0.839844 15.4102 0 14.375 0H4.375C3.33984 0 2.5 0.839844 2.5 1.875V3.75H0.3125C0.140625 3.75 0 3.89062 0 4.0625V4.6875C0 4.85938 0.140625 5 0.3125 5H10.9375C11.1094 5 11.25 5.14062 11.25 5.3125V5.9375C11.25 6.10938 11.1094 6.25 10.9375 6.25H1.5625C1.39062 6.25 1.25 6.39062 1.25 6.5625V7.1875C1.25 7.35938 1.39062 7.5 1.5625 7.5H9.6875C9.85938 7.5 10 7.64062 10 7.8125V8.4375C10 8.60938 9.85938 8.75 9.6875 8.75H0.3125C0.140625 8.75 0 8.89062 0 9.0625V9.6875C0 9.85938 0.140625 10 0.3125 10H8.4375C8.60938 10 8.75 10.1406 8.75 10.3125V10.9375C8.75 11.1094 8.60938 11.25 8.4375 11.25H2.5V16.25C2.5 18.3203 4.17969 20 6.25 20C8.32031 20 10 18.3203 10 16.25H15C15 18.3203 16.6797 20 18.75 20C20.8203 20 22.5 18.3203 22.5 16.25H24.375C24.7188 16.25 25 15.9688 25 15.625V14.375C25 14.0312 24.7188 13.75 24.375 13.75ZM6.25 18.125C5.21484 18.125 4.375 17.2852 4.375 16.25C4.375 15.2148 5.21484 14.375 6.25 14.375C7.28516 14.375 8.125 15.2148 8.125 16.25C8.125 17.2852 7.28516 18.125 6.25 18.125ZM18.75 18.125C17.7148 18.125 16.875 17.2852 16.875 16.25C16.875 15.2148 17.7148 14.375 18.75 14.375C19.7852 14.375 20.625 15.2148 20.625 16.25C20.625 17.2852 19.7852 18.125 18.75 18.125ZM21.875 10H16.25V5.625H17.9727L21.875 9.52734V10Z"
+                            fill="#4475F2" />
+                    </svg>
+                    <span>Доставка товара по всей России в течение 5
+                        дней</span>
+                </p>
+                <div class="arrow">
+                    <svg width="23" height="35" viewBox="0 0 23 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M4.02134 27.5761L6.60584 17.9306C6.69084 17.6211 6.65352 17.2908 6.50161 17.008C6.3497 16.7253 6.09484 16.5118 5.78984 16.4118C5.48483 16.3118 5.15305 16.333 4.86323 16.471C4.57342 16.6089 4.34777 16.8531 4.23305 17.1528L4.19071 17.2835L0.826207 29.84C0.746557 30.1374 0.779472 30.4538 0.918647 30.7284C1.05782 31.003 1.29346 31.2167 1.5804 31.3283L1.71021 31.3711L14.2667 34.7356C14.5762 34.8206 14.9066 34.7833 15.1893 34.6314C15.4721 34.4795 15.6856 34.2246 15.7855 33.9196C15.8855 33.6146 15.8643 33.2829 15.7264 32.993C15.5884 32.7032 15.3443 32.4776 15.0445 32.3629L14.9143 32.3214L5.27567 29.7387L13.0526 25.2487C15.8706 23.6217 18.1307 21.4843 19.7137 18.9781L19.9572 18.5799C21.5237 15.954 22.3303 12.9447 22.2871 9.88741C22.2484 6.77242 21.353 3.62552 19.641 0.660249C19.4753 0.373144 19.2023 0.163645 18.882 0.0778406C18.5618 -0.00796333 18.2206 0.0369574 17.9335 0.202717C17.6464 0.368477 17.4369 0.6415 17.3511 0.961725C17.2653 1.28195 17.3102 1.62314 17.476 1.91025C18.9785 4.51265 19.7547 7.24109 19.7873 9.91962C19.8252 12.5168 19.1404 15.0733 17.8095 17.3039C16.5166 19.4786 14.6293 21.3616 12.2309 22.8294L11.8026 23.0836L4.02134 27.5761L6.60584 17.9306L4.02084 27.5753L4.02134 27.5761Z"
+                            fill="#4475F2" />
+                    </svg>
+                </div>
+                <button>Заказать на ozon</button>
+                <button>Заказать на wb</button>
+            </div>
+        </section>
+        <!-- +++++ Секция описания товара+++++ -->
+        <section class="about-product">
+            <div class="about-product__text-wrap">
+                <div class="about-product__description">
+                    <h4>Описание товара</h4>
+                    <p>
+                        It is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout. The point of using Lorem
+                        Ipsum is that it has a more-or-less The point of
+                        using Lorem Ipsum is that it has a more-or-less
+                    </p>
+                </div>
+                <div class="hr"></div>
+                <div class="about-product__characteristic">
+                    <h4>Характеристики</h4>
+                    <div class="lists">
+                        <ul>
+                            <li>Дерево</li>
+                            <li>Для детей от 3-х лет</li>
+                            <li>Лёгкая сложность сборки</li>
+                            <li>163 детали</li>
+                            <li>Картонная упаковка</li>
+                            <li>Дерево</li>
+                            <li>Для детей от 3-х лет</li>
+                            <li>163 детали</li>
+                        </ul>
+                        <ul>
+                            <li>Дерево</li>
+                            <li>Для детей от 3-х лет</li>
+                            <li>Лёгкая сложность сборки</li>
+                            <li>163 детали</li>
+                            <li>Картонная упаковка</li>
+                            <li>Дерево</li>
+                            <li>Для детей от 3-х лет</li>
+                            <li>163 детали</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hr"></div>
+                <div class="about-product__importer">
+                    <h4>Импортер</h4>
+                    <p>
+                        We offer Free Standard Shipping for all orders over
+                        $75 to the 50 states and the District of Columbia.
+                        The minimum order value must be $75 before taxes,
+                        shipping and handling. Shipping fees are
+                        non-refundable. <br />
+                        <br />
+                        Please allow up to 2 business days (excluding
+                        weekends, holidays, and sale days) to process your
+                        order.
+                        <br />
+                        <br />
+                        Processing Time + Shipping Time = Delivery Time
+                    </p>
+                </div>
+            </div>
+            <img src="assets/rich.png" alt="rich" class="about-product__rich" />
+        </section>
+        <!-- +++++ Инструкция по сборке +++++ -->
+        <section class="instruction">
+            <h2 class="section-title">Инструкция по сборке</h2>
+            <img src="assets/instruction.png" alt="instruction" class="instruction__image" />
+            <ul class="instruction__steps">
+                <li>
+                    <p class="instruction__steps__name">Действие 1</p>
+                    <p class="instruction__steps__text">
+                        It is a long established fact that a reader will be
+                        distracted by the readable content
+                    </p>
+                </li>
+                <li>
+                    <p class="instruction__steps__name">Действие 2</p>
+                    <p class="instruction__steps__text">
+                        It is a long established fact that a reader will be
+                        distracted by the readable content
+                    </p>
+                </li>
+                <li>
+                    <p class="instruction__steps__name">Действие 3</p>
+                    <p class="instruction__steps__text">
+                        It is a long established fact that a reader will be
+                        distracted by the readable content
+                    </p>
+                </li>
+                <li>
+                    <p class="instruction__steps__name">Действие 4</p>
+                    <p class="instruction__steps__text">
+                        It is a long established fact that a reader will be
+                        distracted by the readable content
+                    </p>
+                </li>
+                <li>
+                    <p class="instruction__steps__name">Действие 5</p>
+                    <p class="instruction__steps__text">
+                        It is a long established fact that a reader will be
+                        distracted by the readable content
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <!-- +++++ Видеоинструкция +++++ -->
+        <section class="videoinstruction">
+            <h2 class="section-title">видеоинструкция</h2>
+            <iframe class="videoinstruction__video" width="960" height="544"
+                src="https://www.youtube-nocookie.com/embed/895XdJDJIPw" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </section>
+        <!-- +++++ Cертификаты качества +++++ -->
+        <section class="certificates">
+            <h2 class="section-title">сертификаты качества</h2>
+            <ul class="certificates__list">
+                <li>
+                    <a href="assets/certificates.png" class="certificates-lightbox" data-gallery="certificates"
+                        data-description='<a href="assets/certificates.png" download class="certificates__download-link">скачать</a>'>
+
+                        <img src="assets/certificates.png" alt="certificate" />
+                    </a>
+                </li>
+                <li>
+                    <a href="assets/certificates.png" class="certificates-lightbox" data-gallery="certificates"
+                        data-description='<a href="assets/certificates.png" download class="certificates__download-link">скачать</a>'>
+                        <img src="assets/certificates.png" alt="certificate" />
+                    </a>
+                </li>
+                <li>
+                    <a href="assets/certificates.png" class="certificates-lightbox" data-gallery="certificates"
+                        data-description='<a href="assets/certificates.png" download class="certificates__download-link">скачать</a>'>
+                        <img src="assets/certificates.png" alt="certificate" />
+                    </a>
+                </li>
+                <li>
+                    <a href="assets/certificates.png" class="certificates-lightbox" data-gallery="certificates"
+                        data-description='<a href="assets/certificates.png" download class="certificates__download-link">скачать</a>'>
+                        <img src="assets/certificates.png" alt="certificate" />
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="similar-products">
+            <dialog class="modal" id="get-discount-ozon-modal">
+                <p>Some inforvation 2</p>
+                <button class="close-modal">close</button>
+            </dialog>
+            <h2 class="section-title">Похожие товары</h2>
+            <div class="similar-products__swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- Товар -->
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="assets/derevo-svet-1536x1001.jpg" alt="product image" />
+                            </div>
+                            <div class="product__about">
+                                <p class="product__about__name">
+                                    Наименование игрушки 1
+                                </p>
+                                <div class="product__about__rating" data-rating="5">
+                                    (67)
+                                </div>
+                                <p class="product__about__description">
+                                    Sed ut perspiciatis unde omnis iste natus error
+                                    sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae
+                                    ab.
+                                </p>
+                                <div class="product__about__buy-btns">
+                                    <button class="ozon">Купить на OZON</button>
+                                    <button class="wb">Купить на WB</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- конец карточки товара-->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Товар -->
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="assets/3d-cryptocurrency-rendering-design_23-2149074545.webp"
+                                    alt="product image" />
+                            </div>
+                            <div class="product__about">
+                                <p class="product__about__name">
+                                    Наименование игрушки 1
+                                </p>
+                                <div class="product__about__rating" data-rating="5">
+                                    (67)
+                                </div>
+                                <p class="product__about__description">
+                                    Sed ut perspiciatis unde omnis iste natus error
+                                    sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae
+                                    ab.
+                                </p>
+                                <div class="product__about__buy-btns">
+                                    <button class="ozon">Купить на OZON</button>
+                                    <button class="wb">Купить на WB</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- конец карточки товара-->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Товар -->
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="assets/product_img4.png" alt="product image" />
+                            </div>
+                            <div class="product__about">
+                                <p class="product__about__name">
+                                    Наименование игрушки 1
+                                </p>
+                                <div class="product__about__rating" data-rating="5">
+                                    (67)
+                                </div>
+                                <p class="product__about__description">
+                                    Sed ut perspiciatis unde omnis iste natus error
+                                    sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae
+                                    ab.
+                                </p>
+                                <div class="product__about__buy-btns">
+                                    <button class="ozon">Купить на OZON</button>
+                                    <button class="wb">Купить на WB</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- конец карточки товара-->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Товар -->
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="assets/product_img4.png" alt="product image" />
+                            </div>
+                            <div class="product__about">
+                                <p class="product__about__name">
+                                    Наименование игрушки 1
+                                </p>
+                                <div class="product__about__rating" data-rating="5">
+                                    (67)
+                                </div>
+                                <p class="product__about__description">
+                                    Sed ut perspiciatis unde omnis iste natus error
+                                    sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae
+                                    ab.
+                                </p>
+                                <div class="product__about__buy-btns">
+                                    <button class="ozon">Купить на OZON</button>
+                                    <button class="wb">Купить на WB</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- конец карточки товара-->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Товар -->
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="assets/product_img4.png" alt="product image" />
+                            </div>
+                            <div class="product__about">
+                                <p class="product__about__name">
+                                    Наименование игрушки 1
+                                </p>
+                                <div class="product__about__rating" data-rating="5">
+                                    (67)
+                                </div>
+                                <p class="product__about__description">
+                                    Sed ut perspiciatis unde omnis iste natus error
+                                    sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae
+                                    ab.
+                                </p>
+                                <div class="product__about__buy-btns">
+                                    <button class="ozon">Купить на OZON</button>
+                                    <button class="wb">Купить на WB</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- конец карточки товара-->
+                    </div>
+                    <div class="swiper-slide">
+                        <!-- Товар -->
+                        <div class="product">
+                            <div class="product__img">
+                                <img src="assets/product_img4.png" alt="product image" />
+                            </div>
+                            <div class="product__about">
+                                <p class="product__about__name">
+                                    Наименование игрушки 1
+                                </p>
+                                <div class="product__about__rating" data-rating="5">
+                                    (67)
+                                </div>
+                                <p class="product__about__description">
+                                    Sed ut perspiciatis unde omnis iste natus error
+                                    sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae
+                                    ab.
+                                </p>
+                                <div class="product__about__buy-btns">
+                                    <button class="ozon">Купить на OZON</button>
+                                    <button class="wb">Купить на WB</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- конец карточки товара-->
+                    </div>
+                </div>
+            </div>
+            <div class="similar-products__arrows">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+        </section>
+        <section class="feedback">
+            <h2 class="feedback__title">
+                Почитайте отзывы довольных клиентов
+            </h2>
+            <div class="feedback__swiper-wrap">
+                <div class="feedback__swiper">
+                    <div class="swiper-wrapper">
+                        <div class="feedback__swiper__slide swiper-slide">
+                            <div class="feedback__swiper__slide__content">
+                                <img src="assets/icons/quotes.svg" alt="quotes" class="quotes" />
+                                <p class="quote">
+                                    «Подарок порадовал, дети были в
+                                    восторге»
+                                </p>
+                                <p class="text">
+                                    Massa commodo leo amet in feugiat non,
+                                    commodo. Augue senectus felis,
+                                    suspendisse amet suscipit vestibulum
+                                    lobortis ornare sed. Pharetra, in duis
+                                    tortor, iaculis mi magna urna nullam.
+                                </p>
+                            </div>
+                            <div class="feedback__swiper__slide__person-info">
+                                <div class="avatar"></div>
+                                <p class="name">Ирина Ларионова</p>
+                                <p class="city">Санкт-Петербург</p>
+                            </div>
+                        </div>
+                        <div class="feedback__swiper__slide swiper-slide">
+                            <div class="feedback__swiper__slide__content">
+                                <img src="assets/icons/quotes.svg" alt="quotes" class="quotes" />
+                                <p class="quote">
+                                    «Подарок порадовал, дети были в
+                                    восторге»
+                                </p>
+                                <p class="text">
+                                    Massa commodo leo amet in feugiat non,
+                                    commodo. Augue senectus felis,
+                                    suspendisse amet suscipit vestibulum
+                                    lobortis ornare sed. Pharetra, in duis
+                                    tortor, iaculis mi magna urna nullam.
+                                </p>
+                            </div>
+                            <div class="feedback__swiper__slide__person-info">
+                                <div class="avatar"></div>
+                                <p class="name">Ирина Ларионова</p>
+                                <p class="city">Санкт-Петербург</p>
+                            </div>
+                        </div>
+                        <div class="feedback__swiper__slide swiper-slide">
+                            <div class="feedback__swiper__slide__content">
+                                <img src="assets/icons/quotes.svg" alt="quotes" class="quotes" />
+                                <p class="quote">
+                                    «Подарок порадовал, дети были в
+                                    восторге»
+                                </p>
+                                <p class="text">
+                                    Massa commodo leo amet in feugiat non,
+                                    commodo. Augue senectus felis,
+                                    suspendisse amet suscipit vestibulum
+                                    lobortis ornare sed. Pharetra, in duis
+                                    tortor, iaculis mi magna urna nullam.
+                                </p>
+                            </div>
+                            <div class="feedback__swiper__slide__person-info">
+                                <div class="avatar"></div>
+                                <p class="name">Ирина Ларионова</p>
+                                <p class="city">Санкт-Петербург</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-nav">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ++++ Наши преимущества ++++ -->
+        <section class="our-advantages">
+            <h2 class="section-title">Наши преимущества</h2>
+            <ul class="our-advantages__list">
+                <li style="background: #6991f5">
+                    <p class="advantage-name">Преимущество</p>
+                    <p class="advantage-caption">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Ut elit tellus, luctus nec ullamcorper mattis,
+                        pulvinar dapibus leo.
+                    </p>
+                </li>
+                <li style="background: #ee379d">
+                    <p class="advantage-name">Преимущество</p>
+                    <p class="advantage-caption">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Ut elit tellus, luctus nec ullamcorper mattis,
+                        pulvinar dapibus leo.
+                    </p>
+                </li>
+                <li style="background: #55c18f">
+                    <p class="advantage-name">Преимущество</p>
+                    <p class="advantage-caption">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit. Ut elit tellus, luctus nec ullamcorper mattis,
+                        pulvinar dapibus leo.
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <!-- ++++ Секция "Получите скидку"  ++++ -->
+        <section class="get-discount">
+            <div class="get-discount-wrap">
+                <div class="get-discount__ozon">
+                    <p class="get-discount__ozon__title">
+                        Получите <span class="accent-color">скидку</span> на
+                        <span class="accent-color">OZON</span>
+                    </p>
+                    <p class="get-discount__ozon__value accent-color">
+                        40%
+                    </p>
+                </div>
+                <form action="" class="get-discount__form">
+                    <p class="get-discount__form__title accent-color">
+                        Заполните простую форму
+                    </p>
+                    <p class="get-discount__form__description">
+                        Оставьте свой номер телефона и получите скидку на
+                        <span class="accent-color">OZON</span> и год
+                        <span class="accent-color">гарантии</span> на любую
+                        игрушку.
+                    </p>
+                    <input class="get-discount__form__tel-input" placeholder="Ваш номер телефона" type="tel"
+                        data-tel-input maxlength="18" />
+                    <button class="get-discount__form__btn">
+                        Получить скидку!
+                    </button>
+                </form>
+            </div>
+        </section>
+        <!-- +++++ БЛОГ +++++ -->
+        <section class="blog">
+            <h2 class="section-title blog__title">блог</h2>
+            <p class="blog__description">
+                Massa commodo leo amet in feugiat non, commodo. Augue
+                senectus felis, suspendisse amet suscipit vestibulum
+                lobortis ornare sed. Pharetra, in duis tortor, iaculis mi
+                magna urna nullam.
+            </p>
+            <div class="blog__articles">
+                <div class="blog__swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Статья -->
+                        <article class="swiper-slide blog__article">
+                            <p class="blog__article__title">
+                                Заголовок новости
+                            </p>
+                            <p class="blog__article__short-text">
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam. <br />
+                                <br />
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam...
+                            </p>
+
+                            <button data-modal-target="article1" class="blog__article__btn">
+                                <span class="circle"></span>
+                                <p>Читать полностью</p>
+                                <span><svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.324625 1.0123C0.221049 1.11834 0.163062 1.26069 0.163062 1.40892C0.163062 1.55716 0.221049 1.69951 0.324625 1.80555L6.11131 7.74186L0.324625 13.677C0.221049 13.783 0.163062 13.9254 0.163062 14.0736C0.163062 14.2218 0.221049 14.3642 0.324625 14.4702C0.37497 14.5219 0.435164 14.563 0.501654 14.5911C0.568144 14.6192 0.639581 14.6336 0.71175 14.6336C0.783919 14.6336 0.855357 14.6192 0.921846 14.5911C0.988336 14.563 1.04853 14.5219 1.09887 14.4702L7.2525 8.1563C7.36058 8.04542 7.42107 7.8967 7.42107 7.74186C7.42107 7.58702 7.36058 7.4383 7.2525 7.32742L1.09887 1.01349C1.04853 0.961778 0.988336 0.92068 0.921846 0.892618C0.855357 0.864555 0.783919 0.850098 0.71175 0.850098C0.639581 0.850098 0.568144 0.864555 0.501654 0.892618C0.435164 0.92068 0.37497 0.961778 0.324625 1.01349V1.0123Z" />
+                                    </svg>
+                                </span>
+                            </button>
+
+                        </article>
+                        <!-- Статья -->
+                        <article class="swiper-slide blog__article">
+                            <p class="blog__article__title">
+                                Заголовок новости
+                            </p>
+                            <p class="blog__article__short-text">
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam. <br />
+                                <br />
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam...
+                            </p>
+
+                            <button data-modal-target="article2" class="blog__article__btn">
+                                <span class="circle"></span>
+                                <p>Читать полностью</p>
+                                <span><svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.324625 1.0123C0.221049 1.11834 0.163062 1.26069 0.163062 1.40892C0.163062 1.55716 0.221049 1.69951 0.324625 1.80555L6.11131 7.74186L0.324625 13.677C0.221049 13.783 0.163062 13.9254 0.163062 14.0736C0.163062 14.2218 0.221049 14.3642 0.324625 14.4702C0.37497 14.5219 0.435164 14.563 0.501654 14.5911C0.568144 14.6192 0.639581 14.6336 0.71175 14.6336C0.783919 14.6336 0.855357 14.6192 0.921846 14.5911C0.988336 14.563 1.04853 14.5219 1.09887 14.4702L7.2525 8.1563C7.36058 8.04542 7.42107 7.8967 7.42107 7.74186C7.42107 7.58702 7.36058 7.4383 7.2525 7.32742L1.09887 1.01349C1.04853 0.961778 0.988336 0.92068 0.921846 0.892618C0.855357 0.864555 0.783919 0.850098 0.71175 0.850098C0.639581 0.850098 0.568144 0.864555 0.501654 0.892618C0.435164 0.92068 0.37497 0.961778 0.324625 1.01349V1.0123Z" />
+                                    </svg>
+                                </span>
+                            </button>
+
+                        </article>
+
+                        <article class="swiper-slide blog__article">
+                            <p class="blog__article__title">
+                                Заголовок новости
+                            </p>
+                            <p class="blog__article__short-text">
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam. <br />
+                                <br />
+                                Massa commodo leo amet in feugiat non,
+                                commodo. Augue senectus felis, suspendisse
+                                amet suscipit vestibulum lobortis ornare
+                                sed. Pharetra, in duis tortor, iaculis mi
+                                magna urna nullam...
+                            </p>
+
+                            <button data-modal-target="article1" class="blog__article__btn">
+                                <span class="circle"></span>
+                                <p>Читать полностью</p>
+                                <span><svg width="8" height="15" viewBox="0 0 8 15" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M0.324625 1.0123C0.221049 1.11834 0.163062 1.26069 0.163062 1.40892C0.163062 1.55716 0.221049 1.69951 0.324625 1.80555L6.11131 7.74186L0.324625 13.677C0.221049 13.783 0.163062 13.9254 0.163062 14.0736C0.163062 14.2218 0.221049 14.3642 0.324625 14.4702C0.37497 14.5219 0.435164 14.563 0.501654 14.5911C0.568144 14.6192 0.639581 14.6336 0.71175 14.6336C0.783919 14.6336 0.855357 14.6192 0.921846 14.5911C0.988336 14.563 1.04853 14.5219 1.09887 14.4702L7.2525 8.1563C7.36058 8.04542 7.42107 7.8967 7.42107 7.74186C7.42107 7.58702 7.36058 7.4383 7.2525 7.32742L1.09887 1.01349C1.04853 0.961778 0.988336 0.92068 0.921846 0.892618C0.855357 0.864555 0.783919 0.850098 0.71175 0.850098C0.639581 0.850098 0.568144 0.864555 0.501654 0.892618C0.435164 0.92068 0.37497 0.961778 0.324625 1.01349V1.0123Z" />
+                                    </svg>
+                                </span>
+                            </button>
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-wrap">
+            <ul class="socials">
+                <li>
+                    <a href="#"><img src="assets/icons/facebook.svg" alt="facebook" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="assets/icons/youtube.svg" alt="youtube" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="assets/icons/dribbble.svg" alt="dribbble" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="assets/icons/whatsapp.svg" alt="whatsapp" /></a>
+                </li>
+            </ul>
+            <div class="contacts">
+                <div class="contacts-field">
+                    <div class="icon">
+                        <img src="assets/icons/call-calling-white.svg" alt="icon" />
+                    </div>
+                    <div class="contacts-field-wrap">
+                        <p>Телефон</p>
+                        <a href="tel:+73104372766">310-437-2766</a>
+                    </div>
+                </div>
+                <div class="contacts-field">
+                    <div class="icon">
+                        <img src="assets/icons/sms.svg" alt="icon" />
+                    </div>
+                    <div class="contacts-field-wrap">
+                        <p>Почта</p>
+                        <a href="mailto:unreal@outlook.com">unreal@outlook.com</a>
+                    </div>
+                </div>
+                <div class="contacts-field">
+                    <div class="icon">
+                        <img src="assets/icons/location.svg" alt="icon" />
+                    </div>
+                    <div class="contacts-field-wrap">
+                        <p>Адрес</p>
+                        <a href="">706 Campfire Ave. Meriden</a>
+                    </div>
+                </div>
+                <div class="contacts-field">
+                    <div class="icon">
+                        <img src="assets/icons/printer.svg" alt="icon" />
+                    </div>
+                    <div class="contacts-field-wrap">
+                        <p>Для оптовых покупателей</p>
+                        <a href="tel:+73104372766">310-437-2766</a>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="navigation-list">
+                <li><a href="#">Каталог</a></li>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Цикл производства</a></li>
+            </ul>
+            <p class="copyright">© 2000-2022, Все права защищены</p>
+        </div>
+    </footer>
+</body>
+
+</html>

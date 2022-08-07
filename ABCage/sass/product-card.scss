@@ -1,0 +1,114 @@
+.product {
+    border: 2px solid #5dbf79;
+    width: 424px;
+    height: 500px;
+    border-radius: 15px;
+    background: #4475f2;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all ease 0.5s;
+    &__img {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        img {
+            object-fit: cover;
+            max-width: 103%;
+        }
+    }
+    &__about {
+        display: flex;
+        flex-direction: column;
+        padding: 25px 40px 40px 40px;
+        color: #fff;
+        &__name {
+            transition: all ease 0.5s;
+            font-weight: 700;
+            font-size: 24px;
+            margin-top: 0;
+            @media screen and (max-width: 980px) {
+                font-size: 22px;
+                margin-bottom: 7px;
+            }
+        }
+        &__rating {
+            transition: all ease 0.5s;
+            display: flex;
+            flex-direction: row-reverse;
+
+            justify-content: start;
+            gap: 5px;
+            .star {
+                position: relative;
+                top: 2px;
+            }
+        }
+        &__description {
+            transition: all ease 0.5s;
+            font-weight: 400;
+            font-size: 17px;
+        }
+        &__buy-btns {
+            display: flex;
+            gap: 10px;
+            button {
+                cursor: pointer;
+                display: block;
+                width: 173px;
+                height: 50px;
+                background: #ffffff;
+                border-radius: 25px;
+                text-align: center;
+                color: #4475f2;
+                font-weight: 500;
+                font-size: 16px;
+                border: none;
+                transition: all ease 0.5s;
+            }
+        }
+    }
+    @media screen and (max-width: 980px) {
+        width: 320px;
+        height: 465px;
+        &__about {
+            padding: 25px 25px 25px 25px;
+            &__buy-btns {
+                margin-top: 25px;
+                button {
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+            &__description {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
+    &:hover {
+        background: #fff;
+        .product__about {
+            &__name {
+                color: #000;
+            }
+            &__description,
+            &__rating {
+                color: #757575;
+            }
+            &__buy-btns {
+                button {
+                    background: #4475f2;
+                    color: #ffffff;
+
+                    &:hover {
+                        background: #3861c7;
+                    }
+                }
+            }
+        }
+    }
+}

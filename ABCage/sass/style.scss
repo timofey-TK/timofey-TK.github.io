@@ -1,0 +1,195 @@
+// +++++ Глобальные стили +++++
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    @media screen and (max-width: 980px) {
+    }
+    @media screen and (max-width: 650px) {
+    }
+    @media screen and (max-width: 480px) {
+    }
+    @media screen and (max-width: 360px) {
+    }
+}
+body.unscrollable {
+    height: 100vh;
+    overflow-y: hidden;
+    padding-right: 15px;
+    @media screen and (max-width: 650px) {
+        padding-right: 0;
+    }
+}
+
+body,
+input,
+button {
+    font-family: "TT Norms";
+}
+section,
+header {
+    padding: 0 #{"max(20px, calc(50% - 672px))"};
+    @media screen and (max-width: 1350px) {
+        padding: 0 #{"max(20px, calc(50% - 460px))"};
+    }
+    @media screen and (max-width: 980px) {
+        padding: 0 #{"max(20px, calc(50% - 329px))"};
+    }
+    @media screen and (max-width: 650px) {
+        padding: 0 #{"max(20px, calc(50% - 240px))"};
+    }
+    @media screen and (max-width: 480px) {
+        padding: 0 #{"max(20px, calc(50% - 164px))"};
+    }
+    @media screen and (max-width: 360px) {
+        padding: 0 15px;
+    }
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.mobile-only {
+    display: none;
+    @media screen and (max-width: 980px) {
+        display: block;
+    }
+}
+.accent-color {
+    color: #4475f2;
+}
+
+h2.section-title {
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 71px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    margin-top: 100px;
+    @media screen and (max-width: 980px) {
+        font-size: 50px;
+        &.text-center {
+            text-align: center;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        font-size: 45px;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 30px;
+        line-height: 45px;
+        overflow: hidden;
+    }
+}
+// +++++ Стили повторяющихся блоков +++++
+.breadcrumbs {
+    grid-area: breadcrumbs;
+    display: flex;
+    list-style: none;
+    gap: 5px;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: capitalize;
+    padding: 0;
+    a {
+        color: #757575;
+        text-decoration: none;
+    }
+    li:last-child a {
+        color: #4475f2;
+    }
+    @media screen and (max-width: 480px) {
+        font-size: 11px;
+    }
+}
+.accent-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 73px;
+    left: 50px;
+    top: 589px;
+    background: #ee379d;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: all ease 0.3s;
+    &:hover {
+        background: #d4328b;
+    }
+    @media screen and (max-width: 480px) {
+        width: 164px;
+    }
+}
+
+.contacts {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    gap: 20px;
+}
+.contacts-field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    .icon {
+        padding: 0px;
+        min-width: 48px;
+        height: 48px;
+        background: #4475f2;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 20px;
+        }
+    }
+    .contacts-field-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        font-weight: 400;
+        font-size: 17px;
+        margin: 0;
+        margin-bottom: 5px;
+        padding: 0;
+        color: #8c8c8c;
+    }
+    a {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 19px;
+        color: #ffffff;
+    }
+    @media screen and (max-width: 480px) {
+        p {
+            font-size: 14px;
+        }
+        a {
+            font-size: 16px;
+        }
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    background: #4475f2;
+    border-radius: 100px;
+    width: 66px;
+    height: 66px;
+    transition: all ease 0.5s;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}

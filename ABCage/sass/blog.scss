@@ -1,0 +1,101 @@
+// +++++ БЛОГ +++++
+.blog {
+    padding-bottom: 100px;
+    &__description {
+        max-width: 745px;
+        font-weight: 400;
+        font-size: 20px;
+        color: #728095;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    &__title {
+        margin-bottom: 20px;
+    }
+    &__swiper {
+        overflow-x: hidden;
+    }
+    @media screen and (max-width: 980px) {
+        &__description {
+            font-size: 16px;
+        }
+    }
+    &__article {
+        position: relative;
+        width: 782px;
+        height: 400px;
+        padding: 100px 50px;
+        color: #fff;
+        background-color: #2e363e;
+        background: url(../assets/article-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &__title {
+            font-weight: 700;
+            font-size: 40px;
+        }
+        &__short-text {
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+            max-width: 562px;
+        }
+        &__btn {
+            position: absolute;
+            left: 50px;
+            bottom: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background: none;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-weight: 500;
+            font-size: 18px;
+            color: #fff;
+
+            .circle {
+                width: 20px;
+                height: 20px;
+                background: #4475f2;
+                border-radius: 100px;
+            }
+            svg {
+                fill: #fff;
+            }
+        }
+        @media screen and (max-width: 1350px) {
+            width: 650px;
+        }
+        @media screen and (max-width: 980px) {
+            width: 400px;
+        }
+        @media screen and (max-width: 650px) {
+            width: 330px;
+            padding-top: 50px;
+            padding-bottom: 150px;
+            &__title {
+                font-size: 25px;
+            }
+            &__short-text {
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 50px 20px;
+            height: max-content;
+            &__title {
+                margin-top: 0;
+            }
+            &__short-text {
+                font-size: 12px;
+                padding-bottom: 40px;
+            }
+        }
+    }
+}

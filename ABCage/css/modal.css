@@ -1,7 +1,6 @@
 dialog[open] {
     -webkit-animation: show ease 0.2s normal;
     animation: show ease 0.2s normal;
-    width: min(780px, 87%);
 }
 dialog[open]::backdrop {
     -webkit-animation: show-back ease 0.2s normal;

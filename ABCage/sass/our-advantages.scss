@@ -1,0 +1,56 @@
+// ++++ Наши преимущества ++++
+.our-advantages {
+    &__list {
+        display: flex;
+        gap: 30px;
+        padding: 0;
+        li {
+            box-sizing: border-box;
+            width: 428px;
+            height: 296px;
+            list-style: none;
+            color: #ffffff;
+            border-radius: 20px;
+            padding: 30px;
+        }
+        .advantage-name {
+            font-weight: 900;
+            font-size: 25px;
+            margin-top: 0;
+            margin-bottom: 60px;
+            line-height: 30px;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+        }
+        .advantage-caption {
+            font-weight: 400;
+            font-size: 20px;
+        }
+        @media screen and (max-width: 1350px) {
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media screen and (max-width: 980px) {
+            justify-content: center;
+            gap: 15px;
+            li {
+                width: 321px;
+                height: 208px;
+                padding: 20px;
+            }
+            .advantage-name {
+                margin-bottom: 30px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .advantage-name {
+                margin-bottom: 30px;
+                font-size: 25px;
+            }
+            .advantage-caption {
+                font-size: 18px;
+            }
+        }
+    }
+}

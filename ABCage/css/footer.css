@@ -1,0 +1,144 @@
+footer {
+  padding: 0 calc(50% - 720px);
+  background: #27282b;
+  background-clip: content-box;
+}
+
+footer .footer-wrap {
+  padding: 50px 150px;
+  display: grid;
+  grid-template-areas: "socials socials" "contacts contacts" "nav copyright";
+  align-content: center;
+}
+
+@media screen and (max-width: 1350px) {
+  footer .footer-wrap {
+    padding: 50px 80px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  footer .footer-wrap {
+    grid-template-areas: "socials socials" "nav nav" "contacts contacts" "copyright copyright";
+  }
+}
+
+footer .socials {
+  grid-area: socials;
+  grid-column: span 2;
+  display: flex;
+  gap: 10px;
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+}
+
+footer .socials li {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background: #343538;
+  border-radius: 30px;
+}
+
+footer .socials a {
+  width: 20px;
+  height: 20px;
+}
+
+footer .contacts {
+  grid-area: contacts;
+  grid-column: span 2;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 70px;
+}
+
+footer .contacts .contacts-field {
+  margin: 0;
+  width: fit-content;
+}
+
+footer .contacts .contacts-field a {
+  font-size: 16px;
+}
+
+footer .contacts .contacts-field p {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1350px) {
+  footer .contacts {
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  footer .contacts {
+    grid-gap: 30px;
+    grid-template-columns: auto;
+    justify-content: start;
+  }
+}
+
+footer .navigation-list {
+  grid-area: nav;
+  display: flex;
+  gap: 40px;
+  padding: 0 !important;
+  margin: 0;
+  padding-left: 50px;
+}
+
+footer .navigation-list li {
+  list-style: none;
+}
+
+footer .navigation-list a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #9a9ea6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer .navigation-list a:hover {
+  color: #8c8c8c;
+}
+
+@media screen and (max-width: 980px) {
+  footer .navigation-list {
+    justify-content: center;
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  footer .navigation-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+footer .copyright {
+  font-size: 14px;
+  grid-area: copyright;
+  color: #8c8c8c;
+  margin: 0;
+  text-align: right;
+}
+
+@media screen and (max-width: 980px) {
+  footer .copyright {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

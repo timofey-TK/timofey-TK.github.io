@@ -1,0 +1,151 @@
+// ++++ Секция "Получите скидку" ++++
+.get-discount {
+    margin-top: 100px;
+    &-wrap {
+        width: 100%;
+        position: relative;
+    }
+    &__ozon {
+        width: 100%;
+        height: 550px;
+        background: url(../assets/discount-bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right;
+        color: #ffffff;
+        padding: 137px 80px;
+        box-sizing: border-box;
+        &__title {
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 71px;
+            max-width: 500px;
+            margin-bottom: 25px;
+            margin-top: 0;
+        }
+        &__value {
+            font-weight: 700;
+            font-size: 90px;
+            margin: 0;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 36px 40px;
+        width: 465px;
+        height: 276px;
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12),
+            0px 20px 20px rgba(0, 0, 0, 0.08);
+        border-radius: 8px;
+        position: absolute;
+        top: 137px;
+        right: 80px;
+        box-sizing: border-box;
+        &__title {
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+        &__description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            text-align: center;
+            color: rgba(84, 89, 94, 0.6);
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        &__tel-input {
+            width: 100%;
+            height: 44px;
+            background: #ffffff;
+            border: 1px solid #d1d1d1;
+            border-radius: 8px;
+            padding: 13px 16px;
+            box-sizing: border-box;
+            font-weight: 500;
+            font-size: 14px;
+            outline: none;
+            transition: all ease 0.3s;
+        }
+        &__tel-input:focus {
+            border: 1px solid #4475f2;
+        }
+        &__tel-input::placeholder {
+            color: #acacac;
+        }
+        &__btn {
+            width: 100%;
+            height: 44px;
+            border: none;
+            background: #4475f2;
+            border-radius: 8px;
+            margin-top: 16px;
+            color: #fff;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    }
+    @media screen and (max-width: 1350px) {
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__form {
+            position: relative;
+            top: -100px;
+            right: 0;
+            margin: 0 auto;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        padding: 0;
+        &__ozon {
+            height: 300px;
+            padding: 20px 40px;
+            &__title {
+                margin-bottom: 15px;
+                font-size: 40px;
+            }
+            &__value {
+                font-size: 80px;
+            }
+        }
+        &__form {
+            top: 0;
+            width: 100%;
+            border-radius: 0;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        &__ozon {
+            height: 190px;
+            padding: 30px 20px;
+            &-title {
+                margin-bottom: 15px;
+                font-size: 30px;
+                line-height: 35px;
+            }
+            &-value {
+                font-size: 50px;
+            }
+        }
+        &__form {
+            padding: 20px 20px;
+            margin-bottom: 30px;
+        }
+    }
+    @media screen and (max-width: 360px) {
+        &__form {
+            padding: 20px 20px;
+        }
+    }
+}

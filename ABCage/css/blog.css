@@ -1,0 +1,121 @@
+.blog {
+  padding-bottom: 100px;
+}
+
+.blog__description {
+  max-width: 745px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #728095;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.blog__title {
+  margin-bottom: 20px;
+}
+
+.blog__swiper {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 980px) {
+  .blog__description {
+    font-size: 16px;
+  }
+}
+
+.blog__article {
+  position: relative;
+  width: 782px;
+  height: 400px;
+  padding: 100px 50px;
+  color: #fff;
+  background-color: #2e363e;
+  background: url(../assets/article-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blog__article__title {
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.blog__article__short-text {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  max-width: 562px;
+}
+
+.blog__article__btn {
+  position: absolute;
+  left: 50px;
+  bottom: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+}
+
+.blog__article__btn .circle {
+  width: 20px;
+  height: 20px;
+  background: #4475f2;
+  border-radius: 100px;
+}
+
+.blog__article__btn svg {
+  fill: #fff;
+}
+
+@media screen and (max-width: 1350px) {
+  .blog__article {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .blog__article {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .blog__article {
+    width: 330px;
+    padding-top: 50px;
+    padding-bottom: 150px;
+  }
+  .blog__article__title {
+    font-size: 25px;
+  }
+  .blog__article__short-text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blog__article {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 50px 20px;
+    height: max-content;
+  }
+  .blog__article__title {
+    margin-top: 0;
+  }
+  .blog__article__short-text {
+    font-size: 12px;
+    padding-bottom: 40px;
+  }
+}
+/*# sourceMappingURL=blog.css.map */

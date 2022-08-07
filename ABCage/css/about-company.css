@@ -1,0 +1,104 @@
+.about h2 {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+@media screen and (max-width: 980px) {
+  .about h2 {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .about h2 {
+    margin-top: 0;
+  }
+}
+
+.about-wrap {
+  display: flex;
+}
+
+.about-wrap-text {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 980px) {
+  .about-wrap {
+    flex-direction: column-reverse;
+  }
+}
+
+.about__advantages {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.about__advantages li {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about__advantages li:nth-child(2) .value {
+  color: #54c28f;
+}
+
+.about__advantages li:nth-child(3) .value {
+  color: #00b5e3;
+}
+
+.about__advantages .value {
+  font-weight: 900;
+  font-size: 45px;
+  margin: 0;
+  color: #ed389e;
+}
+
+.about__advantages .years {
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #1b1717;
+}
+
+@media screen and (max-width: 480px) {
+  .about__advantages .value {
+    font-size: 30px;
+  }
+  .about__advantages .years {
+    font-size: 13px;
+  }
+}
+
+.about__description {
+  font-weight: 400;
+  font-size: 17px;
+  color: #6e6e6e;
+  max-width: 655px;
+}
+
+@media screen and (max-width: 480px) {
+  .about__description {
+    font-size: 16px;
+  }
+}
+
+.placeholder {
+  margin-top: -120px;
+  max-width: 50%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 980px) {
+  .placeholder {
+    margin-top: 0;
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=about-company.css.map */

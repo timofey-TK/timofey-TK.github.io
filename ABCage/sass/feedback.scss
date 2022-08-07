@@ -1,0 +1,153 @@
+// +++++ Отзывы клиентов +++++
+.feedback {
+    position: relative;
+    background: #f2f6fa;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    &__title {
+        font-weight: 500;
+        font-size: 48px;
+        text-align: center;
+        letter-spacing: -1px;
+        color: #2e363e;
+        margin: 0;
+        margin-bottom: 80px;
+        @media screen and (max-width: 980px) {
+            font-size: 35px;
+        }
+
+        @media screen and (max-width: 480px) {
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+    &__swiper {
+        width: 88%;
+        margin: 0 auto;
+        .swiper-nav {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            gap: 40px;
+        }
+        .swiper-button-prev,
+        .swiper-button-next {
+            position: relative;
+        }
+        &__slide {
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-start;
+            padding: 70px 143px;
+            gap: 54px;
+            width: 1180px;
+            height: 615px;
+            background: #ffffff;
+            border: 2px solid #e2eaf2;
+            box-shadow: 2px 8px 16px rgba(194, 198, 208, 0.06);
+            border-radius: 5px;
+            transition: all ease 0.5s;
+            padding: 70px 140px;
+            &:not(.swiper-slide-active) {
+                transform: scale(0.8) !important;
+            }
+            &__content {
+                .quote {
+                    max-width: 460px;
+                    font-weight: 500;
+                    font-size: 30px;
+                    line-height: 143%;
+                    color: #2e363e;
+                }
+                .text {
+                    max-width: 430px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.02em;
+                    color: #728095;
+                }
+            }
+            &__person-info {
+                .avatar {
+                    width: 380px;
+                    height: 380px;
+                    background: #f2f6fa;
+                    border: 1px solid #f2f6fa;
+                    border-radius: 1000px;
+                }
+                .name {
+                    font-weight: 500;
+                    font-size: 21px;
+                    text-align: center;
+                    color: #2e363e;
+                }
+                .city {
+                    font-weight: 400;
+                    font-size: 16px;
+                    text-align: center;
+                    color: #a6aeb6;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1350px) {
+            &__slide {
+                padding: 50px 60px;
+            }
+        }
+        @media screen and (max-width: 980px) {
+            width: 90%;
+
+            &__slide {
+                padding: 50px 60px;
+                height: auto;
+                &__person-info {
+                    .avatar {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+                &__content {
+                    .quote {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 650px) {
+            width: 100%;
+            &__slide {
+                flex-direction: column-reverse;
+                gap: 5px;
+                align-items: center;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            width: 100%;
+
+            &__slide {
+                padding: 0;
+                padding-top: 40px;
+                border: none;
+                &__content {
+                    .quote {
+                        font-size: 15px;
+                    }
+                    .text {
+                        font-size: 16px;
+                    }
+                }
+            }
+            .swiper-nav {
+                margin-top: 50px;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        background: #fff;
+        padding: 20px 50px;
+    }
+}
