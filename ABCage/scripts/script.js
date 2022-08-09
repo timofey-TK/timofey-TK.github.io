@@ -66,7 +66,6 @@ document.querySelectorAll("button.close-modal").forEach(function (btn) {
 });
 document.querySelectorAll("dialog").forEach(function (dialog) {
     dialog.addEventListener("click", function (e) {
-        console.log(e);
         const rect = dialog.getBoundingClientRect();
         if (
             e.clientY < rect.top ||

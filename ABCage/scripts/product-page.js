@@ -80,7 +80,7 @@ var Visible = function (target) {
         };
 
     if (targetPosition.bottom > windowPosition.top &&
-        targetPosition.top < windowPosition.bottom &&
+        targetPosition.top + 300 < windowPosition.bottom &&
         targetPosition.right > windowPosition.left &&
         targetPosition.left < windowPosition.right) {
         if (!flag) {
@@ -91,13 +91,6 @@ var Visible = function (target) {
     };
 };
 
-// Запускаем функцию при прокрутке страницы
-window.addEventListener('scroll', function () {
-    Visible(element);
-});
-
-// А также запустим функцию сразу. А то вдруг, элемент изначально видно
-Visible(element);
 // Запускаем функцию при прокрутке страницы
 window.addEventListener('scroll', function () {
     Visible(element);
