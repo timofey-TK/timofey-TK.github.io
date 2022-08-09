@@ -3,22 +3,11 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    @media screen and (max-width: 980px) {
-    }
-    @media screen and (max-width: 650px) {
-    }
-    @media screen and (max-width: 480px) {
-    }
-    @media screen and (max-width: 360px) {
-    }
 }
 body.unscrollable {
-    height: 100vh;
-    overflow-y: hidden;
-    padding-right: 15px;
-    @media screen and (max-width: 650px) {
-        padding-right: 0;
-    }
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
 }
 
 body,

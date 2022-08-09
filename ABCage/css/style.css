@@ -5,15 +5,9 @@ body {
 }
 
 body.unscrollable {
-  height: 100vh;
-  overflow-y: hidden;
-  padding-right: 15px;
-}
-
-@media screen and (max-width: 650px) {
-  body.unscrollable {
-    padding-right: 0;
-  }
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 body,

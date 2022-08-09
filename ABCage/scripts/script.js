@@ -49,6 +49,7 @@ function hideDialog(dialog) {
 }
 function showDialog(dialog) {
     dialog.showModal();
+    document.body.style.top = `-${window.scrollY}px`;
     document.body.classList.toggle("unscrollable");
 }
 document.querySelectorAll("[data-modal-target]").forEach(function (btn) {
@@ -77,8 +78,9 @@ document.querySelectorAll("dialog").forEach(function (dialog) {
         }
     });
     dialog.addEventListener("close", function (e) {
+        const scrollY = document.body.style.top;
         document.body.classList.toggle("unscrollable");
-        blogSwiper.attachEvents();
+        window.scrollTo(0, parseInt(scrollY || '0') * -1);
     });
 });
 
