@@ -175,6 +175,7 @@ hr {
 
 @media screen and (max-width: 980px) {
   .navigation {
+    border-radius: 0px 0px 0px 15px;
     margin-top: 0;
     transition: transform ease 0.3s;
     position: fixed;
@@ -228,6 +229,12 @@ hr {
   .navigation .contacts {
     display: flex;
     width: 320px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .navigation {
+    border-radius: none;
   }
 }
 

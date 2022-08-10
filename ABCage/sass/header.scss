@@ -144,6 +144,7 @@ hr {
         display: none;
     }
     @media screen and (max-width: 980px) {
+        border-radius: 0px 0px 0px 15px;
         margin-top: 0;
         transition: transform ease 0.3s;
         position: fixed;
@@ -197,6 +198,9 @@ hr {
             display: flex;
             width: 320px;
         }
+    }
+    @media screen and (max-width: 650px) {
+        border-radius: none;
     }
     @media screen and (max-width: 480px) {
         max-height: 100vh;

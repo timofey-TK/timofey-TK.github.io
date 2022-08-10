@@ -80,6 +80,7 @@ document.querySelectorAll("dialog").forEach(function (dialog) {
         const scrollY = document.body.style.top;
         document.body.classList.toggle("unscrollable");
         window.scrollTo(0, parseInt(scrollY || '0') * -1);
+        document.body.style.top = ``;
     });
 });
 
