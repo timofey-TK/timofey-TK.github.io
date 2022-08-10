@@ -366,6 +366,7 @@
   font-weight: 700;
   font-size: 24px;
   margin-top: 0;
+  color: #000000;
 }
 
 .about-product__characteristic .lists {
@@ -382,6 +383,7 @@
 .about-product__rich {
   max-width: min(342px,100%);
   max-height: 679px;
+  min-height: 500px;
 }
 
 .about-product .hr {
@@ -404,6 +406,9 @@
   }
   .about-product__characteristic ul:last-child {
     display: none;
+  }
+  .about-product__rich {
+    max-width: 100%;
   }
 }
 
@@ -512,7 +517,13 @@
     height: 350px;
   }
   .videoinstruction h2.section-title {
-    font-size: 28px;
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 357px) {
+  .videoinstruction h2.section-title {
+    font-size: 24px;
   }
 }
 
@@ -653,9 +664,6 @@
 }
 
 @media screen and (max-width: 650px) {
-  .get-discount-ozon-modal {
-    padding: 25px;
-  }
   .get-discount-ozon-modal__title {
     font-size: 18px;
   }

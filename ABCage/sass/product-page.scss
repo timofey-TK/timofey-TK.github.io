@@ -347,6 +347,7 @@
         font-weight: 700;
         font-size: 24px;
         margin-top: 0;
+        color: #000000;
     }
     &__characteristic {
         .lists {
@@ -362,6 +363,7 @@
     &__rich {
         max-width: #{"min(342px,100%)"};
         max-height: 679px;
+        min-height: 500px;
     }
     .hr {
         width: #{"min(100%, 800px)"};
@@ -379,6 +381,9 @@
             ul:last-child {
                 display: none;
             }
+        }
+        &__rich {
+            max-width: 100%;
         }
     }
 }
@@ -479,7 +484,12 @@
             height: 350px;
         }
         h2.section-title {
-            font-size: 28px;
+            font-size: 26px;
+        }
+    }
+    @media screen and (max-width: 357px) {
+        h2.section-title {
+            font-size: 24px;
         }
     }
 }
@@ -609,7 +619,6 @@
         &__title {
             font-size: 18px;
         }
-        padding: 25px;
     }
     @media screen and (max-width: 480px) {
         padding: 0;
