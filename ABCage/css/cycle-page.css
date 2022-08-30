@@ -1,3 +1,10 @@
+.cycle .cycle__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #6e6e6e;
+}
+
 .cycle__list {
   display: flex;
   flex-direction: column;

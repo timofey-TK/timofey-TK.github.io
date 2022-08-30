@@ -175,6 +175,18 @@
         flex-direction: column;
         .search-field {
             width: 90%;
+
+            input {
+                width: 260px;
+                font-weight: 400;
+                font-size: 12px;
+                padding-left: 12px;
+            }
+        }
+    }
+    @media screen and (max-width: 430px) {
+        .search-field input {
+            width: 200px;
         }
     }
 }
