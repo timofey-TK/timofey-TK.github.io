@@ -376,10 +376,6 @@ hr {
 }
 
 .hamburger {
-  position: absolute;
-  transform: translate(0, -50%);
-  right: 0;
-  top: 50%;
   z-index: 3;
   display: none;
   cursor: pointer;
@@ -398,6 +394,15 @@ hr {
 @media screen and (max-width: 980px) {
   .hamburger {
     display: inline-block;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hamburger {
+    position: absolute;
+    transform: translate(0, -50%);
+    right: 0;
+    top: 50%;
   }
 }
 

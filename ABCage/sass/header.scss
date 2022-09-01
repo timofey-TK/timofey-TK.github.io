@@ -325,10 +325,6 @@ hr {
 }
 // Стили кнопки меню
 .hamburger {
-    position: absolute;
-    transform: translate(0, -50%);
-    right: 0;
-    top: 50%;
     z-index: 3;
     display: none;
     cursor: pointer;
@@ -344,6 +340,12 @@ hr {
     overflow: visible;
     @media screen and (max-width: 980px) {
         display: inline-block;
+    }
+    @media screen and (max-width: 480px) {
+        position: absolute;
+        transform: translate(0, -50%);
+        right: 0;
+        top: 50%;
     }
 }
 .hamburger:hover {
