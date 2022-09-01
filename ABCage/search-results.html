@@ -28,32 +28,32 @@
         <div class="top-nav">
             <img src="./assets/logo.png" alt="logo" class="logo" />
             <div class="top-nav-wrap">
-                <div class="search-field">
-                    <label for="search">
-                        <img src="assets/icons/search-normal.svg" alt="search" />
-                    </label>
+                <form class="search-field" autocomplete="off" action="search-results.html">
                     <input type="search" id="search" placeholder="Поиск" autocomplete="off" />
-                </div>
+                    <button type="submit">Найти</button>
+                    <ul class="search-field__suggestions"></ul>
+                </form>
                 <button class="hamburger hamburger--elastic" type="button">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
-                <div class="contact-field">
-                    <img src="assets/icons/call-calling.svg" alt="tel" class="tel-icon" />
-                    <div class="contact-field-wrap">
-                        <p class="caption">Появились вопросы?</p>
-                        <a href="tel:+73104372766">310-437-2766</a>
-                    </div>
-                </div>
-                <div class="contact-field">
-                    <img src="assets/icons/call-calling.svg" alt="tel" class="tel-icon" />
-                    <div class="contact-field-wrap">
-                        <p class="caption">Для оптовых покупателей</p>
-                        <a href="tel:+73104372766">310-437-2766</a>
-                    </div>
+            </div>
+            <div class="contact-field">
+                <img src="assets/icons/call-calling.svg" alt="tel" class="tel-icon" />
+                <div class="contact-field-wrap">
+                    <p class="caption">Появились вопросы?</p>
+                    <a href="tel:+73104372766">310-437-2766</a>
                 </div>
             </div>
+            <div class="contact-field">
+                <img src="assets/icons/call-calling.svg" alt="tel" class="tel-icon" />
+                <div class="contact-field-wrap">
+                    <p class="caption">Для оптовых покупателей</p>
+                    <a href="tel:+73104372766">310-437-2766</a>
+                </div>
+            </div>
+
         </div>
         <hr />
         <!-- Меню сайта и навигационные ссылки -->
@@ -65,6 +65,7 @@
                     <li><a href="#">О компании</a></li>
                     <li><a href="#">Блог</a></li>
                     <li><a href="#">Цикл производства</a></li>
+                    <li><a href="#">Новости</a></li>
                 </ul>
                 <div class="contacts mobile-only">
                     <div class="contacts-field">
