@@ -17,6 +17,10 @@
 }
 .top-nav-wrap {
     flex-grow: 20;
+    position: relative;
+    @media screen and (max-width: 480px) {
+        width: 100%;
+    }
 }
 .search-field {
     position: relative;
@@ -49,7 +53,7 @@
     input::placeholder {
         color: inherit;
     }
-    input[type="text"]::-webkit-search-cancel-button {
+    input[type="search"]::-webkit-search-cancel-button {
         -webkit-appearance: none;
         display: none;
     }
@@ -127,8 +131,9 @@
         }
     }
     @media screen and (max-width: 980px) {
-        width: auto;
+        width: 100%;
         gap: 0;
+        justify-content: start;
         input {
             color: #4475f2;
             padding: 0px 0px 0px 48px;
@@ -138,6 +143,13 @@
             border-radius: 10px;
             font-size: 17px;
         }
+        input:focus {
+            width: 100% !important;
+        }
+        button {
+            position: absolute;
+            right: 0;
+        }
     }
     @media screen and (max-width: 650px) {
         input {
@@ -146,7 +158,7 @@
     }
     @media screen and (max-width: 480px) {
         input {
-            width: 258px !important;
+            width: 228px !important;
         }
     }
     @media screen and (max-width: 360px) {
@@ -313,6 +325,10 @@ hr {
 }
 // Стили кнопки меню
 .hamburger {
+    position: absolute;
+    transform: translate(0, -50%);
+    right: 0;
+    top: 50%;
     z-index: 3;
     display: none;
     cursor: pointer;
