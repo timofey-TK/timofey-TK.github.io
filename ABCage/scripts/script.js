@@ -340,7 +340,7 @@ let toysForSearch = ["Игрушки для мальчиков",
     "Юла"]
 
 let sortedList = toysForSearch.sort();
-let input = document.querySelector(".search-field input[type='search']");
+let input = document.querySelector(".search-field input[type='text']");
 let ul = document.querySelector(".search-field__suggestions")
 input.addEventListener("keyup", (e) => {
     removeElements();

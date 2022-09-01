@@ -49,7 +49,7 @@
     input::placeholder {
         color: inherit;
     }
-    input[type="search"]::-webkit-search-cancel-button {
+    input[type="text"]::-webkit-search-cancel-button {
         -webkit-appearance: none;
         display: none;
     }
