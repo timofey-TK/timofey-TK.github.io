@@ -8,25 +8,36 @@
     flex-direction: column;
     overflow: hidden;
     transition: all ease 0.5s;
+    position: relative;
     &__img {
+        position: absolute;
         width: 100%;
-        height: 200px;
         overflow: hidden;
+        height: 450px;
         img {
             object-fit: cover;
-            max-width: 103%;
+            max-width: 100%;
+            max-height: 100%;
+            height: 100%;
+            width: 100%;
         }
     }
     &__about {
+        background: #4475f2;
+        z-index: 10;
+        transition: all ease 0.5s;
         display: flex;
         flex-direction: column;
         padding: 25px 40px 40px 40px;
         color: #fff;
+        height: 10%;
+        margin-top: auto;
         &__name {
             transition: all ease 0.5s;
             font-weight: 700;
             font-size: 24px;
             margin-top: 0;
+            margin-bottom: 10px;
             @media screen and (max-width: 980px) {
                 font-size: 22px;
                 margin-bottom: 7px;
@@ -45,13 +56,19 @@
             }
         }
         &__description {
+            z-index: -1;
+            opacity: 0;
             transition: all ease 0.5s;
             font-weight: 400;
             font-size: 17px;
+            max-width: 100%;
         }
         &__buy-btns {
+            opacity: 0;
+            z-index: -1;
             display: flex;
             gap: 10px;
+            transition: all ease 0.5s;
             button {
                 cursor: pointer;
                 display: block;
@@ -71,9 +88,22 @@
     @media screen and (max-width: 980px) {
         width: 320px;
         height: 465px;
+        &__img {
+            position: relative;
+            width: 100%;
+            height: auto;
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+            }
+        }
         &__about {
+            height: unset !important;
             padding: 25px 25px 25px 25px;
             &__buy-btns {
+                opacity: 1;
+                z-index: inherit;
                 margin-top: 25px;
                 button {
                     font-size: 14px;
@@ -81,7 +111,14 @@
                 }
             }
             &__description {
+                opacity: 1;
+                z-index: inherit;
                 margin-bottom: 0;
+            }
+        }
+        &:hover {
+            .product__about {
+                height: auto;
             }
         }
     }
@@ -90,24 +127,12 @@
         width: 100%;
     }
     &:hover {
-        background: #fff;
         .product__about {
-            &__name {
-                color: #000;
-            }
+            height: 45%;
             &__description,
-            &__rating {
-                color: #757575;
-            }
             &__buy-btns {
-                button {
-                    background: #4475f2;
-                    color: #ffffff;
-
-                    &:hover {
-                        background: #3861c7;
-                    }
-                }
+                opacity: 1;
+                z-index: inherit;
             }
         }
     }

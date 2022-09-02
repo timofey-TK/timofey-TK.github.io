@@ -1,0 +1,122 @@
+.news {
+    .accent-btn {
+        width: fit-content;
+        padding: 0 55px;
+        margin: 50px auto;
+        margin-bottom: 100px;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 44px;
+        .article {
+            position: relative;
+            box-sizing: border-box;
+            padding: 0 40px;
+            color: #fff;
+            width: 612px;
+            max-width: 100%;
+            height: 430px;
+            background: linear-gradient(
+                    0deg,
+                    rgba(0, 0, 0, 0.7),
+                    rgba(0, 0, 0, 0.7)
+                ),
+                url(../assets/article.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            &-title {
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 47px;
+                margin-bottom: 20px;
+            }
+            &-text {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+            }
+            .read-more {
+                position: absolute;
+                bottom: 40px;
+                left: 40px;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+                color: #fff;
+                transition: color ease 0.3s;
+                &::before {
+                    display: inline-block;
+                    position: relative;
+                    top: 3px;
+                    margin-right: 5px;
+                    border-radius: 100%;
+                    content: "";
+                    width: 20px;
+                    height: 20px;
+                    background: #4475f2;
+                }
+                &::after {
+                    transition: color ease 0.1s;
+                    top: 1px;
+                    margin-left: 5px;
+                    display: inline-block;
+                    position: relative;
+                    content: "❯";
+                    &:hover {
+                        color: #4475f2;
+                    }
+                }
+                &:hover {
+                    color: #4475f2;
+                }
+            }
+        }
+        @media screen and (max-width: 1350px) {
+            gap: 0;
+            justify-content: space-between;
+            .article {
+                width: 49%;
+                margin-bottom: 20px;
+                &-title {
+                    margin-top: 50px;
+                }
+            }
+        }
+        @media screen and (max-width: 980px) {
+            gap: 20px;
+            justify-content: center;
+            .article {
+                width: 90%;
+            }
+        }
+        @media screen and (max-width: 630px) {
+            .article {
+                width: 100%;
+                &-title {
+                    font-size: 35px;
+                }
+                &-text {
+                    font-size: 14px;
+                }
+            }
+        }
+        @media screen and (max-width: 630px) {
+            .article {
+                padding: 0 20px;
+                &-title {
+                    font-size: 25px;
+                    margin-bottom: 0;
+                }
+                &-text {
+                    font-size: 12px;
+                }
+                .read-more {
+                    left: 20px;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}

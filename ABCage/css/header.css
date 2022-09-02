@@ -169,9 +169,6 @@
     border-radius: 10px;
     font-size: 17px;
   }
-  .search-field input:focus {
-    width: 100% !important;
-  }
   .search-field button {
     position: absolute;
     right: 0;

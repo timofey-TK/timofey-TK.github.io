@@ -1,0 +1,56 @@
+.article {
+    &-title {
+        margin-bottom: -10px;
+    }
+    &__help-text {
+        display: flex;
+        gap: 40px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #6e6e6e;
+        .visit_counter::before {
+            content: url(../assets/icons/eye.svg);
+            margin-right: 7px;
+            position: relative;
+            top: 2px;
+        }
+    }
+    &__img img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+    &__content {
+        margin-top: 50px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #000000;
+        margin-bottom: 100px;
+    }
+    @media screen and (max-width: 650px) {
+        &-title {
+            margin-top: 30px !important;
+        }
+        &__help-text {
+            gap: 20px;
+            font-size: 14px;
+        }
+        &__content {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        &__content {
+            font-size: 15px;
+        }
+    }
+    @media screen and (max-width: 390px) {
+        &__help-text {
+            font-size: 13px;
+        }
+    }
+}
