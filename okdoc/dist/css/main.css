@@ -140,7 +140,7 @@
 @media screen and (max-width: 650px) {
   .about {
     background: none;
-    padding-bottom: 40px;
+    padding-bottom: 0;
   }
 }
 @media screen and (max-width: 480px) {
