@@ -22,6 +22,10 @@
   }
 }
 
+.logo {
+  max-width: 149px;
+}
+
 .top-nav-wrap {
   flex-grow: 20;
   position: relative;

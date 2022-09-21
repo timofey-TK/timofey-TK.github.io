@@ -1,0 +1,109 @@
+{# Title and layout #}
+{% set title = "Home title" %}
+{% set range = [
+    5,
+    2,
+    3,
+    4,
+    5,
+    1,
+    4,
+    3,
+    5
+] %}
+{% extends "./components/_layout.njk" %}
+{# styles #}
+{% block links %}
+    {# стили внешних библиотек #}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer="defer"></script>
+    {# стили страницы #}
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/product-card.css">
+    <link rel="stylesheet" href="css/advantages.css">
+    <link rel="stylesheet" href="css/feedback.css">
+{% endblock links %}
+{# content #}
+{% block content %}
+    {# Главная секция #}
+    <section class="hero">
+        <img src="./assets/dots_top.png" alt="" class="decorative-item dots_top">
+
+        <img src="./assets/dots_bottom.png" alt="" class="decorative-item dots_bottom">
+        <img src="./assets/citcle_botoom.png" alt="" class="decorative-item circle_botoom desktop-only">
+        <div class="text-field">
+            <h1 class="big-text hero__title">Качественные товары для укрепления здоровья</h1>
+            <p class="hero__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <div class="hero__btns">
+                <a href="#" class="accent-btn btn btn-with-arrow">Каталог</a>
+                <a href="#" class="clear-btn btn btn-with-arrow desktop-only">О компании</a>
+            </div>
+        </div>
+        <picture class="hero__img">
+            <source srcset="./assets/hero_mobile.png" media="(max-width: 980px)">
+            <img src="./assets/hero.png" alt="MDN">
+        </picture>
+    </section>
+    {# Секция о компании #}
+    <section class="about section-with-bg-pattern full-size">
+        <h2 class="title  mobile-only container">
+            <span class="defoult-color">~</span>
+            О компании
+            <span>
+                <span class="accent-color upper">Ok</span>
+                <span class="defoult-color upper">Doc ~</span>
+            </span>
+        </h2>
+        <div class="about__img"><img src="./assets/image-holder.png" alt=""></div>
+        <div class="container">
+            <div class="text-field">
+                <h2 class="title desktop-only">
+                    <span class="defoult-color">~</span>
+                    О компании
+                    <span>
+                        <span class="accent-color upper">Ok</span>
+                        <span class="defoult-color upper">Doc ~</span>
+                    </span>
+                </h2>
+                <p class="main-text">We love what we do and we do it with passion.
+                    <br>
+                    We value the experimentation of the message and smart incentives.
+                    <br>
+                    <br>
+                    We love what we do and we do it with passion.
+                    <br>
+                    We value the experimentation of the message and smart incentives.</p>
+                <a href="#" class="accent-btn btn btn-with-arrow">Подробнее</a>
+            </div>
+        </div>
+    </section>
+    {# Каталог #}
+    <section class="catalog">
+        <h2 class="title text-center">~ Каталог ~</h2>
+        <form class="search-field" autocomplete="off">
+            <input type="search" autocomplete="off" placeholder="Поиск">
+            <button type="button" class="filter"><img src="./assets/icons/filter.svg" alt="filter"></button>
+        </form>
+        <div class="tags">
+            <span class="tags__caption">Популярное:</span>
+            <a href="#" class="tags__tag">Наименование</a>
+            <a href="#" class="tags__tag">Наименование</a>
+            <a href="#" class="tags__tag">Наименование</a>
+            <a href="#" class="tags__tag">Наименование</a>
+            <a href="#" class="tags__tag">Наименование</a>
+        </div>
+        <div class="catalog__list">
+            {% for i in range %}
+                {% include 'components/product_card.njk' %}
+            {% endfor %}
+        </div>
+        <a href="#" class="btn load-more-btn">
+            <svg width="15" height="14" viewbox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.49999 1.16675V12.8334M7.49999 12.8334L13.3333 7.00008M7.49999 12.8334L1.66666 7.00008" stroke="#6941C6" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Загрузить еще</span>
+        </a>
+    </section>
+    {% include 'components/advantages.njk' %}
+    {% include 'components/feedback.njk' %}
+{% endblock content %}

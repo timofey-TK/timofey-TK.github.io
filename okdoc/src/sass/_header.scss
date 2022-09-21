@@ -1,0 +1,254 @@
+header {
+    background-color: #fff;
+    padding-top: 24px;
+    padding-bottom: 20px;
+    @media screen and (max-width: 980px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        max-height: 32px;
+        position: relative;
+        z-index: 100;
+        img {
+            position: relative;
+            z-index: 100;
+        }
+    }
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__links {
+        display: flex;
+        gap: 60px;
+        align-items: center;
+        font-weight: 400;
+        font-size: 14px;
+        a:hover {
+            color: #1661ff;
+        }
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 20px;
+        color: #242321;
+        a::before {
+            content: url("../assets/icons/phone.svg");
+            margin-right: 6px;
+            position: relative;
+            top: 1px;
+        }
+    }
+    input[type="search"] {
+        width: 220px;
+        height: 42px;
+        background: #e9e9e9;
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 13px;
+        padding-left: 50px;
+        background-image: url("../assets/icons/search.svg");
+        background-position: 23px center;
+        background-repeat: no-repeat;
+    }
+    input[type="search"]:focus {
+        width: 300px;
+    }
+    .search-field {
+        position: relative;
+        &__suggestions:not(:empty) {
+            z-index: 100;
+            max-width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            position: absolute;
+            background: #e9e9e9;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 17px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            li {
+                padding: 10px;
+                border-radius: 10px;
+            }
+            li:hover {
+                background: var(--accent-color);
+                color: #fff;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1350px) {
+        flex-wrap: wrap;
+        gap: 25px;
+        &__contacts {
+            flex-direction: row;
+            gap: 30px;
+        }
+        input[type="search"] {
+            width: 300px;
+        }
+        input[type="search"]:focus {
+            width: 400px;
+        }
+    }
+    &.opened {
+        transform: translate(0);
+    }
+    @media screen and (max-width: 980px) {
+        box-sizing: border-box;
+        border-radius: 15px;
+        z-index: 20;
+        padding: 20px;
+        padding-top: 150px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        transform: translate(110%);
+        background-color: #fff;
+        flex-direction: column;
+        gap: 60px;
+        &__links {
+            flex-direction: column;
+            gap: 30px;
+            font-size: 20px;
+        }
+        &__contacts {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .socials {
+            li {
+                width: 40px;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        max-height: 100vh;
+        justify-content: start;
+        height: calc(var(--vh, 1vh) * 100);
+    }
+}
+
+// Стили кнопки хамбургера
+.hamburger {
+    z-index: 100;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+}
+
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+    background-color: #000000;
+}
+.hamburger.is-active {
+    position: relative;
+}
+.hamburger-box {
+    width: 40px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    width: 40px;
+    height: 4px;
+    background-color: #000000;
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: "";
+    display: block;
+}
+.hamburger-inner::before {
+    top: -10px;
+}
+.hamburger-inner::after {
+    bottom: -10px;
+}
+.hamburger--elastic .hamburger-inner {
+    top: 2px;
+    transition-duration: 0.275s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.hamburger--elastic .hamburger-inner::before {
+    top: 10px;
+    transition: opacity 0.125s 0.275s ease;
+}
+.hamburger--elastic .hamburger-inner::after {
+    top: 20px;
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger--elastic.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(135deg);
+    transition-delay: 0.075s;
+}
+.hamburger--elastic.is-active .hamburger-inner::before {
+    transition-delay: 0s;
+    opacity: 0;
+}
+.hamburger--elastic.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(-270deg);
+    transition-delay: 0.075s;
+}
+
+.hamburger--elastic-r .hamburger-inner {
+    top: 2px;
+    transition-duration: 0.275s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.hamburger--elastic-r .hamburger-inner::before {
+    top: 10px;
+    transition: opacity 0.125s 0.275s ease;
+}
+.hamburger--elastic-r .hamburger-inner::after {
+    top: 20px;
+    transition: transform 0.275s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.hamburger--elastic-r.is-active .hamburger-inner {
+    transform: translate3d(0, 10px, 0) rotate(-135deg);
+    transition-delay: 0.075s;
+}
+.hamburger--elastic-r.is-active .hamburger-inner::before {
+    transition-delay: 0s;
+    opacity: 0;
+}
+.hamburger--elastic-r.is-active .hamburger-inner::after {
+    transform: translate3d(0, -20px, 0) rotate(270deg);
+    transition-delay: 0.075s;
+}

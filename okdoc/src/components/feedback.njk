@@ -1,0 +1,50 @@
+<section class="feedback">
+    <h2 class="title text-center">~ Отзывы
+        <span class="desktop-only">наших</span>
+        клиентов ~
+    </h2>
+
+    <div class="feedback__swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            {% for i in[1, 2, 3, 4, 5] %}
+                <div class="swiper-slide">
+                    <div class="avatar-wrapper">
+                        <img src="assets/avatar.png" alt="avatar" class="avatar">
+                        <div class="author-wrapper mobile-only">
+                            <p class="author">Имя Фамилия</p>
+                            <p class="author-caption">Author at Panoply Store</p>
+                        </div>
+                    </div>
+                    <div class="text-side">
+                        <p class="comment">Currently, Ford sells six sedans and coupes in North America with the Fiesta, Focus, Fusion, C-Max, Mustang and Taurus. This lineup hits multiple segments from the compact Fiest to the mid-size Focus, C-Max and Fusion to the full-size Taurus.
+                        </p>
+                        <div class="author-wrapper desktop-only">
+                            <p class="author">Имя Фамилия</p>
+                            <p class="author-caption">Author at Panoply Store</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-navigation">
+            <div class="swiper-button-prev swiper-nav-button"></div>
+            <div class="swiper-button-next swiper-nav-button"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const swiper = new Swiper('.feedback__swiper', {
+                slidesPerView: 1,
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                }
+            });
+
+        });
+    </script>
+</section>
