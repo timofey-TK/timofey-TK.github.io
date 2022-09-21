@@ -78,6 +78,9 @@
   }
 }
 @media screen and (max-width: 980px) {
+  .feedback__swiper {
+    margin-top: 47px;
+  }
   .feedback__swiper .swiper-navigation {
     display: flex;
     justify-content: center;
