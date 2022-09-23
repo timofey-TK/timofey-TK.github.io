@@ -1,0 +1,217 @@
+.breadcrumbs {
+    display: flex;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.07em;
+    text-transform: capitalize;
+    & li:last-child {
+        color: #15b3af;
+    }
+    margin-top: 20px;
+}
+.gprev,
+.gnext {
+    display: none;
+}
+.btns {
+    display: flex;
+    gap: 10px;
+}
+.buy-btn {
+    width: 173px;
+    height: 50px;
+    background: #15b3af;
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    padding: 0 21px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    &:hover {
+        background: #9e9e9e;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 0 12px;
+    }
+}
+.product-about {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: "slider name" "slider specs" "slider desc" "dots btns";
+    column-gap: 150px;
+    padding-bottom: 80px;
+    .dots {
+        margin: auto auto;
+        padding-left: 127px;
+    }
+    .product-gallery {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 17px;
+        max-width: 100%;
+        max-height: 524px;
+        margin-top: 30px;
+        .thumbsslider {
+            width: 115px;
+            img {
+                width: 100%;
+                height: 110px;
+                object-fit: cover;
+                border-radius: 10px;
+                object-position: center;
+                cursor: pointer;
+            }
+        }
+        .product-swiper {
+            width: 524px;
+            .swiper-slide {
+                position: relative;
+            }
+            a.glightbox {
+                &::after {
+                    content: url(../assets/icons/product-hover.svg);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    opacity: 0;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover::after {
+                    opacity: 1;
+                    pointer-events: none;
+                }
+            }
+            img {
+                width: 100%;
+                height: 524px;
+                object-fit: cover;
+                border-radius: 10px;
+                object-position: center;
+            }
+        }
+    }
+    .name {
+        max-width: 480px;
+        font-size: 30px;
+        line-height: 28px;
+        letter-spacing: 0.35px;
+        margin: 0;
+    }
+    .name-wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        gap: 15px;
+        p {
+            margin: 0;
+            position: relative;
+            top: -2px;
+        }
+    }
+    .product-caption {
+        margin-top: 0;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.38px;
+        margin-top: 25px;
+    }
+    table {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 160%;
+        color: #333333;
+        tr td:first-child {
+            opacity: 0.5;
+            padding-right: 30px;
+        }
+    }
+    .description__text {
+        max-width: 425px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.35px;
+        color: #333333;
+    }
+    .buy-btns__caption {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        color: #000000;
+        margin-top: 0;
+        &::before {
+            content: url(../assets/icons/carbon_delivery-parcel.svg);
+            position: relative;
+            top: 2px;
+            margin-right: 9px;
+        }
+    }
+    @media screen and (max-width: 1350px) {
+        column-gap: 30px;
+        .product-gallery {
+            .thumbsslider {
+                width: 80px;
+                img {
+                    width: 100%;
+                    height: 80px;
+                }
+            }
+            .product-swiper {
+                width: 430px;
+
+                img {
+                    width: 100%;
+                    height: 430px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 980px) {
+        grid-template-areas: "name name" "slider slider" "specs specs" "desc desc" "btns btns";
+
+        .product-gallery {
+            overflow: hidden;
+            flex-direction: column;
+            max-width: 100%;
+            .swiper {
+                width: 100%;
+                max-width: 100%;
+            }
+            .thumbsslider {
+                img {
+                    height: 100px;
+                }
+            }
+        }
+        .description__text {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .product-gallery {
+            .product-swiper {
+                a.glightbox {
+                    &::after {
+                        content: url(../assets/icons/zoomin.svg);
+                        bottom: 15px;
+                        top: auto;
+                        opacity: 1;
+                        transform: translate(-50%, 0);
+                        padding: 7px;
+                        padding-bottom: 3px;
+                        background-color: #fff;
+                        border-radius: 10px;
+                    }
+                }
+                img {
+                    height: 360px;
+                }
+            }
+        }
+    }
+}

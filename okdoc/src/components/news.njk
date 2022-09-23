@@ -1,0 +1,22 @@
+<section class="news">
+    <h2 class="title text-center">~ Новости ~</h2>
+    <div class="news__list">
+        {% for i in[1, 2, 3, 4] %}
+            <article class="news__article">
+                <img src="assets/article-bg.png" alt="new" class="news__image">
+                <div class="title-wrapper">
+                    <p class="article-title">Новость{{i}}</p>
+                    <a href="" class="article__arrow-link">
+                        <svg width="12" height="12" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 11L11 1M11 1H1M11 1V11" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+
+                </div>
+                <p class="article-content">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab.</p>
+                <p class="article-date">дд.мм.гггг</p>
+
+            </article>
+        {% endfor %}
+    </div>
+</section>

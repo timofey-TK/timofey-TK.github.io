@@ -81,7 +81,7 @@ header {
                 border-radius: 10px;
             }
             li:hover {
-                background: var(--accent-color);
+                background: var(--defoult-color);
                 color: #fff;
             }
         }
@@ -121,11 +121,12 @@ header {
         &__links {
             flex-direction: column;
             gap: 30px;
-            font-size: 20px;
+            font-size: 22px;
         }
         &__contacts {
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
+            font-size: 18px;
         }
         .socials {
             li {

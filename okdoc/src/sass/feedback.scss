@@ -57,6 +57,9 @@
             font-weight: 700;
             color: #fff;
         }
+        &:hover {
+            transform: translateY(-5px);
+        }
         &.swiper-button-disabled {
             box-shadow: none;
             &::after {

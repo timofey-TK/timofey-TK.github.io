@@ -5,11 +5,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Результаты</title>
+        <title>Product</title>
         <link rel="stylesheet" href="assets/fonts/fonts.css">
         <link rel="stylesheet" href="css/style.css">
         <script src="scripts/main.js" defer="defer"></script>
         
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    
+    <link rel="stylesheet" href="css/product-page.css">
+    <link rel="stylesheet" href="css/product-card.css">
+    <link rel="stylesheet" href="css/advantages.css">
+    <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/news.css">
+
     </head>
     <body>
         <header>
@@ -133,7 +144,159 @@
     </nav>
 </header>
 
-        результаты
+        
+    <ul class="breadcrumbs desktop-only container">
+        <li>
+            <a href="index.html">Главная/</a>
+        </li>
+        <li>
+            <a href="#">Каталог/</a>
+        </li>
+        <li>
+            <a href="#">Массажер для спины и шеи, плеч, тела, ног</a>
+        </li>
+    </ul>
+    <section class="product-about">
+        <div class="product-gallery" style="grid-area:slider">
+            <div class="swiper product-swiper">
+                <div class="swiper-wrapper">
+                    
+                        <div class="swiper-slide">
+                            <a href="./assets/product.png" class="glightbox">
+                                <img src="./assets/product.png"/>
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a href="https://i03.fotocdn.net/s119/9c4a25d1afe85016/public_pin_l/2730300326.jpg" class="glightbox">
+                                <img src="https://i03.fotocdn.net/s119/9c4a25d1afe85016/public_pin_l/2730300326.jpg"/>
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a href="https://bugaga.ru/uploads/posts/2017-03/1489051999_kotik-hosiko-23.jpg" class="glightbox">
+                                <img src="https://bugaga.ru/uploads/posts/2017-03/1489051999_kotik-hosiko-23.jpg"/>
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a href="https://s1.1zoom.ru/b5050/472/Cats_Grass_Bokeh_Glance_Kittens_590215_3840x2400.jpg" class="glightbox">
+                                <img src="https://s1.1zoom.ru/b5050/472/Cats_Grass_Bokeh_Glance_Kittens_590215_3840x2400.jpg"/>
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a href="https://www.vladtime.ru/uploads/posts/2018-03/1522438548_evropeyskaya-koshka-dikiy-kot.jpg" class="glightbox">
+                                <img src="https://www.vladtime.ru/uploads/posts/2018-03/1522438548_evropeyskaya-koshka-dikiy-kot.jpg"/>
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a href="https://s1.1zoom.ru/big0/543/Cats_British_Shorthair_Grey_Glance_Snout_539533_1280x957.jpg" class="glightbox">
+                                <img src="https://s1.1zoom.ru/big0/543/Cats_British_Shorthair_Grey_Glance_Snout_539533_1280x957.jpg"/>
+                            </a>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <a href="https://c.wallhere.com/photos/32/6f/2040x1360_px_cat_eyes_gray_Looks-1912437.jpg!d" class="glightbox">
+                                <img src="https://c.wallhere.com/photos/32/6f/2040x1360_px_cat_eyes_gray_Looks-1912437.jpg!d"/>
+                            </a>
+                        </div>
+                    
+
+                </div>
+
+            </div>
+            <div thumbsslider="" class="swiper thumbsslider">
+                <div class="swiper-wrapper">
+                    
+                        <div class="swiper-slide">
+                            <img src="./assets/product.png"/>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <img src="https://i03.fotocdn.net/s119/9c4a25d1afe85016/public_pin_l/2730300326.jpg"/>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <img src="https://bugaga.ru/uploads/posts/2017-03/1489051999_kotik-hosiko-23.jpg"/>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <img src="https://s1.1zoom.ru/b5050/472/Cats_Grass_Bokeh_Glance_Kittens_590215_3840x2400.jpg"/>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <img src="https://www.vladtime.ru/uploads/posts/2018-03/1522438548_evropeyskaya-koshka-dikiy-kot.jpg"/>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <img src="https://s1.1zoom.ru/big0/543/Cats_British_Shorthair_Grey_Glance_Snout_539533_1280x957.jpg"/>
+                        </div>
+                    
+                        <div class="swiper-slide">
+                            <img src="https://c.wallhere.com/photos/32/6f/2040x1360_px_cat_eyes_gray_Looks-1912437.jpg!d"/>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+        <img src="./assets/dots_product.svg" alt="dots" class="dots desktop-only" style="grid-area:dots">
+        <div class="product-name" style="grid-area:name">
+            <h3 class="name">Массажер для спины и шеи, плеч, тела, ног</h3>
+            <div class="name-wrapper">
+                <div class="rating" data-rating="5">
+                    <span class="rating__count">(67)</span>
+                </div>
+                <p class="SKU">Артикул: 70303775</p>
+            </div>
+        </div>
+        <div class="specifications" style="grid-area:specs">
+            <p class="product-caption">Характеристики</p>
+            <table>
+                <tr>
+                    <td>Цвет</td>
+                    <td>Чёрный</td>
+                </tr>
+                <tr>
+                    <td>Высота предмета</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>
+                        Ширина предмета</td>
+                    <td>37</td>
+                </tr>
+                <tr>
+                    <td>Ширина упаковки</td>
+                    <td>17.5</td>
+                </tr>
+                <tr>
+                    <td>
+                        Глубина упаковки
+                    </td>
+                    <td>41</td>
+                </tr>
+            </table>
+        </div>
+        <div class="description" style="grid-area:desc">
+            <p class="product-caption">Описание продукта</p>
+            <p class="description__text">Электрический массажер с ручками - ХИТ СЕЗОНА! Удобный универсальный массажер для шеи и плеч, а так же спины, поясница, живота, бёдер и ягодиц расслабит вас после тяжелого трудового дня, приведёт мышцы в тонус, а благодаря эффекту массажной подушки с подогревом заставит вас забыть о любых болях!</p>
+        </div>
+        <div class="buy-btns" style="grid-area:btns ">
+            <p class="buy-btns__caption">Бесплатная доставка</p>
+            <div class="btns">
+                <a href="" class="btn buy-btn">Купить на
+                    <b>OZON</b>
+                </a>
+                <a href="" class="btn buy-btn">Купить на
+                    <b>WB</b>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
         <footer class="footer">
     <div class="footer__content container">
         <div class="company-side">
@@ -249,5 +412,45 @@
 </footer>
 
         
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script type="text/javascript">
+        const lightbox = GLightbox({draggable: false, touchNavigation: false});
+
+        var swiper = new Swiper(".thumbsslider", {
+            spaceBetween: 10,
+            watchSlidesProgress: true,
+            mousewheel: true,
+            direction: 'vertical',
+            breakpoints: {
+                0: {
+                    direction: 'horizontal', // горизонтальная прокрутка
+                    slidesPerView: 3
+                },
+                480: {
+                    direction: 'horizontal', // горизонтальная прокрутка
+                    slidesPerView: 4
+                },
+                650: {
+                    direction: 'horizontal', // горизонтальная прокрутка
+                    slidesPerView: 5
+                },
+                980: {
+                    direction: 'vertical',
+                    slidesPerView: 6
+                },
+                1350: {
+                    slidesPerView: 4
+                }
+            }
+        });
+        var swiper2 = new Swiper(".product-swiper", {
+            spaceBetween: 10,
+            thumbs: {
+                swiper: swiper
+            }
+        });
+    </script>
+
     </body>
 </html>

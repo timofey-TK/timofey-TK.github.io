@@ -1,3 +1,17 @@
+{% set pages = [
+    [
+        "Главная", "index.html"
+    ],
+    [
+        "Товар", "product.html"
+    ],
+    [
+        "Цикл производства", "circle.html"
+    ],
+    [
+        "О нас", "about.html"
+    ]
+] %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -14,5 +28,6 @@
         {% include 'components/header.njk' %}
         {% block content %}{% endblock content %}
         {% include 'components/footer.njk' %}
+        {% block scripts %}{% endblock %}
     </body>
 </html>

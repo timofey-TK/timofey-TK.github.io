@@ -1,4 +1,108 @@
-footer {
-    height: 200px;
-    background-color: var(--accent-light-color);
+.footer {
+    background: #fafafa;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &__content {
+        display: flex;
+        align-items: center;
+        flex-grow: 2;
+        justify-content: space-between;
+        .company-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .about-company {
+                margin-top: 18px;
+                margin-bottom: 37px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.011em;
+                color: #878787;
+            }
+        }
+        .nav-links {
+            display: flex;
+            gap: 60px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 30px;
+            a:hover {
+                color: #1661ff;
+            }
+        }
+        .contacts {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 28px;
+            a,
+            p {
+                margin: 0;
+            }
+            .accent-text {
+                text-decoration-line: underline;
+                color: #0088cf;
+            }
+            .number {
+                font-weight: 900;
+                font-size: 18px;
+                line-height: 45px;
+                color: #242321;
+                margin-top: 20px;
+                display: block;
+            }
+        }
+    }
+    .copyright {
+        height: 65px;
+        border: 1px solid rgba(34, 8, 0, 0.1);
+        font-weight: 400;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #2e2e2e;
+        opacity: 0.6;
+    }
+    @media screen and (max-width: 1350px) {
+        &__content {
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+        }
+    }
+    @media screen and (max-width: 980px) {
+        &__content {
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            gap: 50px;
+            .company-side {
+                .about-company {
+                    margin-bottom: 25px;
+                }
+                .socials {
+                    gap: 30px;
+                    svg {
+                        max-width: 50px;
+                    }
+                }
+            }
+            .nav-links {
+                font-size: 22px;
+                gap: 35px;
+            }
+            .contacts {
+                font-size: 16px;
+                .number {
+                    font-size: 22px;
+                    text-align: center;
+                }
+            }
+        }
+    }
 }

@@ -1,1 +1,24 @@
-<footer></footer>
+<footer class="footer">
+    <div class="footer__content container">
+        <div class="company-side">
+            <img src="assets/Logo.svg" alt="logo" class="logo">
+            <p class="about-company">Краткая информация о компании</p>
+            {% include 'components/socials.njk' %}
+        </div>
+        <ul class="nav-links">
+            {% for page, link in pages %}
+                <li>
+                    <a href="{{link}}">{{page}}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="contacts">
+            <a href="https://go.2gis.com/dgdri" class="accent-text">Россия, Город ул. ....</ф>
+            <p>График работы:
+                <span class="accent-text">Пн-Сб с 9:00 до 18:00</span></p>
+            <a href="mailto:mail@gmail.com">E-mail: mail@gmail.com</a>
+            <a href="tel:+70000000000" class="number">+7 (000) 000 00 00</a>
+        </div>
+    </div>
+    <div class="copyright">© 2022 OkDoc</div>
+</footer>

@@ -15,18 +15,6 @@
   border-radius: 11px;
   object-fit: cover;
 }
-.product-card .rating {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: start;
-  align-items: center;
-  gap: 5px;
-}
-.product-card .rating__count {
-  padding-left: 5px;
-  position: relative;
-  top: -1px;
-}
 .product-card .btns {
   display: flex;
   gap: 10px;

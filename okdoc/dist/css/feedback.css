@@ -60,6 +60,9 @@
   font-weight: 700;
   color: #fff;
 }
+.feedback__swiper .swiper-nav-button:hover {
+  transform: translateY(-5px);
+}
 .feedback__swiper .swiper-nav-button.swiper-button-disabled {
   box-shadow: none;
 }

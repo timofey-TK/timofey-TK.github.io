@@ -18,10 +18,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer="defer"></script>
     {# стили страницы #}
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main-page.css">
     <link rel="stylesheet" href="css/product-card.css">
     <link rel="stylesheet" href="css/advantages.css">
     <link rel="stylesheet" href="css/feedback.css">
+    <link rel="stylesheet" href="css/news.css">
 {% endblock links %}
 {# content #}
 {% block content %}
@@ -106,4 +107,5 @@
     </section>
     {% include 'components/advantages.njk' %}
     {% include 'components/feedback.njk' %}
+    {% include 'components/news.njk' %}
 {% endblock content %}

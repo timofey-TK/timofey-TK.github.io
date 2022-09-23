@@ -97,10 +97,23 @@ svg path,
 .btn::after,
 .btn svg,
 .swiper-nav-button,
-.swiper-nav-button::after {
+.swiper-nav-button::after,
+.news__article,
+a.glightbox::after {
     transition: all ease 0.3s;
 }
-
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    &__count {
+        padding-left: 5px;
+        position: relative;
+        top: -2px;
+    }
+}
 .desktop-only {
     @media screen and (max-width: 980px) {
         display: none !important;

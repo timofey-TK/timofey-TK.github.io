@@ -14,7 +14,7 @@ hamburger.addEventListener("click", function (e) {
 
 
 // Рейтинг товаров
-let ratings = document.querySelectorAll(".product-card .rating");
+let ratings = document.querySelectorAll(".rating");
 ratings.forEach(function (ratingField) {
     var rating = ratingField.getAttribute("data-rating");
     for (let i = 0; i < 5 - rating; i++) {

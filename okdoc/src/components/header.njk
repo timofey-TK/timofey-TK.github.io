@@ -10,18 +10,11 @@
         <a href="#" class="logo desktop-only"><img src="assets/Logo.svg" alt="logo">
         </a>
         <ul class="nav__links">
-            <li>
-                <a href="#">Главная</a>
-            </li>
-            <li>
-                <a href="#">Товары</a>
-            </li>
-            <li>
-                <a href="#">Цикл производства</a>
-            </li>
-            <li>
-                <a href="#">О нас</a>
-            </li>
+            {% for page, link in pages %}
+                <li>
+                    <a href="{{link}}">{{page}}</a>
+                </li>
+            {% endfor %}
         </ul>
         <form class="search-field desktop-only" autocomplete="off" action="results.html">
             <input type="search" placeholder="Поиск" autocomplete="off">
