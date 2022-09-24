@@ -173,27 +173,15 @@
     }
     @media screen and (max-width: 980px) {
         grid-template-areas: "name name" "slider slider" "specs specs" "desc desc" "btns btns";
-
         .product-gallery {
             overflow: hidden;
             flex-direction: column;
             max-width: 100%;
+            max-height: none;
             .swiper {
                 width: 100%;
                 max-width: 100%;
             }
-            .thumbsslider {
-                img {
-                    height: 100px;
-                }
-            }
-        }
-        .description__text {
-            max-width: 100%;
-        }
-    }
-    @media screen and (max-width: 480px) {
-        .product-gallery {
             .product-swiper {
                 a.glightbox {
                     &::after {
@@ -208,8 +196,35 @@
                         border-radius: 10px;
                     }
                 }
+            }
+            .thumbsslider {
+                img {
+                    height: 100px;
+                }
+            }
+        }
+        .description__text {
+            max-width: 100%;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .btns {
+            justify-content: space-between;
+            .btn {
+                width: 48%;
+                box-sizing: border-box;
+            }
+        }
+        .product-gallery {
+            .product-swiper {
+                height: 360px;
                 img {
                     height: 360px;
+                }
+            }
+            .thumbsslider {
+                img {
+                    height: 90px;
                 }
             }
         }

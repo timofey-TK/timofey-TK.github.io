@@ -181,19 +181,12 @@
     overflow: hidden;
     flex-direction: column;
     max-width: 100%;
+    max-height: none;
   }
   .product-about .product-gallery .swiper {
     width: 100%;
     max-width: 100%;
   }
-  .product-about .product-gallery .thumbsslider img {
-    height: 100px;
-  }
-  .product-about .description__text {
-    max-width: 100%;
-  }
-}
-@media screen and (max-width: 480px) {
   .product-about .product-gallery .product-swiper a.glightbox::after {
     content: url(../assets/icons/zoomin.svg);
     bottom: 15px;
@@ -205,7 +198,28 @@
     background-color: #fff;
     border-radius: 10px;
   }
+  .product-about .product-gallery .thumbsslider img {
+    height: 100px;
+  }
+  .product-about .description__text {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product-about .btns {
+    justify-content: space-between;
+  }
+  .product-about .btns .btn {
+    width: 48%;
+    box-sizing: border-box;
+  }
+  .product-about .product-gallery .product-swiper {
+    height: 360px;
+  }
   .product-about .product-gallery .product-swiper img {
     height: 360px;
+  }
+  .product-about .product-gallery .thumbsslider img {
+    height: 90px;
   }
 }
