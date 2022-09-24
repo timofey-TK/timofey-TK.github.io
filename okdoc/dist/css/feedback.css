@@ -45,30 +45,6 @@
   margin: 0;
   margin-top: 5px;
 }
-.feedback__swiper .swiper-nav-button {
-  width: 40px;
-  height: 40px;
-  background: var(--defoult-color);
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 40px;
-  opacity: 1 !important;
-  outline: none;
-  border: none;
-}
-.feedback__swiper .swiper-nav-button::after {
-  font-size: 15px;
-  font-weight: 700;
-  color: #fff;
-}
-.feedback__swiper .swiper-nav-button:hover {
-  transform: translateY(-5px);
-}
-.feedback__swiper .swiper-nav-button.swiper-button-disabled {
-  box-shadow: none;
-}
-.feedback__swiper .swiper-nav-button.swiper-button-disabled::after {
-  color: #9dafbd;
-}
 @media screen and (max-width: 1350px) {
   .feedback__swiper .swiper-button-prev {
     left: 0;

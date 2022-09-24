@@ -5,9 +5,7 @@
 {# styles #}
 {% block links %}
     {# стили внешних библиотек #}
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     {# стили страницы #}
     <link rel="stylesheet" href="css/product-page.css">
     <link rel="stylesheet" href="css/product-card.css">
@@ -65,7 +63,7 @@
         </div>
         <div class="specifications" style="grid-area:specs">
             <p class="product-caption">Характеристики</p>
-            <table>
+            <table class="specifications-table">
                 <tr>
                     <td>Цвет</td>
                     <td>Чёрный</td>
@@ -107,9 +105,132 @@
             </div>
         </div>
     </section>
-
+    <section class="full-description">
+        <div class="specifications">
+            <p class="product-caption">Все характеристики</p>
+            <div class="full-description__tables">
+                <table class="specifications-table">
+                    <tr>
+                        <td>Цвет</td>
+                        <td>Чёрный</td>
+                    </tr>
+                    <tr>
+                        <td>Высота предмета</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ширина предмета</td>
+                        <td>37</td>
+                    </tr>
+                    <tr>
+                        <td>Ширина упаковки</td>
+                        <td>17.5</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Глубина упаковки
+                        </td>
+                        <td>41</td>
+                    </tr>
+                </table>
+                <table class="specifications-table">
+                    <tr>
+                        <td>Действие
+                        </td>
+                        <td>антицеллюлитный</td>
+                    </tr>
+                    <tr>
+                        <td>Страна производства</td>
+                        <td>Россия
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Комплектация</td>
+                        <td>Массажер - 1 шт.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="description">
+            <p class="product-caption">Полное описание</p>
+            <p class="description__text">Электрический массажер с ручками - ХИТ СЕЗОНА! Удобный универсальный массажер для шеи и плеч, а так же спины, поясница, живота, бёдер и ягодиц расслабит вас после тяжелого трудового дня, приведёт мышцы в тонус, а благодаря эффекту массажной подушки с подогревом заставит вас забыть о любых болях! Важно! Каждый комплект проверяется нами вручную на брак и комплектность. В случае возникновения вопросов или проблем, смело обращайтесь в нашу тех. поддержку, мы оперативно вам поможем. Для женщин этот массажер для тела - находка, т.к. способствует похудению, оказывает антицеллюлитный эффект на зоны применения.Работает от сети и прикуривателя! (номинальная частота 50 Гц, номинальная мощность 40Вт). Добиться медицинского массажа можно правильным применением натяжения к ручкам, и массажер с прогревом станет вашим спасителем при боли в ногах или икрах! ТЕГИ: массаж ролик здоровье уход массажная стопы кожи шейный снятие мышц расслабления усталости офис рук свадьбу новоселье юбилей день учителя накидка бабушке дедушке бедра адаптер комплект автомобильный защита насадка целлюлит электро релакс мужчины дома сестре машину дочке бытовой вибромассажер корректор осанки подарок девушке</p>
+        </div>
+    </section>
+    <section class="instruction">
+        <h3 class="small-title text-center">Инструкция по применению</h3>
+        <ul class="instruction__steps">
+            <li>
+                <p class="step-name">1.Действие</p>
+                <p class="step-text">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </li>
+            <li>
+                <p class="step-name">2.Действие</p>
+                <p class="step-text">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </li>
+            <li>
+                <p class="step-name">3.Действие</p>
+                <p class="step-text">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </li>
+            <li>
+                <p class="step-name">4.Действие</p>
+                <p class="step-text">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            </li>
+        </ul>
+        <div class="instruction__video">
+            <iframe width="988" height="612" src="https://www.youtube-nocookie.com/embed/895XdJDJIPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+    </section>
+    <section class="rich section-with-bg-pattern">
+        <div class="rich__item">
+            <p class="caption" style="max-width: 468px;">Расслабляет и снимает боль в разных частях тела</p>
+            <img src="./assets/unsplash_A3MleA0jtoE-1.png" alt="">
+        </div>
+        <div class="rich__item">
+            <p class="caption" style="max-width: 430px;">Наша массажная подушка - Ваш личный массажист, который всегда под рукой</p>
+            <img src="./assets/unsplash_A3MleA0jtoE-2.png" alt="">
+        </div>
+        <div class="rich__item">
+            <p class="caption" style="max-width: 707px;">Две вращающихся массажных головки с четырьмя круглыми роликами на каждой, отлично заменят теплые руки массажиста</p>
+            <img src="./assets/unsplash_A3MleA0jtoE-1.png" alt="">
+        </div>
+        <img src="./assets/6398630235 2.png" alt="" class="full-img">
+    </section>
+    {% include 'components/feedback.njk' %}
+    <section class="similar-products">
+        <h2 class="title text-center">~ Похожие товары ~</h2>
+        <div class="swiper-btns-wrapper">
+            <div class="btns-wrapper">
+                <div class="swiper-button-prev swiper-nav-button"></div>
+                <div class="swiper-button-next swiper-nav-button"></div>
+            </div>
+        </div>
+        <div class="swiper similar-products__swiper">
+            <div class="swiper-wrapper">
+                {% for i in[1, 2, 3, 4, 5] %}
+                    <div class="swiper-slide">{% include 'components/product_card.njk' %}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% include 'components/advantages.njk' %}
+    <section class="get_sale">
+        <div class="section-wrapper">
+            <h2 class="big-text text-center">Оставь заявку и получи скидку на OZON и Wildberries</h2>
+            <form action="">
+                <p class="form__caption">Заполните простую форму и получите скидку на обоих маркетплейсах!</p>
+                <label>
+                    <span>Номер телефона</span>
+                    <input type="tel" data-tel-input="data-tel-input" placeholder="+7 (000) 00 00 00" maxlength="18"/>
+                </label>
+                <button class="accent-btn btn">Получить скидку!</button>
+            </form>
+        </div>
+    </section>
+    {% include 'components/news.njk' %}
 {% endblock %}
 {% block scripts %}
+    <script src="./scripts/phoneinput.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script type="text/javascript">
@@ -146,6 +267,35 @@
             spaceBetween: 10,
             thumbs: {
                 swiper: swiper
+            }
+        });
+        var swiper3 = new Swiper(".similar-products__swiper", {
+            spaceBetween: 10,
+            slidesPerView: 3.4,
+            navigation: {
+                nextEl: '.similar-products .swiper-button-next',
+                prevEl: '.similar-products .swiper-button-prev'
+            },
+            breakpoints: {
+                0: {
+
+                    slidesPerView: 1
+                },
+                480: {
+                    centeredSlides: false,
+                    slidesPerView: 1
+                },
+                650: {
+                    centeredSlides: true,
+                    slidesPerView: 1.7
+                },
+                980: {
+                    centeredSlides: false,
+                    slidesPerView: 2.4
+                },
+                1350: {
+                    slidesPerView: 3.4
+                }
             }
         });
     </script>

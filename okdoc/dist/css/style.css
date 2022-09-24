@@ -399,6 +399,7 @@ header,
 
 section {
   padding-top: 40px;
+  overflow-x: hidden;
 }
 
 .section-with-bg-pattern {
@@ -484,7 +485,10 @@ svg path,
 .swiper-nav-button,
 .swiper-nav-button::after,
 .news__article,
-a.glightbox::after {
+a.glightbox::after,
+.product-caption::after,
+.full-description__tables,
+.description__text {
   transition: all ease 0.3s;
 }
 
@@ -558,6 +562,31 @@ body.unscrollable {
 }
 .accent-btn:after {
   content: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0 6C0 5.80109 0.0790178 5.61032 0.21967 5.46967C0.360322 5.32902 0.551088 5.25 0.75 5.25L9.4395 5.25L6.219 2.031C6.14927 1.96127 6.09395 1.87848 6.05621 1.78737C6.01848 1.69626 5.99905 1.59861 5.99905 1.5C5.99905 1.40138 6.01848 1.30373 6.05621 1.21262C6.09395 1.12151 6.14927 1.03873 6.219 0.968998C6.28873 0.899266 6.37152 0.843952 6.46262 0.806213C6.55373 0.768475 6.65138 0.749051 6.75 0.749051C6.84862 0.749051 6.94627 0.768475 7.03738 0.806213C7.12848 0.843952 7.21127 0.899266 7.281 0.968998L11.781 5.469C11.8508 5.53867 11.9063 5.62143 11.9441 5.71255C11.9819 5.80367 12.0013 5.90135 12.0013 6C12.0013 6.09865 11.9819 6.19633 11.9441 6.28745C11.9063 6.37857 11.8508 6.46133 11.781 6.531L7.281 11.031C7.21127 11.1007 7.12848 11.156 7.03738 11.1938C6.94627 11.2315 6.84862 11.2509 6.75 11.2509C6.65138 11.2509 6.55373 11.2315 6.46262 11.1938C6.37152 11.156 6.28873 11.1007 6.219 11.031C6.07817 10.8902 5.99905 10.6992 5.99905 10.5C5.99905 10.4014 6.01848 10.3037 6.05621 10.2126C6.09395 10.1215 6.14927 10.0387 6.219 9.969L9.4395 6.75L0.75 6.75C0.551088 6.75 0.360322 6.67098 0.21967 6.53033C0.0790178 6.38968 0 6.19891 0 6Z' fill='white'/%3E%3C/svg%3E%0A");
+}
+
+.swiper-nav-button {
+  width: 40px !important;
+  height: 40px !important;
+  background: var(--defoult-color);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 40px;
+  opacity: 1 !important;
+  outline: none;
+  border: none;
+}
+.swiper-nav-button::after {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #fff;
+}
+.swiper-nav-button:hover {
+  transform: translateY(-5px);
+}
+.swiper-nav-button.swiper-button-disabled {
+  box-shadow: none;
+}
+.swiper-nav-button.swiper-button-disabled::after {
+  color: #9dafbd;
 }
 
 header {

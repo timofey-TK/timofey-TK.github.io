@@ -323,3 +323,10 @@ function inputBlur() {
         input.focus()
     };
 }
+
+
+document.querySelectorAll(".full-description .product-caption").forEach(i => {
+    i.addEventListener("click", (e) => {
+        i.closest("div").classList.toggle("opened");
+    })
+})
