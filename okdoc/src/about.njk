@@ -1,0 +1,91 @@
+{# Title and layout #}
+{% set title = "О нас" %}
+{% extends "./components/_layout.njk" %}
+{# styles #}
+{% block links %}
+    {# стили страницы #}
+    <link rel="stylesheet" href="css/about-page.css">
+
+    <link rel="stylesheet" href="css/advantages.css">
+
+    <link rel="stylesheet" href="css/news.css">
+{% endblock links %}
+{# content #}
+{% block content %}
+
+    {# Секция о компании #}
+    <section class="about full-size">
+        <h2 class="title  mobile-only container">
+            <span class="defoult-color">~</span>
+            О компании
+            <span>
+                <span class="accent-color upper">Ok</span>
+                <span class="defoult-color upper">Doc ~</span>
+            </span>
+        </h2>
+        <div class="about__img"><img src="./assets/image-holder.png" alt=""></div>
+        <div class="container">
+            <div class="text-field">
+                <h2 class="title desktop-only">
+                    <span class="defoult-color">~</span>
+                    О компании
+                    <span>
+                        <span class="accent-color upper">Ok</span>
+                        <span class="defoult-color upper">Doc ~</span>
+                    </span>
+                </h2>
+                <p class="main-text">We love what we do and we do it with passion.
+                    <br>
+                    We value the experimentation of the message and smart incentives.
+                    <br>
+                    <br>
+                    We love what we do and we do it with passion.
+                    <br>
+                    We value the experimentation of the message and smart incentives.</p>
+
+            </div>
+        </div>
+    </section>
+    <section class="mission">
+        <h2 class="title text-center">~ Наша миссия ~</h2>
+        <div class="mission-wrapper">
+            <p>We love what we do and we do it with passion. We value the experimentation of the message and smart incentives. We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.</p>
+            <p>We love what we do and we do it with passion. We value the experimentation of the message and smart incentives. We love what we do and we do it with passion. We value the experimentation of the message and smart incentives.</p>
+        </div>
+    </section>
+    <section class="in-numbers full-size">
+        <h2 class="title text-center">
+            <span class="defoult-color">~</span>
+            О нас в цифрах
+            <span class="defoult-color">~</span>
+        </h2>
+        <div class="container">
+            <ul class="in-numbers__list">
+                <li>
+                    <p class="value">4,000+</p>
+                    <p class="caption">Заголовок</p>
+                    <p class="text">Описание достижения в цифрах</p>
+                </li>
+                <li>
+                    <p class="value">600%</p>
+                    <p class="caption">Заголовок</p>
+                    <p class="text">Описание достижения в цифрах</p>
+                </li>
+                <li>
+                    <p class="value">10k</p>
+                    <p class="caption">Заголовок</p>
+                    <p class="text">Описание достижения в цифрах</p>
+                </li>
+                <li>
+                    <p class="value">200+</p>
+                    <p class="caption">Заголовок</p>
+                    <p class="text">Описание достижения в цифрах</p>
+                </li>
+            </ul>
+            <img src="./assets/image-holder.png" alt="" class="in-numbers__image">
+        </div>
+    </section>
+    {% include 'components/advantages.njk' %}
+
+    {% include 'components/news.njk' %}
+{% endblock %}

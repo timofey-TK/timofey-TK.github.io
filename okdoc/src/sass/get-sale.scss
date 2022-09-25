@@ -1,0 +1,112 @@
+.get_sale {
+    padding-bottom: 40px;
+    .section-wrapper {
+        background: linear-gradient(
+                0deg,
+                rgba(21, 179, 175, 0.7),
+                rgba(21, 179, 175, 0.7)
+            ),
+            url(../assets/bg-pattern.svg);
+        border-radius: 20px;
+        padding: 0 20px;
+        padding-top: 40px;
+        padding-bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    h2 {
+        max-width: 894px;
+        color: #ffffff;
+        margin: 0 auto;
+        line-height: 75px;
+    }
+    form {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+        padding-bottom: 16px;
+        gap: 25px;
+        width: 516px;
+        max-width: 100%;
+        background: #f1f7ff;
+        border-radius: 24px;
+        .form__caption {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-align: center;
+            color: #15b3af;
+            margin: 0;
+        }
+        label {
+            box-sizing: border-box;
+            display: flex;
+            height: 69px;
+            width: 100%;
+            background: #f1f7ff;
+            border: 1px solid #bbbdc1;
+            border-radius: 8px;
+            padding: 12px;
+            flex-direction: column;
+            gap: 5px;
+            span {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                color: #1b2430;
+            }
+            input {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                background: transparent;
+            }
+        }
+        .accent-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 50px;
+            background: #dc0d15;
+            border-radius: 8px;
+            &::after {
+                content: none;
+            }
+            &:hover {
+                background: #c00b11;
+            }
+        }
+    }
+    @media screen and (max-width: 980px) {
+        h2 {
+            font-size: 30px;
+            line-height: 45px;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        form {
+            width: auto;
+            .form__caption {
+                font-size: 18px;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        background: linear-gradient(
+                0deg,
+                rgba(21, 179, 175, 0.7),
+                rgba(21, 179, 175, 0.7)
+            ),
+            url(../assets/bg-pattern.svg);
+        border-radius: 20px;
+        .section-wrapper {
+            background: none;
+            padding: 0;
+            gap: 15px;
+        }
+    }
+}

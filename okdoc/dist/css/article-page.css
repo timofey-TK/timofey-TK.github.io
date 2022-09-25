@@ -1,0 +1,62 @@
+.article__image {
+  margin-top: 20px;
+  max-height: 600px;
+}
+.article__image img {
+  min-width: 60%;
+  object-fit: cover;
+  border-radius: 20px;
+  max-height: 600px;
+}
+.article__info {
+  font-weight: 400;
+  font-size: 18px;
+  color: #717070;
+  display: flex;
+  gap: 30px;
+}
+.article__info .views::before {
+  content: url("data:image/svg+xml,%3Csvg width='23' height='17' viewBox='0 0 23 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.1429 7.41876C21.6366 8.06459 21.6366 8.93647 21.1429 9.58126C19.5877 11.6115 15.8564 15.7917 11.5002 15.7917C7.1439 15.7917 3.41265 11.6115 1.85745 9.58126C1.61722 9.27202 1.48682 8.89159 1.48682 8.50001C1.48682 8.10843 1.61722 7.728 1.85745 7.41876C3.41265 5.38855 7.1439 1.20834 11.5002 1.20834C15.8564 1.20834 19.5877 5.38855 21.1429 7.41876V7.41876Z' stroke='%23717070' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.5 11.625C13.2259 11.625 14.625 10.2259 14.625 8.5C14.625 6.77411 13.2259 5.375 11.5 5.375C9.77411 5.375 8.375 6.77411 8.375 8.5C8.375 10.2259 9.77411 11.625 11.5 11.625Z' stroke='%23717070' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+  margin-right: 12px;
+  position: relative;
+  top: 2px;
+}
+.article__title {
+  margin: 0;
+  margin-bottom: 38px;
+}
+.article__content {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: -0.165px;
+}
+@media screen and (max-width: 650px) {
+  .article__image {
+    padding: 0;
+    background: #a3a3a3;
+  }
+  .article__image img {
+    height: 100%;
+    border-radius: 0;
+  }
+  .article__info {
+    font-size: 15px;
+  }
+  .article__title {
+    margin-bottom: 20px;
+  }
+  .article__content {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .article__info {
+    margin: 25px 0;
+    flex-direction: column-reverse;
+    gap: 15px;
+  }
+  .article__info p {
+    margin: 0;
+  }
+}

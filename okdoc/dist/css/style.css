@@ -474,6 +474,10 @@ section {
   text-transform: uppercase;
 }
 
+.defoult-color {
+  color: var(--defoult-color);
+}
+
 a,
 input[type=search],
 .search-field li,
@@ -715,6 +719,9 @@ header .logo img {
     background-color: #fff;
     flex-direction: column;
     gap: 60px;
+    -webkit-box-shadow: 0px 12px 37px -4px rgba(34, 60, 80, 0.31);
+    -moz-box-shadow: 0px 12px 37px -4px rgba(34, 60, 80, 0.31);
+    box-shadow: 0px 12px 37px -4px rgba(34, 60, 80, 0.31);
   }
   .nav__links {
     flex-direction: column;
@@ -732,6 +739,9 @@ header .logo img {
 }
 @media screen and (max-width: 480px) {
   .nav {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
     max-height: 100vh;
     justify-content: start;
     height: calc(var(--vh, 1vh) * 100);

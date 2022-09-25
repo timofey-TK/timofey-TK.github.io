@@ -2,6 +2,45 @@
 {% set title = "Результаты" %}
 {% extends "./components/_layout.njk" %}
 {# styles #}
-{% block links %}{% endblock links %}
+{% block links %}
+    <link rel="stylesheet" href="css/results-page.css">
+    <link rel="stylesheet" href="css/get-sale.css">
+    <link rel="stylesheet" href="css/product-card.css">{% endblock links %}
 {# content #}
-{% block content %}результаты{% endblock content %}
+{% block content %}
+    <section class="results">
+        <h2 class="title text-center">Результаты поиска: наименование 1</h2>
+        <form class="search-field" autocomplete="off">
+            <input type="search" autocomplete="off" placeholder="Поиск">
+            <button type="button" class="filter"><img src="./assets/icons/filter.svg" alt="filter"></button>
+        </form>
+        <div class="filters">
+            <span class="filters__caption">Фильтры:</span>
+            <button class="filters__filter">Product vendor is balabalabal</button>
+            <button class="filters__filter">Status is active</button>
+            <button class="filters__filter">Online Store</button>
+        </div>
+        <div class="results__list">
+            {% for i in[
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+            ] %}
+                {% include 'components/product_card.njk' %}
+            {% endfor %}
+        </div>
+        <a href="#" class="btn load-more-btn">
+            <svg width="15" height="14" viewbox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.49999 1.16675V12.8334M7.49999 12.8334L13.3333 7.00008M7.49999 12.8334L1.66666 7.00008" stroke="#6941C6" stroke-width="1.67" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Загрузить еще</span>
+        </a>
+    </section>
+    {% include 'components/get-sale.njk' %}
+{% endblock content %}

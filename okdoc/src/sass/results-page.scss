@@ -1,0 +1,82 @@
+.results {
+    padding-bottom: 60px;
+    .search-field {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        .filter {
+            background: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        input {
+            width: 356px;
+            height: 42px;
+            background: #e9e9e9;
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 13px;
+            padding-left: 50px;
+            background-image: url("../assets/icons/search.svg");
+            background-position: 23px center;
+            background-repeat: no-repeat;
+        }
+    }
+    .filters {
+        margin-top: 20px;
+        font-weight: 400;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        color: rgba(0, 0, 0, 0.85);
+        line-height: 18px;
+        &__filter {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1px 8px;
+
+            gap: 3px;
+            background: #f0f0f0;
+            border-radius: 2px;
+            &::after {
+                content: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.57808 3.99949L7.50776 0.507304C7.55687 0.449268 7.51558 0.361099 7.43968 0.361099H6.54906C6.4966 0.361099 6.44638 0.384536 6.41178 0.424715L3.99549 3.3053L1.57919 0.424715C1.54571 0.384536 1.49549 0.361099 1.44191 0.361099H0.551289C0.475396 0.361099 0.434102 0.449268 0.483209 0.507304L3.4129 3.99949L0.483209 7.49168C0.472208 7.50462 0.465151 7.52044 0.462875 7.53726C0.460598 7.55409 0.463198 7.57122 0.470367 7.58661C0.477535 7.60201 0.48897 7.61502 0.503314 7.62411C0.517658 7.6332 0.534309 7.63798 0.551289 7.63788H1.44191C1.49437 7.63788 1.54459 7.61445 1.57919 7.57427L3.99549 4.69369L6.41178 7.57427C6.44526 7.61445 6.49549 7.63788 6.54906 7.63788H7.43968C7.51558 7.63788 7.55687 7.54972 7.50776 7.49168L4.57808 3.99949Z' fill='black' fill-opacity='0.45'/%3E%3C/svg%3E%0A");
+                margin-left: 5px;
+            }
+        }
+        margin-bottom: 45px;
+    }
+    .load-more-btn {
+        max-width: 100%;
+        color: #6941c6;
+        width: 356px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px 20px;
+        gap: 8px;
+        background: #f9f5ff;
+        border: 2px solid #f9f5ff;
+        box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+        border-radius: 8px;
+        margin-top: 80px;
+        &:hover {
+            border: 2px solid #e1d6f3;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 80px;
+        row-gap: 50px;
+        @media screen and (max-width: 980px) {
+            justify-content: center;
+        }
+    }
+}

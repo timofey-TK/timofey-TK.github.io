@@ -89,6 +89,9 @@ section {
 .upper {
     text-transform: uppercase;
 }
+.defoult-color {
+    color: var(--defoult-color);
+}
 a,
 input[type="search"],
 .search-field li,
