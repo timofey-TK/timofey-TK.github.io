@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+@font-face {
+    font-family: "DaxlinePro";
+    src: url("../assets/fonts/DaxlinePro-Black.woff2") format("woff2"),
+        url("../assets/fonts/DaxlinePro-Black.woff") format("woff"),
+        url("../assets/fonts/DaxlinePro-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
