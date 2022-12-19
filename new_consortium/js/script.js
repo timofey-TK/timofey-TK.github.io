@@ -1,16 +1,13 @@
 const convertImages = (query) => {
     const images = document.querySelectorAll(query);
-
     images.forEach(image => {
         fetch(image.src)
             .then(res => res.text())
             .then(data => {
                 const parser = new DOMParser();
                 const svg = parser.parseFromString(data, 'image/svg+xml').querySelector('svg');
-
                 if (image.id) svg.id = image.id;
                 if (image.className) svg.classList = image.classList;
-
                 image.parentNode.replaceChild(svg, image);
             })
             .catch(error => console.error(error))
@@ -32,7 +29,6 @@ class ItcTabs {
         this._elButtons.forEach((el, index) => {
             el.dataset.index = index;
             el.setAttribute('role', 'tab');
-
         });
     }
     show(elLinkTarget) {
@@ -64,21 +60,15 @@ class ItcTabs {
     }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    convertImages(".svg")
-    new ItcTabs('#cases-tabs');
-    new ItcTabs('#services-tabs');
-    var burger = document.querySelector(".burger"),
-        menu = document.querySelector("nav"),
-        cross = document.querySelector(".cross")
+const InitMenu = (burger, cross, menu) => {
     burger.addEventListener("click", (e) => {
         menu.classList.add("opened")
     })
     cross.addEventListener("click", (e) => {
         menu.classList.remove("opened")
     })
-
-    const smoothLinks = document.querySelectorAll('.smooth-link');
+}
+const InitSmoothLinks = (smoothLinks) => {
     for (let smoothLink of smoothLinks) {
         smoothLink.addEventListener('click', function (e) {
             e.preventDefault();
@@ -89,7 +79,39 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     };
+}
+const InitAccordion = (accordions) => {
+    const openAccordion = (accordion) => {
+        const content = accordion.querySelector(".accordion__content");
+        accordion.classList.add("accordion__active");
+        content.style.maxHeight = content.scrollHeight + "px";
+    };
+    const closeAccordion = (accordion) => {
+        const content = accordion.querySelector(".accordion__content");
+        accordion.classList.remove("accordion__active");
+        content.style.maxHeight = null;
+    };
 
+    accordions.forEach((accordion) => {
+        const intro = accordion.querySelector(".accordion__intro");
+        const content = accordion.querySelector(".accordion__content");
 
+        intro.onclick = () => {
+            if (content.style.maxHeight) {
+                closeAccordion(accordion);
+            } else {
+                accordions.forEach((accordion) => closeAccordion(accordion));
+                openAccordion(accordion);
+            }
+        };
+    });
 
+}
+document.addEventListener("DOMContentLoaded", () => {
+    convertImages(".svg")
+    new ItcTabs('#cases-tabs');
+    new ItcTabs('#services-tabs');
+    InitMenu(document.querySelector(".burger"), document.querySelector(".cross"), document.querySelector("nav"))
+    InitSmoothLinks(document.querySelectorAll('.smooth-link'))
+    InitAccordion(document.querySelectorAll(".accordion"))
 });

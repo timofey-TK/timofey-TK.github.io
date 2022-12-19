@@ -130,7 +130,7 @@
                 Работаем по всей России
             </p>
             <div class="ui-wrapper">
-                <ul class="navigation full desktop">
+                <ul class="navigation desktop">
                     <li><a href="#header" class="active smooth-link">01</a></li>
                     <li>
                         <a href="#cost-calculation" class="smooth-link"
@@ -140,8 +140,10 @@
                     <li>
                         <a href="#order" class="smooth-link">Порядок работы</a>
                     </li>
-                    <li><a href="#" class="smooth-link">Кейсы</a></li>
-                    <li><a href="#" class="smooth-link">Частые вопросы</a></li>
+                    <li><a href="#cases" class="smooth-link">Кейсы</a></li>
+                    <li>
+                        <a href="#faq" class="smooth-link">Частые вопросы</a>
+                    </li>
                 </ul>
             </div>
             <h1 class="title hero__title">
@@ -155,7 +157,9 @@
                 <li>Фокус на 3-5 новых проектах в год</li>
             </ul>
             <div class="btn-wrapper">
-                <a class="accent-btn">Записаться на аудит</a>
+                <button class="accent-btn" onclick="openModal('modal')">
+                    Записаться на аудит
+                </button>
                 <p class="caption">Перезвоним через 10 минут</p>
             </div>
         </section>
@@ -171,17 +175,23 @@
                 />
                 <div class="col">
                     <ul class="navigation desktop">
-                        <li><a href="#header" class="smooth-link"></a></li>
+                        <li>
+                            <a href="#header" class="smooth-link"></a>
+                        </li>
                         <li>
                             <a
                                 href="#cost-calculation"
-                                class="active smooth-link"
+                                class="smooth-link active"
                                 >02</a
                             >
                         </li>
-                        <li><a href="#order" class="smooth-link"></a></li>
-                        <li><a href="#" class="smooth-link"></a></li>
-                        <li><a href="#" class="smooth-link"></a></li>
+                        <li>
+                            <a href="#order" class="smooth-link"></a>
+                        </li>
+                        <li><a href="#cases" class="smooth-link"></a></li>
+                        <li>
+                            <a href="#faq" class="smooth-link"></a>
+                        </li>
                     </ul>
 
                     <p class="cost-calculation__text">
@@ -260,13 +270,19 @@
                     </div>
                 </div>
                 <ul class="navigation desktop">
-                    <li><a href="#header" class="smooth-link"></a></li>
+                    <li>
+                        <a href="#header" class="smooth-link"></a>
+                    </li>
                     <li>
                         <a href="#cost-calculation" class="smooth-link"></a>
                     </li>
-                    <li><a href="#order" class="smooth-link active">03</a></li>
-                    <li><a href="#" class="smooth-link"></a></li>
-                    <li><a href="#" class="smooth-link"></a></li>
+                    <li>
+                        <a href="#order" class="smooth-link active">03</a>
+                    </li>
+                    <li><a href="#cases" class="smooth-link"></a></li>
+                    <li>
+                        <a href="#faq" class="smooth-link"></a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -571,8 +587,8 @@
                 </div>
             </div>
             <form action="#" method="get" class="glass-form">
-                <p class="glass-form__caption">Получите на WhatsApp:</p>
-                <ul class="glass-form__list">
+                <p class="glass-form__title">Получите на WhatsApp:</p>
+                <ul class="glass-form__list accent-list">
                     <li>
                         Mind-map с источниками трафика о которых вы еще не знали
                     </li>
@@ -600,7 +616,7 @@
                 <button class="accent-btn">Получить расчет</button>
             </form>
         </section>
-        <section class="cases">
+        <section class="cases" id="cases">
             <h2 class="section-title">Кейсы</h2>
             <div class="tabs" id="cases-tabs">
                 <div class="tabs__nav">
@@ -611,16 +627,22 @@
                     <button class="tabs__btn"><span>Торговля</span></button>
                 </div>
                 <div class="ui-wrapper">
-                    <ul class="navigation full desktop">
-                        <li><a href="#header" class="smooth-link"></a></li>
+                    <ul class="navigation desktop">
+                        <li>
+                            <a href="#header" class="smooth-link"></a>
+                        </li>
                         <li>
                             <a href="#cost-calculation" class="smooth-link"></a>
                         </li>
                         <li>
                             <a href="#order" class="smooth-link"></a>
                         </li>
-                        <li><a href="#" class="active smooth-link">04</a></li>
-                        <li><a href="#" class="smooth-link"></a></li>
+                        <li>
+                            <a href="#cases" class="smooth-link active">04</a>
+                        </li>
+                        <li>
+                            <a href="#faq" class="smooth-link"></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="tabs__content">
@@ -796,8 +818,283 @@
                 <span>Сквозная аналитика</span>
             </marquee>
         </section>
-        <script src="js/phoneinput.js"></script>
+        <section class="faq section-with-bg" id="faq">
+            <img src="assets/images/faq-bg.png" alt="bg" class="section-bg" />
+            <img
+                src="assets/images/faq-circle.png"
+                alt="bg"
+                class="section-bg bg-circle"
+            />
+            <div class="ui-wrapper">
+                <ul class="navigation desktop">
+                    <li>
+                        <a href="#header" class="smooth-link"></a>
+                    </li>
+                    <li>
+                        <a href="#cost-calculation" class="smooth-link"></a>
+                    </li>
+                    <li>
+                        <a href="#order" class="smooth-link"></a>
+                    </li>
+                    <li><a href="#cases" class="smooth-link"></a></li>
+                    <li>
+                        <a href="#faq" class="smooth-link active">05</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="faq__content">
+                <div class="faq__text">
+                    <h2 class="section-title">Частые вопросы</h2>
+                    <div class="accordions">
+                        <div class="accordion">
+                            <div class="accordion__intro">
+                                <h4>Почему такая модель оплаты?</h4>
+                            </div>
+                            <div class="accordion__content">
+                                <p>
+                                    Задайте нам вопрос и в течение рабочего дня
+                                    мы с вами свяжемся. Для глубокого внедрения
+                                    мы используем проектный подход.
+                                    Бизнес-аналитик детально разбирает ваши
+                                    бизнес-процессы
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion__intro">
+                                <h4>Какой процент вы берете?</h4>
+                            </div>
+                            <div class="accordion__content">
+                                <p>
+                                    Задайте нам вопрос и в течение рабочего дня
+                                    мы с вами свяжемся. Для глубокого внедрения
+                                    мы используем проектный подход.
+                                    Бизнес-аналитик детально разбирает ваши
+                                    бизнес-процессы
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion__intro">
+                                <h4>Какие гарантия вы даете?</h4>
+                            </div>
+                            <div class="accordion__content">
+                                <p>
+                                    Задайте нам вопрос и в течение рабочего дня
+                                    мы с вами свяжемся. Для глубокого внедрения
+                                    мы используем проектный подход.
+                                    Бизнес-аналитик детально разбирает ваши
+                                    бизнес-процессы
+                                </p>
+                            </div>
+                        </div>
+                        <div class="accordion">
+                            <div class="accordion__intro">
+                                <h4>Как вы контролируете заявки?</h4>
+                            </div>
+                            <div class="accordion__content">
+                                <p>
+                                    Задайте нам вопрос и в течение рабочего дня
+                                    мы с вами свяжемся. Для глубокого внедрения
+                                    мы используем проектный подход.
+                                    Бизнес-аналитик детально разбирает ваши
+                                    бизнес-процессы
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form action="#" method="get" class="glass-form">
+                    <h4 class="big-text">Остались вопросы?</h4>
+                    <p class="glass-form__caption">
+                        Задайте нам вопрос и в течение рабочего дня мы с вами
+                        свяжемся.
+                    </p>
+                    <input
+                        type="tel"
+                        data-tel-input
+                        placeholder="+7 (XXX) XXX XX XX"
+                        maxlength="18"
+                        class="tel"
+                        required
+                        name="tel"
+                    />
+                    <textarea
+                        name="comment"
+                        id="textarea"
+                        rows="10"
+                        placeholder="Занимаетесь ли SEO-продвижением?"
+                    ></textarea>
+                    <button class="accent-btn">Записаться</button>
+                </form>
+            </div>
+        </section>
+        <section class="clients">
+            <h2 class="section-title">С кем вы будете работать?</h2>
+            <div class="clients__content">
+                <div class="text">
+                    <p>
+                        Для глубокого внедрения мы используем проектный подход.
+                        Бизнес-аналитик детально разбирает ваши бизнес-процессы
+                        и накладывает их на логику CRM-системы. Это ваше
+                        руководство к дальнейшим действиям. В нем четко
+                        расписаны этапы внедрения и детально указан состав и
+                        стоимость первого этапа работ.
+                    </p>
+                    <p>
+                        Этап адаптации и выработки привычек нужен, чтобы
+                        Битрикс24 стал использоваться в вашей компании на 100%.
+                        Информация дается поэтапно с примерами из вашего
+                        бизнеса, ответами на вопросами и домашним заданием. Вам
+                        будет предоставлена запись всех уроков.
+                    </p>
+                </div>
+                <div class="accent-img">
+                    <img src="assets/images/clients.png" alt="clients" />
+                </div>
+            </div>
+            <ul class="clients__opportunities top accent-list">
+                <li>12 лет в Digital</li>
+                <li>97 партнерских проектов</li>
+                <li>Всегда в тренде</li>
+                <li>Команда из 34 сертифицированных специалистов</li>
+            </ul>
+            <ul class="clients__opportunities bottom accent-list">
+                <li>Является золотым партнером Битрикс24</li>
+                <li>Сертифицированные партнеры Яндекса</li>
+                <li>Среднее время сотрудничества с нами 3-5 лет</li>
+            </ul>
+        </section>
+        <section class="get-call">
+            <div class="get-call__content">
+                <h2 class="section-title">Не знаете с чего начать?</h2>
+                <p class="get-call__caption">
+                    Наш менеджер позвонит вам через 5 минут , чтобы:
+                </p>
+                <ul class="get-call__list">
+                    <li>определить ваши цели и задачи;</li>
+                    <li>составить план дальнейших действий;</li>
+                    <li>ответить на ваши вопросы.</li>
+                </ul>
+            </div>
+            <form action="#" method="get" class="glass-form">
+                <p class="glass-form__title">
+                    Получите бесплатную консультацию
+                </p>
+                <p class="glass-form__caption plain-text">
+                    Получите бесплатную консультацию
+                </p>
 
+                <input type="text" class="name" placeholder="Имя" />
+                <input
+                    type="tel"
+                    data-tel-input
+                    placeholder="+7 (XXX) XXX XX XX"
+                    maxlength="18"
+                    class="tel"
+                    required
+                />
+                <label class="checkbox">
+                    Я даю согласие на
+                    <a href="#">обработку персональных данных</a>
+                    <input type="checkbox" required />
+                    <span class="checkmark"></span>
+                </label>
+                <button class="accent-btn">Получить</button>
+            </form>
+        </section>
+        <footer class="footer">
+            <picture>
+                <source
+                    srcset="./assets/images/footer-bg-phone.png"
+                    media="(max-width: 980px)"
+                />
+                <img
+                    src="assets/images/footer-bg.png"
+                    alt=""
+                    class="section-bg"
+                />
+            </picture>
+
+            <div class="footer-col">
+                <h4 class="footer__title">
+                    Сертифицированный партнер Яндекса и Битрикс24
+                </h4>
+                <p class="plain-text">
+                    Приносим деньги в бизнес по всей России, от Калининграда до
+                    Владивостока
+                </p>
+                <img
+                    src="assets/images/bx24_gold.png"
+                    alt="bx24_gold"
+                    class="bx24"
+                />
+            </div>
+            <div class="footer-col">
+                <h4 class="footer__title">Контакты</h4>
+                <p class="plain-text" style="max-width: 334px">
+                    Москва, Пресненская набережная, 12, башня Федерация
+                    "Восток", 19 этаж
+                </p>
+                <a href="tel:+78009998127" class="tel">8 (800) 999-81-27</a>
+                <a href="mailto:info@crmonline.ru" class="mail"
+                    >info@crmonline.ru</a
+                >
+            </div>
+            <div class="footer-col">
+                <h4 class="footer__title">Еще не решилсь?</h4>
+                <a href="#" class="accent-btn">Оставить заявку</a>
+            </div>
+        </footer>
+        <div class="modal" data-modal="modal">
+            <img src="assets/images/modal-bg.png" alt="" class="section-bg" />
+            <button onclick=" closeActiveModal()" class="cross">
+                <img src="assets/images/icons/cross.svg" alt="" class="svg" />
+            </button>
+            <div class="modal__content">
+                <div class="modal__text desktop">
+                    <h3 class="modal__title">
+                        Получите быструю и профессиональную консультацию прямо
+                        сейчас
+                    </h3>
+                    <p class="modal__caption">Из которой вы узнаете:</p>
+                    <ul class="accent-list">
+                        <li>какая локация подойдет для вашего видео;</li>
+                        <li>как будет проходить съемка;</li>
+                        <li>
+                            почему вы получите безупречный видеоконтент,
+                            которого хватит на год и дольше;
+                        </li>
+                        <li>точную стоимость готового видео.</li>
+                    </ul>
+                </div>
+                <form action="#" method="get" class="glass-form">
+                    <p class="glass-form__title">
+                        Получите бесплатную консультацию
+                    </p>
+
+                    <input
+                        type="tel"
+                        data-tel-input
+                        placeholder="+7 (XXX) XXX XX XX"
+                        maxlength="18"
+                        class="tel"
+                        required
+                    />
+                    <label class="time">
+                        <p>Удобное время для звонка</p>
+                        <input
+                            type="text"
+                            class="name"
+                            placeholder="11:30 - 12:00"
+                        />
+                    </label>
+                    <button class="accent-btn">Получить</button>
+                </form>
+            </div>
+        </div>
+        <script src="js/phoneinput.js"></script>
+        <script src="./js/modal.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
