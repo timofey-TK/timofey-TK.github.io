@@ -109,9 +109,13 @@ body {
 }
 
 .unscrollable {
-  position: fixed;
-  height: 100vh;
   overflow: hidden;
+  padding-right: 20px;
+}
+@media screen and (max-width: 980px) {
+  .unscrollable {
+    padding-right: 0;
+  }
 }
 
 .bg {
@@ -514,6 +518,10 @@ header,
   z-index: -1;
 }
 
+input::placeholder {
+  color: #879eb5;
+}
+
 .glass-form {
   box-sizing: border-box;
   width: 488px;
@@ -543,7 +551,8 @@ header,
   color: #6e88a2;
   margin-bottom: 10px;
 }
-.glass-form input:not([type=checkbox]) {
+.glass-form input:not([type=checkbox]),
+.glass-form select {
   outline: none;
   border: none;
   width: 100%;
@@ -556,6 +565,15 @@ header,
   box-shadow: inset 0px -1px 6px 2px rgba(0, 177, 159, 0.1), inset 0px 4px 15px rgba(53, 182, 158, 0.2), inset 0px 2px 4px rgba(32, 39, 34, 0.15);
   border-radius: 20px;
   margin-bottom: 20px;
+}
+.glass-form select {
+  background-image: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 1.3rem) center !important;
+  -moz-appearance: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  padding-right: 3rem !important;
 }
 .glass-form input::placeholder {
   color: #879eb5;
@@ -1252,16 +1270,8 @@ nav > ul {
   position: relative;
   z-index: 20;
 }
-.step .card__text::before {
-  content: "";
-  display: block;
-  height: 20px;
-  width: 268px;
+.step .card__text .accent {
   background: #5ef2d7;
-  position: absolute;
-  top: 51%;
-  z-index: -1;
-  left: -15px;
 }
 .step .card__bottom {
   margin-top: 20px;
@@ -1347,7 +1357,6 @@ nav > ul {
   font-weight: 400;
   font-size: 24px;
   line-height: 33px;
-  color: #6e88a2;
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -2183,7 +2192,7 @@ nav > ul {
   background: linear-gradient(278.58deg, #00b19f 23.79%, #5bcf90 111.14%);
 }
 .modal .section-bg {
-  margin: -20px;
+  margin: -30px;
   width: 110%;
 }
 .modal__content {
@@ -2245,6 +2254,12 @@ nav > ul {
   .modal .accent-btn {
     background: linear-gradient(112.57deg, #ffffff 18.42%, #bee4e1 101.58%);
     color: #3f5870;
+  }
+}
+@media screen and (max-width: 650px) {
+  .modal .accent-btn {
+    background: linear-gradient(278.58deg, #00b19f 23.79%, #5bcf90 111.14%);
+    color: #f3f7fc;
   }
 }
 @media screen and (max-width: 450px) {

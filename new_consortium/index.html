@@ -11,6 +11,12 @@
     </head>
 
     <body>
+        <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none"
+            onload='document.querySelectorAll("form").forEach(form => {form.reset()});closeActiveModal()'
+        ></iframe>
         <div class="bg">
             <img
                 src="assets/images/main-bg.png"
@@ -203,7 +209,9 @@
                         Ответье на 6 вопросов и мы рассчитаем медиаплан.
                         результаты вышлем на E-mail или Whats`App
                     </p>
-                    <a class="accent-btn">Рассчитать</a>
+                    <button class="accent-btn" onclick="openModal('modal')">
+                        Рассчитать
+                    </button>
                     <p class="cost-calculation__btn-caption">
                         Бонусы после прохождения теста:
                     </p>
@@ -257,9 +265,12 @@
                             .
                             <br />
                             <br />
-                            Такая карта помогает найти слабые места, показывает
-                            как улучшить посадочные страницы чтобы принести
-                            наибольшую пользу и покупателю, и компании.
+                            <span class="accent"
+                                >Такая карта помогает найти</span
+                            >
+                            слабые места, показывает как улучшить посадочные
+                            страницы чтобы принести наибольшую пользу и
+                            покупателю, и компании.
                         </p>
                         <div class="card__bottom">
                             <div class="author">
@@ -302,16 +313,22 @@
                     сколько заявок они получают и какие источники используют
                     больше всего
                 </p>
-                <form>
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
+                    method="POST"
+                    target="hidden_iframe"
+                >
                     <input
                         type="tel"
+                        name="entry.1695006066"
                         data-tel-input
                         placeholder="+7 (XXX) XXX XX XX"
                         maxlength="18"
                         class="analysis__input"
+                        required
                     />
+                    <button class="accent-btn">Записаться</button>
                 </form>
-                <a href="#" class="accent-btn">Записаться</a>
             </div>
             <img
                 src="assets/images/analysis.png"
@@ -348,9 +365,11 @@
                         <p class="card__text plain-text">
                             Мы убеждены, что 50% успеха зависит от посадочной
                             страницы. Реклама может дать чистый трафик, но
-                            решение о покупке принимается на странице. Наша
-                            задача повысить конверсию сайта, ведь наша работа
-                            привязана к результату.
+                            <span class="accent"
+                                >решение о покупке принимается</span
+                            >
+                            на странице. Наша задача повысить конверсию сайта,
+                            ведь наша работа привязана к результату.
                         </p>
                         <div class="card__bottom">
                             <div class="author">
@@ -393,26 +412,41 @@
                         На аудите найдем слабые места и составим карту доработок
                     </p>
                 </div>
-                <form action="#" method="get" class="glass-form">
-                    <p class="glass-form__caption">
-                        Запишитесь на бесплатный аудит и получите план доработок
-                    </p>
-                    <input type="text" class="name" placeholder="Имя" />
-                    <input
-                        type="tel"
-                        data-tel-input
-                        placeholder="+7 (XXX) XXX XX XX"
-                        maxlength="18"
-                        class="tel"
-                        required
-                    />
-                    <label class="checkbox">
-                        Я даю согласие на
-                        <a href="#">обработку персональных данных</a>
-                        <input type="checkbox" required checked />
-                        <span class="checkmark"></span>
-                    </label>
-                    <button class="accent-btn">Записаться</button>
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
+                    method="POST"
+                    target="hidden_iframe"
+                    class="glass-form"
+                    style="will-change: "
+                >
+                    <div>
+                        <p class="glass-form__caption">
+                            Запишитесь на бесплатный аудит и получите план
+                            доработок
+                        </p>
+                        <input
+                            type="text"
+                            class="name"
+                            placeholder="Имя"
+                            name="entry.1054757174"
+                        />
+                        <input
+                            type="tel"
+                            name="entry.1695006066"
+                            data-tel-input
+                            placeholder="+7 (XXX) XXX XX XX"
+                            maxlength="18"
+                            class="tel"
+                            required
+                        />
+                        <label class="checkbox">
+                            Я даю согласие на
+                            <a href="#">обработку персональных данных</a>
+                            <input type="checkbox" required checked />
+                            <span class="checkmark"></span>
+                        </label>
+                        <button class="accent-btn">Записаться</button>
+                    </div>
                 </form>
             </div>
         </section>
@@ -447,8 +481,12 @@
                         <p class="card__text plain-text">
                             Тренд маркетинга 2023 года - это маркетинг
                             основанный на больших данных и статистике. Поэтому
-                            наши аналитики владеют арсеналом инструментов,
-                            которые помогают отстроиться от конкурентов.
+                            наши
+                            <span class="accent"
+                                >аналитики владеют арсеналом</span
+                            >
+                            инструментов, которые помогают отстроиться от
+                            конкурентов.
                         </p>
                         <div class="card__bottom">
                             <div class="author">
@@ -471,7 +509,9 @@
                     ваши задачи.
                 </p>
                 <div class="btn-wrapper">
-                    <a class="accent-btn">Получить кейс</a>
+                    <button class="accent-btn" onclick="openModal('modal')">
+                        Получить кейс
+                    </button>
                     <p class="caption">Отправим в мессенджер</p>
                 </div>
                 <p class="plain-text">
@@ -514,8 +554,8 @@
                     <div class="card__content">
                         <p class="card__text plain-text">
                             PDCA — циклически повторяющийся процесс принятия
-                            решения. Выдвигаем гипотезу → внедряем → оцениваем
-                            результат → корректируем →
+                            решения. Выдвигаем гипотезу внедряем оцениваем
+                            <span class="accent">результат корректируем </span>
                         </p>
                         <div class="card__bottom">
                             <div class="author">
@@ -552,9 +592,14 @@
                     <div class="card__content">
                         <p class="card__text plain-text">
                             Увеличим конверсию отдела продаж на 10-50% через
-                            развитие переговорных навыков Заберем большинство
-                            рутинных задач на себя, а РОП пусть руководит и
-                            принимает верные решения.
+                            развитие переговорных навыков
+                            <br />
+                            <br />
+                            <span class="accent">
+                                Заберем большинство рутинных
+                            </span>
+                            задач на себя, а РОП пусть руководит и принимает
+                            верные решения.
                         </p>
                         <div class="card__bottom">
                             <div class="author">
@@ -587,7 +632,12 @@
                     <p class="caption">Довольных клиента</p>
                 </div>
             </div>
-            <form action="#" method="get" class="glass-form">
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
+                method="POST"
+                target="hidden_iframe"
+                class="glass-form"
+            >
                 <p class="glass-form__title">Получите на WhatsApp:</p>
                 <ul class="glass-form__list accent-list">
                     <li>
@@ -599,9 +649,15 @@
                     </li>
                     <li>Таблица для создания оффера B2B (Excel)</li>
                 </ul>
-                <input type="text" class="name" placeholder="Имя" />
+                <input
+                    type="text"
+                    class="name"
+                    placeholder="Имя"
+                    name="entry.1054757174"
+                />
                 <input
                     type="tel"
+                    name="entry.1695006066"
                     data-tel-input
                     placeholder="+7 (XXX) XXX XX XX"
                     maxlength="18"
@@ -777,28 +833,52 @@
                         <img src="assets/images/services1.png" alt="service" />
                     </div>
                     <div class="tabs__pane">
-                        <img src="assets/images/services1.png" alt="service" />
+                        <img
+                            src="https://krasivosti.pro/uploads/posts/2021-07/1625702895_23-krasivosti-pro-p-mini-korgi-sobaka-sobaki-krasivo-foto-23.jpg"
+                            alt="service"
+                        />
                     </div>
                     <div class="tabs__pane">
-                        <img src="assets/images/services1.png" alt="service" />
+                        <img
+                            src="https://ferret-pet.ru/wp-content/uploads/e/e/e/eee4fd171f5957cd94d453ad3487d9cb.jpeg"
+                            alt="service"
+                        />
                     </div>
                     <div class="tabs__pane">
-                        <img src="assets/images/services1.png" alt="service" />
+                        <img
+                            src="https://natalyland.ru/wp-content/uploads/e/5/d/e5d1b34ccc597effd92460fe8b0969af.jpg"
+                            alt="service"
+                        />
                     </div>
                     <div class="tabs__pane">
-                        <img src="assets/images/services1.png" alt="service" />
+                        <img
+                            src="https://vseocorgi.ru/wp-content/uploads/2019/05/puppy-3428059_960_720.jpg"
+                            alt="service"
+                        />
                     </div>
                     <div class="tabs__pane">
-                        <img src="assets/images/services1.png" alt="service" />
+                        <img
+                            src="https://ferret-pet.ru/wp-content/uploads/f/3/6/f3628d6372c4e5a1f68a7a504a5700ee.jpeg"
+                            alt="service"
+                        />
                     </div>
                     <div class="tabs__pane">
-                        <img src="assets/images/services1.png" alt="service" />
+                        <img
+                            src="https://phonoteka.org/uploads/posts/2021-06/1624302916_45-phonoteka_org-p-korgi-oboi-krasivo-47.jpg"
+                            alt="service"
+                        />
                     </div>
                     <div class="tabs__pane">
-                        <img src="assets/images/services1.png" alt="service" />
+                        <img
+                            src="https://kipmu.ru/wp-content/uploads/2021/01/vlshkrg.jpg"
+                            alt="service"
+                        />
                     </div>
                     <div class="tabs__pane">
-                        <img src="assets/images/services1.png" alt="service" />
+                        <img
+                            src="https://zooblog.ru/wp-content/uploads/2021/07/picture-7.jpeg"
+                            alt="service"
+                        />
                     </div>
                     <div class="tabs__pane">
                         <img src="assets/images/services1.png" alt="service" />
@@ -905,7 +985,12 @@
                         </div>
                     </div>
                 </div>
-                <form action="#" method="get" class="glass-form">
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
+                    method="POST"
+                    target="hidden_iframe"
+                    class="glass-form"
+                >
                     <h4 class="big-text">Остались вопросы?</h4>
                     <p class="glass-form__caption">
                         Задайте нам вопрос и в течение рабочего дня мы с вами
@@ -918,10 +1003,10 @@
                         maxlength="18"
                         class="tel"
                         required
-                        name="tel"
+                        name="entry.1695006066"
                     />
                     <textarea
-                        name="comment"
+                        name="entry.164436338"
                         id="textarea"
                         rows="10"
                         placeholder="Занимаетесь ли SEO-продвижением?"
@@ -978,7 +1063,12 @@
                     <li>ответить на ваши вопросы.</li>
                 </ul>
             </div>
-            <form action="#" method="get" class="glass-form">
+            <form
+                action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
+                method="POST"
+                target="hidden_iframe"
+                class="glass-form"
+            >
                 <p class="glass-form__title">
                     Получите бесплатную консультацию
                 </p>
@@ -986,9 +1076,15 @@
                     Получите бесплатную консультацию
                 </p>
 
-                <input type="text" class="name" placeholder="Имя" />
+                <input
+                    type="text"
+                    class="name"
+                    placeholder="Имя"
+                    name="entry.1054757174"
+                />
                 <input
                     type="tel"
+                    name="entry.1695006066"
                     data-tel-input
                     placeholder="+7 (XXX) XXX XX XX"
                     maxlength="18"
@@ -1044,7 +1140,9 @@
             </div>
             <div class="footer-col">
                 <h4 class="footer__title">Еще не решилсь?</h4>
-                <a href="#" class="accent-btn">Оставить заявку</a>
+                <button class="accent-btn" onclick="openModal('modal')">
+                    Оставить заявку
+                </button>
             </div>
         </footer>
         <div class="modal" data-modal="modal">
@@ -1069,7 +1167,12 @@
                         <li>точную стоимость готового видео.</li>
                     </ul>
                 </div>
-                <form action="#" method="get" class="glass-form">
+                <form
+                    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
+                    method="POST"
+                    target="hidden_iframe"
+                    class="glass-form"
+                >
                     <p class="glass-form__title">
                         Получите бесплатную консультацию
                     </p>
@@ -1081,14 +1184,15 @@
                         maxlength="18"
                         class="tel"
                         required
+                        name="entry.1695006066"
                     />
                     <label class="time">
                         <p>Удобное время для звонка</p>
-                        <input
-                            type="text"
-                            class="name"
-                            placeholder="11:30 - 12:00"
-                        />
+                        <select name="entry.1520852661">
+                            <option selected>11:30 - 12:00</option>
+                            <option>18:00 - 20:00</option>
+                            <option>10:30 - 14:00</option>
+                        </select>
                     </label>
                     <button class="accent-btn">Получить</button>
                 </form>
