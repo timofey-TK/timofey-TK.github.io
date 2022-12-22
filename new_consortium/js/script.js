@@ -63,9 +63,11 @@ class ItcTabs {
 const InitMenu = (burger, cross, menu) => {
     burger.addEventListener("click", (e) => {
         menu.classList.add("opened")
+        document.body.classList.add("unscrollable")
     })
     cross.addEventListener("click", (e) => {
         menu.classList.remove("opened")
+        document.body.classList.remove("unscrollable")
     })
 }
 const InitSmoothLinks = (smoothLinks) => {
@@ -107,11 +109,17 @@ const InitAccordion = (accordions) => {
     });
 
 }
+
+
 document.addEventListener("DOMContentLoaded", () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty("--vh", `${vh}px`);
+
     convertImages(".svg")
     new ItcTabs('#cases-tabs');
     new ItcTabs('#services-tabs');
     InitMenu(document.querySelector(".burger"), document.querySelector(".cross"), document.querySelector("nav"))
     InitSmoothLinks(document.querySelectorAll('.smooth-link'))
     InitAccordion(document.querySelectorAll(".accordion"))
+    marqueeInit()
 });
