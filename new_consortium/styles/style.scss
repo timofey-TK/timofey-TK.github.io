@@ -794,7 +794,7 @@ nav {
     }
     @media screen and (max-width: 980px) {
         padding-top: 35px;
-        padding-bottom: 325px;
+        padding-bottom: 230px;
     }
     @media screen and (max-width: 650px) {
         &__title {
@@ -831,7 +831,8 @@ nav {
 // ===== Секция с онлайн-расчетом =======
 .cost-calculation {
     color: #3f5870;
-    padding-bottom: 220px;
+    padding-bottom: 250px;
+    padding-top: 100px;
     &__content {
         position: relative;
         display: flex;
@@ -894,6 +895,8 @@ nav {
         }
     }
     @media screen and (max-width: 1350px) {
+        padding-bottom: 220px;
+        padding-top: 0;
         .col {
             max-width: 310px;
         }
@@ -958,7 +961,7 @@ nav {
             letter-spacing: 0.3em;
             color: #879eb5;
             opacity: 0.25;
-            transform: rotate(-90deg);
+            rotate: -90deg !important;
         }
     }
     .stage-line {
@@ -1393,7 +1396,7 @@ nav {
     &__img {
         max-width: 60%;
         object-fit: contain;
-        transform: translateX(20%);
+        translate: 20%;
         margin-left: -10%;
     }
     &__content {
@@ -1419,7 +1422,7 @@ nav {
     }
     @media screen and (max-width: 1600px) {
         &__img {
-            transform: translateX(0);
+            translate: (0);
             max-width: 55%;
             margin-left: 20px;
         }
@@ -2112,6 +2115,7 @@ nav {
 }
 
 .modal {
+    z-index: 100;
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -2119,7 +2123,6 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 30;
     transition: 0.3s all;
     height: 100vh;
     width: 100vw;

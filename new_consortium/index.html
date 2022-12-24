@@ -4,6 +4,10 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
         <link rel="stylesheet" href="css/normalize.css" />
         <link rel="stylesheet" href="css/fonts.css" />
         <link rel="stylesheet" href="css/style.css" />
@@ -35,7 +39,7 @@
         <a class="go-to-top-btn smooth-link" href="#header">
             <img src="assets/images/icons/go-to-top.svg" alt="" class="svg" />
         </a>
-        <header id="header">
+        <header id="header" class="wow animate__fadeInDown">
             <div class="top-nav">
                 <div class="col">
                     <img
@@ -133,11 +137,11 @@
             </nav>
         </header>
         <section class="hero">
-            <p class="hero__caption caption-with-line">
+            <p class="hero__caption caption-with-line wow animate__fadeInLeft">
                 Работаем по всей России
             </p>
             <div class="ui-wrapper">
-                <ul class="navigation desktop">
+                <ul class="navigation desktop wow animate__fadeInRight">
                     <li><a href="#header" class="active smooth-link">01</a></li>
                     <li>
                         <a href="#cost-calculation" class="smooth-link"
@@ -153,17 +157,17 @@
                     </li>
                 </ul>
             </div>
-            <h1 class="title hero__title">
+            <h1 class="title hero__title wow animate__fadeInLeft">
                 Привлекаем клиентов из
                 <span class="accent-color">интернета</span> с оплатой за
                 результат
             </h1>
-            <ul class="hero__list">
+            <ul class="hero__list wow animate__fadeInLeft">
                 <li>Оплата только за целевые заявки</li>
                 <li>Финансовая гарантия результата по договору</li>
                 <li>Фокус на 3-5 новых проектах в год</li>
             </ul>
-            <div class="btn-wrapper">
+            <div class="btn-wrapper wow animate__fadeInLeft">
                 <button class="accent-btn" onclick="openModal('modal')">
                     Записаться на аудит
                 </button>
@@ -171,17 +175,20 @@
             </div>
         </section>
         <section class="cost-calculation" id="cost-calculation">
-            <h2 class="section-title">
+            <h2 class="section-title wow animate__fadeInLeft">
                 Онлайн-расчет стоимости заявки для вашего бизнеса
             </h2>
-            <div class="cost-calculation__content">
+            <div class="cost-calculation__content wow animate__fadeInUp">
                 <img
                     src="assets/images/hero.png"
                     alt="bg"
                     class="cost-calculation__img desktop"
                 />
                 <div class="col">
-                    <ul class="navigation desktop">
+                    <ul
+                        class="navigation desktop wow animate__fadeInRight"
+                        data-wow-delay="0.5s"
+                    >
                         <li>
                             <a href="#header" class="smooth-link"></a>
                         </li>
@@ -225,19 +232,22 @@
             </div>
         </section>
         <section class="step" id="order">
-            <h2 class="section-title">Порядок работы</h2>
-            <p class="step__caption plain-text">
+            <h2 class="section-title wow animate__fadeInLeft">
+                Порядок работы
+            </h2>
+            <p class="step__caption plain-text wow animate__fadeInLeft">
                 Для глубокого внедрения маркетинга мы используем отработанный на
                 300 проектах подход
             </p>
-
             <div class="step__content">
                 <div class="stage">
                     <span>1</span>
-                    <span class="stage-text">первый этап</span>
+                    <span class="stage-text animate__slideInLeft wow"
+                        >первый этап</span
+                    >
                     <div class="stage-line"></div>
                 </div>
-                <div class="step__text">
+                <div class="step__text wow animate__fadeInUp">
                     <p class="caption-with-line">1-2 недели</p>
                     <h3 class="big-text">Аудит сайта и рекламых кабинетов</h3>
                     <div class="plain-text">
@@ -251,7 +261,7 @@
                         Разрабатываем стратегию внедрения на 3 месяца.
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp">
                     <img
                         src="assets/images/avatar.png"
                         alt="avatar"
@@ -281,7 +291,10 @@
                         </div>
                     </div>
                 </div>
-                <ul class="navigation desktop">
+                <ul
+                    class="navigation desktop wow animate__fadeInRight"
+                    data-wow-delay="0.5s"
+                >
                     <li>
                         <a href="#header" class="smooth-link"></a>
                     </li>
@@ -305,10 +318,10 @@
                 class="section-bg"
             />
             <div class="analysis__content">
-                <h3 class="big-text">
+                <h3 class="big-text wow animate__fadeInLeft">
                     Предоставляем полный конкурентный анализ по вашей нише
                 </h3>
-                <p class="plain-text">
+                <p class="plain-text wow animate__fadeInLeft">
                     Вы узнаете какой рекламный бюджет выделяют ваши конкуренты,
                     сколько заявок они получают и какие источники используют
                     больше всего
@@ -324,25 +337,29 @@
                         data-tel-input
                         placeholder="+7 (XXX) XXX XX XX"
                         maxlength="18"
-                        class="analysis__input"
+                        class="analysis__input wow animate__fadeInLeft"
                         required
                     />
-                    <button class="accent-btn">Записаться</button>
+                    <button class="accent-btn wow animate__fadeInLeft">
+                        Записаться
+                    </button>
                 </form>
             </div>
             <img
                 src="assets/images/analysis.png"
                 alt="analysis"
-                class="analysis__img"
+                class="analysis__img wow animate__fadeInRight"
             />
         </section>
         <section class="step" id="modification">
             <div class="step__content">
                 <div class="stage">
                     <span>2</span>
-                    <span class="stage-text">второй этап</span>
+                    <span class="stage-text animate__slideInLeft wow"
+                        >второй этап</span
+                    >
                 </div>
-                <div class="step__text">
+                <div class="step__text wow animate__fadeInUp">
                     <p class="caption-with-line">3 недели</p>
                     <h3 class="big-text">Доработка сайта</h3>
                     <div class="plain-text">
@@ -355,7 +372,7 @@
                         рекламных кампаний.
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp">
                     <img
                         src="assets/images/avatar.png"
                         alt="avatar"
@@ -388,7 +405,7 @@
                 draggable="false"
                 class="section-bg"
             />
-            <div class="base">
+            <div class="base wow animate__fadeInUp">
                 <div class="accent-img base__img">
                     <img src="assets/images/base.png" alt="base" />
                 </div>
@@ -405,8 +422,10 @@
             </div>
             <div class="contractor">
                 <div class="contractor__text">
-                    <h3 class="big-text">Уже есть подрядчик?</h3>
-                    <p class="contractor__description">
+                    <h3 class="big-text wow animate__fadeInLeft">
+                        Уже есть подрядчик?
+                    </h3>
+                    <p class="contractor__description wow animate__fadeInLeft">
                         Проведем бесплатный аудит по чек-листу из 37 пунктов.
                         <br />
                         На аудите найдем слабые места и составим карту доработок
@@ -416,8 +435,7 @@
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
                     method="POST"
                     target="hidden_iframe"
-                    class="glass-form"
-                    style="will-change: "
+                    class="glass-form wow animate__fadeInRight"
                 >
                     <div>
                         <p class="glass-form__caption">
@@ -454,9 +472,11 @@
             <div class="step__content">
                 <div class="stage">
                     <span>3 </span>
-                    <span class="stage-text">третий этап</span>
+                    <span class="stage-text animate__slideInLeft wow"
+                        >третий этап</span
+                    >
                 </div>
-                <div class="step__text">
+                <div class="step__text wow animate__fadeInUp">
                     <p class="caption-with-line">2 недели</p>
                     <h3 class="big-text">Настройка и оптимизация рекламы</h3>
                     <div class="plain-text">
@@ -471,7 +491,7 @@
                         информации.
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp">
                     <img
                         src="assets/images/avatar.png"
                         alt="avatar"
@@ -501,7 +521,7 @@
         </section>
         <section class="areas section-with-bg">
             <img src="assets/images/areas-bg.png" alt="bg" class="section-bg" />
-            <div class="areas__content">
+            <div class="areas__content wow animate__fadeInLeft">
                 <h3 class="big-text">Работаем со всеми сферами бизнеса</h3>
                 <p class="plain-text">
                     Подберем кейс-продвижения из вашей отрасли. Имеем отраслевую
@@ -522,7 +542,7 @@
             <img
                 src="assets/images/areas.png"
                 alt="areas"
-                class="areas__img"
+                class="areas__img wow animate__fadeInRight"
                 draggable="false"
             />
         </section>
@@ -530,10 +550,12 @@
             <div class="step__content">
                 <div class="stage">
                     <span class="number">4</span>
-                    <span class="stage-text">четвертый этап</span>
+                    <span class="stage-text animate__slideInLeft wow"
+                        >четвертый этап</span
+                    >
                     <div class="stage-line"></div>
                 </div>
-                <div class="step__text">
+                <div class="step__text wow animate__fadeInUp">
                     <p class="caption-with-line">Все время</p>
                     <h3 class="big-text">
                         Улучшение показателей по системе PDCA
@@ -545,7 +567,7 @@
                         гипотезы по улучшения показателей на след. месяц.
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp">
                     <img
                         src="assets/images/avatar.png"
                         alt="avatar"
@@ -572,9 +594,11 @@
             <div class="step__content">
                 <div class="stage">
                     <span class="number">5 </span>
-                    <span class="stage-text">пятый этап</span>
+                    <span class="stage-text animate__slideInLeft wow"
+                        >пятый этап</span
+                    >
                 </div>
-                <div class="step__text">
+                <div class="step__text wow animate__fadeInUp">
                     <p class="caption-with-line">Бонус</p>
                     <h3 class="big-text">Развитие отдела продаж</h3>
                     <div class="plain-text">
@@ -583,7 +607,7 @@
                         отказов. Обучение менеджеров на основе аналитики.
                     </div>
                 </div>
-                <div class="card">
+                <div class="card wow animate__fadeInUp">
                     <img
                         src="assets/images/avatar.png"
                         alt="avatar"
@@ -621,13 +645,13 @@
                 />
             </div>
             <div class="promotion__text">
-                <h3 class="big-text">
+                <h3 class="big-text wow animate__fadeInLeft">
                     Заказать проектное продвижение бизнеса под ключ
                 </h3>
-                <p class="caption">
+                <p class="caption wow animate__fadeInLeft">
                     Составление технического задания берем на себя.
                 </p>
-                <div class="promotion__clients">
+                <div class="promotion__clients wow animate__fadeInLeft">
                     <div class="counter">97</div>
                     <p class="caption">Довольных клиента</p>
                 </div>
@@ -636,7 +660,7 @@
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
                 method="POST"
                 target="hidden_iframe"
-                class="glass-form"
+                class="glass-form wow animate__fadeInRight"
             >
                 <p class="glass-form__title">Получите на WhatsApp:</p>
                 <ul class="glass-form__list accent-list">
@@ -674,8 +698,8 @@
             </form>
         </section>
         <section class="cases" id="cases">
-            <h2 class="section-title">Кейсы</h2>
-            <div class="tabs" id="cases-tabs">
+            <h2 class="section-title wow animate__fadeInLeft">Кейсы</h2>
+            <div class="tabs wow animate__fadeInUp" id="cases-tabs">
                 <div class="tabs__nav">
                     <button class="tabs__btn tabs__btn_active">
                         <span>Услуги</span>
@@ -684,7 +708,10 @@
                     <button class="tabs__btn"><span>Торговля</span></button>
                 </div>
                 <div class="ui-wrapper">
-                    <ul class="navigation desktop">
+                    <ul
+                        class="navigation desktop wow animate__fadeInRight"
+                        data-wow-delay="0.5s"
+                    >
                         <li>
                             <a href="#header" class="smooth-link"></a>
                         </li>
@@ -848,11 +875,11 @@
             </div>
         </section>
         <section class="services">
-            <h2 class="section-title">
+            <h2 class="section-title wow animate__fadeInLeft">
                 Что входит в наши
                 <span class="accent-color">услуги?</span>
             </h2>
-            <div class="tabs" id="services-tabs">
+            <div class="tabs wow animate__fadeInUp" id="services-tabs">
                 <div
                     class="tabs__nav"
                     data-packery='{ "itemSelector": ".tabs__btn", "gutter": 10 }'
@@ -995,7 +1022,10 @@
                 class="section-bg bg-circle"
             />
             <div class="ui-wrapper">
-                <ul class="navigation desktop">
+                <ul
+                    class="navigation desktop wow animate__fadeInRight"
+                    data-wow-delay="0.5s"
+                >
                     <li>
                         <a href="#header" class="smooth-link"></a>
                     </li>
@@ -1013,9 +1043,11 @@
             </div>
             <div class="faq__content">
                 <div class="faq__text">
-                    <h2 class="section-title">Частые вопросы</h2>
+                    <h2 class="section-title wow animate__fadeInLeft">
+                        Частые вопросы
+                    </h2>
                     <div class="accordions">
-                        <div class="accordion">
+                        <div class="accordion wow animate__fadeInLeft">
                             <div class="accordion__intro">
                                 <h4>Почему такая модель оплаты?</h4>
                             </div>
@@ -1029,7 +1061,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="accordion">
+                        <div class="accordion wow animate__fadeInLeft">
                             <div class="accordion__intro">
                                 <h4>Какой процент вы берете?</h4>
                             </div>
@@ -1043,7 +1075,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="accordion">
+                        <div class="accordion wow animate__fadeInLeft">
                             <div class="accordion__intro">
                                 <h4>Какие гарантия вы даете?</h4>
                             </div>
@@ -1057,7 +1089,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="accordion">
+                        <div class="accordion wow animate__fadeInLeft">
                             <div class="accordion__intro">
                                 <h4>Как вы контролируете заявки?</h4>
                             </div>
@@ -1077,7 +1109,7 @@
                     action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
                     method="POST"
                     target="hidden_iframe"
-                    class="glass-form"
+                    class="glass-form wow animate__fadeInRight"
                 >
                     <h4 class="big-text">Остались вопросы?</h4>
                     <p class="glass-form__caption">
@@ -1104,8 +1136,10 @@
             </div>
         </section>
         <section class="clients">
-            <h2 class="section-title">С кем вы будете работать?</h2>
-            <div class="clients__content">
+            <h2 class="section-title wow animate__fadeInLeft">
+                С кем вы будете работать?
+            </h2>
+            <div class="clients__content wow animate__fadeInUp">
                 <div class="text">
                     <p>
                         Для глубокого внедрения мы используем проектный подход.
@@ -1127,13 +1161,17 @@
                     <img src="assets/images/clients.png" alt="clients" />
                 </div>
             </div>
-            <ul class="clients__opportunities top accent-list">
+            <ul
+                class="clients__opportunities top accent-list wow animate__fadeInLeft"
+            >
                 <li>12 лет в Digital</li>
                 <li>97 партнерских проектов</li>
                 <li>Всегда в тренде</li>
                 <li>Команда из 34 сертифицированных специалистов</li>
             </ul>
-            <ul class="clients__opportunities bottom accent-list">
+            <ul
+                class="clients__opportunities bottom accent-list wow animate__fadeInRight"
+            >
                 <li>Является золотым партнером Битрикс24</li>
                 <li>Сертифицированные партнеры Яндекса</li>
                 <li>Среднее время сотрудничества с нами 3-5 лет</li>
@@ -1141,11 +1179,13 @@
         </section>
         <section class="get-call">
             <div class="get-call__content">
-                <h2 class="section-title">Не знаете с чего начать?</h2>
-                <p class="get-call__caption">
+                <h2 class="section-title wow animate__fadeInLeft">
+                    Не знаете с чего начать?
+                </h2>
+                <p class="get-call__caption wow animate__fadeInLeft">
                     Наш менеджер позвонит вам через 5 минут , чтобы:
                 </p>
-                <ul class="get-call__list">
+                <ul class="get-call__list wow animate__fadeInLeft">
                     <li>определить ваши цели и задачи;</li>
                     <li>составить план дальнейших действий;</li>
                     <li>ответить на ваши вопросы.</li>
@@ -1155,7 +1195,7 @@
                 action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe5cCtYUwwz6U4gwxOiTaPkl_pFqCfCbFsD60Ks1eflbxb7jg/formResponse"
                 method="POST"
                 target="hidden_iframe"
-                class="glass-form"
+                class="glass-form wow animate__fadeInRight"
             >
                 <p class="glass-form__title">
                     Получите бесплатную консультацию
@@ -1201,7 +1241,7 @@
                 />
             </picture>
 
-            <div class="footer-col">
+            <div class="footer-col wow animate__fadeInUp">
                 <h4 class="footer__title">
                     Сертифицированный партнер Яндекса и Битрикс24
                 </h4>
@@ -1215,7 +1255,7 @@
                     class="bx24"
                 />
             </div>
-            <div class="footer-col">
+            <div class="footer-col wow animate__fadeInUp">
                 <h4 class="footer__title">Контакты</h4>
                 <p class="plain-text" style="max-width: 334px">
                     Москва, Пресненская набережная, 12, башня Федерация
@@ -1226,7 +1266,7 @@
                     >info@crmonline.ru</a
                 >
             </div>
-            <div class="footer-col">
+            <div class="footer-col wow animate__fadeInUp">
                 <h4 class="footer__title">Еще не решилсь?</h4>
                 <button class="accent-btn" onclick="openModal('modal')">
                     Оставить заявку
@@ -1286,6 +1326,7 @@
                 </form>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/wowjs@1.1.3/dist/wow.min.js"></script>
         <script src="js/phoneinput.js"></script>
         <script src="./js/modal.js"></script>
         <script src="js/script.js"></script>

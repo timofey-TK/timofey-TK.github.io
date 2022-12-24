@@ -941,7 +941,7 @@ nav > ul {
 @media screen and (max-width: 980px) {
   .hero {
     padding-top: 35px;
-    padding-bottom: 325px;
+    padding-bottom: 230px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -981,7 +981,8 @@ nav > ul {
 
 .cost-calculation {
   color: #3f5870;
-  padding-bottom: 220px;
+  padding-bottom: 250px;
+  padding-top: 100px;
 }
 .cost-calculation__content {
   position: relative;
@@ -1044,6 +1045,10 @@ nav > ul {
   }
 }
 @media screen and (max-width: 1350px) {
+  .cost-calculation {
+    padding-bottom: 220px;
+    padding-top: 0;
+  }
   .cost-calculation .col {
     max-width: 310px;
   }
@@ -1103,7 +1108,7 @@ nav > ul {
   letter-spacing: 0.3em;
   color: #879eb5;
   opacity: 0.25;
-  transform: rotate(-90deg);
+  rotate: -90deg !important;
 }
 .step .stage-line {
   position: absolute;
@@ -1511,7 +1516,7 @@ nav > ul {
 .areas__img {
   max-width: 60%;
   object-fit: contain;
-  transform: translateX(20%);
+  translate: 20%;
   margin-left: -10%;
 }
 .areas__content {
@@ -1537,7 +1542,7 @@ nav > ul {
 }
 @media screen and (max-width: 1600px) {
   .areas__img {
-    transform: translateX(0);
+    translate: 0;
     max-width: 55%;
     margin-left: 20px;
   }
@@ -2199,6 +2204,7 @@ nav > ul {
 }
 
 .modal {
+  z-index: 100;
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -2206,7 +2212,6 @@ nav > ul {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 30;
   transition: 0.3s all;
   height: 100vh;
   width: 100vw;

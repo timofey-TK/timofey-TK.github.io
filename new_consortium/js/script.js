@@ -109,17 +109,22 @@ const InitAccordion = (accordions) => {
     });
 
 }
-
+const wow = new WOW({
+    boxClass: 'wow',
+    animateClass: 'animate__animated',
+    offset: 30,
+    mobile: true,
+    live: true
+})
 
 document.addEventListener("DOMContentLoaded", () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty("--vh", `${vh}px`);
-
+    wow.init();
     convertImages(".svg")
     new ItcTabs('#cases-tabs');
     new ItcTabs('#services-tabs');
     InitMenu(document.querySelector(".burger"), document.querySelector(".cross"), document.querySelector("nav"))
     InitSmoothLinks(document.querySelectorAll('.smooth-link'))
     InitAccordion(document.querySelectorAll(".accordion"))
-    marqueeInit()
 });
