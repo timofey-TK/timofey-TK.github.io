@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Unbounded", cursive;
+    color: #fff;
+    background-color: #7f669d;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+.btns {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.main-btn {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    top: 0;
+    -webkit-box-shadow: 0px 12px 0px 0px rgba(34, 60, 80, 0.83);
+    -moz-box-shadow: 0px 12px 0px 0px rgba(34, 60, 80, 0.83);
+    box-shadow: 0px 12px 0px 0px rgba(34, 60, 80, 0.83);
+    transition: all 0.1s ease;
+}
+.main-btn:active {
+    box-shadow: none;
+    top: 12px;
+}
+
+.like {
+    background-color: #81ff9c;
+}
+.neutral {
+    background-color: #f1f7b5;
+}
+.dislike {
+    background-color: #fd7777;
+}
+.statistics {
+    display: flex;
+    column-gap: 40px;
+    font-size: 21px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.resset {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 6px 0px 0px rgba(34, 60, 80, 0.83);
+    -moz-box-shadow: 0px 6px 0px 0px rgba(34, 60, 80, 0.83);
+    box-shadow: 0px 16x 0px 0px rgba(34, 60, 80, 0.83);
+    transition: all 0.1s ease;
+}
+.resset:active {
+    box-shadow: none;
+    top: 6px;
+}
