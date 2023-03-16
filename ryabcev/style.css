@@ -5,13 +5,16 @@ body {
     font-size: 24px;
     background: #d9d9d9;
 }
+p {
+    padding: 0.25em 0;
+    margin: 0;
+}
 section,
 header,
 main,
 footer {
     padding: 0 calc(50% - 570px);
 }
-
 @media screen and (max-width: 1200px) {
     section,
     header,
@@ -26,6 +29,14 @@ footer {
     main,
     footer {
         padding: 0 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    section,
+    header,
+    main,
+    footer {
+        padding: 0 15px;
     }
 }
 
@@ -143,6 +154,12 @@ footer nav {
 .truly-list {
     padding-left: 40px;
 }
+.authors {
+    margin-top: 10px;
+}
+.authors li {
+    line-height: 50px;
+}
 
 @media screen and (max-width: 950px) {
     body {
@@ -177,6 +194,9 @@ footer nav {
     .header__title {
         font-size: 52px;
     }
+    .truly-list {
+        padding-left: 30px;
+    }
 }
 @media screen and (max-width: 540px) {
     nav,
@@ -186,10 +206,15 @@ footer nav {
     .header__title {
         font-size: 36px;
     }
+    .footer__content {
+        flex-direction: column;
+        row-gap: 20px;
+        text-align: center;
+    }
 }
 @media screen and (max-width: 400px) {
     body {
-        font-size: 16px;
+        font-size: 15px;
     }
     .header__title {
         font-size: 34px;
