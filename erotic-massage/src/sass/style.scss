@@ -1,0 +1,13 @@
+@import "normalize";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap");
+@font-face {
+    font-family: "Actay Wide";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(../assets/fonts/ActayWide-Bold.otf) format("opentype");
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+}
