@@ -1,0 +1,222 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #333333;
+    font-weight: 400;
+    font-size: 24px;
+    background: #d9d9d9;
+}
+p {
+    padding: 0.25em 0;
+    margin: 0;
+}
+section,
+header,
+main,
+footer {
+    padding: 0 calc(50% - 570px);
+}
+@media screen and (max-width: 1200px) {
+    section,
+    header,
+    main,
+    footer {
+        padding: 0 calc(50% - 450px);
+    }
+}
+@media screen and (max-width: 950px) {
+    section,
+    header,
+    main,
+    footer {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 500px) {
+    section,
+    header,
+    main,
+    footer {
+        padding: 0 15px;
+    }
+}
+
+.prikol {
+    top: 0;
+    position: relative;
+    box-shadow: 0px 7px 0px 0px rgba(34, 60, 80, 0.83);
+    transition: all ease 0.3s;
+}
+.prikol:hover {
+    box-shadow: 0px 10px 0px 0px rgba(34, 60, 80, 0.83);
+    top: -3px;
+}
+.prikol:active {
+    box-shadow: none;
+    top: 7px;
+}
+
+header {
+    color: #fff;
+    background: url(assets/bg.png) no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 250px;
+}
+nav {
+    display: flex;
+    gap: 48px;
+    font-size: 32px;
+}
+nav a {
+    position: relative;
+}
+nav a::after {
+    transition: all 0.3s ease;
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #96b9cc;
+}
+nav a:hover:after,
+nav a.active:after {
+    width: 100%;
+}
+
+.header__title {
+    max-width: 100%;
+    font-weight: 600;
+    font-size: 96px;
+    text-align: center;
+    margin-top: 110px;
+    margin-bottom: 45px;
+}
+.header__description {
+    text-align: center;
+}
+.btns {
+    list-style: none;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.btns a {
+    display: block;
+    padding: 17px 40px;
+    font-size: 36px;
+    background: #96b9cc;
+    border-radius: 3px;
+    color: #333333;
+}
+
+main {
+    padding-top: 35px;
+    line-height: 29px;
+    padding-bottom: 200px;
+}
+
+.useful-links {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.useful-links a {
+    text-align: center;
+    padding: 20px 0;
+    display: block;
+    background: #84a1b1;
+    border-radius: 5px;
+    width: calc((100% - 60px) / 4);
+}
+
+footer {
+    background: #333333;
+    color: #fff;
+}
+footer nav {
+    flex-direction: column;
+    gap: 25px;
+}
+.footer__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.copyright {
+    border-top: 5px solid #96b9cc;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 20px;
+}
+.truly-list {
+    padding-left: 40px;
+}
+.authors {
+    margin-top: 10px;
+}
+.authors li {
+    line-height: 50px;
+}
+
+@media screen and (max-width: 950px) {
+    body {
+        font-size: 20px;
+    }
+    .btns {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: start;
+    }
+    .header__title {
+        font-size: 74px;
+    }
+}
+@media screen and (max-width: 745px) {
+    .useful-links {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 10px;
+        justify-content: start;
+    }
+    .useful-links a {
+        width: auto;
+        padding: 20px;
+    }
+    .btns a {
+        padding: 15px 20px;
+    }
+    body {
+        font-size: 18px;
+    }
+    .header__title {
+        font-size: 52px;
+    }
+    .truly-list {
+        padding-left: 30px;
+    }
+}
+@media screen and (max-width: 540px) {
+    nav,
+    .btns a {
+        font-size: 26px;
+    }
+    .header__title {
+        font-size: 36px;
+    }
+    .footer__content {
+        flex-direction: column;
+        row-gap: 20px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 15px;
+    }
+    .header__title {
+        font-size: 34px;
+    }
+}
