@@ -8,6 +8,7 @@ let pos1 = 0, pos2 = 0, coordY = 0, speed = 0, percent = 0
 function openModal() {
     document.body.classList.add("modal-open")
     modal.classList.add("trs")
+    modal.classList.add("medium")
     modal.style.top = (height * 36 / 100) + "px";
 }
 
