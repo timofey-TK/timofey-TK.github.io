@@ -1,66 +1,109 @@
 const modal = document.querySelector(".modal"),
-    helper = document.querySelector(".helper")
+    clientHeight = document.documentElement.clientHeight,
+    modalContent = document.querySelector(".modal-content"),
+    contentHeight = modalContent.offsetHeight
+abs = Math.abs
 
-const height = document.documentElement.clientHeight
+let animation = null, opening = null, is_end = true, stopScrolling = true, flag = true
+var hm = new Hammer(modal, {});
+hm.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL });
+hm.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
-let pos1 = 0, pos2 = 0, coordY = 0, speed = 0, percent = 0
+let height = 0
+hm.on('panstart', function (ev) {
+    height = modal.offsetHeight
+    if (is_end && (ev.deltaY > 0)) {
+        stopScrolling = true;
+    }
+    try {
+        animation.pause();
+        opening.pause()
+    } catch (error) {
+    }
+});
+hm.on('panmove', function (ev) {
+    console.log(ev);
+    if ((height - ev.deltaY <= clientHeight) && (flag || stopScrolling)) {
+        anime({
+            targets: modal,
+            height: (height - ev.deltaY),
+            duration: 0
+        });
+    }
+    else {
+        stopScrolling = false;
+    }
+});
+
+hm.on('panend', function (ev) {
+    height = modal.offsetHeight
+    let percent = height * 100 / clientHeight
+    if (ev.velocityY >= 0.3 && percent <= 100) {
+        anime({
+            targets: modal,
+            height: clientHeight * 0,
+            easing: 'easeOutQuart',
+            duration: 400
+        });
+    }
+    else if (ev.velocityY <= -0.3 && percent <= 100) {
+        opening = anime({
+            targets: modal,
+            height: clientHeight - 10
+        });
+    }
+    else if ((percent >= 70 && percent <= 100)) {
+        opening = anime({
+            targets: modal,
+            height: clientHeight - 10
+        });
+    }
+    else if (percent <= 20) {
+        anime({
+            targets: modal,
+            height: clientHeight * 0,
+            easing: 'easeOutQuart',
+            duration: 400
+        });
+    }
+    else if (percent >= 20 && percent <= 70) {
+        anime({
+            targets: modal,
+            height: clientHeight * 0.50
+        });
+    }
+});
+
 
 function openModal() {
-    document.body.classList.add("modal-open")
-    modal.classList.add("trs")
-    modal.classList.add("medium")
-    modal.style.top = (height * 36 / 100) + "px";
+    animation = anime({
+        targets: modal,
+        height: clientHeight * 0.5
+    });
 }
 
 
-function handleStart(ev) {
-    modal.classList.remove("trs")
-    ev.preventDefault();
-    touch = ev.changedTouches[0];
-    coordY = Number(modal.style.top.replace("px", ""))
-    pos1 = touch.clientY
-}
-function handleMove(ev) {
-    ev.preventDefault();
-    touch = ev.changedTouches[0];
-    speed = parseInt((pos2 / pos1) * 1000)
-    pos2 = touch.clientY - pos1
-    pos1 = touch.clientY
-    coordY += pos2
-    modal.style.top = coordY + "px"
-}
 
-function handleEnd(ev) {
-    modal.classList.remove("closed")
-    modal.classList.remove("opened")
-    modal.classList.remove("medium")
-    pos1 = 0
-    pos2 = 0
-    ev.preventDefault();
-    modal.classList.add("trs")
-    touch = ev.changedTouches[0];
-    percent = (coordY * 100 / height)
-    if (percent >= 60 || (speed >= 40 && speed >= 0 && percent >= 0)) {
-        modal.style.top = height + "px";
-        modal.classList.add("closed")
+modalContent.addEventListener("touchmove", handleTouchMove, {
+    passive: false
+});
+
+function handleTouchMove(e) {
+    if (!stopScrolling) {
+        return;
     }
-    else if ((percent <= 16) || (speed <= -40 && speed <= 0 && percent >= 0)) {
-        modal.style.top = 0 + "px"
-        modal.classList.add("opened")
-    }
-    else if (percent >= 16 && percent <= 60) {
-        modal.classList.add("medium")
-        modal.style.top = height * 36 / 100 + "px";
-    }
+    e.preventDefault();
 }
 
-function handleCancel(ev) {
-    ev.preventDefault();
-    touches = ev.changedTouches;
+function onTouchStart() {
+    stopScrolling = true;
 }
 
+function onTouchEnd() {
+    stopScrolling = false;
+}
 
-helper.addEventListener("touchstart", handleStart, false);
-helper.addEventListener("touchend", handleEnd, false);
-helper.addEventListener("touchcancel", handleCancel, false);
-helper.addEventListener("touchmove", handleMove, false);
+modalContent.addEventListener("scroll", (a) => {
+    is_end = (a.target.scrollTop == 0)
+    flag = a.cancelable
+})

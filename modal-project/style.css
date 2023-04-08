@@ -1,69 +1,42 @@
 body {
-    background-color: blanchedalmond;
+    background-color: chocolate;
 }
-body.modal-open {
-    height: 100vh;
-    overflow-y: hidden;
-}
-.lorem {
-    padding: 20px;
-}
-.helper {
-    position: absolute;
-    top: 0;
+
+.modal {
+    will-change: height;
+    position: fixed;
     left: 0;
     right: 0;
-    width: 100%;
-    height: 40px;
+    bottom: 0;
+    width: 100vw;
+    height: 0;
+    background-color: #fff;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
+    overscroll-behavior: contain;
 }
-.modal.medium .helper {
-    height: 100%;
-}
-.helper span {
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    width: 50px;
-    height: 3px;
-    background: #000;
-    transform: translateX(-50%);
-}
-.modal {
-    position: fixed;
-    z-index: 10;
-    top: 100%;
-    box-sizing: border-box;
-    padding: 40px;
-    background-color: aquamarine;
-    width: 100%;
-    min-height: 100vh;
-    border-radius: 20px 20px 0 0;
-}
-.modal-content {
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
-
-.modal.opened .modal-content {
-    overflow-y: scroll;
-    height: 100vh;
-}
-
-.text {
-    z-index: 20;
+.helper {
     display: flex;
-    gap: 10px;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    color: #fff;
+    justify-content: center;
+    height: 40px;
+    padding: 10px;
 }
-.text-item {
-    background-color: #000;
-    padding: 20px;
+.helper::after {
+    content: "";
+    width: 50px;
+    height: 4px;
+    background-color: #000000a5;
+    border-radius: 5px;
 }
 
-.trs {
-    transition: top 0.4s ease, border-radius 0.4s ease;
+.modal-content {
+    padding: 0 20px;
+    height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+}
+.modal-content::after {
+    content: "";
+    display: block;
+    height: 80px;
 }
