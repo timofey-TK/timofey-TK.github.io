@@ -1,0 +1,25 @@
+@media (max-width: 1300px) {
+    /* CSS для ширины от 992px до 1199px */
+}
+/* lg-размер (<=1199px) */
+@media (max-width: 1199px) {
+    /* CSS для ширины от 992px до 1199px */
+}
+
+/* md-размер (<=991px) */
+@media (max-width: 991px) {
+    /* CSS для ширины от 768px до 991px */
+}
+
+/* sm-размер (<=768px) */
+@media (max-width: 767px) {
+    /* CSS для ширины от 576px до 767px */
+}
+
+/* xs-размер (<=575px) */
+@media (max-width: 575px) {
+    /* CSS для ширины до 575px (включительно) */
+}
+@media (max-width: 390px) {
+    /* CSS для ширины до 575px (включительно) */
+}
