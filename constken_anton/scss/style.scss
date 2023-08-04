@@ -60,13 +60,14 @@ body {
 }
 //  ================ Шапка ================
 header {
+    padding-bottom: 50px;
     @media (max-width: 991px) {
         background: var(--accent-bg-color);
     }
     @media (max-width: 575px) {
         height: 60px;
+        padding-bottom: 30px;
     }
-    padding-bottom: 50px;
 }
 .header__wrapper {
     z-index: 100;

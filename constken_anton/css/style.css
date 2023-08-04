@@ -161,6 +161,7 @@ header {
 @media (max-width: 575px) {
   header {
     height: 60px;
+    padding-bottom: 30px;
   }
 }
 
