@@ -20,6 +20,11 @@ body {
         }
     }
 }
+.desktop-only {
+    @media (max-width: 991px) {
+        display: none;
+    }
+}
 .container {
     padding: 0 80px 0 80px;
     @media (max-width: 1300px) {
@@ -27,7 +32,9 @@ body {
     }
 }
 .primary-btn {
+    text-decoration: none;
     display: inline-flex;
+    cursor: pointer;
     padding: 18px 30px;
     width: max-content;
     justify-content: center;
@@ -56,6 +63,14 @@ body {
     transition: background-size 0.3s;
     &:hover {
         background-size: 100% 2px;
+    }
+}
+.section-title {
+    font-size: 60px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    @media (max-width: 575px) {
+        font-size: 37px;
     }
 }
 //  ================ Шапка ================
@@ -291,6 +306,446 @@ header {
             .btn {
                 margin-top: 250px;
                 margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+//  ================ Партнеры ================
+.partners {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6vw;
+        img {
+            max-width: 45%;
+        }
+        left: unset;
+        @media (max-width: 1300px) {
+            gap: max(25px, 3vw);
+            flex-wrap: wrap;
+        }
+    }
+}
+//  ================ Обо мне ================
+.about {
+    display: grid;
+    grid-template-areas: "text image" "text image" "btn image";
+    column-gap: 60px;
+    row-gap: 30px;
+    justify-content: center;
+    margin-bottom: 90px;
+    padding-top: 140px;
+    position: relative;
+    overflow: visible;
+    z-index: 100;
+    .bg {
+        position: absolute;
+        background-image: url(../assets/bg-net.png);
+        background-position: top 32% right 0;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .title-text {
+        padding: 0 20px;
+        grid-area: text;
+        p {
+            max-width: 465px;
+        }
+    }
+    .image-text {
+        grid-area: image;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        p {
+            max-width: 620px;
+        }
+    }
+    .btn-wrapper {
+        padding: 20px;
+        grid-area: btn;
+        display: flex;
+        align-items: end;
+    }
+    .img-wrapper {
+        margin-bottom: 50px;
+        width: min(45vw, 511px);
+        position: relative;
+        img {
+            max-width: 100%;
+        }
+        .img-tip {
+            color: var(--text-color-dark);
+            box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.06);
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 25px;
+            background: var(--color);
+            top: var(--top, unset);
+            bottom: var(--bottom, unset);
+            left: var(--left, unset);
+            right: var(--right, unset);
+            display: flex;
+            box-sizing: border-box;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0 16px;
+            .number {
+                width: 100%;
+                text-align: left;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 500;
+            }
+            .capture {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+    @media (max-width: 1199px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 991px) {
+        grid-template-areas: "text" "image" "btn";
+        grid-template-columns: 1fr;
+        p {
+            max-width: 100% !important;
+        }
+        .image-text {
+            align-items: center;
+        }
+        .img-wrapper {
+            width: min(511px, 100%);
+        }
+        .title-text {
+            margin-bottom: 30px;
+            padding: 0;
+        }
+        .btn-wrapper {
+            padding: 0;
+        }
+    }
+    @media (max-width: 575px) {
+        padding-top: 70px;
+        .bg {
+            background-position: top 46% right 0;
+            opacity: 0.4;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .img-wrapper {
+            .img-tip {
+                width: 85px;
+                height: 85px;
+                padding: 14px;
+                .number {
+                    font-size: 26px;
+                }
+                .capture {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+//  ================ Услуги ================
+.services {
+    &-wrapper {
+        background-color: var(--text-color-dark);
+        border-radius: 30px;
+        padding: 90px 70px;
+        color: var(--text-color-light);
+        background-image: url(../assets/Group.svg);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    &__list {
+        margin-top: 50px;
+        --gap: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+        .card {
+            width: calc(50% - (var(--gap) / 2));
+            background-color: #fff;
+            padding: 30px;
+            box-sizing: border-box;
+            color: var(--text-color-dark);
+            border-radius: 20px;
+            display: grid;
+            grid-template-areas: "title price" "time ." "text text" "btn .";
+            &__title {
+                grid-area: title;
+                font-size: 23px;
+                font-style: normal;
+                font-weight: 500;
+            }
+            &__time {
+                grid-area: time;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                margin-top: 5px;
+            }
+            &__price {
+                font-family: Inter;
+                text-align: right;
+                grid-area: price;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+            }
+            &__content {
+                line-height: 28px;
+                margin: 20px 0;
+                grid-area: text;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+            }
+            .btn {
+                grid-area: btn;
+                font-variant-numeric: lining-nums proportional-nums;
+                font-family: Onest;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+            }
+        }
+    }
+    @media (max-width: 1199px) {
+        &__list {
+            .card {
+                padding: 20px;
+                grid-template-areas: "title title" "time time" "text text" "btn price";
+                grid-template-columns: 1fr 1fr;
+                &__price {
+                    display: flex;
+                    align-items: center;
+                    justify-content: end;
+                }
+                &__time {
+                    opacity: 0.5;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    @media (max-width: 991px) {
+        &-wrapper {
+            padding: 60px 35px;
+            background-repeat: repeat-y;
+        }
+        &__list {
+            --gap: 25px;
+            .card {
+                &__content {
+                    font-size: 16px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        padding: 0;
+        &-wrapper {
+            overflow: hidden;
+            border-radius: 0;
+            padding: 40px 0;
+        }
+        .section-title {
+            padding-left: 30px;
+        }
+        &__list {
+            overflow-x: scroll;
+            padding: 0 30px;
+            padding-bottom: 30px;
+            flex-wrap: nowrap;
+            gap: 10px;
+
+            .card {
+                .btn {
+                    border-radius: 15px;
+                }
+                min-width: 320px;
+                &__title {
+                    font-size: 27px;
+                }
+                &__time {
+                    font-size: 12px;
+                }
+                &__price {
+                    font-size: 14px;
+                }
+                &__content {
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+//  ================ Клиенты ================
+.clients {
+    margin-top: 130px;
+    margin-bottom: 90px;
+    .section-title {
+        text-align: center;
+        @media (max-width: 991px) {
+            font-size: 50px;
+        }
+    }
+    .splide {
+        margin-top: 70px;
+        &__slide {
+            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .avatar {
+                border-radius: 35px;
+                width: 124px;
+                height: 124px;
+            }
+            .content {
+                margin-top: 30px;
+                margin-bottom: 40px;
+                max-width: 610px;
+                text-align: center;
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 25px; /* 156.25% */
+            }
+            .name {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 20px;
+            }
+            .speciality {
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+            }
+        }
+        &__arrows {
+            @media (max-width: 991px) {
+                display: none;
+            }
+        }
+        &__arrow {
+            transition: all ease 0.3s;
+            position: absolute;
+            z-index: 100;
+            cursor: pointer;
+            top: 50%;
+            translate: -50%, -50%;
+            width: 59px;
+            height: 59px;
+            background-color: #fff;
+            border-radius: 0;
+            outline: none;
+            text-decoration: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.13);
+            &[disabled] {
+                opacity: 0.8;
+            }
+            &:hover {
+                scale: 1.1;
+            }
+            &--next {
+                right: 10%;
+            }
+            &--prev {
+                left: 10%;
+            }
+            @media (max-width: 1199px) {
+                &--next {
+                    right: 5%;
+                }
+                &--prev {
+                    left: 5%;
+                }
+            }
+        }
+        &__pagination {
+            gap: 10px;
+            &__page {
+                border: 0;
+                border-radius: 50%;
+                display: inline-block;
+                height: 8px;
+                padding: 0;
+                position: relative;
+                transition: background-color 0.2s ease;
+                width: 7px;
+                background-color: #d9d9d9;
+                &.is-active {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        margin-top: 40px;
+        .section-title {
+            font-size: 37px;
+            margin: 0;
+        }
+        .splide {
+            margin-top: 50px;
+        }
+    }
+    @media (max-width: 575px) {
+        .section-title {
+            font-size: 27px;
+            max-width: 175px;
+            margin: 0 auto;
+        }
+        .splide {
+            margin-top: 30px;
+            &__slide {
+                .avatar {
+                    width: 87px;
+                    height: 87px;
+                    border-radius: 17px;
+                }
+                .content {
+                    margin-top: 20px;
+                    margin-bottom: 30px;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                .name {
+                    font-size: 14px;
+                }
+                .speciality {
+                    font-size: 12px;
+                }
             }
         }
     }

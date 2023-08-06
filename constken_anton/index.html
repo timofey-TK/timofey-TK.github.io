@@ -4,6 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/splidejs/4.1.4/css/splide-core.min.css"
+            integrity="sha512-cSogJ0h5p3lhb//GYQRKsQAiwRku2tKOw/Rgvba47vg0+iOFrQ94iQbmAvRPF5+qkF8+gT7XBct233jFg1cBaQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="assets/fonts/fonts.css" />
         <link rel="stylesheet" href="css/style.css " />
@@ -12,6 +20,7 @@
     </head>
 
     <body>
+        <!-- ================ Шапка ================ -->
         <header>
             <div class="header__wrapper container">
                 <button class="hamburger hamburger--spin" type="button">
@@ -90,6 +99,7 @@
                 </nav>
             </div>
         </header>
+        <!-- ================ Главная секция ================ -->
         <section class="hero container">
             <div class="hero__warapper">
                 <div class="text">
@@ -107,6 +117,294 @@
                     </p>
                     <div class="btn primary-btn">Обсудить проект</div>
                     <img src="assets/hero.png" alt="" class="hero__img" />
+                </div>
+            </div>
+        </section>
+        <!-- ================ Партнеры ================ -->
+        <section class="partners container">
+            <div class="partners__list">
+                <img src="assets/image-4.png" alt="" />
+                <img src="assets/image-5.png" alt="" />
+                <img src="assets/image-6.png" alt="" />
+                <img src="assets/image-7.png" alt="" />
+                <img src="assets/image-9.png" alt="" />
+            </div>
+        </section>
+        <!-- ================ Обо мне ================ -->
+        <section class="about container">
+            <div class="bg"></div>
+            <div class="title-text">
+                <h2 class="section-title">Обо мне</h2>
+                <p>
+                    В первые с веб разработкой и интернет маркетингом
+                    я познакомился в 2013 году, создав сайт для Автосервиса. В
+                    дальнейшем я работал с такими компаниями как «Belt Impex»,
+                    «Сады России», «IMEX», «Bebakids», «НТЛС Новейшие
+                    технологии», «HAITIAN», «Gallery Smart», «Ronbel»,
+                    «international plastic guide», «Пептек», «Utupack», «Widex»,
+                    «Картонкино» Создал сервис рассылки «MSender» и услугу
+                    «Мессенджер ретаргетинга» в РФ.
+                </p>
+            </div>
+            <div class="image-text">
+                <div class="img-wrapper">
+                    <div
+                        class="img-tip"
+                        style="--top: -25px; --left: -25px; --color: #dbff8f"
+                    >
+                        <span class="number">10</span>
+                        <span class="capture">лет опыта</span>
+                    </div>
+                    <div
+                        class="img-tip"
+                        style="--bottom: -30px; --left: 10%; --color: #fff"
+                    >
+                        <span class="number">10</span>
+                        <span class="capture">лет опыта</span>
+                    </div>
+                    <div
+                        class="img-tip"
+                        style="--top: 20%; --right: -30px; --color: #d6daff"
+                    >
+                        <span class="number">47</span>
+                        <span class="capture">проектов</span>
+                    </div>
+                    <img
+                        src="assets/telegram-cloud-document-253188988509649755282.png"
+                        alt="img"
+                    />
+                </div>
+                <p>
+                    У  меня есть ясное понимание того, что необходимо вашему
+                    бизнесу для продвижения в интернете сегодня, а также готовые
+                    стратегии, которые могут помочь вам достичь поставленных
+                    целей. Интернет является мощным инструментом для привлечения
+                    новых клиентов, укрепления имиджа вашего бренда и увеличения
+                    прибыли. Вам необходимо использовать его потенциал
+                    максимально эффективно.
+                </p>
+            </div>
+            <div class="btn-wrapper">
+                <a href="# " class="btn primary-btn">Обсудить проект</a>
+            </div>
+        </section>
+        <!-- ================ Услуги ================ -->
+        <section class="services container">
+            <div class="services-wrapper">
+                <h2 class="section-title">
+                    Услуги <span class="desktop-only">которые я предлагаю</span>
+                </h2>
+                <ul class="services__list">
+                    <li class="card">
+                        <p class="card__title">SEO</p>
+                        <p class="card__time">от 15 дней</p>
+                        <p class="card__content">
+                            Поможет оптимизировать ваш сайт, повысить его
+                            рейтинг и привлечь больше органического трафика
+                        </p>
+                        <p class="card__price">от 95 000 ₽</p>
+                        <div class="btn primary-btn">Обсудить</div>
+                    </li>
+                    <li class="card">
+                        <p class="card__title">PPC</p>
+                        <p class="card__time">от 15 дней</p>
+                        <p class="card__content">
+                            Поможет оптимизировать ваш сайт, повысить его
+                            рейтинг и привлечь больше органического трафика
+                        </p>
+                        <p class="card__price">от 95 000 ₽</p>
+                        <div class="btn primary-btn">Обсудить</div>
+                    </li>
+                    <li class="card">
+                        <p class="card__title">Разработка сайта</p>
+                        <p class="card__time">от 15 дней</p>
+                        <p class="card__content">
+                            Поможет оптимизировать ваш сайт, повысить его
+                            рейтинг и привлечь больше органического трафика
+                        </p>
+                        <p class="card__price">от 95 000 ₽</p>
+                        <div class="btn primary-btn">Обсудить</div>
+                    </li>
+                    <li class="card">
+                        <p class="card__title">Таргетированная реклама</p>
+                        <p class="card__time">от 15 дней</p>
+                        <p class="card__content">
+                            Поможет оптимизировать ваш сайт, повысить его
+                            рейтинг и привлечь больше органического трафика
+                        </p>
+                        <p class="card__price">от 95 000 ₽</p>
+                        <div class="btn primary-btn">Обсудить</div>
+                    </li>
+                    <li class="card">
+                        <p class="card__title">Email / Мессенджер маркетинг</p>
+                        <p class="card__time">от 15 дней</p>
+                        <p class="card__content">
+                            Поможет оптимизировать ваш сайт, повысить его
+                            рейтинг и привлечь больше органического трафика
+                        </p>
+                        <p class="card__price">от 95 000 ₽</p>
+                        <div class="btn primary-btn">Обсудить</div>
+                    </li>
+                    <li class="card">
+                        <p class="card__title">Комплексное сопровождение</p>
+                        <p class="card__time">от 15 дней</p>
+                        <p class="card__content">
+                            Поможет оптимизировать ваш сайт, повысить его
+                            рейтинг и привлечь больше органического трафика
+                        </p>
+                        <p class="card__price">от 95 000 ₽</p>
+                        <div class="btn primary-btn">Обсудить</div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- ================ Клиенты ================ -->
+        <section class="clients container">
+            <h2 class="section-title">Что говорят мои клиенты</h2>
+            <div class="splide" aria-label="clients-slider">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <svg
+                            width="15"
+                            height="17"
+                            viewBox="0 0 15 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1.74429 5.87501C-0.319191 7.01673 -0.319188 9.98328 1.74429 11.125L10.5476 15.9958C12.5471 17.1021 15 15.656 15 13.3708L15 3.62918C15 1.34402 12.5471 -0.102125 10.5476 1.00419L1.74429 5.87501Z"
+                                fill="#2A59FF"
+                            />
+                        </svg>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <svg
+                            width="15"
+                            height="17"
+                            viewBox="0 0 15 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M13.2557 5.87501C15.3192 7.01673 15.3192 9.98328 13.2557 11.125L4.45239 15.9958C2.45288 17.1021 1.09187e-06 15.656 1.19176e-06 13.3708L1.61758e-06 3.62918C1.71747e-06 1.34402 2.45289 -0.102125 4.45239 1.00419L13.2557 5.87501Z"
+                                fill="#2A59FF"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <img
+                                src="assets/avatar.png"
+                                alt="avatar"
+                                class="avatar"
+                            />
+                            <p class="content">
+                                Благодаря усилиям Антона мы заметили
+                                значительный рост трафика на нашем вебсайте,
+                                увеличение числа запросов и конверсий. Антон
+                                также предоставлял нам регулярные отчеты
+                                и аналитику, чтобы мы могли следить за
+                                прогрессом и вносить необходимые корректировки.
+                            </p>
+                            <p class="name">Алексей Ткачев</p>
+                            <p class="speciality">
+                                Генеральный директор Бэлтимпекс
+                            </p>
+                        </li>
+                        <li class="splide__slide">
+                            <img
+                                src="https://i.pinimg.com/originals/39/26/ee/3926ee0a81c0211d69e6332c35134a4f.jpg"
+                                alt="avatar"
+                                class="avatar"
+                            />
+                            <p class="content">
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Quis delectus, repellendus aut
+                                unde totam at doloremque tempore nam voluptas
+                                distinctio similique voluptates numquam quas
+                                fugit, sit nesciunt maxime reprehenderit.
+                                Labore?
+                            </p>
+                            <p class="name">Алексей Ткачев</p>
+                            <p class="speciality">
+                                Генеральный директор Бэлтимпекс
+                            </p>
+                        </li>
+                        <li class="splide__slide">
+                            <img
+                                src="https://this-person-does-not-exist.com/img/avatar-gena818fc2b36096cc7d7cce3165a563212.jpg"
+                                alt="avatar"
+                                class="avatar"
+                            />
+                            <p class="content">
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Enim dolor esse ab. Aliquam,
+                                facilis necessitatibus dolorem dolor consectetur
+                                nesciunt. Aspernatur expedita perferendis natus
+                                soluta quasi culpa nihil adipisci at incidunt!
+                            </p>
+                            <p class="name">Алексей Ткачев</p>
+                            <p class="speciality">
+                                Генеральный директор Бэлтимпекс
+                            </p>
+                        </li>
+                        <li class="splide__slide">
+                            <img
+                                src="https://this-person-does-not-exist.com/img/avatar-gen11e51ce29bfc21cfc3052b83287f47fb.jpg"
+                                alt="avatar"
+                                class="avatar"
+                            />
+                            <p class="content">
+                                Благодаря усилиям Антона мы заметили
+                                значительный рост трафика на нашем вебсайте,
+                                увеличение числа запросов и конверсий. Антон
+                                также предоставлял нам регулярные отчеты
+                                и аналитику, чтобы мы могли следить за
+                                прогрессом и вносить необходимые корректировки.
+                            </p>
+                            <p class="name">Алексей Ткачев</p>
+                            <p class="speciality">
+                                Генеральный директор Бэлтимпекс
+                            </p>
+                        </li>
+                        <li class="splide__slide">
+                            <img
+                                src="assets/avatar.png"
+                                alt="avatar"
+                                class="avatar"
+                            />
+                            <p class="content">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Asperiores ipsam voluptas
+                                dignissimos.
+                            </p>
+                            <p class="name">Алексей Ткачев</p>
+                            <p class="speciality">
+                                Генеральный директор Бэлтимпекс
+                            </p>
+                        </li>
+                        <li class="splide__slide">
+                            <img
+                                src="assets/avatar.png"
+                                alt="avatar"
+                                class="avatar"
+                            />
+                            <p class="content">
+                                Благодаря усилиям Антона мы заметили
+                                значительный рост трафика на нашем вебсайте,
+                                увеличение числа запросов и конверсий. Антон
+                                также предоставлял нам регулярные отчеты
+                                и аналитику, чтобы мы могли следить за
+                                прогрессом и вносить необходимые корректировки.
+                            </p>
+                            <p class="name">Алексей Ткачев</p>
+                            <p class="speciality">
+                                Генеральный директор Бэлтимпекс
+                            </p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
