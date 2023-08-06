@@ -207,9 +207,13 @@ header {
   }
 }
 .header__wrapper.is-active {
-  border-radius: 0;
   height: 400px;
   transition-delay: 0;
+}
+@media (max-width: 575px) {
+  .header__wrapper.is-active {
+    border-radius: 0;
+  }
 }
 @media (max-width: 1199px) {
   .header__wrapper {
@@ -689,6 +693,8 @@ header {
   }
   .services__list .card .btn {
     border-radius: 15px;
+    height: 45px;
+    box-sizing: border-box;
   }
   .services__list .card__title {
     font-size: 27px;
@@ -725,7 +731,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .clients .splide__slide .avatar {
   border-radius: 35px;
@@ -804,6 +810,7 @@ header {
   gap: 10px;
 }
 .clients .splide__pagination__page {
+  cursor: pointer;
   border: 0;
   border-radius: 50%;
   display: inline-block;

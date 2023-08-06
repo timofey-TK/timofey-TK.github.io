@@ -104,7 +104,9 @@ header {
         }
     }
     &.is-active {
-        border-radius: 0;
+        @media (max-width: 575px) {
+            border-radius: 0;
+        }
         height: 400px;
         transition-delay: 0;
     }
@@ -580,6 +582,8 @@ header {
             .card {
                 .btn {
                     border-radius: 15px;
+                    height: 45px;
+                    box-sizing: border-box;
                 }
                 min-width: 320px;
                 &__title {
@@ -617,7 +621,7 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
             .avatar {
                 border-radius: 35px;
                 width: 124px;
@@ -695,6 +699,7 @@ header {
         &__pagination {
             gap: 10px;
             &__page {
+                cursor: pointer;
                 border: 0;
                 border-radius: 50%;
                 display: inline-block;
