@@ -862,4 +862,38 @@ header {
   .clients .splide__slide .speciality {
     font-size: 12px;
   }
+}
+
+.proects {
+  padding-bottom: 1000px;
+}
+.proects .filter.active {
+  background-color: #2a59ff;
+}
+.proects__list {
+  margin-left: -30px;
+  margin-top: 50px;
+}
+.proects__list .card {
+  border-radius: 20px;
+  width: calc(33% - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.proects__list .card[data-groups=seo] {
+  background: lightgreen;
+}
+.proects__list .card[data-groups=pack] {
+  background: lightcoral;
+}
+.proects__list .card[data-groups=dev] {
+  background: lightsalmon;
+}
+.proects__list .card[data-groups=context_ad] {
+  background: lightseagreen;
+}
+.proects__list .card[data-groups=target_ad] {
+  background: palevioletred;
 }/*# sourceMappingURL=style.css.map */

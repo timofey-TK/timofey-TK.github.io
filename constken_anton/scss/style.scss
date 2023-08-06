@@ -755,3 +755,38 @@ header {
         }
     }
 }
+//  ================ Проекты ================
+.proects {
+    padding-bottom: 1000px;
+    .filter.active {
+        background-color: #2a59ff;
+    }
+    &__list {
+        margin-left: -30px;
+        margin-top: 50px;
+        .card {
+            border-radius: 20px;
+            width: calc(33% - 30px);
+            margin-left: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            box-sizing: border-box;
+
+            &[data-groups="seo"] {
+                background: lightgreen;
+            }
+            &[data-groups="pack"] {
+                background: lightcoral;
+            }
+            &[data-groups="dev"] {
+                background: lightsalmon;
+            }
+            &[data-groups="context_ad"] {
+                background: lightseagreen;
+            }
+            &[data-groups="target_ad"] {
+                background: palevioletred;
+            }
+        }
+    }
+}
