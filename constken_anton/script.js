@@ -19,34 +19,83 @@ nav.addEventListener("click", (e) => {
     nav.classList.remove("is-active")
     body.classList.remove("unscrollable")
 })
-var splide = new Splide('.splide', {
-    arrowPath: 'M42.7443 43.875C40.6808 45.0167 40.6808 47.9833 42.7443 49.125L51.5476 53.9958C53.5471 55.1021 56 53.656 56 51.3708L56 41.6292C56 39.344 53.5471 37.8979 51.5476 39.0042L42.7443 43.875Z',
-});
-splide.mount();
+var clientSplide = new Splide('.clients-splide', {
+    speed: 600,
+}).mount();
+var achievementsSplide = new Splide('.achievements-splide', {
+    perPage: 4,
+    gap: "30px",
+    pagination: false,
+    speed: 600,
+    perMove: 1,
+    breakpoints: {
+        1600: {
+            perPage: 3,
+        },
+        767: {
+            gap: "10px",
+            arrows: false,
+            perPage: 2,
+            pagination: true,
+        },
+    }
+}).mount();
 
 
 
-const Shuffle = window.Shuffle;
+
+function getMaxHeight(element) {
+    let maxHeight = 0;
+    const children = element.children;
+
+    for (let i = 0; i < children.length; i++) {
+        const child = children[i];
+        maxHeight = Math.max(maxHeight, child.offsetHeight);
+    }
+    return maxHeight;
+}
+
 const filterBtns = document.querySelectorAll(".filter")
 const list = document.querySelector('.proects__list');
 const sizer = list.querySelector('.card')
+let options
+if (window.matchMedia("(max-width: 767px)").matches) {
+    options = {
+        itemSelector: '.card',
+        layoutMode: 'horiz',
+    }
+}
+else {
+    options = {
+        itemSelector: '.card',
+        masonry: {
+            columnWidth: ".card",
+        }
+    }
+}
+var iso = new Isotope(list, options);
 
-const shuffle = new Shuffle(list, {
-    itemSelector: '.card',
-    sizer: sizer,
-    delimiter: ",",
-});
 
+window.onload = () => {
+    iso.arrange();
+    if (window.matchMedia("(max-width: 767px)").matches) {
+
+        document.querySelector(".proects .list-wrapper").style.height = getMaxHeight(list) + 30 + "px"
+    }
+
+}
 
 let filterbuff = []
 function filterList(btn) {
     filterType = btn.getAttribute("data-groups-type")
     isActive = btn.classList.contains("active")
+
     if (filterType == "all" && !isActive) {
         filterBtns.forEach(el => {
             el.classList.remove("active")
         })
         filterbuff = []
+
     }
     else if (isActive) {
         filterbuff = filterbuff.filter((i) => i != filterType)
@@ -56,6 +105,22 @@ function filterList(btn) {
         filterbuff.push(filterType)
         btn.classList.add("active")
     }
-    shuffle.filter(filterbuff)
 
+    if (filterbuff.length == 0) {
+        iso.arrange({
+            filter: function (itemElem) {
+                return true;
+            }
+        });
+    }
+    else {
+        iso.arrange({
+            filter: function (itemElem) {
+                var atr = itemElem.getAttribute("data-groups")
+                return filterbuff.includes(atr);
+            }
+        });
+    }
 }
+
+const lightbox = GLightbox({});

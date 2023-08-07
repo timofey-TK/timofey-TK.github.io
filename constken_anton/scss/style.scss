@@ -757,35 +757,200 @@ header {
 }
 //  ================ Проекты ================
 .proects {
-    padding-bottom: 1000px;
-    .filter.active {
-        background-color: #2a59ff;
+    margin-bottom: 90px;
+    &__wrapper {
+        border-radius: 30px;
+        background-color: var(--accent-bg-color);
+        padding: 80px 70px;
+        @media (max-width: 991px) {
+            padding: 50px 35px;
+        }
+    }
+    .filter-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        .filter {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            padding: 0 25px;
+            height: 40px;
+            border: none;
+            border-radius: 25px;
+            background: #fff;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid var(--accent-bg-color);
+            &:hover {
+                color: var(--primary-color);
+            }
+            &.active {
+                margin: 0;
+                color: var(--primary-color);
+                border: 1px solid var(--primary-color);
+                &::after {
+                    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8' fill='none'%3E%3Cpath d='M1 1L7 7' stroke='black'/%3E%3Cpath d='M1 7L7 1' stroke='black'/%3E%3C/svg%3E");
+                    position: relative;
+                    top: -1px;
+                }
+            }
+        }
     }
     &__list {
         margin-left: -30px;
         margin-top: 50px;
+
         .card {
             border-radius: 20px;
             width: calc(33% - 30px);
             margin-left: 30px;
             margin-bottom: 30px;
-            padding: 20px;
+            padding: 27px 38px;
             box-sizing: border-box;
-
-            &[data-groups="seo"] {
-                background: lightgreen;
+            background-color: #fff;
+            .title {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                margin-top: 15px;
+                margin-bottom: 10px;
+                line-height: 150%;
             }
-            &[data-groups="pack"] {
-                background: lightcoral;
+            .content {
+                line-height: 150%;
+                font-size: 16px;
+                font-weight: 400;
             }
-            &[data-groups="dev"] {
-                background: lightsalmon;
+            @media (max-width: 1199px) {
+                width: calc(50% - 30px);
             }
-            &[data-groups="context_ad"] {
-                background: lightseagreen;
+            @media (max-width: 991px) {
+                padding: 20px 30px;
             }
-            &[data-groups="target_ad"] {
-                background: palevioletred;
+        }
+        @media (max-width: 767px) {
+            margin-left: -10px;
+            .card {
+                width: 300px;
+                margin-left: 10px;
+                margin-bottom: 0;
+                .content {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        padding: 0;
+        margin-bottom: 50px;
+        .section-title {
+            font-size: 27px;
+            padding: 0 35px;
+        }
+        &__wrapper {
+            padding: 40px 0;
+            padding-bottom: 20px;
+        }
+        .list-wrapper {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding: 0 35px;
+            margin-top: 30px;
+        }
+        &__list {
+            margin-top: 0;
+        }
+        .filter-btns {
+            padding: 0 35px;
+            .filter {
+                font-size: 16px;
+            }
+        }
+    }
+}
+//  ================ Достижения ================
+.achievements {
+    padding-bottom: 1000px;
+    .splide {
+        &__slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                max-width: 100%;
+            }
+        }
+        &__arrow {
+            transition: all ease 0.3s;
+            position: absolute;
+            z-index: 100;
+            cursor: pointer;
+            top: 50%;
+            translate: -50%, -50%;
+            width: 59px;
+            height: 59px;
+            background-color: var(--primary-color);
+            border-radius: 0;
+            outline: none;
+            text-decoration: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.13);
+            &[disabled] {
+                opacity: 0.8;
+            }
+            &:hover {
+                scale: 1.1;
+            }
+            &--next {
+                right: -2%;
+            }
+            &--prev {
+                left: -2%;
+            }
+        }
+        &__pagination {
+            gap: 10px;
+            &__page {
+                cursor: pointer;
+                border: 0;
+                border-radius: 50%;
+                display: inline-block;
+                height: 8px;
+                padding: 0;
+                position: relative;
+                transition: background-color 0.2s ease;
+                width: 7px;
+                background-color: #d9d9d9;
+                &.is-active {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+    @media (max-width: 1199px) {
+        .splide {
+            &__slide {
+                img {
+                    max-width: calc(33vw - 45px);
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .splide {
+            &__slide {
+                padding-bottom: 40px;
+                img {
+                    max-width: calc(50vw - 45px);
+                }
             }
         }
     }

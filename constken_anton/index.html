@@ -15,8 +15,14 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="assets/fonts/fonts.css" />
         <link rel="stylesheet" href="css/style.css " />
-        <script src="https://cdn.jsdelivr.net/npm/shufflejs@6.1.0/dist/shuffle.min.js"></script>
+        <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+        <script src="https://npmcdn.com/isotope-horizontal@2.0.1/horizontal.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+        />
+        <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
         <script src="script.js" defer></script>
     </head>
 
@@ -262,7 +268,7 @@
         <!-- ================ Клиенты ================ -->
         <section class="clients container">
             <h2 class="section-title">Что говорят мои клиенты</h2>
-            <div class="splide" aria-label="clients-slider">
+            <div class="splide clients-splide" aria-label="clients-slider">
                 <div class="splide__arrows">
                     <button class="splide__arrow splide__arrow--prev">
                         <svg
@@ -413,7 +419,6 @@
         <section class="proects container">
             <div class="proects__wrapper">
                 <h2 class="section-title">Мне доверили свои проекты</h2>
-
                 <div class="filter-btns">
                     <button
                         class="filter"
@@ -459,97 +464,218 @@
                     </button>
                 </div>
 
-                <div class="proects__list">
-                    <div class="card" data-groups="seo">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
+                <div class="list-wrapper">
+                    <div class="proects__list">
+                        <div class="card" data-groups="seo">
+                            <img src="assets/card-1.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Провели аудит сайта и оценили эффективность
+                                продвижения. Предложили доработку основных
+                                источников трафика и изменения сайта
+                            </p>
+                        </div>
+                        <div class="card" data-groups="pack">
+                            <img src="assets/card-2.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Провели аудит сайта и оценили эффективность
+                                продвижения. Предложили доработку основных
+                                источников трафика и изменения сайта
+                            </p>
+                        </div>
+                        <div class="card" data-groups="target_ad">
+                            <img src="assets/card-3.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. At perferendis quos libero
+                                quod unde!, eum laborum pariatur tempora At
+                                perferendis quos libero quod unde!, eum laborum
+                                pariatur tempora
+                            </p>
+                        </div>
+                        <div class="card" data-groups="context_ad">
+                            <img src="assets/card-4.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Nisi modi totam consequatur
+                                rem adipisci pariatur sit reiciendis, eos
+                                eligendi delectus, animi quam quae. Vel libero
+                            </p>
+                        </div>
+                        <div class="card" data-groups="dev">
+                            <img src="assets/card-5.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Accusamus, illum. Reiciendis,
+                                natus laudantium! Repudiandae quam in optio
+                                voluptatem enim aliquid, imus accusamus
+                                similique harum?
+                            </p>
+                        </div>
+                        <div class="card" data-groups="context_ad">
+                            <img src="assets/card-6.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Nisi modi totam consequatur
+                                rem adipisci pariatur sit reiciendis, eos
+                                eligendi delectus, animi quam quae.
+                            </p>
+                        </div>
+                        <div class="card" data-groups="seo">
+                            <img src="assets/card-7.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Провели аудит сайта и оценили эффективность
+                                продвижения. Предложили доработку основных
+                                источников трафика и изменения сайта Предложили
+                                доработку основных
+                            </p>
+                        </div>
+                        <div class="card" data-groups="dev">
+                            <img src="assets/card-8.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Провели аудит сайта и оценили эффективность
+                                продвижения. Предложили доработку основных
+                                источников трафика и изменения сайта
+                            </p>
+                        </div>
+                        <div class="card" data-groups="pack">
+                            <img src="assets/card-9.png" alt="" />
+                            <p class="title">Продажа товаров для дачи и дома</p>
+                            <p class="content">
+                                Lorem ipsum dolor sit, amet consectetur
+                                adipisicing elit. Lorem ipsum dolor sit amet
+                                consectetur adipisicing elit. Doloremque aut
+                                temporibus numquam.
+                            </p>
+                        </div>
                     </div>
-                    <div class="card" data-groups="pack">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
-                    </div>
-                    <div class="card" data-groups="target_ad">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
-                    </div>
-                    <div class="card" data-groups="context_ad">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
-                    </div>
-                    <div class="card" data-groups="dev">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
-                    </div>
-                    <div class="card" data-groups="context_ad">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
-                    </div>
-                    <div class="card" data-groups="seo">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
-                    </div>
-                    <div class="card" data-groups="dev">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
-                    </div>
-                    <div class="card" data-groups="pack">
-                        <img src="assets/image-4.png" alt="" />
-                        <p>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing
-                            elit. Tempora dicta id rem incidunt quasi. Ullam
-                            sequi eius atque unde. Repudiandae eum voluptatibus
-                            cupiditate quasi id. Veniam, optio aliquam? Dolorem,
-                            sit.
-                        </p>
-                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ================ Достижения ================ -->
+        <section class="achievements container">
+            <div class="splide achievements-splide" aria-label="clients-slider">
+                <div class="splide__arrows">
+                    <button class="splide__arrow splide__arrow--prev">
+                        <svg
+                            width="15"
+                            height="17"
+                            viewBox="0 0 15 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M1.74429 5.87501C-0.319191 7.01673 -0.319188 9.98328 1.74429 11.125L10.5476 15.9958C12.5471 17.1021 15 15.656 15 13.3708L15 3.62918C15 1.34402 12.5471 -0.102125 10.5476 1.00419L1.74429 5.87501Z"
+                                fill="#fff"
+                            />
+                        </svg>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next">
+                        <svg
+                            width="15"
+                            height="17"
+                            viewBox="0 0 15 17"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M13.2557 5.87501C15.3192 7.01673 15.3192 9.98328 13.2557 11.125L4.45239 15.9958C2.45288 17.1021 1.09187e-06 15.656 1.19176e-06 13.3708L1.61758e-06 3.62918C1.71747e-06 1.34402 2.45289 -0.102125 4.45239 1.00419L13.2557 5.87501Z"
+                                fill="#fff"
+                            />
+                        </svg>
+                    </button>
+                </div>
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <a
+                                href="assets/cert.png"
+                                class="glightbox"
+                                data-zoomable="true"
+                            >
+                                <img src="assets/cert.png" alt="image" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a
+                                href="assets/cert.png"
+                                class="glightbox"
+                                data-zoomable="true"
+                            >
+                                <img src="assets/cert.png" alt="image" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a
+                                href="assets/cert.png"
+                                class="glightbox"
+                                data-zoomable="true"
+                            >
+                                <img src="assets/cert.png" alt="image" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a
+                                href="https://images.sampletemplates.com/wp-content/uploads/2017/03/Personal-Training-Certificate-PDF1.jpg"
+                                class="glightbox"
+                                data-zoomable="true"
+                            >
+                                <img
+                                    src="https://images.sampletemplates.com/wp-content/uploads/2017/03/Personal-Training-Certificate-PDF1.jpg"
+                                    alt="image"
+                                />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a
+                                href="assets/cert.png"
+                                class="glightbox"
+                                data-zoomable="true"
+                            >
+                                <img src="assets/cert.png" alt="image" />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a
+                                href="https://sdelai.ru/resources/files/2017/01/certificate-sdelai-ru.jpg"
+                                class="glightbox"
+                                data-zoomable="true"
+                            >
+                                <img
+                                    src="https://sdelai.ru/resources/files/2017/01/certificate-sdelai-ru.jpg"
+                                    alt="image"
+                                />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a
+                                href="https://a228.ru/upload/iblock/db1/db1dfd2741a1914792f68ee1ac5da1be.jpg"
+                                class="glightbox"
+                                data-zoomable="true"
+                            >
+                                <img
+                                    src="https://a228.ru/upload/iblock/db1/db1dfd2741a1914792f68ee1ac5da1be.jpg"
+                                    alt="image"
+                                />
+                            </a>
+                        </li>
+                        <li class="splide__slide">
+                            <a
+                                href="assets/cert.png"
+                                class="glightbox"
+                                data-zoomable="true"
+                            >
+                                <img src="assets/cert.png" alt="image" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
