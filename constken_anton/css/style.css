@@ -991,7 +991,8 @@ header {
 }
 
 .achievements {
-  padding-bottom: 1000px;
+  padding: 0 calc(50% - 570px);
+  padding-bottom: 90px;
 }
 .achievements .splide__slide {
   display: flex;
@@ -1052,6 +1053,10 @@ header {
   background-color: var(--primary-color);
 }
 @media (max-width: 1199px) {
+  .achievements {
+    padding: 0 35px;
+    padding-bottom: 90px;
+  }
   .achievements .splide__slide img {
     max-width: calc(33vw - 45px);
   }

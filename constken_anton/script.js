@@ -23,15 +23,12 @@ var clientSplide = new Splide('.clients-splide', {
     speed: 600,
 }).mount();
 var achievementsSplide = new Splide('.achievements-splide', {
-    perPage: 4,
+    perPage: 3,
     gap: "30px",
     pagination: false,
     speed: 600,
     perMove: 1,
     breakpoints: {
-        1600: {
-            perPage: 3,
-        },
         767: {
             gap: "10px",
             arrows: false,
