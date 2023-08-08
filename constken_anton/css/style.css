@@ -1137,6 +1137,7 @@ header {
 }
 .feedback .form input,
 .feedback .form textarea {
+  font-family: Onest;
   outline: none;
   resize: none;
   color: var(--text-color-light);
