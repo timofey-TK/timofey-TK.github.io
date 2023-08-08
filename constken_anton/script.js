@@ -13,12 +13,32 @@ hamburger.addEventListener("click", (e) => {
     nav.classList.toggle("is-active")
     body.classList.toggle("unscrollable")
 })
-nav.addEventListener("click", (e) => {
-    hamburger.classList.remove("is-active")
-    header.classList.remove("is-active")
-    nav.classList.remove("is-active")
-    body.classList.remove("unscrollable")
-})
+function getDeepestChildren(element) {
+    const children = element.children;
+    let deepestChildren = [];
+
+    if (children.length === 0) { // если элемент не имеет дочерних элементов
+        deepestChildren.push(element);
+    } else {
+        for (let i = 0; i < children.length; i++) {
+            const childDeepestChildren = getDeepestChildren(children[i]);
+            deepestChildren = deepestChildren.concat(childDeepestChildren);
+        }
+    }
+    return deepestChildren;
+}
+for (const child of getDeepestChildren(nav)) {
+    child.addEventListener("click", (e) => {
+
+        hamburger.classList.remove("is-active")
+        header.classList.remove("is-active")
+        nav.classList.remove("is-active")
+        body.classList.remove("unscrollable")
+
+    })
+}
+
+
 var clientSplide = new Splide('.clients-splide', {
     speed: 600,
 }).mount();
@@ -71,17 +91,6 @@ else {
     }
 }
 var iso = new Isotope(list, options);
-
-
-window.onload = () => {
-    iso.arrange();
-    if (window.matchMedia("(max-width: 767px)").matches) {
-
-        document.querySelector(".proects .list-wrapper").style.height = getMaxHeight(list) + 30 + "px"
-    }
-
-}
-
 let filterbuff = []
 function filterList(btn) {
     filterType = btn.getAttribute("data-groups-type")
@@ -120,4 +129,25 @@ function filterList(btn) {
     }
 }
 
-const lightbox = GLightbox({});
+window.onload = () => {
+    iso.arrange();
+    if (window.matchMedia("(max-width: 767px)").matches) {
+
+        document.querySelector(".proects .list-wrapper").style.height = getMaxHeight(list) + 30 + "px"
+    }
+
+    const smoothLinks = document.querySelectorAll('.smooth');
+    for (let smoothLink of smoothLinks) {
+        smoothLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            const id = smoothLink.getAttribute('href');
+            document.querySelector(id).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    };
+
+    const lightbox = GLightbox({});
+
+}

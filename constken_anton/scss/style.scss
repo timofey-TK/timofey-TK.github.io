@@ -959,3 +959,171 @@ header {
         }
     }
 }
+//  ================ Обратная связь ================
+.feedback {
+    color: var(--text-color-light);
+    padding-bottom: 100px;
+
+    &__wrapper {
+        background-color: var(--text-color-dark);
+        background-image: url(../assets/bg-planet.png);
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        border-radius: 30px;
+        padding: 80px max(80px, calc(50% - 570px));
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 1300px) {
+            padding: 80px 35px;
+        }
+    }
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    h2 {
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 55px;
+        margin: 0;
+    }
+    .capture {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px;
+    }
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        a {
+            width: fit-content;
+        }
+    }
+    .socials-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        margin-top: 60px;
+    }
+    .form {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 50%;
+        box-sizing: border-box;
+        input,
+        textarea {
+            &::placeholder {
+                color: var(--text-color-light);
+            }
+            outline: none;
+            resize: none;
+            color: var(--text-color-light);
+            background-color: transparent;
+            padding-bottom: 15px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            box-shadow: 0px 5px 10px 0px rgba(34, 34, 34, 0.1) inset;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        .btn {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-weight: 500;
+        }
+        .terms {
+            font-size: 12px;
+            font-weight: 400;
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+    @media (max-width: 1199px) {
+        position: relative;
+        padding: 0;
+        &__wrapper {
+            border-radius: 0;
+        }
+        .bg-fixer {
+            position: absolute;
+            width: 32px;
+            height: 32px;
+            background-color: var(--text-color-dark);
+            bottom: 0;
+            left: 0;
+            border-top-right-radius: 30px;
+        }
+    }
+    @media (max-width: 991px) {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+        }
+        .form {
+            max-width: 100%;
+        }
+        .contacts {
+            gap: 10px;
+        }
+        .socials-wrapper {
+            margin-top: 0;
+            flex-direction: column;
+            align-items: start;
+        }
+        .text {
+            gap: 25px;
+        }
+    }
+    @media (max-width: 575px) {
+        padding-bottom: 0;
+        &__wrapper {
+            background-position: bottom 0 left 70%;
+            padding-bottom: 20px;
+        }
+        .form {
+            padding: 0;
+        }
+        h2 {
+            font-size: 37px;
+            line-height: 43px;
+        }
+        .capture {
+            font-size: 14px;
+
+            line-height: 20px;
+        }
+        .socials-wrapper {
+            font-size: 16px;
+        }
+    }
+}
+.footer {
+    display: none;
+    @media (max-width: 575px) {
+        background-color: var(--text-color-dark);
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        color: var(--accent-bg-color);
+    }
+}
