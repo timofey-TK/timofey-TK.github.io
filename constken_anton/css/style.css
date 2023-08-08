@@ -1229,6 +1229,11 @@ header {
     font-size: 16px;
   }
 }
+@media (max-width: 400px) {
+  .feedback h2 {
+    font-size: 32px;
+  }
+}
 
 .footer {
   display: none;
