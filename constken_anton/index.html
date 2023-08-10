@@ -22,9 +22,10 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
         />
-        <script src="phoneinput.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-        <script src="script.js" defer></script>
+        <script src="scripts/formHandler.js"></script>
+        <script src="scripts/phoneinput.js"></script>
+        <script src="scripts/script.js" defer></script>
     </head>
 
     <body>
@@ -76,7 +77,7 @@
                         >
                     </div>
                     <div class="socials">
-                        <a href="">
+                        <a href="https://t.me/constken">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="35"
@@ -99,7 +100,7 @@
                                 />
                             </svg>
                         </a>
-                        <a href="">
+                        <a href="https://wa.me/79006073737">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="35"
@@ -135,7 +136,10 @@
                     <script>
                         var typed = new Typed(".typed span", {
                             strings: ["Проводник вашего бизнеса в онлайн мире"],
+                            loop: true,
+                            smartBackspace: true,
                             typeSpeed: 50,
+                            backSpeed: 30,
                         });
                     </script>
                     <h1>Антон Залесский</h1>
@@ -742,7 +746,7 @@
                     <div class="socials-wrapper">
                         <p>Задайте вопрос в мессенджер</p>
                         <div class="socials">
-                            <a href="">
+                            <a href="https://t.me/constken">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="35"
@@ -765,7 +769,7 @@
                                     />
                                 </svg>
                             </a>
-                            <a href="">
+                            <a href="https://wa.me/79006073737">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     width="35"
@@ -804,18 +808,39 @@
                         maxlength="18"
                     />
                     <textarea
-                        name=""
+                        name="text"
                         rows="1"
                         placeholder="Введите ваш вопрос"
                     ></textarea>
                     <button class="btn primary-btn">Обсудить проект</button>
+                    <input type="hidden" name="project_name" value="ConstKen" />
+                    <input
+                        type="hidden"
+                        name="admin_email"
+                        value="ConstKen@yandex.ru"
+                    />
+                    <input
+                        type="hidden"
+                        name="form_subject"
+                        value="Форма с сайта ConstKen"
+                    />
                     <p class="terms">
                         Нажимая кнопку, вы соглашаетесь с
                         <a href=""> Условиями обработки персональных данных </a>
                     </p>
                 </form>
             </div>
+            <div
+                class="form-status form-status-success"
+                style="--color: #2a59ff"
+            >
+                Форма успешно отправленна
+            </div>
+            <div class="form-status form-status-error" style="--color: #e33725">
+                Произошла ошибка при отправке
+            </div>
         </section>
+
         <footer class="footer"><p>© 2023</p></footer>
     </body>
 </html>

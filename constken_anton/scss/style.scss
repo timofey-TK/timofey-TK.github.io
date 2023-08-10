@@ -963,7 +963,7 @@ header {
 .feedback {
     color: var(--text-color-light);
     padding-bottom: 100px;
-
+    position: relative;
     &__wrapper {
         background-color: var(--text-color-dark);
         background-image: url(../assets/bg-planet.png);
@@ -1117,6 +1117,26 @@ header {
         h2 {
             font-size: 32px;
         }
+    }
+}
+.form-status {
+    transition: all 0.1s ease;
+    position: fixed;
+    top: 20px;
+    right: -210px;
+    width: 200px;
+    background-color: var(--color);
+    border-radius: 30px;
+    color: var(--text-color-light);
+    padding: 20px;
+
+    font-weight: 500;
+    text-align: center;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.13);
+    opacity: 0;
+    &.show {
+        opacity: 1;
+        right: 20px;
     }
 }
 .footer {
