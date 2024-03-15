@@ -7,6 +7,7 @@
     <title>Форт Боярд</title>
     <!-- Шрифты -->
     <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -174,7 +175,7 @@
         <img src="media/key3.png" alt="key" class="key2" />
         <img src="media/key.png" alt="key" class="key3" />
         <h2 class="section-title">
-            Пройдите короткий опроси узнайте стоимость вашего праздника
+            Пройдите короткий опрос и узнайте стоимость вашего праздника
         </h2>
         <div class="btn-wrapper">
             <button class="primary-btn">
@@ -229,7 +230,39 @@
             </button>
         </div>
     </section>
-
+    <section class="about">
+        <img src="media/chain.png" alt="chain" class="chain" />
+        <div class="ellipse"></div>
+        <div class="content">
+            <h2 class="section-title">Подробнее про наше шоу</h2>
+            <p class="description">Посмотрите видео и убедитесь в том, что такой праздник участники точно не забудут,
+                либо оставьте нам свои контакты, и мы
+                отправим вам материалы в любой удобный мессенджер</p>
+            <ul class="features">
+                <li class="feature">
+                    <div class="icon gradient-text">6+</div>
+                    <p class="capture">возраст: от 6 лет</p>
+                </li>
+                <li class="feature">
+                    <div class="icon"><img src="media/players.svg" alt="icon"></div>
+                    <p class="capture">10-20 игроков</p>
+                </li>
+                <li class="feature">
+                    <div class="icon gradient-text">350 м²</div>
+                    <p class="capture">площадь для игр</p>
+                </li>
+            </ul>
+            <button class="primary-btn">
+                <p class="content">записаться</p>
+                <span class="bottom-part"></span>
+            </button>
+        </div>
+        <div class="video">
+            <video id="about-player" playsinline controls>
+                <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </section>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, sequi! Earum consectetur labore quis eligendi
         dolor error, placeat corporis dicta ipsa, doloremque laborum, mollitia laudantium cupiditate? Quis eveniet nemo
         sed?
@@ -245,6 +278,7 @@
         doloribus accusamus eligendi?</p>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
     <script src="script.js"></script>
 </body>
 

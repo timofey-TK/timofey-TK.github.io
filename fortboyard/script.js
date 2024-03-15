@@ -25,6 +25,10 @@ document.addEventListener("DOMContentLoaded", function () {
     swiperEl.initialize();
 
 
+    const player = new Plyr('#about-player', {
+        controls: ['play-large', 'play', 'progress', 'fullscreen'],
+    });
+
     var phoneInputs = document.querySelectorAll('input[data-tel-input]');
 
     var getInputNumbersValue = function (input) {

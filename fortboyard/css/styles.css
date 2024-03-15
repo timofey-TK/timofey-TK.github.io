@@ -211,6 +211,7 @@ legend {
   --swiper-navigation-color: radial-gradient(76.99% 76.94% at 18.15% 89.13%,
           #f16b11 0%,
           #f8da45 100%);
+  --plyr-color-main: #222;
 }
 
 html {
@@ -235,7 +236,14 @@ body.no-scroll {
 
 header,
 section {
-  padding: 0 max(20px, 50% - 700px);
+  padding: 0 max(60px, 50% - 700px);
+  margin-bottom: calc(0.0683760684 * 100vw + 40.5982905983px);
+}
+@media (max-width: 1200px) {
+  header,
+  section {
+    padding: 0 20px;
+  }
 }
 
 .full_section {
@@ -275,7 +283,7 @@ h1.section-title {
 .primary-btn {
   display: block;
   position: relative;
-  box-shadow: 0px 20px 20px rgba(44, 116, 194, 0.4);
+  box-shadow: 0px 20px 20px rgba(255, 124, 3, 0.2);
   width: 390px;
   max-width: 100%;
 }
@@ -318,6 +326,10 @@ h1.section-title {
 }
 .primary-btn:active .content {
   bottom: -5px;
+}
+
+header {
+  margin-bottom: 0;
 }
 
 .nav {
@@ -782,7 +794,6 @@ h1.section-title {
 .events {
   z-index: 20;
   position: relative;
-  margin-bottom: 150px;
 }
 .events .slider-wrapper {
   position: relative;
@@ -919,7 +930,6 @@ h1.section-title {
   padding-bottom: 120px;
   background-image: url(../media/survey-bg.png);
   background-repeat: repeat-x;
-  margin-bottom: 150px;
 }
 .survey .key {
   display: none;
@@ -1068,9 +1078,8 @@ h1.section-title {
   gap: 50px;
   background: radial-gradient(93.08% 82.6% at 50% 82.65%, #F16B11 0%, #F8DA45 100%);
   box-shadow: 0px 0px 150px #F8DA45;
-  margin-bottom: calc(0.0683760684 * 100vw + 40.5982905983px);
   color: #222;
-  padding: 70px max(20px, 50% - 600px);
+  padding: 70px max(60px, 50% - 600px);
   align-items: center;
 }
 .reserve .section-title {
@@ -1128,6 +1137,7 @@ h1.section-title {
 }
 @media (max-width: 992px) {
   .reserve {
+    padding: 70px 20px;
     flex-direction: column;
   }
 }
@@ -1150,5 +1160,140 @@ h1.section-title {
     right: -30px;
     top: 15%;
     width: 64px;
+  }
+}
+
+.about {
+  display: flex;
+  gap: 40px;
+  position: relative;
+}
+.about .ellipse {
+  z-index: -1;
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  top: -40%;
+  right: -20%;
+  background: radial-gradient(76.99% 76.94% at 18.15% 89.13%, #F16B11 0%, #F8DA45 100%);
+  filter: blur(195px);
+  transform: rotate(90deg);
+}
+@media (max-width: 768px) {
+  .about .ellipse {
+    top: -20%;
+  }
+}
+@media (max-width: 576px) {
+  .about .ellipse {
+    top: 0;
+  }
+}
+.about .chain {
+  display: none;
+}
+@media (max-width: 768px) {
+  .about .chain {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: -15%;
+    max-width: 1000px;
+  }
+}
+@media (max-width: 576px) {
+  .about .chain {
+    max-width: 800px;
+    top: -25%;
+  }
+}
+@media (max-width: 450px) {
+  .about .chain {
+    max-width: 600px;
+    left: -10%;
+    bottom: -25%;
+  }
+}
+.about > .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 50px 0;
+  font-size: calc(0.0034188034 * 100vw + 14.5299145299px);
+  max-width: 50%;
+}
+.about > .content .features {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  align-items: center;
+}
+.about > .content .features .feature {
+  text-align: center;
+}
+.about > .content .features .feature .capture {
+  font-size: calc(0.0068376068 * 100vw + 9.0598290598px);
+}
+.about > .content .features .feature .icon {
+  line-height: 51px;
+  font-size: 33px;
+}
+.about > .content .primary-btn {
+  width: 330px;
+  margin-top: 50px;
+  height: 50px;
+}
+.about > .content .primary-btn .content {
+  height: 100%;
+  width: 100%;
+}
+.about > .content .section-title {
+  margin: 0;
+}
+.about .video {
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+}
+.about .video .plyr {
+  max-height: 480px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+.about .video .plyr__controls {
+  opacity: 0;
+}
+.about .video .plyr--playing .plyr__controls {
+  opacity: 1;
+}
+@media (max-width: 992px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about > .content {
+    max-width: 70%;
+  }
+  .about > .content .primary-btn {
+    margin: 0 auto;
+  }
+  .about .video {
+    max-width: 70%;
+  }
+}
+@media (max-width: 576px) {
+  .about > .content {
+    max-width: 100%;
+    padding: 0;
+  }
+  .about > .content .primary-btn {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .about .video {
+    max-width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
