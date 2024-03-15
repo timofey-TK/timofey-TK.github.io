@@ -797,7 +797,6 @@ h1.section-title {
   position: relative;
   width: 335px;
   height: 335px;
-  border-radius: 10px;
   overflow: hidden;
 }
 .events swiper-slide::after {
@@ -809,7 +808,6 @@ h1.section-title {
   width: 100%;
   height: 100%;
   background: linear-gradient(180deg, rgba(34, 34, 34, 0) 75%, #222222 90%);
-  border-radius: 10px;
 }
 .events swiper-slide .capture {
   z-index: 1;
@@ -820,6 +818,8 @@ h1.section-title {
   text-align: center;
 }
 .events swiper-slide img {
+  box-shadow: inset;
+  border-radius: 10px;
   object-fit: cover;
   width: 100%;
   height: 100%;
