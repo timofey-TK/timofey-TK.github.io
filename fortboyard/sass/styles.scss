@@ -28,6 +28,10 @@ img {
     pointer-events: none;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 body {
     font-family: "MuseoSansCyrl";
     font-weight: 500;
@@ -35,10 +39,6 @@ body {
     color: #fff;
     font-size: 20px;
     overflow-x: hidden;
-
-    &.no-scroll {
-        overflow: hidden;
-    }
 }
 
 header,
@@ -188,7 +188,7 @@ header {
 .nav {
     z-index: 100;
     position: relative;
-    padding: 15px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1784,6 +1784,15 @@ footer {
         a,
         span {
             font-size: calcFluidFontSize(12, 20);
+        }
+
+        a {
+            transition: color 0.4s;
+            cursor: pointer;
+        }
+
+        a:hover {
+            color: #f16b11;
         }
 
         .logo,

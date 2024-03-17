@@ -1,12 +1,15 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const menu = document.querySelector('.menu');
-    const burger = document.querySelector('.hamburger');
+    const burger = document.querySelector('.hamburger'),
+        body = document.body,
+        html = document.querySelector("html");
 
     burger.addEventListener('click', () => {
         menu.classList.toggle('is-active');
         burger.classList.toggle('is-active');
-        document.body.classList.toggle('no-scroll');
+        body.classList.toggle('no-scroll');
+        html.classList.toggle('no-scroll');
     });
 
 
@@ -16,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             menu.classList.remove('is-active');
             burger.classList.remove('is-active');
-            document.body.classList.remove('no-scroll');
+            body.classList.toggle('no-scroll');
+            html.classList.toggle('no-scroll');
             const id = smoothLink.getAttribute('href');
             console.log(id);
             document.querySelector(id).scrollIntoView({

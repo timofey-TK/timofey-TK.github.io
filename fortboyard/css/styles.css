@@ -3,7 +3,6 @@
   padding: 0px;
   margin: 0px;
   border: none;
-  scroll-behavior: smooth !important;
 }
 
 html {
@@ -227,6 +226,10 @@ img {
   pointer-events: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 body {
   font-family: "MuseoSansCyrl";
   font-weight: 500;
@@ -234,9 +237,6 @@ body {
   color: #fff;
   font-size: 20px;
   overflow-x: hidden;
-}
-body.no-scroll {
-  overflow: hidden;
 }
 
 header,
@@ -374,7 +374,7 @@ header {
 .nav {
   z-index: 100;
   position: relative;
-  padding: 15px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1741,6 +1741,13 @@ footer .grid p,
 footer .grid a,
 footer .grid span {
   font-size: calc(0.0050955414 * 100vw + 9.8089171975px);
+}
+footer .grid a {
+  transition: color 0.4s;
+  cursor: pointer;
+}
+footer .grid a:hover {
+  color: #f16b11;
 }
 footer .grid .logo,
 footer .grid .main,
