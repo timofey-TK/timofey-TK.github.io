@@ -651,14 +651,14 @@ header {
 @media (max-width: 576px) {
   .adventure .chain {
     max-width: 800px;
-    bottom: -40%;
+    bottom: -66%;
   }
 }
 @media (max-width: 450px) {
   .adventure .chain {
-    max-width: 600px;
-    left: -10%;
-    bottom: -25%;
+    max-width: 650px;
+    left: -18%;
+    bottom: -52%;
   }
 }
 .adventure .grid {
@@ -1383,9 +1383,9 @@ header {
 }
 @media (max-width: 450px) {
   .about .chain {
-    max-width: 600px;
-    left: -10%;
-    bottom: -25%;
+    max-width: 650px;
+    left: -18%;
+    bottom: -52%;
   }
 }
 .about > .content {
