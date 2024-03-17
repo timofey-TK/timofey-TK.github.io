@@ -11,7 +11,7 @@
 
 @function calcFluidFontSize($f-min, $f-max) {
     $v-min: 430;
-    $v-max: 1600;
+    $v-max: 2000;
     $k: ($f-max - $f-min)/ ($v-max - $v-min);
     $b: $f-min - $k * $v-min;
 
@@ -29,7 +29,6 @@ img {
 }
 
 body {
-
     font-family: "MuseoSansCyrl";
     font-weight: 500;
     background-color: rgb(34, 34, 34);
@@ -46,10 +45,14 @@ header,
 section,
 footer,
 .in-container {
-    padding: 0 max(60px, calc(50% - 700px));
+    padding: 0 max(150px, calc(50% - 700px));
     margin-bottom: calcFluidFontSize(70, 150);
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1400px) {
+        padding: 0 max(100px, #{"calc(50% - 500px)"});
+    }
+
+    @media (max-width: 768px) {
         padding: 0 20px;
     }
 }
@@ -92,13 +95,13 @@ footer,
 
 h1.section-title {
     font-size: calcFluidFontSize(34, 60);
+    margin: 0;
 }
 
 .primary-btn {
     display: block;
     position: relative;
     box-shadow: 0px 20px 20px rgba(255, 124, 3, 0.2);
-
     width: 390px;
     max-width: 100%;
 
@@ -190,6 +193,14 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: 1400px) {
+        font-size: 18px;
+    }
+
+    @media (max-width: 992px) {
+        font-size: 20px;
+    }
+
     .hamburger {
         display: none;
     }
@@ -232,6 +243,14 @@ header {
                             #f8da45 100%);
                 }
             }
+
+            @media (max-width: 1400px) {
+                font-size: 20px;
+            }
+
+            @media (max-width: 992px) {
+                font-size: 30px;
+            }
         }
 
         .messengers {
@@ -239,6 +258,7 @@ header {
             flex-direction: column;
         }
     }
+
 }
 
 .menu {
@@ -248,7 +268,7 @@ header {
     gap: 30px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
     .menu {
         position: absolute;
         top: 100%;
@@ -359,7 +379,7 @@ header {
     }
 
     @media (max-width: 1400px) {
-        background-size: 80%;
+        background-size: 70%;
         background-position: top -10% right -10px;
         padding-top: 100px;
         min-height: 820px;
@@ -1241,7 +1261,17 @@ header {
     background: radial-gradient(93.08% 82.6% at 50% 82.65%, #F16B11 0%, #F8DA45 100%);
     box-shadow: 0px 0px 150px #F8DA45;
     color: #222;
-    padding: 70px max(60px, calc(50% - 600px));
+
+    padding: 70px max(150px, #{"calc(50% - 600px)"});
+
+    @media (max-width: 1400px) {
+        padding-left: max(100px, #{"calc(50% - 500px)"});
+    }
+
+    @media (max-width: 768px) {
+        padding: 0 20px;
+    }
+
     align-items: center;
 
     .section-title {
@@ -1578,7 +1608,7 @@ header {
         background: radial-gradient(79.53% 100% at 38.53% 100.03%, #F16B11 0%, #F8DA45 59.59%);
         width: 50%;
         padding: 80px 20px;
-        padding-left: max(60px, calc(50% - 700px));
+        padding-left: max(150px, calc(50% - 700px));
         display: flex;
         flex-direction: column;
         gap: 40px;
@@ -1742,7 +1772,7 @@ footer {
     .grid {
         display: grid;
         grid-template-areas: "logo main holidays contacts socials";
-        gap: 10px;
+        gap: 25px;
         justify-content: space-between;
 
         h6 {
