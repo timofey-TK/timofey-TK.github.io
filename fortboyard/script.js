@@ -31,9 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
         breakpoints: {
             0: {
                 slidesOffsetBefore: 20,
+                slidesPerView: "auto"
+            },
+            992: {
+                slidesPerView: 4
             },
             1200: {
                 slidesOffsetBefore: 0,
+                slidesPerView: 4
             },
         }
     };

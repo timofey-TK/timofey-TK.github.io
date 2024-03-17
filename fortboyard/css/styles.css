@@ -251,7 +251,7 @@ footer,
   section,
   footer,
   .in-container {
-    padding: 0 max(100px, calc(50% - 500px));
+    padding: 0 max(80px, calc(50% - 500px));
   }
 }
 @media (max-width: 768px) {
@@ -294,7 +294,7 @@ footer,
 }
 
 h1.section-title {
-  font-size: calc(0.0165605096 * 100vw + 26.8789808917px);
+  font-size: calc(0.0133757962 * 100vw + 28.2484076433px);
   margin: 0;
 }
 
@@ -379,7 +379,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
   .nav {
     font-size: 18px;
   }
@@ -425,7 +425,7 @@ header {
   left: 0;
   background: radial-gradient(76.99% 76.94% at 18.15% 89.13%, #f16b11 0%, #f8da45 100%);
 }
-@media (max-width: 1400px) {
+@media (max-width: 1500px) {
   .nav__contacts .phone {
     font-size: 20px;
   }
@@ -447,7 +447,7 @@ header {
   gap: 30px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .menu {
     position: absolute;
     top: 100%;
@@ -500,7 +500,7 @@ header {
   background-image: url(../media/hero.png);
   background-repeat: no-repeat;
   background-position: top -40px right 100px;
-  min-height: 1000px;
+  min-height: 900px;
   overflow: hidden;
   z-index: 1;
 }
@@ -528,7 +528,7 @@ header {
 .hero .key2 {
   position: absolute;
   left: 10px;
-  bottom: 100px;
+  bottom: 70px;
 }
 .hero .money1,
 .hero .money2 {
@@ -537,14 +537,15 @@ header {
 @media (max-width: 1600px) {
   .hero {
     background-position: top -40px right 0;
+    background-size: 70%;
+    padding-top: 150px;
   }
 }
 @media (max-width: 1400px) {
   .hero {
-    background-size: 70%;
     background-position: top -10% right -10px;
     padding-top: 100px;
-    min-height: 820px;
+    min-height: 780px;
   }
   .hero .key2 {
     position: absolute;
