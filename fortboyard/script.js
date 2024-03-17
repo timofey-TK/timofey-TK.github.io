@@ -10,8 +10,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    const swiperEl = document.querySelector('swiper-container');
-    const swiperParams = {
+    const smoothLinks = document.querySelectorAll('.smooth-scroll');
+    for (let smoothLink of smoothLinks) {
+        smoothLink.addEventListener('click', function (e) {
+            e.preventDefault();
+            menu.classList.remove('is-active');
+            burger.classList.remove('is-active');
+            document.body.classList.remove('no-scroll');
+            const id = smoothLink.getAttribute('href');
+            console.log(id);
+            document.querySelector(id).scrollIntoView({
+                behavior: 'smooth',
+            });
+        });
+    };
+
+
+    const swiperEl_events = document.querySelector('.events swiper-container');
+    const swiperParams_events = {
         breakpoints: {
             0: {
                 slidesOffsetBefore: 20,
@@ -21,16 +37,62 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         }
     };
-    Object.assign(swiperEl, swiperParams);
-    swiperEl.initialize();
+    Object.assign(swiperEl_events, swiperParams_events);
+    swiperEl_events.initialize();
 
+    const swiperGallery = document.querySelector(".gallery swiper-container")
+    swiperGallery.addEventListener('swiperslidechange', (event) => {
+        galleryPlayers[swiperGallery.swiper.previousIndex].pause();
+    });
+
+    const swiperEl_reviews = document.querySelector('.reviews swiper-container');
+    const swiperParams_reviews = {
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+        }
+    };
+    Object.assign(swiperEl_reviews, swiperParams_reviews);
+    swiperEl_reviews.initialize();
+    swiperEl_reviews.addEventListener('swiperslidechange', (event) => {
+        reviewsPlayers[swiperEl_reviews.swiper.previousIndex].pause();
+    });
+    swiperEl_reviews.addEventListener('click', (event) => {
+        const className = event.target.classList[0];
+        if (className == "swiper-slide-next") {
+            swiperEl_reviews.swiper.slideNext()
+        }
+        else if (className == "swiper-slide-prev") {
+            swiperEl_reviews.swiper.slidePrev()
+        }
+    });
+
+    const galleryPlayers = Plyr.setup('.gallery-player', {
+        controls: ['play-large', 'play', 'progress', 'fullscreen'],
+    });
 
     const player = new Plyr('#about-player', {
         controls: ['play-large', 'play', 'progress', 'fullscreen'],
     });
 
-    var phoneInputs = document.querySelectorAll('input[data-tel-input]');
+    const reviewsPlayers = Plyr.setup('.reviews-player', {
+        controls: ['play-large', 'play', 'progress', 'fullscreen'],
+    });
 
+    const lightbox = GLightbox({ keyboardNavigation: true, touchNavigation: true });
+    lightbox.on('open', () => {
+        swiperGallery.swiper.disable()
+    });
+    lightbox.on('close', () => {
+        swiperGallery.swiper.enable()
+    });
+
+    // Обработка телефонного инпута
+    var phoneInputs = document.querySelectorAll('input[data-tel-input]');
     var getInputNumbersValue = function (input) {
         // Return stripped input value — just numbers
         return input.value.replace(/\D/g, '');

@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Форт Боярд</title>
     <!-- Шрифты -->
-    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -24,16 +26,16 @@
             <div class="menu">
                 <ul class="nav__links">
                     <li>
-                        <a href="#" class="underline_animation">Игра</a>
+                        <a href="#game" class="underline_animation smooth-scroll">Игра</a>
                     </li>
                     <li>
-                        <a href="#" class="underline_animation">Сценарии</a>
+                        <a href="#events" class="underline_animation smooth-scroll">Сценарии</a>
                     </li>
                     <li>
-                        <a href="#" class="underline_animation">Отзывы</a>
+                        <a href="#reviews" class="underline_animation smooth-scroll">Отзывы</a>
                     </li>
                     <li>
-                        <a href="#" class="underline_animation">Контакты</a>
+                        <a href="#footer" class="underline_animation smooth-scroll">Контакты</a>
                     </li>
                 </ul>
                 <div class="nav__contacts">
@@ -70,8 +72,8 @@
         </div>
     </section>
     <!--===================adventure====================-->
-    <section class="adventure">
-        <img src="media/ellipse-adventure.svg" alt="blub" class="blub" />
+    <section class="adventure" id="game">
+        <div class="blub"></div>
         <img src="media/chain.png" alt="chain" class="chain" />
         <h2 class="section-title">
             Почувствуйте себя героем настоящего приключения
@@ -122,7 +124,7 @@
             </div>
         </div>
     </section>
-    <section class="events">
+    <section class="events" id="events">
         <img src="media/money3.png" alt="money" class="money" />
         <h2 class="section-title gradient-text">
             На каждое событие <br />
@@ -130,7 +132,7 @@
         </h2>
         <div class="slider-wrapper">
             <swiper-container navigation="true" navigation-next-el=".next-arrow" navigation-prev-el=".prev-arrow"
-                pagination="true" pagination-el=".pagination" pagination-clickable="true" slides-per-view="auto"
+                pagination="true" pagination-el=".events .pagination" pagination-clickable="true" slides-per-view="auto"
                 space-between="20">
                 <swiper-slide>
                     <img src="media/slider1.png" alt loading="lazy" />
@@ -190,37 +192,180 @@
             мы возьмем всю организацию на себя
         </h2>
         <div class="grid">
-            <div class="grid-item" style="grid-area: a;">
+            <div class="grid-item" style="grid-area: a">
                 <img src="media/organization1.png" alt="phtografer" />
                 <p class="capture">Профессиональный фотограф</p>
             </div>
-            <div class="grid-item" style="grid-area: b;">
+            <div class="grid-item" style="grid-area: b">
                 <img src="media/organization2.png" alt="feature" />
                 <p class="capture">Фирменный торт</p>
             </div>
-            <div class="grid-item" style="grid-area: c;">
+            <div class="grid-item" style="grid-area: c">
                 <img src="media/test.jpg" alt="feature" />
                 <p class="capture">Стилизованная банкетная зона</p>
             </div>
-            <div class="grid-item" style="grid-area: d;">
+            <div class="grid-item" style="grid-area: d">
                 <img src="media/organization2.png" alt="feature" />
                 <p class="capture">Украшение банкетной зоны</p>
             </div>
-            <div class="grid-item" style="grid-area: e;">
+            <div class="grid-item" style="grid-area: e">
                 <img src="media/test.jpg" alt="feature" />
                 <p class="capture">Дискотека с DJ</p>
             </div>
         </div>
     </section>
-    <section class="video-slider"></section>
+    <section class="gallery">
+        <div class="ellipse"></div>
+        <img src="media/chain.png" alt="chain" class="chain1 chain" />
+        <img src="media/chain.png" alt="chain" class="chain2 chain" />
+
+        <h2 class="section-title">
+            Праздник, который вы запомните надолго!
+        </h2>
+        <swiper-container class="gallery-swiper" centered-slides="true" slides-per-view="1" pagination="true"
+            pagination-el=".gallery .pagination" pagination-clickable="true" keyboard="true">
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery1">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery1">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery2">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery2">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery2">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery2">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery3">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery3">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery3">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery3">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery4">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery4">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery4">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery4">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery5">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery5">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery5">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery5">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery6">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery6">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery6">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery6">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+        <div class="pagination"></div>
+    </section>
     <section class="reserve">
-        <img src="./media/cockroach.png" alt="" class="cockroach1">
-        <img src="./media/cockroach.png" alt="" class="cockroach2">
-        <img src="./media/cockroach.png" alt="" class="cockroach3">
+        <img src="./media/cockroach.png" alt class="cockroach1" />
+        <img src="./media/cockroach.png" alt class="cockroach2" />
+        <img src="./media/cockroach.png" alt class="cockroach3" />
         <div class="content">
-            <h2 class="section-title">На ближайшие 3 недели уже забронированы 70% праздников</h2>
-            <p class="capture">Просто оставьте ваш номер ниже, мы проверим, свободна ли ваша дата и сделаем
-                предварительную бронь совершенно бесплатно</p>
+            <h2 class="section-title">
+                На ближайшие 3 недели уже забронированы 70% праздников
+            </h2>
+            <p class="capture">
+                Просто оставьте ваш номер ниже, мы проверим, свободна ли
+                ваша дата и сделаем предварительную бронь совершенно
+                бесплатно
+            </p>
         </div>
         <div class="form">
             <input type="tel" data-tel-input placeholder="+7 900 000 00 00" maxlength="18" />
@@ -235,16 +380,20 @@
         <div class="ellipse"></div>
         <div class="content">
             <h2 class="section-title">Подробнее про наше шоу</h2>
-            <p class="description">Посмотрите видео и убедитесь в том, что такой праздник участники точно не забудут,
-                либо оставьте нам свои контакты, и мы
-                отправим вам материалы в любой удобный мессенджер</p>
+            <p class="description">
+                Посмотрите видео и убедитесь в том, что такой праздник
+                участники точно не забудут, либо оставьте нам свои контакты,
+                и мы отправим вам материалы в любой удобный мессенджер
+            </p>
             <ul class="features">
                 <li class="feature">
                     <div class="icon gradient-text">6+</div>
                     <p class="capture">возраст: от 6 лет</p>
                 </li>
                 <li class="feature">
-                    <div class="icon"><img src="media/players.svg" alt="icon"></div>
+                    <div class="icon">
+                        <img src="media/players.svg" alt="icon" />
+                    </div>
                     <p class="capture">10-20 игроков</p>
                 </li>
                 <li class="feature">
@@ -263,19 +412,164 @@
             </video>
         </div>
     </section>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, sequi! Earum consectetur labore quis eligendi
-        dolor error, placeat corporis dicta ipsa, doloremque laborum, mollitia laudantium cupiditate? Quis eveniet nemo
-        sed?
-        Magni aperiam voluptate at exercitationem tempore, quisquam ea eius. Repellat, est, distinctio totam placeat vel
-        ullam sequi nesciunt facilis perspiciatis nam eius non possimus dolore ex saepe, obcaecati fugit earum!
-        Cumque dicta placeat dolore repudiandae? Quia, architecto? Minima laborum autem tempora, iure eveniet odit
-        libero nemo. Sed harum dolor eligendi beatae consequatur, assumenda ex id velit laboriosam aspernatur cumque
-        quas.
-        Quis vel, provident dolor, est neque debitis hic repudiandae blanditiis quam officia delectus culpa earum veniam
-        odit quidem labore facilis! Ad quo voluptate beatae! Maxime atque beatae alias libero quae.
-        Eveniet delectus hic incidunt cupiditate asperiores inventore dolorum quae veritatis iure nam facilis possimus
-        culpa itaque vitae dolorem ratione, quidem recusandae similique quam enim? Ducimus saepe necessitatibus
-        doloribus accusamus eligendi?</p>
+    <section class="reviews full_section" id="reviews">
+        <h2 class="section-title in-container">Отзывы наших гостей</h2>
+        <swiper-container class="swiper-reviews" centered-slides="true" slides-per-view="2" pagination="true"
+            pagination-el=".reviews .pagination" pagination-clickable="true" keyboard="true">
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/sample-5s.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+        <div class="pagination"></div>
+    </section>
+    <section class="feadback full_section">
+        <div class="content">
+            <div class="lilman">
+                <img src="media/lilman.png" alt="lilman" />
+            </div>
+            <h2 class="section-title">
+                Все ещё не можете представить праздник в формате «Форт
+                Боярд»?
+            </h2>
+            <p class="text">
+                Лучше один раз увидеть, чем прочитать 100 отзывов в
+                интернете
+            </p>
+            <div class="capture">
+                Запишитесь на виртуальную экскурсию по площадке, а также
+                получите видео с недавних мероприятий
+            </div>
+            <form class="form">
+                <input type="tel" data-tel-input placeholder="+7 900 000 00 00" maxlength="18" />
+                <button class="primary-btn">
+                    <p class="content">забронировать</p>
+                    <span class="bottom-part"></span>
+                </button>
+            </form>
+        </div>
+        <div class="map">
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A12e9e17d30fd16b37016e9102a292dfd87d514284ff5d84e69cd686867e8e41b&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="grid">
+            <div class="logo" style="grid-area: logo">
+                <img src="media/logo.png" alt="logo" />
+                <div class="text">
+                    <p>ИП Дмитриева Е.С.</p>
+                    <p>ИНН 540621674185</p>
+                    <p>ОГРНИП 311547619300104</p>
+                </div>
+            </div>
+            <div class="main" style="grid-area: main">
+                <h6 class="gradient-text">Главная</h6>
+                <a href="#">Игра</a>
+                <a href="#">Сервис</a>
+                <a href="#">Отзывы</a>
+                <a href="#">Контакты</a>
+            </div>
+            <div class="holidays" style="grid-area: holidays">
+                <h6 class="gradient-text">Контакты</h6>
+                <div class="text">
+                    <a href="#">Корпоратив</a>
+                    <a href="#">Выход классом</a>
+                    <a href="#">Февромарт</a>
+                    <a href="#">Выпускные</a>
+                    <a href="#">Новый год</a>
+                    <a href="#">Взрослый день рождения</a>
+                    <a href="#">Детский день рождения</a>
+                </div>
+            </div>
+            <div class="contacts" style="grid-area: contacts">
+                <h6 class="gradient-text">Контакты</h6>
+                <div class="text">
+                    <p>ПН-ПТ: 09:00—18:00</p>
+                    <a href="tel:+78001234567">8 800 123-45-67</a>
+                    <a href="mailto:mail@planeta.ooo">mail@planeta.ooo</a>
+                </div>
+                <div class="payment">
+                    <p>Мы принимаем к оплате:</p>
+                    <div class="methods">
+                        <div class="method"><img src="media/payment1.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment2.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment3.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment4.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment5.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment6.png" alt="method" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="socials" style="grid-area: socials">
+                <h6 class="gradient-text">Пишите нам 24/7</h6>
+                <div class="socials-wrapper">
+                    <div class="social">
+                        <img src="media/whatsapp.svg" alt="tg">
+                        <span>в WhatsApp</span>
+                    </div>
+                    <div class="social">
+                        <img src="media/telegramm.svg" alt="tg">
+                        <span>в Telegram</span>
+                    </div>
+                    <div class="social">
+                        <img src="media/VKontakte.svg" alt="tg">
+                        <span>в ВК</span>
+                    </div>
+                    <div class="social">
+                        <img src="media/Instagram.svg" alt="tg">
+                        <span>в Instagram</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Золото Форта</p>
+            <div class="gradient-text">
+                <p>Продвижение и разработка</p>
+                <a href="ConstKen.com" class="underline_animation">ConstKen.com</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
