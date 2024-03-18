@@ -11,6 +11,35 @@
     <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        .hero {
+            background-image: url(./media/corporativ.png);
+            background-position: top -40px right 0;
+        }
+
+        @media (max-width: 1200px) {
+            .hero {
+                background-image: url(./media/corporativMobile.png);
+                margin-bottom: 40px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                margin-bottom: 0;
+                background-size: 100%;
+            }
+        }
+
+        .hero .key1 {
+            left: 10vw;
+            top: -150px;
+        }
+
+        .adventure {
+            margin-bottom: 200px;
+        }
+    </style>
 </head>
 
 <body>
@@ -55,12 +84,12 @@
     <section class="hero">
         <img src="./media/key.png" alt class="key1" />
         <img src="./media/key.png" alt class="key2" />
+        <img src="media/money-hero.png" alt="money" class="money-main">
         <div class="hero__content">
             <img src="media/bglightning.png" alt class="blub" />
-            <img src="media/money.png" alt class="money1" />
-            <img src="media/money2.png" alt class="money2" />
+            <img src="media/money.png" alt class="money1" /><img src="media/money2.png" alt class="money2" />
             <h1 class="section-title">
-                Организуем праздник <br />в стиле «Форт Боярд» <br />в
+                Организуем корпоратив <br />в стиле «Форт Боярд» <br />в
                 Красногорске
             </h1>
             <p class="capture gradient-text">
@@ -126,55 +155,9 @@
             </div>
         </div>
     </section>
-    <section class="events" id="events">
-        <img src="media/money3.png" alt="money" class="money" />
-        <h2 class="section-title gradient-text">
-            На каждое событие <br />
-            у нас есть захватывающий сценарий
-        </h2>
-        <div class="slider-wrapper">
-            <swiper-container navigation="true" navigation-next-el=".next-arrow" navigation-prev-el=".prev-arrow"
-                pagination="true" pagination-el=".events .pagination" pagination-clickable="true" space-between="20">
-                <swiper-slide>
-                    <img src="media/slider1.png" alt loading="lazy" />
-                    <p class="capture gradient-text">День Рождения</p>
-                </swiper-slide>
-                <swiper-slide><img src="media/slider2.png" alt loading="lazy" />
-                    <p class="capture gradient-text">Выпускной</p>
-                </swiper-slide>
-                <swiper-slide><img src="media/test.jpg" alt loading="lazy" />
-                    <p class="capture gradient-text">Корпоратив</p>
-                </swiper-slide>
-                <swiper-slide><img src="media/slider4.png" alt loading="lazy" />
-                    <p class="capture gradient-text">Выход классом</p>
-                </swiper-slide>
-                <swiper-slide><img src="media/slider1.png" alt loading="lazy" />
-                    <p class="capture gradient-text">День Рождения</p>
-                </swiper-slide>
-                <swiper-slide><img src="media/test.jpg" alt loading="lazy" />
-                    <p class="capture gradient-text">День Рождения</p>
-                </swiper-slide>
-                <swiper-slide><img src="media/slider3.png" alt loading="lazy" />
-                    <p class="capture gradient-text">День Рождения</p>
-                </swiper-slide>
-                <swiper-slide><img src="media/slider4.png" alt loading="lazy" />
-                    <p class="capture gradient-text">День Рождения</p>
-                </swiper-slide>
-            </swiper-container>
-            <div class="navigation">
-                <span class="prev-arrow">
-                    <img src="media/arrow.svg" alt="prev" />
-                </span>
-                <span class="next-arrow">
-                    <img src="media/arrow.svg" alt="next" />
-                </span>
-            </div>
-            <div class="pagination"></div>
-        </div>
-    </section>
+
     <section class="survey">
         <img src="media/money3.png" alt="money" class="money" />
-        <img src="./media/key2.png" alt="key" class="key" />
         <img src="media/key3.png" alt="key" class="key2" />
         <img src="media/key.png" alt="key" class="key3" />
         <h2 class="section-title">

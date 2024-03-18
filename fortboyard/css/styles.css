@@ -294,7 +294,7 @@ footer,
 }
 
 h1.section-title {
-  font-size: calc(0.0133757962 * 100vw + 28.2484076433px);
+  font-size: calc(0.0159235669 * 100vw + 23.152866242px);
   margin: 0;
 }
 
@@ -374,7 +374,7 @@ header {
 .nav {
   z-index: 100;
   position: relative;
-  padding: 20px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -404,6 +404,7 @@ header {
 .nav__contacts {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 .nav__contacts .phone {
   display: flex;
@@ -450,7 +451,7 @@ header {
 @media (max-width: 1200px) {
   .menu {
     position: absolute;
-    top: 100%;
+    top: 82px;
     right: -150%;
     transition: right 0.4s;
     flex-direction: column;
@@ -460,10 +461,11 @@ header {
     background-color: rgb(34, 34, 34);
     padding: 20px;
     height: 100vh;
-    width: 100vw;
+    width: 110vw;
+    padding-left: 10vw;
   }
   .menu.is-active {
-    right: -20px;
+    right: -10vw;
   }
   .nav .hamburger {
     display: block;
@@ -517,6 +519,18 @@ header {
 }
 .hero__content .blub {
   display: none;
+}
+.hero .money-main {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 35vw;
+  z-index: 10;
+}
+@media (max-width: 1200px) {
+  .hero .money-main {
+    display: none;
+  }
 }
 .hero .key1 {
   position: absolute;
@@ -594,6 +608,11 @@ header {
     background-size: 120%;
     background-position: 100% 0;
   }
+  .hero__content .blub {
+    min-width: 110%;
+    top: auto;
+    bottom: 40px;
+  }
 }
 @media (max-width: 768px) {
   .hero {
@@ -603,7 +622,6 @@ header {
   }
   .hero__content .blub {
     min-width: 130%;
-    top: -55%;
   }
 }
 @media (max-width: 576px) {
@@ -623,18 +641,22 @@ header {
   }
   .hero__content .blub {
     min-width: 150%;
-    top: -45%;
   }
 }
 @media (max-width: 430px) {
   .hero__content .blub {
     min-width: 180%;
-    top: -55%;
+    top: -70%;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .hero__content .section-title {
     font-size: 28px;
+  }
+}
+@media (max-width: 373px) {
+  .hero__content .section-title {
+    font-size: 26px;
   }
 }
 
@@ -1467,7 +1489,7 @@ header {
 .about .video {
   display: flex;
   align-items: center;
-  max-width: 50%;
+  width: 50%;
 }
 .about .video .plyr {
   max-height: 480px;

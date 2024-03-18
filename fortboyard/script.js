@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             menu.classList.remove('is-active');
             burger.classList.remove('is-active');
-            body.classList.toggle('no-scroll');
-            html.classList.toggle('no-scroll');
+            body.classList.remove('no-scroll');
+            html.classList.remove('no-scroll');
             const id = smoothLink.getAttribute('href');
             console.log(id);
             document.querySelector(id).scrollIntoView({
@@ -31,23 +31,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const swiperEl_events = document.querySelector('.events swiper-container');
-    const swiperParams_events = {
-        breakpoints: {
-            0: {
-                slidesOffsetBefore: 20,
-                slidesPerView: "auto"
-            },
-            992: {
-                slidesPerView: 4
-            },
-            1200: {
-                slidesOffsetBefore: 0,
-                slidesPerView: 4
-            },
-        }
-    };
-    Object.assign(swiperEl_events, swiperParams_events);
-    swiperEl_events.initialize();
+    if (swiperEl_events) {
+
+        const swiperParams_events = {
+            breakpoints: {
+                0: {
+                    slidesOffsetBefore: 20,
+                    slidesPerView: "auto"
+                },
+                992: {
+                    slidesPerView: 4
+                },
+                1200: {
+                    slidesOffsetBefore: 0,
+                    slidesPerView: 4
+                },
+            }
+        };
+        Object.assign(swiperEl_events, swiperParams_events);
+        swiperEl_events.initialize();
+    }
 
     const swiperGallery = document.querySelector(".gallery swiper-container")
     swiperGallery.addEventListener('swiperslidechange', (event) => {

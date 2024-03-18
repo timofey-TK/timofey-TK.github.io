@@ -94,7 +94,7 @@ footer,
 }
 
 h1.section-title {
-    font-size: calcFluidFontSize(34, 55);
+    font-size: calcFluidFontSize(30, 55);
     margin: 0;
 }
 
@@ -188,7 +188,7 @@ header {
 .nav {
     z-index: 100;
     position: relative;
-    padding: 20px 0;
+    padding: 15px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -219,6 +219,7 @@ header {
     &__contacts {
         display: flex;
         gap: 20px;
+        align-items: center;
 
         .phone {
             display: flex;
@@ -271,7 +272,7 @@ header {
 @media (max-width: 1200px) {
     .menu {
         position: absolute;
-        top: 100%;
+        top: 82px;
         right: -150%;
         transition: right 0.4s;
         flex-direction: column;
@@ -281,10 +282,11 @@ header {
         background-color: rgb(34, 34, 34);
         padding: 20px;
         height: 100vh;
-        width: 100vw;
+        width: 110vw;
+        padding-left: 10vw;
 
         &.is-active {
-            right: -20px;
+            right: -10vw;
         }
     }
 
@@ -351,6 +353,18 @@ header {
         }
 
         .blub {
+            display: none;
+        }
+    }
+
+    .money-main {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 35vw;
+        z-index: 10;
+
+        @media (max-width: 1200px) {
             display: none;
         }
     }
@@ -435,6 +449,14 @@ header {
         padding-top: 80%;
         background-size: 120%;
         background-position: 100% 0;
+
+        &__content {
+            .blub {
+                min-width: 110%;
+                top: auto;
+                bottom: 40px;
+            }
+        }
     }
 
     @media (max-width: 768px) {
@@ -445,7 +467,7 @@ header {
         &__content {
             .blub {
                 min-width: 130%;
-                top: -55%;
+
             }
         }
     }
@@ -470,7 +492,7 @@ header {
         &__content {
             .blub {
                 min-width: 150%;
-                top: -45%;
+
             }
         }
     }
@@ -479,15 +501,23 @@ header {
         &__content {
             .blub {
                 min-width: 180%;
-                top: -55%;
+                top: -70%;
             }
         }
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         &__content {
             .section-title {
                 font-size: 28px;
+            }
+        }
+    }
+
+    @media (max-width: 373px) {
+        &__content {
+            .section-title {
+                font-size: 26px;
             }
         }
     }
