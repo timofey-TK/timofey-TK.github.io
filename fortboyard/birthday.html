@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форт Боярд</title>
+    <!-- Шрифты -->
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        .hero {
+            background-image: url(./media/birthday.png);
+            background-position: top -100px right 0;
+        }
+
+        @media (max-width: 1600px) {
+            .hero {
+                background-size: 100%;
+                background-position: top -100px right -200px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .hero {
+                background-image: url(./media/birthdayMobile.png);
+                margin-bottom: 40px;
+                background-position: top -100px right 0;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                margin-bottom: 0;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                margin-bottom: 0;
+                background-position: top -50px right 0;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .hero__content .section-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 370px) {
+            .hero__content .section-title {
+                font-size: 22px;
+            }
+        }
+
+        .hero .key1 {
+            left: 10vw;
+            top: -150px;
+        }
+
+        .adventure {
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!--====================Навбар====================-->
+        <nav class="nav">
+            <div class="nav__logo">
+                <img src="media/logo.png" alt="logo" />
+            </div>
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+            </button>
+            <div class="menu">
+                <ul class="nav__links">
+                    <li>
+                        <a href="#game" class="underline_animation smooth-scroll">Игра</a>
+                    </li>
+                    <li>
+                        <a href="#events" class="underline_animation smooth-scroll">Сценарии</a>
+                    </li>
+                    <li>
+                        <a href="#reviews" class="underline_animation smooth-scroll">Отзывы</a>
+                    </li>
+                    <li>
+                        <a href="#footer" class="underline_animation smooth-scroll">Контакты</a>
+                    </li>
+                </ul>
+                <div class="nav__contacts">
+                    <div class="phone">
+                        <a href="tel:+74951197468" class="phone__tel">8 (495) 119-74-68</a><a href
+                            class="phone__link gradient-text">заказать звонок</a>
+                    </div>
+                    <div class="messengers">
+                        <a href="#" class="telegramm"><img src="media/telegramm.svg" alt="telegramm" /></a><a href="#"
+                            class="whatsapp"><img src="media/whatsapp.svg" alt="whatsapp" /></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--===================hero====================-->
+    <section class="hero">
+        <img src="./media/key.png" alt class="key1" />
+        <img src="./media/key.png" alt class="key2" />
+        <img src="media/money-hero.png" alt="money" class="money-main">
+        <div class="hero__content">
+            <img src="media/bglightning.png" alt class="blub" />
+            <img src="media/money.png" alt class="money1" /><img src="media/money2.png" alt class="money2" />
+            <h1 class="section-title">
+                Организуем день рождения <br />в стиле «Форт Боярд» <br />в
+                Красногорске
+            </h1>
+            <p class="capture gradient-text">
+                С полным погружением в атмосферу<br />телешоу с настоящими
+                животными
+            </p>
+            <button class="primary-btn">
+                <p class="content">узнать стоимость</p>
+                <span class="bottom-part"></span>
+            </button>
+        </div>
+    </section>
+    <!--===================adventure====================-->
+    <section class="adventure" id="game">
+        <div class="blub"></div>
+        <img src="media/chain.png" alt="chain" class="chain" />
+        <h2 class="section-title">
+            Почувствуйте себя героем настоящего приключения
+        </h2>
+        <div class="grid">
+            <div class="box gradient-text">
+                <p class="box__name">32 испытания</p>
+                <p class="box__description">
+                    минимальное время стандартного праздника
+                </p>
+            </div>
+            <div class="box white-box">
+                <p class="box__name">2, 5 часа</p>
+                <p class="box__description">
+                    минимальное время стандартного праздника
+                </p>
+            </div>
+            <div class="box cockroach-box">
+                <p class="box__name">Реальные насекомые и животные</p>
+                <p class="box__description">
+                    животных и насекомых для полного погружения
+                </p>
+                <img src="media/cockroach.png" alt="cockroach" class="cockroach1" /><img src="media/cockroach.png"
+                    alt="cockroach" class="cockroach2" />
+            </div>
+        </div>
+        <div class="characters">
+            <div class="count">
+                <p class="num gradient-text">5</p>
+                <p class="capture">
+                    персонажей <br />оригинального <br />Форта Боярд
+                </p>
+            </div>
+            <div class="character">
+                <img src="media/metr.png" alt="character" />
+            </div>
+            <div class="character">
+                <img src="media/paspartu.png" alt="character" />
+            </div>
+            <div class="character">
+                <img src="media/monik.png" alt="character" />
+            </div>
+            <div class="character">
+                <img src="media/fura.png" alt="character" />
+            </div>
+            <div class="character">
+                <img src="media/lyabul.png" alt="character" />
+            </div>
+        </div>
+    </section>
+
+    <section class="survey">
+        <img src="media/money3.png" alt="money" class="money" />
+        <img src="media/key3.png" alt="key" class="key2" />
+        <img src="media/key.png" alt="key" class="key3" />
+        <h2 class="section-title">
+            Пройдите короткий опрос и узнайте стоимость вашего праздника
+        </h2>
+        <div class="btn-wrapper">
+            <button class="primary-btn">
+                <p class="content">пройти опрос</p>
+                <span class="bottom-part"></span>
+            </button>
+        </div>
+    </section>
+    <section class="organization">
+        <h2 class="section-title gradient-text">
+            Вам не придется тратить время на поиск подрядчиков, <br />
+            мы возьмем всю организацию на себя
+        </h2>
+        <div class="grid">
+            <div class="grid-item" style="grid-area: a">
+                <img src="media/organization1.png" alt="phtografer" />
+                <p class="capture">Профессиональный фотограф</p>
+            </div>
+            <div class="grid-item" style="grid-area: b">
+                <img src="media/organization2.png" alt="feature" />
+                <p class="capture">Фирменный торт</p>
+            </div>
+            <div class="grid-item" style="grid-area: c">
+                <img src="media/test.jpg" alt="feature" />
+                <p class="capture">Стилизованная банкетная зона</p>
+            </div>
+            <div class="grid-item" style="grid-area: d">
+                <img src="media/organization2.png" alt="feature" />
+                <p class="capture">Украшение банкетной зоны</p>
+            </div>
+            <div class="grid-item" style="grid-area: e">
+                <img src="media/test.jpg" alt="feature" />
+                <p class="capture">Дискотека с DJ</p>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="ellipse"></div>
+        <img src="media/chain.png" alt="chain" class="chain1 chain" />
+        <img src="media/chain.png" alt="chain" class="chain2 chain" />
+
+        <h2 class="section-title">
+            Праздник, который вы запомните надолго!
+        </h2>
+        <swiper-container class="gallery-swiper" centered-slides="true" slides-per-view="1" pagination="true"
+            pagination-el=".gallery .pagination" pagination-clickable="true" keyboard="true">
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery1">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery1">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery1">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery2">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery2">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery2">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery2">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery3">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery3">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery3">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery3">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery4">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery4">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery4">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery4">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery5">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery5">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery5">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery5">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-photos">
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery6">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery6">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/organization2.png" class="glightbox" data-gallery="gallery6">
+                        <img src="media/organization2.png" alt="photo" class="photo" />
+                    </a>
+                    <a href="media/test.jpg" class="glightbox" data-gallery="gallery6">
+                        <img src="media/test.jpg" alt="photo" class="photo" />
+                    </a>
+                </div>
+                <div class="slider-video">
+                    <video class="gallery-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+        <div class="pagination"></div>
+    </section>
+    <section class="reserve">
+        <img src="./media/cockroach.png" alt class="cockroach1" />
+        <img src="./media/cockroach.png" alt class="cockroach2" />
+        <img src="./media/cockroach.png" alt class="cockroach3" />
+        <div class="content">
+            <h2 class="section-title">
+                На ближайшие 3 недели уже забронированы 70% праздников
+            </h2>
+            <p class="capture">
+                Просто оставьте ваш номер ниже, мы проверим, свободна ли
+                ваша дата и сделаем предварительную бронь совершенно
+                бесплатно
+            </p>
+        </div>
+        <div class="form">
+            <input type="tel" data-tel-input placeholder="+7 900 000 00 00" maxlength="18" />
+            <button class="primary-btn">
+                <p class="content">забронировать</p>
+                <span class="bottom-part"></span>
+            </button>
+        </div>
+    </section>
+    <section class="about">
+        <img src="media/chain.png" alt="chain" class="chain" />
+        <div class="ellipse"></div>
+        <div class="content">
+            <h2 class="section-title">Подробнее про наше шоу</h2>
+            <p class="description">
+                Посмотрите видео и убедитесь в том, что такой праздник
+                участники точно не забудут, либо оставьте нам свои контакты,
+                и мы отправим вам материалы в любой удобный мессенджер
+            </p>
+            <ul class="features">
+                <li class="feature">
+                    <div class="icon gradient-text">6+</div>
+                    <p class="capture">возраст: от 6 лет</p>
+                </li>
+                <li class="feature">
+                    <div class="icon">
+                        <img src="media/players.svg" alt="icon" />
+                    </div>
+                    <p class="capture">10-20 игроков</p>
+                </li>
+                <li class="feature">
+                    <div class="icon gradient-text">350 м²</div>
+                    <p class="capture">площадь для игр</p>
+                </li>
+            </ul>
+            <button class="primary-btn">
+                <p class="content">записаться</p>
+                <span class="bottom-part"></span>
+            </button>
+        </div>
+        <div class="video">
+            <video id="about-player" playsinline controls>
+                <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </section>
+    <section class="reviews full_section" id="reviews">
+        <h2 class="section-title in-container">Отзывы наших гостей</h2>
+        <swiper-container class="swiper-reviews" centered-slides="true" slides-per-view="2" pagination="true"
+            pagination-el=".reviews .pagination" pagination-clickable="true" keyboard="true">
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/sample-5s.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+            <swiper-slide>
+                <div class="slider-content">
+                    <video class="reviews-player" playsinline controls>
+                        <source src="media/SampleVideo_1280x720_2mb.mp4" type="video/mp4" />
+                    </video>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+        <div class="pagination"></div>
+    </section>
+    <section class="feadback full_section">
+        <div class="content">
+            <div class="lilman">
+                <img src="media/lilman.png" alt="lilman" />
+            </div>
+            <h2 class="section-title">
+                Все ещё не можете представить праздник в формате «Форт
+                Боярд»?
+            </h2>
+            <p class="text">
+                Лучше один раз увидеть, чем прочитать 100 отзывов в
+                интернете
+            </p>
+            <div class="capture">
+                Запишитесь на виртуальную экскурсию по площадке, а также
+                получите видео с недавних мероприятий
+            </div>
+            <form class="form">
+                <input type="tel" data-tel-input placeholder="+7 900 000 00 00" maxlength="18" />
+                <button class="primary-btn">
+                    <p class="content">забронировать</p>
+                    <span class="bottom-part"></span>
+                </button>
+            </form>
+        </div>
+        <div class="map">
+            <script type="text/javascript" charset="utf-8" async
+                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A12e9e17d30fd16b37016e9102a292dfd87d514284ff5d84e69cd686867e8e41b&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="grid">
+            <div class="logo" style="grid-area: logo">
+                <img src="media/logo.png" alt="logo" />
+                <div class="text">
+                    <p>ИП Дмитриева Е.С.</p>
+                    <p>ИНН 540621674185</p>
+                    <p>ОГРНИП 311547619300104</p>
+                </div>
+            </div>
+            <div class="main" style="grid-area: main">
+                <h6 class="gradient-text">Главная</h6>
+                <a href="#">Игра</a>
+                <a href="#">Сервис</a>
+                <a href="#">Отзывы</a>
+                <a href="#">Контакты</a>
+            </div>
+            <div class="holidays" style="grid-area: holidays">
+                <h6 class="gradient-text">Контакты</h6>
+                <div class="text">
+                    <a href="#">Корпоратив</a>
+                    <a href="#">Выход классом</a>
+                    <a href="#">Февромарт</a>
+                    <a href="#">Выпускные</a>
+                    <a href="#">Новый год</a>
+                    <a href="#">Взрослый день рождения</a>
+                    <a href="#">Детский день рождения</a>
+                </div>
+            </div>
+            <div class="contacts" style="grid-area: contacts">
+                <h6 class="gradient-text">Контакты</h6>
+                <div class="text">
+                    <p>ПН-ПТ: 09:00—18:00</p>
+                    <a href="tel:+78001234567">8 800 123-45-67</a>
+                    <a href="mailto:mail@planeta.ooo">mail@planeta.ooo</a>
+                </div>
+                <div class="payment">
+                    <p>Мы принимаем к оплате:</p>
+                    <div class="methods">
+                        <div class="method"><img src="media/payment1.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment2.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment3.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment4.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment5.png" alt="method" /></div>
+                        <div class="method"><img src="media/payment6.png" alt="method" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="socials" style="grid-area: socials">
+                <h6 class="gradient-text">Пишите нам 24/7</h6>
+                <div class="socials-wrapper">
+                    <a class="social" href="#">
+                        <img src="media/whatsapp.svg" alt="tg">
+                        <span>в WhatsApp</span>
+                    </a>
+                    <a class="social" href="#">
+                        <img src="media/telegramm.svg" alt="tg">
+                        <span>в Telegram</span>
+                    </a>
+                    <a class="social" href="#">
+                        <img src="media/VKontakte.svg" alt="tg">
+                        <span>в ВКонтакте</span>
+                    </a>
+                    <a class="social" href="#">
+                        <img src="media/Instagram.svg" alt="tg">
+                        <span>в Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© Золото Форта</p>
+            <div class="gradient-text">
+                <p>Продвижение и разработка</p>
+                <a href="ConstKen.com" class="underline_animation">ConstKen.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

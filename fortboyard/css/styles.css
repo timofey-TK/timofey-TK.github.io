@@ -524,7 +524,7 @@ header {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 35vw;
+  width: calc(0.1592356688 * 100vw + 231.5286624204px);
   z-index: 10;
 }
 @media (max-width: 1200px) {
