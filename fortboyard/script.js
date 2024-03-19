@@ -135,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
             return input.value = "";
         }
 
+
         if (input.value.length != selectionStart) {
             // Editing in the middle of input, not last symbol
             if (e.data && /\D/g.test(e.data)) {
@@ -161,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 formattedInputValue += '-' + inputNumbersValue.substring(9, 11);
             }
         } else {
-            formattedInputValue = '+' + inputNumbersValue.substring(0, 16);
+            formattedInputValue = "";
         }
         input.value = formattedInputValue;
     }

@@ -897,7 +897,13 @@ header {
   height: 335px;
   overflow: hidden;
 }
-.events swiper-slide::after {
+.events swiper-slide > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.events swiper-slide > a::after {
   position: absolute;
   top: 0;
   left: 0;
