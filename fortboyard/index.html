@@ -187,11 +187,34 @@
             Пройдите короткий опрос и узнайте стоимость вашего праздника
         </h2>
         <div class="btn-wrapper">
-            <button class="primary-btn">
+            <a class="primary-btn" href="#popup:marquiz_65ccedaf8680f50026cf2573">
                 <p class="content">пройти опрос</p>
                 <span class="bottom-part"></span>
-            </button>
+            </a>
+            <!-- Marquiz script start -->
+            <script>
+                (function (w, d, s, o) {
+                    var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js'; j.onload = function () {
+                        if (document.readyState !== 'loading') Marquiz.init(o);
+                        else document.addEventListener("DOMContentLoaded", function () {
+                            Marquiz.init(o);
+                        });
+                    };
+                    d.head.insertBefore(j, d.head.firstElementChild);
+                })(window, document, 'script', {
+                    host: '//quiz.marquiz.ru',
+                    region: 'eu',
+                    id: '65ccedaf8680f50026cf2573',
+                    autoOpen: false,
+                    autoOpenFreq: 'once',
+                    openOnExit: false,
+                    disableOnMobile: false
+                }
+                );
+            </script>
+            <!-- Marquiz script end -->
         </div>
+
     </section>
     <section class="organization">
         <h2 class="section-title gradient-text">
@@ -512,20 +535,20 @@
             <div class="main" style="grid-area: main">
                 <h6 class="gradient-text">Главная</h6>
                 <a href="#game">Игра</a>
-                <a href="#">Сервис</a>
+                <a href="#events">Сервис</a>
                 <a href="#reviews">Отзывы</a>
                 <a href="#footer">Контакты</a>
             </div>
             <div class="holidays" style="grid-area: holidays">
                 <h6 class="gradient-text">Праздники</h6>
                 <div class="text">
-                    <a href="#">Корпоратив</a>
-                    <a href="#">Выход классом</a>
-                    <a href="#">Февромарт</a>
-                    <a href="#">Выпускные</a>
-                    <a href="#">Новый год</a>
-                    <a href="#">Взрослый день рождения</a>
-                    <a href="#">Детский день рождения</a>
+                    <a href="corporativ.html">Корпоратив</a>
+                    <a href="class.html">Выход классом</a>
+                    <a href="fevromart.html">Февромарт</a>
+                    <a href="graduation.html">Выпускные</a>
+                    <a href="new_year.html">Новый год</a>
+                    <a href="birthday.html">Взрослый день рождения</a>
+                    <a href="child_birthday.html">Детский день рождения</a>
                 </div>
             </div>
             <div class="contacts" style="grid-area: contacts">
