@@ -263,6 +263,21 @@ footer,
   }
 }
 
+.swal2-html-container {
+  overflow: visible !important;
+}
+
+.swal2-popup {
+  border-radius: 20px;
+}
+
+#popup__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .full_section {
   padding: 0;
 }
@@ -365,6 +380,16 @@ input {
 
 .plyr--playing .plyr__controls {
   opacity: 1;
+}
+
+.plyr__poster {
+  background-size: cover;
+}
+
+.plyr__control--overlaid {
+  background: none !important;
+  color: #222;
+  transform: translate(-50%, -50%) scale(2);
 }
 
 header {
@@ -684,7 +709,8 @@ header {
 }
 @media (max-width: 576px) {
   .adventure .blub {
-    right: -70%;
+    right: -105%;
+    top: 60%;
   }
 }
 .adventure .chain {
@@ -875,6 +901,11 @@ header {
     margin: 0;
     font-size: calc(0.0076433121 * 100vw + 14.7133757962px);
     margin-top: -40%;
+  }
+}
+@media (max-width: 576px) {
+  .adventure .characters {
+    gap: 7px;
   }
 }
 
@@ -1316,6 +1347,7 @@ header {
 }
 
 .reserve {
+  z-index: 10;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -1409,6 +1441,22 @@ header {
   gap: 40px;
   position: relative;
 }
+.about .money {
+  position: absolute;
+  right: 0;
+  top: -80%;
+}
+@media (max-width: 1200px) {
+  .about .money {
+    width: 60%;
+    top: -60%;
+  }
+}
+@media (max-width: 992px) {
+  .about .money {
+    display: none;
+  }
+}
 .about .ellipse {
   z-index: -1;
   position: absolute;
@@ -1445,13 +1493,13 @@ header {
 }
 @media (max-width: 576px) {
   .about .chain {
-    max-width: 800px;
+    max-width: 600px;
     top: -25%;
   }
 }
 @media (max-width: 450px) {
   .about .chain {
-    max-width: 650px;
+    max-width: 570px;
     left: -18%;
     bottom: -52%;
   }
@@ -1462,7 +1510,7 @@ header {
   gap: 40px;
   padding: 50px 0;
   font-size: calc(0.0025477707 * 100vw + 14.9044585987px);
-  max-width: 50%;
+  max-width: 45%;
 }
 .about > .content .features {
   display: flex;
@@ -1481,7 +1529,6 @@ header {
   font-size: 33px;
 }
 .about > .content .primary-btn {
-  width: 330px;
   margin-top: 50px;
   height: 50px;
 }
@@ -1489,20 +1536,43 @@ header {
   height: 100%;
   width: 100%;
 }
+@media (max-width: 365px) {
+  .about > .content .primary-btn .content {
+    font-size: 16px;
+  }
+}
 .about > .content .section-title {
   margin: 0;
 }
 .about .video {
   display: flex;
   align-items: center;
-  width: 50%;
+  width: 55%;
+  position: relative;
 }
 .about .video .plyr {
   max-height: 480px;
   object-fit: cover;
   height: 100%;
   width: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.about .video .plyr::before {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 4px;
+  /* control the border thickness */
+  background: radial-gradient(76.99% 76.94% at 18.15% 89.13%, #f16b11 0%, #f8da45 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 @media (max-width: 992px) {
   .about {
@@ -1516,7 +1586,7 @@ header {
     margin: 0 auto;
   }
   .about .video {
-    max-width: 70%;
+    width: 90%;
   }
 }
 @media (max-width: 576px) {
@@ -1529,7 +1599,7 @@ header {
     width: 100%;
   }
   .about .video {
-    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -1538,23 +1608,40 @@ header {
   align-items: center;
   justify-content: center;
   height: 100%;
+  transition: transform 0.4s;
+  transform: scale(0.8);
 }
 .reviews .swiper-reviews .slider-content {
   pointer-events: none;
   max-height: 480px;
   border-radius: 20px;
-  transition: transform 0.4s;
-  transform: scale(0.8);
   overflow: hidden;
-  max-height: 100%;
+  width: 100%;
+}
+.reviews .swiper-reviews .slider-content::before {
+  z-index: 10;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 4px;
+  /* control the border thickness */
+  background: radial-gradient(76.99% 76.94% at 18.15% 89.13%, #f16b11 0%, #f8da45 100%);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 .reviews .swiper-reviews .plyr {
   width: 100%;
   height: 100%;
 }
+.reviews .swiper-reviews .swiper-slide-active {
+  transform: scale(1);
+}
 .reviews .swiper-reviews .swiper-slide-active .slider-content {
   pointer-events: all;
-  transform: scale(1);
 }
 @media (max-width: 992px) {
   .reviews .swiper-reviews {
