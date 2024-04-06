@@ -165,6 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
         controls: ['play-large', 'play', 'progress', "mute", "volume", 'fullscreen'],
     });
 
+
     const reviewsPlayers = Plyr.setup('.reviews-player', {
         controls: ['play-large', 'play', 'progress', "mute", "volume", 'settings', 'fullscreen'],
         settings: ['quality', "speed"],
