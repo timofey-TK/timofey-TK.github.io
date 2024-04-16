@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
+    <link rel="stylesheet" href="reset.css">
+    <!-- подключаем CSS-селекта -->
+    <link rel="stylesheet" href="custom-select.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav>
+        <img src="media/logo.svg" alt="logo" class="logo">
+        <ul class="links">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="index.html#catalog">Каталог</a></li>
+            <li><a href="about.html">О нас</a></li>
+        </ul>
+        <div class="cart">
+            <box-icon name="cart" color="#3a3f58" size="md"></box-icon>
+            <span class="not" style="display: none;"></span>
+        </div>
+        <div class="cart-modal">
+            <div class="modal-header">
+                <p>Корзина</p>
+                <button class="close-btn">
+                    <box-icon name="x" color="#ece6cd" size="md"></box-icon>
+                </button>
+            </div>
+            <p class="empty">Корзина пустая</p>
+            <div class="cart-item-grid">
+            </div>
+            <div class="modal-footer">
+                <button class="btn pay-btn">Оплатить</button>
+                <p class="sum"></p>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="hero">
+            <h1>Открой для себя исключительное в Книжном бункере</h1>
+            <div class="tags">
+                <button class="tag">Классика</button>
+                <button class="tag">Фэнтези</button>
+                <button class="tag">Детектив</button>
+                <button class="tag">Роман</button>
+                <button class="tag">Фантастика</button>
+                <button class="tag">Классика</button>
+                <button class="tag">Фэнтези</button>
+                <button class="tag">Детектив</button>
+                <button class="tag">Роман</button>
+                <button class="tag">Фантастика</button>
+            </div>
+        </div>
+    </header>
+    <section class="catalog" id="catalog">
+        <div class="filters">
+            <input type="text" class="search" placeholder="Найди свою книгу ...">
+            <div id="select"></div>
+        </div>
+        <div class="item-grid">
+        </div>
+    </section>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi perferendis cupiditate assumenda nisi
+        sint vel ullam distinctio iusto odio illo iste molestias asperiores culpa dolores optio repellat sunt,
+        repudiandae quaerat?
+        Adipisci consequatur excepturi, aut maiores delectus laborum, quo, ipsa id rerum consequuntur amet sunt
+        molestiae accusamus non. Corporis accusantium doloribus iure repudiandae voluptas dolorum debitis sint, aliquid,
+        consequuntur hic deserunt!
+        Tenetur ipsam doloribus nulla, vitae quis mollitia eveniet voluptatum repellat, architecto dolor libero, quidem
+        recusandae nam quam nemo repellendus beatae reiciendis. Eveniet veritatis ipsum animi hic, nulla cupiditate
+        consequuntur iusto.
+        Repellat ex cumque cupiditate consequatur soluta iste laudantium asperiores possimus doloribus! Perferendis
+        architecto repellat, possimus, provident odit earum quam tempora ratione sit deleniti quidem nulla. Quaerat
+        quibusdam veritatis alias voluptates.
+        Nemo, molestias inventore. Fugit, voluptatibus! Dolorum, placeat nobis ea cupiditate numquam ex nisi. Labore
+        impedit illum itaque incidunt eos, minus vero, cupiditate quaerat dolorum fugit ullam iste soluta et odio.
+        Dolorem recusandae molestias aliquid minus optio nihil voluptas maxime, consequuntur fuga officiis illum
+        quisquam! Odio sequi ex, minima deleniti pariatur fugiat quibusdam alias voluptas modi earum, quisquam doloribus
+        provident nihil.
+        Fuga maiores a sunt corporis minus nesciunt porro id illo in nostrum incidunt vitae atque error odio inventore
+        nam vero voluptates, repellendus hic ratione eveniet assumenda unde, eum explicabo. Nesciunt!
+        Voluptatem quidem dolore voluptatum, modi sed dicta pariatur! Quos architecto id amet. Atque totam magni
+        reiciendis corporis esse natus similique velit perspiciatis quisquam repellat, cupiditate maxime dolorum eum
+        nulla tempore.
+        Ea sapiente numquam placeat qui asperiores harum fugit reiciendis, in eos sunt dolores maxime amet quos
+        doloremque dicta voluptatibus ex quae expedita mollitia neque iure eum fugiat. Non, quasi blanditiis.
+        Corporis aliquam expedita et? Ab modi libero molestias recusandae blanditiis quisquam ex distinctio! Expedita,
+        quibusdam! Perferendis distinctio, officiis a eligendi tempora consequatur commodi. Temporibus deleniti ex
+        doloribus explicabo totam dolorem?
+    </section>
+    <footer>
+        <div class="hr"></div>
+        <p>© радмилка 2024</p>
+    </footer>
+
+    <script src="db.js"></script>
+    <!-- подключаем JS-селекта -->
+    <script src="custom-select.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

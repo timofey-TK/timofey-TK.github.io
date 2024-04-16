@@ -24,41 +24,7 @@ function popUp() {
     })
 }
 
-function sendMail(e) {
-    e.preventDefault();
-    const formData = new FormData(this);
 
-    fetch('process_form.php', {
-        method: 'POST',
-        body: formData
-    })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Произошла ошибка');
-            }
-            return response.text();
-        })
-        .then(data => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Спасибо ваша заявка принята!',
-                color: "#fff",
-                confirmButtonColor: "#ff7c03",
-                background: "#222",
-            });
-        })
-        .catch(error => {
-            console.error('Ошибка:', error);
-            Swal.fire({
-                icon: 'error',
-                color: "#fff",
-                title: 'Ошибка!',
-                text: 'Что-то пошло не так.',
-                background: "#222",
-                confirmButtonColor: "#ff7c03"
-            });
-        });
-}
 
 
 document.addEventListener("DOMContentLoaded", function () {
