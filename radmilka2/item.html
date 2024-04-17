@@ -41,44 +41,25 @@
             </div>
         </div>
     </nav>
-    <header>
-        <div class="hero">
-            <h1>Открой для себя исключительное в Книжном бункере</h1>
-            <div class="tags">
-                <button class="tag">Классика</button>
-                <button class="tag">Фэнтези</button>
-                <button class="tag">Детектив</button>
-                <button class="tag">Роман</button>
-                <button class="tag">Фантастика</button>
-                <button class="tag">Классика</button>
-                <button class="tag">Фэнтези</button>
-                <button class="tag">Детектив</button>
-                <button class="tag">Роман</button>
-                <button class="tag">Фантастика</button>
-            </div>
-        </div>
-    </header>
-    <section class="catalog" id="catalog">
-        <div class="filters">
-            <input type="text" class="search" placeholder="Найди свою книгу ...">
-            <div id="select"></div>
-        </div>
-        <div class="item-grid">
-        </div>
-    </section>
 
+    <section class="book-page"></section>
 
     <footer>
         <div class="hr"></div>
         <p>© радмилка 2024</p>
     </footer>
-
     <script src="db.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search)
+        const bookId = urlParams.get('id');
+        const book = books.find(book => book.id == bookId);
+        console.log(book);
+    </script>
+
+
     <!-- подключаем JS-селекта -->
     <script src="custom-select.js"></script>
-
     <script src="script.js"></script>
-
 </body>
 
 </html>

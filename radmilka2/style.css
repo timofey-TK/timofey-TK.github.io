@@ -66,6 +66,7 @@ nav {
 .cart {
     color: var(--dark);
     font-size: 20px;
+    margin-left: 100px;
     width: 60px;
     height: 60px;
     position: relative;
@@ -200,7 +201,7 @@ h1 {
 }
 .book-image {
     border-radius: 0 0 20px 20px;
-    max-width: 100%;
+    width: 100%;
     object-fit: cover;
     height: 540px;
 }

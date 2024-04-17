@@ -8,7 +8,6 @@ const select = new ItcCustomSelect('#select', {
         generateBooks()
     }
 });
-console.log();
 // Генерация товаров
 
 
@@ -19,8 +18,10 @@ searchInput.addEventListener("input", (e) => {
 })
 function BookComponent(book) {
     return `<div class="item" data-id="${book.id}" data-genre="${book.genre}">
-                <img src="${book.coverURL}"
-                    alt="book" class="book-image">
+                <a href="item.html?id=${book.id}">
+                    <img src="${book.coverURL}"
+                        alt="book" class="book-image">
+                </a>
                 <p class="book-name">${book.title}</p>
                 <p class="book-author">${book.author}</p>
                 <div class="item-footer">
