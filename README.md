@@ -103,6 +103,7 @@ target="hidden_iframe" onsubmit="submitted=true;">
 15. Патерны на инпуты https://nosir.github.io/cleave.js/
 16. Плитка как в пинтересте [https://masonry.desandro.com/](http://callmecavs.com/bricks.js/)
 17. 3d модели в вебе https://spline.design/
+18. darg&drop https://swapy.tahazsh.com/
 ---
 [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
