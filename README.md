@@ -7,6 +7,21 @@
 * https://timofey-tk.github.io/planetsanim/
 ---
 ## Строки кода
+#### Динамически меняющиеся размеры в зависимости от ширины экрана
+```scss
+@function calcFluidSize($f-min, $f-max, $w-min: 390, $w-max: 1600, $units: px) {
+    $k: ($f-max - $f-min)/($w-max - $w-min);
+    $b: $f-min - $k * $w-min;
+
+    $b: $b + $units;
+
+    @if $f-min < $f-max {
+        @return calc(max(#{$f-min}#{$units}, min(#{$k} * 100vw + #{$b}, #{$f-max}#{$units})));
+    } @else {
+        @return calc(min(#{$f-min}#{$units}, max(#{$k} * 100vw + #{$b}, #{$f-max}#{$units})));
+    }
+}
+```
 #### Изменение активного класса у навигационных ссылок при скролле (jQuery http://jsfiddle.net/bonilka/p7sgwg4L/)
   ```javascript
   const sections = document.querySelectorAll("SECTIONS") 
