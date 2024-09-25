@@ -1,0 +1,52 @@
+@function calcFluidSize($f-min, $f-max, $w-min: 390, $w-max: 1600, $units: px) {
+    $k: ($f-max - $f-min)/($w-max - $w-min);
+    $b: $f-min - $k * $w-min;
+
+    $b: $b + $units;
+
+    @return calc(max(#{$f-min}#{$units}, min(#{$k} * 100vw + #{$b}, #{$f-max}#{$units})));
+}
+
+.ticker-wrap {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    z-index: 0;
+    top: calcFluidSize(15, 90);
+}
+
+.ticker {
+    white-space: nowrap;
+    padding-right: 100%;
+    animation: ticker 60s linear infinite;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    will-change: transform;
+}
+
+.ticker-item {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'Srbija Sans';
+    font-size: 30px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    gap: 30px;
+}
+
+.ticker-item svg {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}

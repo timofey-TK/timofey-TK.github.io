@@ -1,0 +1,47 @@
+/* Circe */
+@font-face {
+	font-family: 'Circe';
+	src: url('Circe-Regular.eot');
+	src: local('Circe'), local('Circe-Regular'),
+		url('Circe-Regular.eot?#iefix') format('embedded-opentype'),
+		url('Circe-Regular.woff') format('woff'),
+		url('Circe-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Circe';
+	src: url('Circe-Bold.eot');
+	src: local('Circe Bold'), local('Circe-Bold'),
+		url('Circe-Bold.eot?#iefix') format('embedded-opentype'),
+		url('Circe-Bold.woff') format('woff'),
+		url('Circe-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Circe';
+	src: url('Circe-ExtraBold.eot');
+	src: local('Circe ExtraBold'), local('Circe-ExtraBold'),
+		url('Circe-ExtraBold.eot?#iefix') format('embedded-opentype'),
+		url('Circe-ExtraBold.woff') format('woff'),
+		url('Circe-ExtraBold.ttf') format('truetype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+/* Srbija Sans */
+@font-face {
+    font-family: 'Srbija Sans';
+    src: url('SrbijaSans-Regular.eot');
+    src: local('Srbija Sans Regular'), local('SrbijaSans-Regular'),
+        url('SrbijaSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('SrbijaSans-Regular.woff2') format('woff2'),
+        url('SrbijaSans-Regular.woff') format('woff'),
+        url('SrbijaSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
