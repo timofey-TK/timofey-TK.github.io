@@ -4,62 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Книжный бункер</title>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
-    <link rel="stylesheet" href="reset.css">
-    <!-- подключаем CSS-селекта -->
-    <link rel="stylesheet" href="custom-select.css">
-    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="scripts/db.js"></script>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
 
 </head>
 
 <body>
-    <nav>
-        <img src="media/logo.svg" alt="logo" class="logo">
-        <ul class="links">
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="index.html#catalog">Каталог</a></li>
-            <li><a href="about.html">О нас</a></li>
-        </ul>
-        <div class="cart">
-            <box-icon name="cart" color="#3a3f58" size="md"></box-icon>
-            <span class="not" style="display: none;"></span>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="media/logo-dark.svg" alt="logo"></a>
+            <ul class="links">
+                <li><a href="index.html" class="link-effect">Главная</a></li>
+                <li><a href="catalog.html" class="link-effect">Каталог</a></li>
+                <li><a href="about.html" class="link-effect">О нас</a></li>
+            </ul>
+            <a href="cart.html" class="cart">
+                <box-icon name="cart" color="#ece6cd" size="md"></box-icon>
+                <span class="not" style="display: none;"></span>
+            </a>
+        </nav>
+        <div class="book-section">
+            <div class="book-section-wrapper">
+                <div class="left-side">
+                    <img alt="" class="cover" onmouseover="hover(this);" onmouseout="unhover(this);">
+                </div>
+                <div class="right-side">
+                    <p class="name"></p>
+                    <p class="author">Автор: </p>
+                    <p class="description">Описание: </p>
+
+                </div>
+            </div>
+            <div class="boottom-side">
+                <div class="wrapper">
+                    <div class="btn book-btn" onclick="addToCart()">Добавить в корзину</div>
+                    <p class="price"></p>
+                </div>
+                <div class="wrapper wrapper-rating">
+                    <p class="rating">Оцените: <span class="star-rating">
+                            <label for="rate-1" style="--i:1"><i class="bx bxs-star"></i></label>
+                            <input type="radio" name="rating" id="rate-1" value="1">
+                            <label for="rate-2" style="--i:2"><i class="bx bxs-star"></i></label>
+                            <input type="radio" name="rating" id="rate-2" value="2" checked>
+                            <label for="rate-3" style="--i:3"><i class="bx bxs-star"></i></label>
+                            <input type="radio" name="rating" id="rate-3" value="3">
+                            <label for="rate-4" style="--i:4"><i class="bx bxs-star"></i></label>
+                            <input type="radio" name="rating" id="rate-4" value="4">
+                            <label for="rate-5" style="--i:5"><i class="bx bxs-star"></i></label>
+                            <input type="radio" name="rating" id="rate-5" value="5">
+                        </span></p>
+                    <a href="reviews.html" class="reviews-link">Отзывы</a>
+                </div>
+            </div>
         </div>
-        <div class="cart-modal">
-            <div class="modal-header">
-                <p>Корзина</p>
-                <button class="close-btn">
-                    <box-icon name="x" color="#ece6cd" size="md"></box-icon>
-                </button>
-            </div>
-            <p class="empty">Корзина пустая</p>
-            <div class="cart-item-grid">
-            </div>
-            <div class="modal-footer">
-                <button class="btn pay-btn">Оплатить</button>
-                <p class="sum"></p>
-            </div>
-        </div>
-    </nav>
-
-    <section class="book-page"></section>
-
-    <footer>
-        <div class="hr"></div>
-        <p>© радмилка 2024</p>
-    </footer>
-    <script src="db.js"></script>
-    <script>
-        const urlParams = new URLSearchParams(window.location.search)
-        const bookId = urlParams.get('id');
-        const book = books.find(book => book.id == bookId);
-        console.log(book);
-    </script>
+    </header>
 
 
-    <!-- подключаем JS-селекта -->
-    <script src="custom-select.js"></script>
-    <script src="script.js"></script>
+
+
+    <script src="scripts/item.js"></script>
 </body>
 
 </html>

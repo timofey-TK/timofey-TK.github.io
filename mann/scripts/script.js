@@ -112,6 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 spaceBetween: 20
             }
         }
-
     });
+
+    const lightbox = GLightbox();
 });

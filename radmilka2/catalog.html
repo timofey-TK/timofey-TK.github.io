@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Книжный бункер</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <!-- подключаем CSS-селекта -->
+    <link rel="stylesheet" href="styles/custom-select.css">
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/db.js"></script>
+    <style>
+        body {
+            background: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="dark">
+        <a href="index.html" class="logo"><img src="media/logo-light.svg" alt="logo" /></a>
+        <ul class="links">
+            <li>
+                <a href="index.html" class="link-effect">Главная</a>
+            </li>
+            <li>
+                <a href="catalog.html" class="link-effect">Каталог</a>
+            </li>
+            <li><a href="about.html" class="link-effect">О нас</a></li>
+        </ul>
+        <a href="cart.html" class="cart">
+            <box-icon name="cart" color="#ece6cd" size="md"></box-icon>
+            <span class="not" style="display: none"></span>
+        </a>
+    </nav>
+
+    <section class="catalog" id="catalog">
+        <div class="filters">
+            <input type="text" class="search input" placeholder="Найди свою книгу ..." />
+            <div id="select"></div>
+        </div>
+        <div class="item-grid">
+
+        </div>
+
+    </section>
+
+    <script src="scripts/custom-select.js"></script>
+    <script src="scripts/catalog.js"></script>
+</body>
+
+</html>

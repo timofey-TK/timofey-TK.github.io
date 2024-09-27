@@ -1,0 +1,777 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&display=swap");
+:root {
+    --dark: #3a3f58;
+    --light: #ece6cd;
+    --accent1: #ee6a59;
+    --accent2: #f9ac67;
+}
+body {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--dark);
+}
+section,
+header,
+nav.dark {
+    padding: 0 max(50px, calc(50% - 600px));
+}
+@media (max-width: 576px) {
+    section,
+    header,
+    nav.dark {
+        padding: 0 30px;
+    }
+}
+.text {
+    font-size: 24px;
+}
+
+.btn {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    --shadow-color: var(--accent2);
+    cursor: pointer;
+    transform: translateY(0);
+    border: none;
+    box-shadow: 0 4px var(--shadow-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: var(--accent1);
+    border-radius: 12px;
+    color: var(--light);
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px var(--shadow-color);
+}
+
+.btn:active {
+    box-shadow: 0 0px var(--shadow-color);
+    transform: translateY(3px);
+}
+footer {
+    position: absolute;
+    bottom: -10%;
+    text-align: center;
+    padding-top: 10px;
+    border-top: 5px solid #3a3f58;
+    width: 100%;
+}
+.link-effect {
+    --underline-color: var(--dark);
+    position: relative;
+    display: inline-block;
+}
+.link-effect::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -3px;
+    display: block;
+    width: 0;
+    height: 3px;
+    border-radius: 2px;
+    background: var(--underline-color);
+    width: 0;
+    transition: 0.3s;
+}
+
+.link-effect:hover:after {
+    width: 100%;
+}
+.title {
+    font-size: 45px;
+    margin-bottom: 30px;
+}
+.subtitle {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.input {
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 4px solid #3a3f58;
+    border-radius: 72px;
+    padding: 10px 30px;
+    max-width: 100%;
+    font-size: 20px;
+}
+@media (max-width: 992px) {
+    .input {
+        font-size: 18px;
+    }
+}
+
+/* Шапка */
+body {
+    background: url(../media/Gradient.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header {
+    padding-top: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+nav {
+    box-sizing: border-box;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 30px 30px;
+    color: var(--dark);
+}
+body:has(nav.dark) {
+    padding-top: 100px;
+}
+nav.dark {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    color: var(--light);
+    background-color: var(--dark);
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+nav.dark a {
+    --underline-color: var(--light);
+}
+nav.dark .cart {
+    border: var(--light) 3px solid;
+    width: 50px;
+    height: 50px;
+}
+.logo {
+    grid-area: logo;
+}
+.links {
+    display: flex;
+    gap: 50px;
+    font-size: 22px;
+    font-weight: 700;
+    grid-area: links;
+}
+.cart {
+    color: var(--dark);
+    font-size: 20px;
+    margin-left: 100px;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    border-radius: 100%;
+    background-color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    grid-area: cart;
+}
+.cart .not {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    top: -10px;
+    left: -10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background: var(--accent1);
+}
+.hero {
+    padding-top: 75px;
+    padding-bottom: 30px;
+}
+h1 {
+    font-size: 96px;
+    line-height: 88.67%;
+}
+.tags {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.tag {
+    background-color: var(--dark);
+    color: var(--light);
+    font-size: 24px;
+    border-radius: 72px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+@media (max-width: 992px) {
+    h1 {
+        font-size: 70px;
+    }
+}
+@media (max-width: 768px) {
+    nav {
+        display: grid;
+        grid-template-areas: "logo cart" "links links";
+        row-gap: 30px;
+    }
+    .links {
+        justify-content: center;
+        padding-bottom: 10px;
+    }
+    h1 {
+        font-size: 50px;
+    }
+    .tag {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    body:has(nav.dark) {
+        padding-top: 170px;
+    }
+}
+@media (max-width: 576px) {
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    .tags {
+        gap: 10px;
+        justify-content: center;
+    }
+    .tag {
+        font-size: 18px;
+    }
+}
+@media (max-width: 476px) {
+    .tags {
+        gap: 7px;
+        justify-content: center;
+    }
+}
+/* Страница о нас */
+.about {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.about__text,
+.about__specials,
+.about__contacts {
+    font-size: 28px;
+    line-height: 110%;
+    margin-bottom: 20px;
+}
+.about__contacts {
+    margin-bottom: 7px;
+}
+.about a {
+    font-size: 28px;
+    margin-bottom: 7px;
+}
+@media (max-width: 576px) {
+    .about__text,
+    .about__specials,
+    .about__contacts,
+    .about a {
+        font-size: 24px;
+    }
+}
+
+/* Страница каталога */
+.filters {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.search {
+    width: 400px;
+}
+#select {
+    width: auto;
+}
+.itc-select__toggle {
+    width: auto;
+    background: var(--dark);
+    color: var(--light);
+    border-radius: 72px;
+    font-style: normal;
+    font-size: 20px;
+    padding: 5px 30px;
+    padding-right: 10px;
+}
+.itc-select__toggle::after {
+    width: 45px;
+    height: 45px;
+    background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.2282 17.8116L23 26.0398L14.7717 17.8116L12.0616 20.5218L23 31.4602L33.9384 20.5218L31.2282 17.8116Z' fill='%23ECE6CD'/%3E%3C/svg%3E%0A");
+}
+.itc-select__dropdown {
+    background: var(--dark);
+    color: var(--light);
+    padding: 20px;
+    border-radius: 25px;
+    top: 3.6rem;
+    width: 305px;
+    max-width: 100%;
+    border: none;
+}
+.itc-select__dropdown::-webkit-scrollbar {
+    width: 0;
+}
+.itc-select__option {
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.itc-select__option:hover {
+    background: var(--accent2);
+    color: var(--dark);
+}
+.itc-select__option_selected {
+    background: var(--accent1);
+    color: var(--dark);
+}
+.itc-select__option_selected::after {
+    display: none;
+}
+
+.item-grid {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    justify-content: center;
+    gap: 30px;
+}
+.item {
+    border: 3px solid var(--light);
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 15px;
+    width: calc((100% - 80px) / 3);
+}
+.book-image {
+    border-radius: 0 0 20px 20px;
+    width: 100%;
+    object-fit: cover;
+    height: 540px;
+}
+.book-name {
+    font-size: 24px;
+    padding: 0 20px;
+}
+.book-author {
+    padding: 0 20px;
+    font-size: 16px;
+}
+.item-footer {
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    margin-top: auto;
+}
+.add-to-cart-btn {
+    cursor: pointer;
+    background: var(--accent1);
+    border-radius: 12px;
+    color: var(--light);
+    font-size: 20px;
+    padding: 5px 15px;
+}
+@media (max-width: 1400px) {
+    .item {
+        width: calc((100% - 120px) / 4);
+    }
+    .book-image {
+        height: 400px;
+    }
+}
+@media (max-width: 1200px) {
+    .item {
+        width: calc((100% - 80px) / 3);
+    }
+
+    .add-to-cart-btn {
+        font-size: 18px;
+    }
+    .book-name {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+    .book-author {
+        padding: 0 15px;
+    }
+    .item-footer {
+        padding: 0 15px;
+        font-size: 20px;
+    }
+}
+@media (max-width: 992px) {
+    .item {
+        width: calc((100% - 60px) / 2);
+    }
+    .itc-select__toggle {
+        font-size: 18px;
+    }
+    #select {
+        width: 48%;
+    }
+    .search {
+        width: 48%;
+    }
+    .filters {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .item-grid {
+        gap: 15px;
+    }
+    .item {
+        width: calc((100% - 30px) / 2);
+    }
+    .book-image {
+        height: 400px;
+    }
+}
+@media (max-width: 576px) {
+    .filters {
+        flex-direction: column;
+    }
+    #select {
+        width: 100%;
+    }
+    .book-image {
+        height: 300px;
+    }
+    .add-to-cart-btn {
+        font-size: 14px;
+    }
+    .item-footer {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    .book-name {
+        font-size: 18px;
+        padding: 0 10px;
+    }
+    .book-author {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+}
+@media (max-width: 476px) {
+    .item {
+        width: 100%;
+    }
+    .book-image {
+        height: 500px;
+    }
+    .itc-select__dropdown {
+        left: unset;
+        right: 0;
+    }
+}
+/* Страница товара */
+.book-section {
+    display: flex;
+    padding-top: 50px;
+    flex-direction: column;
+    gap: 30px;
+}
+.book-section-wrapper {
+    display: flex;
+    gap: 30px;
+}
+.name {
+    font-size: 36px;
+}
+.author {
+    font-size: 24px;
+    margin-top: 10px;
+}
+.description {
+    font-size: 28px;
+    margin-top: 15px;
+}
+.cover {
+    max-height: 60vh;
+    border-radius: 15px;
+    aspect-ratio: 5/8;
+    object-fit: cover;
+}
+.boottom-side {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.price {
+    font-size: 28px;
+}
+.book-btn {
+    padding: 15px 30px;
+}
+.reviews-link {
+    font-size: 20px;
+    text-decoration: underline;
+    margin-left: auto;
+}
+.rating {
+    margin-left: 30px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.star-rating {
+    white-space: nowrap;
+}
+.star-rating [type="radio"] {
+    appearance: none;
+}
+.star-rating i {
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.star-rating label:is(:hover, :has(~ :hover)) i {
+    transform: scale(1.35);
+    color: #fffdba;
+    animation: jump 0.5s calc(0.3s + (var(--i) - 1) * 0.15s) alternate infinite;
+}
+.star-rating label:has(~ :checked) i {
+    color: #faec1b;
+    text-shadow: 0 0 2px #ffffff, 0 0 10px #ffee58;
+}
+
+@keyframes jump {
+    0%,
+    50% {
+        transform: translatey(0) scale(1.35);
+    }
+    100% {
+        transform: translatey(-15%) scale(1.35);
+    }
+}
+
+@media (max-width: 992px) {
+    .boottom-side {
+        flex-direction: column;
+        padding-bottom: 30px;
+    }
+    .wrapper {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .rating {
+        margin: 0;
+    }
+    .description {
+        font-size: 22px;
+    }
+    .cover {
+        max-width: 30vw;
+    }
+}
+@media (max-width: 768px) {
+    .description {
+        font-size: 18px;
+    }
+}
+@media (max-width: 576px) {
+    .book-section-wrapper {
+        flex-direction: column;
+    }
+    .left-side {
+        text-align: center;
+    }
+    .cover {
+        max-width: 70vw;
+    }
+    .wrapper-rating {
+        flex-direction: column;
+        align-items: start;
+    }
+    .reviews-link {
+        margin-left: 0;
+    }
+}
+@media (max-width: 476px) {
+    .price {
+        font-size: 24px;
+    }
+    .book-btn {
+        padding: 15px 20px;
+    }
+}
+
+/* Корзина */
+.cart-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 50px;
+    gap: 30px;
+    overflow: hidden;
+}
+.book-grid {
+    border-top: 1px solid var(--light);
+
+    overflow-y: auto;
+}
+.book {
+    display: grid;
+    grid-template-areas:
+        "cover name name"
+        "cover author author"
+        "cover price count";
+    grid-template-columns: 70px 1fr 1fr;
+    column-gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--light);
+    align-items: center;
+}
+.book__cover {
+    max-width: 100%;
+    border-radius: 8px;
+}
+.cart-book-name {
+    padding-top: 6px;
+    font-size: 20px;
+    padding-right: 20px;
+}
+.cart-book-author {
+    font-size: 1 4px;
+}
+.cart-price {
+    font-size: 20px;
+}
+.cart-count {
+    font-size: 20px;
+}
+.cart-count input {
+    border-bottom: var(--dark) 2px solid;
+    width: 12px;
+    padding: 0 2px;
+    font-size: 18px;
+}
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.info {
+    font-size: 24px;
+}
+.lined {
+    text-decoration: line-through;
+}
+.promo {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.promocode {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.pay {
+    margin-top: auto;
+    margin-bottom: 5px;
+    font-size: 28px;
+}
+
+.swal2-input {
+    color: var(--dark);
+    border: 1px solid var(--dark);
+    -webkit-tap-highlight-color: #3a3f58;
+    outline: none;
+}
+.swal2-input::placeholder {
+    color: #868a99;
+}
+@media (max-width: 768px) {
+    .cart-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+    .book-grid {
+        max-height: 100vh;
+    }
+    .cart-title {
+        margin: 0;
+    }
+    header {
+        height: auto !important;
+    }
+}
+/* Отзывы */
+.reviews h3 {
+    font-size: 36px;
+}
+.reviews form {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 50px;
+}
+.reviews textarea {
+    border-radius: 30px;
+}
+.reviews label {
+    font-size: 22px;
+}
+
+.reviews-grid {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0;
+    border-top: var(--dark) 2px solid;
+}
+
+.reviews .rating {
+    color: #faec1b;
+    margin: 0;
+}
+.review {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: var(--dark) 2px solid;
+}
+.reviews .images {
+    display: flex;
+    gap: 5px;
+}
+.reviews .images img {
+    object-fit: contain;
+    height: 100px;
+    border-radius: 12px;
+}
+@media (max-width: 768px) {
+    .reviews form {
+        padding: 30px 0;
+    }
+}

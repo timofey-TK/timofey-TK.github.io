@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/fonts/fonts.css">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 
 <body>
@@ -452,7 +452,9 @@
                 <img src="imgs/mann-turusin.webp" alt="Main Image" class="main-image">
                 <div class="island video">
                     <span class="label">видеоуроки</span>
-                    <img src="imgs/Frame 1597882327.png" alt="Video" class="small-video">
+                    <a href="imgs/SampleVideo_1280x720_10mb.mp4" class="glightbox">
+                        <img src="imgs/preview.webp" alt="Video" class="small-video">
+                    </a>
                 </div>
             </div>
             <div class="block-text">
@@ -530,11 +532,95 @@
             </p>
             <button class="accent-btn">ПОДАТЬ ЗАЯВКУ</button>
         </div>
-
     </section>
+    <section class="contact-form">
+        <div class="ellipse desktop-only"></div>
+        <div class="info">
+            <h2 class="section-title">Ещё сомневаетесь?<br>Остались вопросы?</h2>
+            <p class="description">Оставьте свои контакты, чтобы мы могли ответить на ваши вопросы и узнать, подходит ли
+                Гроуинг.12
+                для вас.</p>
+            <p><b>Задайте вопрос в мессенджер или на почту</b></p>
+            <div class="contact-links">
+                <img src="imgs/whatsapp-icon.svg" alt="WhatsApp">
+                <img src="imgs/telegram-icon.svg" alt="Telegram">
+                <a href="mailto:ddurusin@gmail.com">ddurusin@gmail.com</a>
+            </div>
+        </div>
+
+        <form class="form">
+            <div class="input-group">
+                <input type="text" placeholder="Мое имя">
+                <input type="tel" data-tel-input placeholder="Мой телефон" maxlength="18" />
+            </div>
+            <div class="input-group textarea">
+                <textarea name="message" id="message" placeholder="Хочу спросить"></textarea>
+            </div>
+            <button type="submit" class="accent-btn">ПОДАТЬ ЗАЯВКУ</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-left">
+            <h2 class="footer-title">
+                Уточним <br class="desktop-only"> детали?
+            </h2>
+
+            <ul class="questions-list">
+                <li>
+                    <a href="#">Что такое Группинг.12?</a>
+                </li>
+                <li>
+                    <a href="#">Что мы сделаем за 12 недель</a>
+                </li>
+                <li>
+                    <a href="#">Что говорят выпускники Группинг.12?</a>
+                </li>
+                <li>
+                    <a href="#">Как проходит работа в формате Группинг.12?</a>
+                </li>
+                <li>
+                    <a href="#">Стоимость программы</a>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="footer-right">
+            <p class="secondary-title">Пишите нам 24/7</p>
+            <a href="#">
+                <img src="imgs/whatsapp-icon.svg" alt="WhatsApp" width="20" height="20">
+                <span>в WhatsApp</span>
+            </a>
+
+
+            <a href="#">
+                <img src="imgs/telegram-icon.svg" alt="Telegram" width="20" height="20">
+                <span>в Telegram</span>
+            </a>
+
+
+            <a href="#" class="desktop-only">
+                <img src="imgs/vk-icon.svg" alt="VK" width="20" height="20">
+                <span>в ВК</span>
+            </a>
+
+
+            <a href="#" class="desktop-only">
+                <img src="imgs/insta-icon.svg" alt="Instagram" width="20" height="20">
+                <span>в Instagram</span>
+            </a>
+        </div>
+        <div class="copyright" style="grid-area: copyright;">
+            <p>© Название 2024</p>
+            <img src="imgs/dev.svg" alt="LM">
+        </div>
+    </footer>
+    <script src="scripts/phoneinput.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
 

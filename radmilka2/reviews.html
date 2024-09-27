@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Книжный бункер</title>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="scripts/db.js"></script>
+    <style>
+        body {
+            background: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="dark">
+        <a href="index.html" class="logo"><img src="media/logo-light.svg" alt="logo" /></a>
+        <ul class="links">
+            <li>
+                <a href="index.html" class="link-effect">Главная</a>
+            </li>
+            <li>
+                <a href="catalog.html" class="link-effect">Каталог</a>
+            </li>
+            <li><a href="about.html" class="link-effect">О нас</a></li>
+        </ul>
+        <a href="cart.html" class="cart">
+            <box-icon name="cart" color="#ece6cd" size="md"></box-icon>
+            <span class="not" style="display: none"></span>
+        </a>
+    </nav>
+
+    <section class="reviews" id="reviews">
+        <h3>Оставить отзыв</h3>
+        <form>
+
+            <label for="text">Ваше имя:</label>
+            <input type="text" id="name" name="name" class="input"><br>
+            <label for="review">Ваш отзыв:</label>
+            <textarea id="review" name="review" rows="5" class="input"></textarea><br>
+            <label for="photo">Прикрепить фото:</label>
+            <input type="file" id="photo" name="photo" accept="image/*"><br>
+
+            <input type="submit" value="Отправить" class="btn">
+        </form>
+        <h3>Отзывы других пользователей</h3>
+        <div class="reviews-grid">
+            <div class="review">
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="quote">Я в полном восторге от этого онлайн-магазина! Удобный сайт, огромный выбор книг и
+                    быстрая доставка.
+                    Заказывал здесь несколько раз, и книги всегда приходили в идеальном состоянии. Отличный сервис и
+                    приятные цены.
+                    Обязательно буду заказывать здесь снова!</p>
+                <p class="author">- Анна К.</p>
+            </div>
+            <div class="review">
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <p class="quote">Очень удобный онлайн-магазин для книголюбов! Нашел здесь много редких изданий,
+                    которых
+                    не было в
+                    наличии в обычных книжных. Доставка была быстрой, а упаковка надежной. Единственный минус -
+                    иногда
+                    цены чуть
+                    выше, чем в других интернет-магазинах. Но в целом, отличный сервис!</p>
+                <p class="author">- Максим Л.</p>
+            </div>
+            <div class="review">
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="quote">Я просто влюбилась в этот книжный онлайн-магазин! Сайт очень понятный и простой в
+                    использовании, а
+                    ассортимент книг просто потрясающий. Заказы приходят быстро и в отличном состоянии. Персонал
+                    очень
+                    отзывчивый и
+                    всегда готов помочь. Определенно рекомендую!</p>
+                <div class="images">
+                    <img src="media/OIG3.jpeg" alt="">
+                    <img src="media/OIG3.mPzAkzYGru3.jpeg" alt="">
+                </div>
+                <p class="author">- Екатерина В.</p>
+            </div>
+            <div class="review">
+                <div class="rating">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
+                <p class="quote">Неплохой онлайн-магазин с хорошим выбором книг. Но иногда сталкиваюсь с проблемами
+                    при
+                    оформлении
+                    заказа, а доставка бывает медленной. Цены выше, чем в некоторых популярных интернет-магазинах.
+                </p>
+                <p class="author">- Сергей Н.</p>
+            </div>
+            <div class="review">
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                <p class="quote">Я давно искал удобный книжный онлайн-магазин, и "Книжный бункер" полностью оправдал
+                    мои
+                    ожидания.
+                    Широкий ассортимент, понятный интерфейс сайта и быстрая доставка. Единственное, что немного
+                    разочаровало -
+                    состояние упаковки одной из книг. Но в целом, отличный сервис!</p>
+                <div class="images">
+                    <img src="media/OIG3.jpeg" alt="">
+                    <img src="media/OIG3.mPzAkzYGru3.jpeg" alt="">
+                </div>
+                <p class="author">- Иван П.</p>
+            </div>
+            <div class="review">
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="quote">Я просто без ума от "Книжного бункера"! Заказываю здесь книги уже несколько лет, и
+                    они
+                    неизменно
+                    радуют меня отличным качеством, быстрой доставкой и прекрасным обслуживанием. Сайт постоянно
+                    обновляется,
+                    добавляются новинки. Очень рекомендую этот магазин!</p>
+                <p class="author">- Ольга С.</p>
+            </div>
+            <div class="review">
+                <div class="rating">&#9733;&#9733;&#9733;&#9734;&#9734;</div>
+                <p class="quote">Не могу сказать, что я полностью доволен сервисом "Книжного бункера". Книги,
+                    конечно,
+                    присылают
+                    быстро, но часто случаются задержки с доставкой. А однажды мне прислали не ту книгу, которую я
+                    заказывал.
+                    Пришлось возвращать и ждать новую. Надеюсь, они поработают над качеством обслуживания.</p>
+                <p class="author">- Дмитрий В.</p>
+            </div>
+            <div class="review">
+                <div class="rating">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="quote">Я настоящий книжный гурман, и "Книжный бункер" стал для меня находкой! Здесь можно
+                    найти редчайшие
+                    издания, которых нет больше нигде. Сервис на высшем уровне, доставка быстрая, а упаковка
+                    надежная.
+                    Очень
+                    рекомендую этот онлайн-магазин всем ценителям книг!</p>
+                <div class="images">
+                    <img src="media/OIG3.jpeg" alt="">
+                    <img src="media/OIG3.mPzAkzYGru3.jpeg" alt="">
+                </div>
+                <p class="author">- Елена Р.</p>
+            </div>
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>
