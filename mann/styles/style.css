@@ -54,6 +54,7 @@
   --accent-color-mid: #007963;
   --accent-color-light: #039BE5;
   --plyr-color-main: var(--accent-color-light);
+  scroll-behavior: smooth;
 }
 
 * {
