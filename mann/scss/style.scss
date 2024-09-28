@@ -70,6 +70,8 @@ footer {
 .accent-btn,
 .simple-btn {
     display: block;
+    text-decoration: none;
+    text-align: center;
     padding: 25px 50px;
     border-radius: 20px;
     outline: none;
@@ -124,6 +126,8 @@ footer {
 .section-title,
 .section-title h2 {
     font-family: 'Srbija Sans';
+    font-style: normal;
+    font-weight: 400;
     font-size: calcFluidSize(30, 46);
 
     line-height: calcFluidSize(30, 46);
@@ -150,6 +154,8 @@ footer {
         display: none;
     }
 }
+
+
 
 .header {
     position: relative;
@@ -217,6 +223,8 @@ footer {
 
         .h1 {
             font-family: 'Srbija Sans';
+            font-style: normal;
+            font-weight: 400;
             font-weight: 400;
             font-size: calcFluidSize(142, 228, 992, 1600);
             line-height: calcFluidSize(142, 228, 992, 1600);
@@ -386,6 +394,8 @@ footer {
             margin: 0;
             z-index: 0;
             font-family: 'Srbija Sans';
+            font-style: normal;
+            font-weight: 400;
             font-weight: 400;
         }
 
@@ -488,6 +498,8 @@ footer {
                 padding: 0 40px;
                 background: #FFFFFF;
                 font-family: 'Srbija Sans';
+                font-style: normal;
+                font-weight: 400;
                 font-size: calcFluidSize(20, 30);
                 text-transform: uppercase;
                 color: var(--accent-color-light);
@@ -609,6 +621,8 @@ footer {
             min-width: calcFluidSize(76, 170);
             aspect-ratio: 1/1;
             font-family: 'Srbija Sans';
+            font-style: normal;
+            font-weight: 400;
             font-size: calcFluidSize(50, 100);
             line-height: calcFluidSize(50, 100);
             text-transform: uppercase;
@@ -652,6 +666,8 @@ footer {
 
             .content-title {
                 font-family: 'Srbija Sans';
+                font-style: normal;
+                font-weight: 400;
                 font-size: calcFluidSize(16, 30);
                 line-height: calcFluidSize(19.8, 33);
                 margin: 0;
@@ -972,6 +988,8 @@ footer {
 
     h2 {
         font-family: 'Srbija Sans';
+        font-style: normal;
+        font-weight: 400;
         font-size: calcFluidSize(100, 200);
         line-height: calcFluidSize(100, 200);
         color: #FFFFFF;
@@ -1002,6 +1020,8 @@ footer {
 
         strong {
             font-family: 'Srbija Sans';
+            font-style: normal;
+            font-weight: 400;
             font-size: calcFluidSize(30, 46);
             line-height: calcFluidSize(33, 46);
             padding: 0 10px;
@@ -1010,6 +1030,8 @@ footer {
         .desktop {
             @media screen and (min-width: 768px) {
                 font-family: 'Srbija Sans';
+                font-style: normal;
+                font-weight: 400;
                 font-size: calcFluidSize(30, 46);
                 line-height: calcFluidSize(33, 46);
                 padding: 0 10px;
@@ -1207,6 +1229,8 @@ footer {
 
         h3 {
             font-family: 'Srbija Sans';
+            font-style: normal;
+            font-weight: 400;
             font-size: calcFluidSize(24, 30);
             line-height: calcFluidSize(24, 33);
             margin-bottom: 15px;
@@ -1243,6 +1267,8 @@ footer {
                 writing-mode: vertical-rl;
                 transform: scale(-1, -1);
                 font-family: 'Srbija Sans';
+                font-style: normal;
+                font-weight: 400;
                 font-size: calcFluidSize(18, 30, 1200, 1600);
                 line-height: calcFluidSize(21.6, 33, 1200, 1600);
                 text-align: center;
@@ -1345,6 +1371,7 @@ footer {
             .main-image {
                 position: relative;
                 z-index: 2;
+                transform: scale(-1, 1);
             }
 
             .island {
@@ -1367,6 +1394,10 @@ footer {
                     align-items: start;
                     z-index: 1;
                     margin-bottom: calcFluidSize(-44, -30);
+                }
+                .label{
+                    font-size: 23px;
+                    line-height: 25.3px;
                 }
             }
         }
@@ -1423,6 +1454,8 @@ footer {
             font-family: 'Srbija Sans';
             font-style: normal;
             font-weight: 400;
+            font-style: normal;
+            font-weight: 400;
             font-size: calcFluidSize(38, 40);
             line-height: calcFluidSize(38, 40);
             text-transform: uppercase;
@@ -1452,6 +1485,8 @@ footer {
 
         .payment-price {
             font-family: 'Srbija Sans';
+            font-style: normal;
+            font-weight: 400;
             font-size: 30px;
             line-height: 33px;
             width: 100%;
@@ -1671,15 +1706,18 @@ footer {
     font-size: calcFluidSize(16, 22);
     line-height: calcFluidSize(19.2, 26.4);
     padding-bottom: 70px;
+
     a {
         text-decoration: none;
         color: inherit;
         font-size: inherit;
         transition: all 0.3s ease;
     }
-    a:hover{
+
+    a:hover {
         color: var(--accent-color-light);
     }
+
     .footer-left {
         grid-area: left;
         display: flex;
@@ -1731,25 +1769,28 @@ footer {
         width: 100%;
     }
 
-@media screen and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    .footer-left{
+    @media screen and (max-width: 768px) {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
-    }
-    .footer-right{
-        a{
-            justify-content: start;
+        align-items: start;
+
+        .footer-left {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-right {
+            a {
+                justify-content: start;
+            }
+        }
+
+        .secondary-title {
+            font-size: calcFluidSize(22, 30);
+            line-height: calcFluidSize(26.4, 36);
+            margin: 0;
+            color: var(--accent-color-light);
         }
     }
-    .secondary-title{
-        font-size: calcFluidSize(22, 30);
-        line-height: calcFluidSize(26.4, 36);
-        margin: 0;
-        color: var(--accent-color-light);
-    }
-}
 
 }
